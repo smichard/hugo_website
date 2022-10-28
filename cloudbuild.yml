@@ -1,0 +1,30 @@
+# [START cloudbuild]
+steps:
+# This step builds the container image.
+- name: 'gcr.io/cloud-builders/docker'
+  id: Build
+  args:
+  - 'build'
+  - '-t'
+  - 'eu.gcr.io/storied-network-317810/hugo-website:$BUILD_ID'
+  - '-t'
+  - 'eu.gcr.io/storied-network-317810/hugo-website:latest'
+  - '.'
+
+# This step pushes the image to Container Registry
+# The PROJECT_ID and SHORT_SHA variables are automatically
+# replaced by Cloud Build.
+- name: 'gcr.io/cloud-builders/docker'
+  id: Push
+  args:
+  - 'push'
+  - 'eu.gcr.io/storied-network-317810/hugo-website'
+
+# deploy container image to Google Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  id: Deploy
+  args: ['run', 'deploy', 'hugo-website', '--image', 'gcr.io/storied-network-317810/hugo-website', '--region', 'europe-north1']
+images:
+- gcr.io/storied-network-317810/hugo-website
+
+# [END cloudbuild]
