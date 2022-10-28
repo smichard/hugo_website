@@ -1,2 +1,2 @@
 # hugo_website
-test 6
+test 7
