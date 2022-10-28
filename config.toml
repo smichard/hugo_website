@@ -1,7 +1,8 @@
-baseURL = "https://example.com"
+baseURL = ""
 languageCode = "en"
 defaultContentLanguage = "en"
-title = "KeepIt"
+
+title = "My Personal Website"
 theme = "KeepIt"
 
 paginate = 12
