@@ -26,7 +26,7 @@ disqusShortname = "yourdiscussshortname"
 
 [menu]
   [[menu.main]]
-    name = "Blog"
+    name = "Posts"
     url = "/posts/"
     weight = 1
 
@@ -36,13 +36,18 @@ disqusShortname = "yourdiscussshortname"
     weight = 3
 
   [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 4
+
+  [[menu.main]]
     name = "About"
     url = "/about"
-    weight = 4
+    weight = 5
 
 [params]
     since = 2012
-    author = "Fastbyte01"               # Author's name
+    author = "Stephan Michard"               # Author's name
     subtitle = "A Hugo theme"       # Subtitle
     cdn_url = ""           # Base CDN URL
     home_mode = "" # post or other
@@ -63,21 +68,21 @@ disqusShortname = "yourdiscussshortname"
     license= 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
 [params.gravatar]
-    #email = "example@gmail.com"   #uncomment and insert your email address to use gravatar
+  #  email = "stephan.michard@gmail.com"   #uncomment and insert your email address to use gravatar
 
 
 [params.social]
-    GitHub = "xxxx"
-    Linkedin = "xxxx"
     Twitter = "xxxx"
-    #Instagram = "xxxx"
+    Linkedin = "xxxx"
+    GitHub = "xxxx"
+    Instagram = "xxxx"
     #Email   = "xxxx"
-    Facebook = "xxxx"
+    #Facebook = "xxxx"
     #Telegram = "xxxx"
     #Medium = "xxxx"
     #Gitlab = "xxxx"
     #Youtubelegacy = "xxxx"
-    #Youtubecustom = "xxxx"
+    Youtubecustom = "xxxx"
     #Youtubechannel = "xxxx"
     #Tumblr ="xxxx"
     #Quora = "xxxx"
@@ -107,7 +112,7 @@ disqusShortname = "yourdiscussshortname"
     #Patreon = "xxxx"
     #Steam = "xxxx"
     #Twitch = "xxxx"
-    #Strava = "xxxx"
+    Strava = "xxxx"
     #Skype = "xxxx"
     #Whatsapp = "xxxx"
     #Zhihu = "xxxx"
@@ -123,11 +128,11 @@ disqusShortname = "yourdiscussshortname"
     #Googlescholar = "xxxx"
     #Researchgate = "xxxx"
     #Mastodon = "xxxx"
-    #Thingiverse = "xxxx"
+    Thingiverse = "xxxx"
 
 [params.share]
 Twitter = true
-Facebook = true
+Facebook = false
 #Reddit = true
 Linkedin = true
 #Pinterest = true
@@ -142,10 +147,10 @@ Linkedin = true
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
 [author]
-  name = "Fastbyte01"
+  name = "Stephan Michard"
 
   [params.publisher]
-    name = "Fastbyte01"
+    name = "Stephan Michard"
 
     [params.publisher.logo]
       url = "logo.png"
