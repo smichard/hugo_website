@@ -1,3 +1,5 @@
 hugo.exe
 .hugo_build.lock
 a_to_do.md
+/public
+./public
