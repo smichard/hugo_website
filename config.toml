@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "dev.michard.io"
 languageCode = "en"
 defaultContentLanguage = "en"
 
