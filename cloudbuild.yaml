@@ -6,9 +6,7 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'eu.gcr.io/storied-network-317810/hugo-website:$BUILD_ID'
-  - '-t'
-  - 'eu.gcr.io/storied-network-317810/hugo-website:latest'
+  - 'eu.gcr.io/${PROJECT_ID}/hugo-website:${BUILD_ID}'
   - '.'
 
 # This step pushes the image to Container Registry
@@ -18,13 +16,24 @@ steps:
   id: Push
   args:
   - 'push'
-  - 'eu.gcr.io/storied-network-317810/hugo-website'
+  - 'eu.gcr.io/${PROJECT_ID}/hugo-website:${BUILD_ID}'
 
 # deploy container image to Google Cloud Run
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+- name: 'gcr.io/cloud-builders/gcloud'
   id: Deploy
-  args: ['run', 'deploy', 'hugo-website', '--image', 'gcr.io/storied-network-317810/hugo-website', '--region', 'europe-north1']
-images:
-- gcr.io/storied-network-317810/hugo-website
+  args:
+  - 'run'
+  - 'deploy'
+  - 'hugo-website'
+  - '--image'
+  - 'eu.gcr.io/${PROJECT_ID}/hugo-website:${BUILD_ID}'
+  - '--region'
+  - 'europe-north1'
+  - '--platform'
+  - 'managed'
+  - '--allow-unauthenticated'
+
+#images:
+#- gcr.io/${PROJECT_ID}/hugo-debug
 
 # [END cloudbuild]
