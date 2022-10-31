@@ -4,3 +4,5 @@ a_to_do.md
 /public
 ./public
 public/
+.\public
+\public
