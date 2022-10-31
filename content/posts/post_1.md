@@ -1,12 +1,11 @@
 ---
-title: "Post_1"
-date: 2022-10-28T20:11:36Z
+title: "Post 1"
+date: 2022-10-28
 draft: false
 author: "Stephan Michard"
-category: ["cloud"]
+categories: ["Cloud"]
 tags: ["docker","traefik","rancher"]
 ---
-
 
 # Lorem ipsum dolor sit
 amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Quis ipsum suspendisse ultrices gravida dictum fusce. Cras adipiscing enim eu turpis egestas pretium. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Quam pellentesque nec nam aliquam sem et tortor.

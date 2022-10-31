@@ -79,10 +79,10 @@
     <div class="post-tags">
         {{ with .Params.tags }}
             <section>
-            <i class="iconfont icon-icon-tag"></i>{{ i18n "Tag" }}: 
+            <!--<i class="iconfont icon-icon-tag"></i>-->{{ i18n "Tag" }}: 
             {{ range . }}
             <span class="tag"><a href="{{ "tags/" | absURL }}{{ . | urlize }}/">
-                    #{{.}}</a></span>
+                    {{.}}</a></span>
             {{ end }}
             </section>
         {{ end }}

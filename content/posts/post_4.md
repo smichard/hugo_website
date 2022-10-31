@@ -1,9 +1,9 @@
 ---
-title: "Post_4"
+title: "Post 4"
 date: 2022-10-28T20:11:39Z
 draft: false
 author: "Stephan Michard"
-category: ["cloud"]
+categories: ["cloud"]
 tags: ["docker","lab","kubernetes"]
 ---
 

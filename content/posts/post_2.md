@@ -1,12 +1,11 @@
 ---
-title: "Post_2"
-date: 2022-10-28T20:11:39Z
+title: "Post 2"
+date: 2022-10-27
 draft: false
 author: "Stephan Michard"
-category: ["cloud"]
+categories: ["Cloud"]
 tags: ["rancher","tanzu","kubernetes"]
 ---
-
 
 # Lorem ipsum dolor sit
 amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Quis ipsum suspendisse ultrices gravida dictum fusce. Cras adipiscing enim eu turpis egestas pretium. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Quam pellentesque nec nam aliquam sem et tortor.
