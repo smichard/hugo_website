@@ -2,7 +2,7 @@ baseURL = "https://dev.michard.io"
 languageCode = "en"
 defaultContentLanguage = "en"
 
-title = "My Personal Website"
+title = "Personal Website"
 theme = "KeepIt"
 
 paginate = 12
