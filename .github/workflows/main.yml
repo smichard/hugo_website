@@ -1,14 +1,13 @@
 name: verify
 on: push
 jobs:
-  verify:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: Numericas/matrix-action@v1
-        with:
-          server: ${{ secrets.MATRIX_SERVER }}
-          room-id: ${{ secrets.MATRIX_ROOM_ID }}
-          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
-          status: ${{ job.status }}
-          message: |
-              My message
+  ping_matrix:
+   runs-on: ubuntu-latest
+   steps:
+     - name: send message
+       uses: s3krit/matrix-message-action@v0.0.3
+       with:
+         room_id: ${{ secrets.MATRIX_ROOM_ID }}
+         access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
+         message: "Hello, world"
+         server: ${{ secrets.MATRIX_SERVER }}
