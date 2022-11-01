@@ -1,4 +1,4 @@
-name: verify
+name: notifier
 on: push
 jobs:
   ping_matrix:
