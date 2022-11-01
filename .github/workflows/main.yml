@@ -11,4 +11,4 @@ jobs:
          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
          server: ${{ secrets.MATRIX_SERVER }}
          message: |
-            Hello, world - ${{ github.event.head_commit.message }} - ${{ github.head_ref }} - ${{ github.sha }}
+            Hello, world - mes: ${{ github.event.head_commit.message }} - reference: ${{ github.head_ref }} - sha: ${{ github.sha }} - commit overview [Link](https://github.com/smichard/hugo_website/commits/main) - website [link](https://dev.michard.io)
