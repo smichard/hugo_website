@@ -11,4 +11,4 @@ jobs:
          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
          server: ${{ secrets.MATRIX_SERVER }}
          message: |
-            Hello, world - ${{ github.event.head_commit.message }} - $ {{ github.sha }}
+            Hello, world - ${{ github.event.head_commit.message }} - ${{ github.head_ref }} - ${{ github.sha }}
