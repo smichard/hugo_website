@@ -2,4 +2,4 @@
 
 docker build -t site .  
 
-docker run -p 8080:80 site
+docker run -p 8080:8080 site
