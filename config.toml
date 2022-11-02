@@ -40,12 +40,6 @@ googleAnalytics = "UA-166794311-1"
     url = "/tags/"
     weight = 3
 
-  [[menu.main]]
-    name = "About"
-    identifier = 'about'
-    url = "/about"
-    weight = 4
-
 [params]
     since = 2012
     author = "Stephan Michard"               # Author's name
