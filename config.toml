@@ -9,7 +9,7 @@ paginate = 12
 enableEmoji = true
 enableRobotsTXT = true
 googleAnalytics = ""
-disqusShortname = "yourdiscussshortname"
+disqusShortname = "michard"
 
 [sitemap]
   changefreq = "monthly"
@@ -66,7 +66,8 @@ disqusShortname = "yourdiscussshortname"
     keywords = "" # site keywords
 
     license= 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
-
+    favicon = "static/favicon.ico"
+    
 [params.gravatar]
   #  email = "stephan.michard@gmail.com"   #uncomment and insert your email address to use gravatar
 
