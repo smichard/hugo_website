@@ -1,12 +1,17 @@
 # [START cloudbuild]
 steps:
+# This step fetchtes git submodulesbuilds.
 #- name: gcr.io/cloud-builders/git
 #  id: Git
-#  args: ['init']
+#  args: ['submodule', 'update', '--init', '--recursive']
 
 - name: gcr.io/cloud-builders/git
-  id: Git2
-  args: ['submodule', 'update', '--init', '--recursive']
+  id: Git
+  args:
+  - submodule'
+  - 'update'
+  - '--init'
+  - '--recursive'
 
 # This step builds the container image.
 - name: 'gcr.io/cloud-builders/docker'
