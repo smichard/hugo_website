@@ -9,7 +9,7 @@ paginate = 12
 enableEmoji = true
 enableRobotsTXT = true
 googleAnalytics = "UA-166794311-1"
-disqusShortname = "michard"
+#disqusShortname = "michard"
 
 [sitemap]
   changefreq = "monthly"
