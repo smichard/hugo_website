@@ -48,7 +48,6 @@ googleAnalytics = "UA-166794311-1"
 
   [[menu.main]]
     name = "Test"
-    identifier = 'test'
     url = "/test"
     weight = 5
 
