@@ -45,6 +45,11 @@ googleAnalytics = "UA-166794311-1"
     url = "/about"
     weight = 4
 
+  [[menu.main]]
+    name = "Test"
+    url = "/test"
+    weight = 5
+
 [params]
     since = 2012
     author = "Stephan Michard"               # Author's name

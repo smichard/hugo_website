@@ -1,10 +1,10 @@
----
-title: "About"
-date: 2022-10-28T20:11:39Z
-draft: false
-author: "Stephan Michard"
-tags: ["about-us","about-hugo","contact"]
----
++++
+title = "About"
+date = "2014-04-09"
+aliases = ["about-us","about-hugo","contact"]
+[ author ]
+  name = "Hugo Authors"
++++
 
 Hugo is the **world’s fastest framework for building websites**. It is written in Go.
 

@@ -5,7 +5,6 @@ draft: false
 author: "Stephan Michard"
 tags: ["about-us","about-hugo","contact"]
 menu: "main"
-weight: 50
 ---
 
 
