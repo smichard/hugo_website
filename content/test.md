@@ -4,8 +4,6 @@ date: 2022-10-28T20:11:39Z
 draft: false
 author: "Stephan Michard"
 tags: ["about-us","about-hugo","contact"]
-menu: "main"
-weight: 4
 ---
 
 Hugo is the **world’s fastest framework for building websites**. It is written in Go.

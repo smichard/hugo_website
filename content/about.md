@@ -4,6 +4,8 @@ date: 2022-11-02T20:34:39Z
 draft: false
 author: "Stephan Michard"
 tags: ["about-us","about-hugo","contact"]
+menu: "main"
+weight: 50
 ---
 
 
