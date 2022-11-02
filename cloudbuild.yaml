@@ -8,7 +8,7 @@ steps:
 - name: gcr.io/cloud-builders/git
   id: Git
   args:
-  - submodule'
+  - 'submodule'
   - 'update'
   - '--init'
   - '--recursive'
