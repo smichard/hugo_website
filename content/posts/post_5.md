@@ -8,7 +8,6 @@ tags: ["docker","gcp","hugo"]
 ---
 
 
-# hugo: build static site with Google Cloud Build
 I would like to automatically build a Docker container that displays the public files of a website created with the Hugo framework. Therefore I added the following Dockerfile to the root directory of the Hugo website:
 ```
 FROM klakegg/hugo:0.104.3-onbuild AS hugo
@@ -21,7 +20,7 @@ The idea of this multi-stage build is to create the website files on the fly and
 docker build -t hugo-local .
 docker run -d -p 8080:80 hugo-local
 ```
-
+# H2 - Title
 If I built the container with Google Cloud Build, the build process completes successfully. The files are also copied to the correct directory (`/usr/share/nginx/html`).
 
 ```
@@ -44,7 +43,7 @@ steps:
   - 'push'
   - 'eu.gcr.io/gcp-project/hugo-cloud'
 ```
-
+### H3 - Title
 However, instead of rendering the website, the default nginx welcome page is displayed:
 ```
 docker run -d -p 8080:80 hugo-cloud
