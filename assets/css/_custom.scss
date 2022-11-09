@@ -1,0 +1,26 @@
+h1.post-title,
+h1 {
+	color: #1DA1F2;
+}
+
+
+/* Tags */
+a.custom-cloud-links {
+	color: #FFF;
+	font-size: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+a.custom-cloud-links:hover {
+	color: #1DA1F2;
+	border:1px solid #1DA1F2;
+	border-radius: 10px;
+}
+
+/* Tags below Post */
+.post-warp {
+    .tag:not(:last-child) a::after {
+        content: " - ";
+    }
+}
