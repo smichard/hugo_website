@@ -9,21 +9,21 @@
         margin-top: 3em;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 0 2.5em;
-        line-height: 1.6em;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 10px;
+        line-height: 1 em;
 
         .card-item {
-            font-size: 14px;
-            text-align: left;
-            width: 45%;
+            font-size: 16px;
+            text-align: justify;
+            width: 100%;
             display: flex;
-            align-items: flex-start;
+            align-items: stretch;
             margin-top:2em;
-            min-height: 16em;
-            padding: 0 2%;
+            min-height: 2em;
+            padding: 15px 2%;
             position: relative;
 
             .categories{
@@ -38,7 +38,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        max-width: 95%;
+        max-width: 100%;
         &:hover {
             color: $light-global-link-hover-color;
             background-color: transparent;
