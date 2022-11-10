@@ -8,9 +8,10 @@ menu: "main"
 ---
 
 # hello world
-bladi, bladi, bla
+amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Quis ipsum suspendisse ultrices gravida dictum fusce. Cras adipiscing enim eu turpis egestas pretium. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Quam pellentesque nec nam aliquam sem et tortor.
+
 # whoami
-bladi, bladi, bla
+amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Quis ipsum suspendisse ultrices gravida dictum fusce. Cras adipiscing enim eu turpis egestas pretium. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Quam pellentesque nec nam aliquam sem et tortor.  
 Hugo is the **world’s fastest framework for building websites**. It is written in Go.
 
 It makes use of a variety of open source projects including:
