@@ -4,10 +4,10 @@ h1 {
 }
 
 
-/* Tags */
+/* Tags Page */
 a.custom-cloud-links {
 	color: #FFF;
-	font-size: 100%;
+	font-size: 1.2em;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -18,9 +18,60 @@ a.custom-cloud-links:hover {
 	border-radius: 10px;
 }
 
+/* Posts Page*/
+/* Text on Posts page*/
+.archive-item {
+	font-size: 14pt;
+}
+
 /* Tags below Post */
 .post-warp {
     .tag:not(:last-child) a::after {
         content: " - ";
     }
+}
+
+/* Text Size in General*/
+.post-warp p {
+	font-size: 1.2em;
+}
+
+/* code blocks */
+.prettyprint {
+	background: #69696A;
+}
+
+.dark-theme .post-warp .post-content code:not([class]):not([class]) {
+	box-shadow: none;
+	border: none;
+}
+
+li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9
+{
+	color: #FFF;
+	list-style-type: decimal;
+}
+li.L1, li.L3, li.L5, li.L7, li.L9 {
+	background: #69696A;
+}
+
+.post-warp .post-content code,
+.post-warp .post-content pre {
+	border-radius: 20px;
+}
+
+/* code tags */
+.pln,
+.tag,
+.atn,
+.atv,
+.dec,
+.com,
+.str,
+.typ,
+.lit,
+.kwd,
+.pun,
+{
+	color: #FFF;
 }
