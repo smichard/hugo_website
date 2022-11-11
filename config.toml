@@ -2,7 +2,7 @@ baseURL = "https://dev.michard.io/"
 languageCode = "en"
 defaultContentLanguage = "en"
 
-title = "My Personal Website"
+title = "Home"
 theme = "KeepIt"
 
 paginate = 12
@@ -43,7 +43,8 @@ googleAnalytics = "UA-166794311-1"
 [params]
     since = 2012
     author = "Stephan Michard"               # Author's name
-    subtitle = "A Hugo theme"       # Subtitle
+    subtitle = "Dr. Stephan Michard"       # Subtitle
+    tagline = "a collection of random thoughts" # tagline
     cdn_url = ""           # Base CDN URL
     home_mode = "" # post or other
     dateFormatToUse = "" # set date format, default "2 January 2006"
