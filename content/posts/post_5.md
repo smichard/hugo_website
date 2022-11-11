@@ -1,6 +1,6 @@
 ---
 title: "hugo: build static site with Google Cloud Build"
-date: 2022-10-29
+date: 2022-11-12T8:11:39Z
 draft: false
 author: "Stephan Michard"
 categories: ["cloud"]
