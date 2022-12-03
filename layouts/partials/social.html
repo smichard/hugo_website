@@ -1,11 +1,20 @@
 {{ with .Site.Params.Social.Twitter }}
 <a href="https://twitter.com/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-twitter"></i></a>
 {{ end }}
+{{ with .Site.Params.Social.PostNews }}
+<a href="https://post.news/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-mail"></i></a> 
+{{ end }}
 {{ with .Site.Params.Social.Instagram }}
 <a href="https://www.instagram.com/{{.}}/" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-instagram"></i></a> 
 {{ end }}
 {{ with .Site.Params.Social.Youtubecustom}}
 <a href="https://www.youtube.com/c/{{.}}" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-youtube"></i></a>
+{{ end }}
+{{ with .Site.Params.Social.Youtubechannel}}
+<a href="https://www.youtube.com/channel/{{.}}" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-youtube"></i></a>
+{{ end }}
+{{ with .Site.Params.Social.Email}}
+<a href="mailto:{{.}}" rel="me noopener noreffer"><i class="iconfont icon-mail" target="_blank"></i></a>
 {{ end }}
 {{ with .Site.Params.Social.Github }}
 <a href="https://github.com/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-github"></i></a>
@@ -15,8 +24,4 @@
 {{ end }}
 {{ with .Site.Params.Social.Strava}}
 <a href="https://www.strava.com/athletes/{{.}}" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-strava"></i></a>
-{{ end }}
-
-{{ with .Site.Params.Social.Thingiverse}}
-<a href="https://www.thingiverse.com/{{ . }}" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-matrix"></i></a>
 {{ end }}
