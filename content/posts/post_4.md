@@ -1,10 +1,10 @@
 ---
-title: "amet consectetur adipiscing elit sed do eiusmod tempor incididunt"
-date: 2022-10-28T20:11:39Z
+title: "Post 4"
+date: 2022-09-01
 draft: false
-author: "Stephan Michard"
-categories: ["cloud"]
-tags: ["docker","lab","kubernetes"]
+author: "author"
+categories: ["category-1"]
+tags: ["tag-3","tag-4","tag-6"]
 ---
 
 

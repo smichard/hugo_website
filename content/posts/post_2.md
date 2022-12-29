@@ -1,10 +1,10 @@
 ---
-title: "elit, sed do eiusmod tempor incididunt"
-date: 2022-10-27
+title: "Post 1"
+date: 2022-07-01
 draft: false
-author: "Stephan Michard"
-categories: ["Cloud"]
-tags: ["rancher","tanzu","kubernetes"]
+author: "author"
+categories: ["category-2"]
+tags: ["tag-3","tag-4","tag-5"]
 ---
 
 # Lorem ipsum dolor sit

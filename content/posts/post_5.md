@@ -1,56 +1,27 @@
 ---
-title: "hugo: build static site with Google Cloud Build"
-date: 2022-11-12T8:11:39Z
+title: "Post 5"
+date: 2022-10-01
 draft: false
-author: "Stephan Michard"
-categories: ["cloud"]
-tags: ["docker","gcp","hugo"]
+author: "author"
+categories: ["category-2"]
+tags: ["tag-1","tag-2","tag-3"]
 ---
 
+# Lorem ipsum dolor sit
+amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Quis ipsum suspendisse ultrices gravida dictum fusce. Cras adipiscing enim eu turpis egestas pretium. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Quam pellentesque nec nam aliquam sem et tortor.
+```
+docker exec -it bladi
+```
+Massa sed elementum tempus egestas sed sed risus pretium quam. Aenean vel elit scelerisque mauris pellentesque. Mollis nunc sed id semper risus. Odio morbi quis commodo odio aenean sed adipiscing. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Venenatis cras sed felis eget velit aliquet. Varius duis at consectetur lorem donec massa sapien.
 
-I would like to automatically build a Docker container that displays the public files of a website created with the Hugo framework. Therefore I added the following Dockerfile to the root directory of the Hugo website:
-```
-FROM klakegg/hugo:0.104.3-onbuild AS hugo
+# Amet dictum sit
+amet justo donec. Sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum. Nec feugiat in fermentum posuere urna nec. Fringilla est ullamcorper eget nulla. Porta nibh venenatis cras sed felis. Elit eget gravida cum sociis natoque penatibus et magnis dis. Id velit ut tortor pretium. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Nulla aliquet porttitor lacus luctus accumsan. Tristique sollicitudin nibh sit amet. Viverra orci sagittis eu volutpat odio. Ipsum consequat nisl vel pretium lectus quam id.
 
-FROM nginx
-COPY --from=hugo /target /usr/share/nginx/html
-```
-The idea of this multi-stage build is to create the website files on the fly and display the result using a nginx container. When I create the container locally on my Ubuntu 20.04 Linux PC and then run it, everything works as expected and the website is available at `localhost:8080`:
-```
-docker build -t hugo-local .
-docker run -d -p 8080:80 hugo-local
-```
-# H2 - Title
-If I built the container with Google Cloud Build, the build process completes successfully. The files are also copied to the correct directory (`/usr/share/nginx/html`).
+# Turpis massa sed
+elementum tempus egestas sed. Proin libero nunc consequat interdum. Fermentum iaculis eu non diam phasellus vestibulum lorem. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Fringilla ut morbi tincidunt augue. Quam adipiscing vitae proin sagittis nisl rhoncus. Volutpat consequat mauris nunc congue nisi. Varius morbi enim nunc faucibus. Amet facilisis magna etiam tempor orci eu lobortis elementum nibh. Ut tristique et egestas quis ipsum suspendisse ultrices. Erat velit scelerisque in dictum non consectetur.
 
-```
-steps:
-# This step builds the container image.
-- name: 'gcr.io/cloud-builders/docker'
-  id: Build
-  args:
-  - 'build'
-  - '-t'
-  - 'eu.gcr.io/gcp-project/hugo-cloud:$BUILD_ID'
-  - '.'
+# Risus viverra adipiscing
+at in *tellus* integer feugiat. Arcu bibendum at varius vel pharetra vel turpis. Nibh sit amet commodo nulla facilisi **nullam**. Urna molestie at elementum eu facilisis sed odio. Varius duis at consectetur lorem donec. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Vitae congue mauris rhoncus aenean. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Sit amet aliquam id diam maecenas ultricies. Senectus et netus et malesuada fames ac turpis egestas sed. Consequat interdum varius sit amet mattis vulputate. Risus in hendrerit gravida rutrum quisque.
 
-# This step pushes the image to Container Registry
-# The PROJECT_ID and SHORT_SHA variables are automatically
-# replaced by Cloud Build.
-- name: 'gcr.io/cloud-builders/docker'
-  id: Push
-  args:
-  - 'push'
-  - 'eu.gcr.io/gcp-project/hugo-cloud'
-```
-### H3 - Title
-However, instead of rendering the website, the default nginx welcome page is displayed:
-```
-docker run -d -p 8080:80 hugo-cloud
-```
-![](/images/posts/nginx.png)
-
-# Questions
-What am I doing wrong? Any ideas? Feedback highly appreciated.
-
-I tried various base images, various environments.
+# Sed adipiscing diam donec
+adipiscing **tristique** risus nec feugiat. Eget lorem dolor sed viverra ipsum nunc aliquet. Magna sit amet purus gravida quis. Magna eget est lorem ipsum dolor. Et ~malesuada fames ac turpis~ egestas maecenas pharetra convallis. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Fermentum odio eu feugiat pretium nibh ipsum. Aliquam ultrices sagittis orci a scelerisque purus semper eget duis. Ultricies leo integer malesuada nunc vel risus commodo. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Egestas congue quisque egestas diam in arcu cursus. Id velit ut tortor pretium viverra suspendisse. Enim praesent elementum facilisis leo vel fringilla est ullamcorper eget.

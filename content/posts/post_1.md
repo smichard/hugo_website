@@ -1,10 +1,10 @@
 ---
 title: "Post 1"
-date: 2022-10-28
+date: 2022-06-01
 draft: false
-author: "Stephan Michard"
-categories: ["Cloud"]
-tags: ["docker","traefik","rancher"]
+author: "author"
+categories: ["category-1"]
+tags: ["tag-1","tag-2","tag-3"]
 ---
 
 # Lorem ipsum dolor sit
