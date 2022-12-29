@@ -1,4 +1,4 @@
-baseURL = "https://dev.michard.io/"
+baseURL = "https://stephan.michard.io/"
 languageCode = "en"
 defaultContentLanguage = "en"
 
@@ -45,6 +45,7 @@ googleAnalytics = "UA-166794311-1"
     author = "Stephan Michard"               # Author's name
     subtitle = "Dr. Stephan Michard"       # Subtitle
     tagline = "a collection of random thoughts" # tagline
+    headtitle = "vCard - Stephan Michard" #website title for header
     cdn_url = ""           # Base CDN URL
     home_mode = "" # post or other
     dateFormatToUse = "" # set date format, default "2 January 2006"
