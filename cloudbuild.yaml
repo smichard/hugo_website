@@ -1,6 +1,6 @@
 # [START cloudbuild]
 steps:
-# This step fetchtes git submodulesbuilds.
+# This step fetches git submodulesbuilds.
 - name: gcr.io/cloud-builders/git
   id: Git
   args:
