@@ -2,7 +2,7 @@
 title: "Workflow to publish a personal website automatically on Google Cloud Run"
 date: 2022-06-01
 draft: true
-author: "author"
+author: "Stephan Michard"
 categories: ["Google Cloud"]
 tags: ["Hugo","Cloud Run","Cloud Build"]
 ---
