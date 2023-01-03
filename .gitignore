@@ -5,3 +5,5 @@ ci/
 /public/
 /public/*
 /resources/_gen/
+changes.md
+/changes
