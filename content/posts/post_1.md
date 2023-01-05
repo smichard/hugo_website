@@ -24,8 +24,7 @@ Being a big fan of Google Cloud Platform, I wanted to use Google Cloud Build and
 # How it's all connected
 In the following section I am going to describe how the tools work together to enable the workflow to publish the website easily and automatically. The source code for a sample website is hosted on GitHub - [link](https://github.com/smichard/boilerplates/tree/main/hugo_blog).
 
-## Hugo
-**Hugo basics**  
+## Hugo basics
 A comprehensive introduction to the Hugo framework is beyond the scope of this post. Therefore, only the essential aspects will be presented here.  
 Once Hugo is installed on the PC, a new website can be created with the following command. This command creates the required structure and all essential files:
 ```
@@ -50,7 +49,7 @@ If the web page is to be published, the following command can be executed. In th
 hugo
 ```
 
-**Leveraging container technology**  
+## Leveraging container technology
 To ensure the portability of the website, a container image is generated in the workflow. The following Dockerfile is used for this purpose:
 ```
 FROM klakegg/hugo:0.105.0-ext-alpine-onbuild AS hugo
@@ -85,7 +84,7 @@ docker build -t <image_name> .
 docker run -d -p 8080:8080 <image_name>
 ```
 
-**Leveraging Google Cloud Builds and Google Cloud Run**  
+## Leveraging Google Cloud Builds and Google Cloud Run
 The last section described why container technology is used and how the final container image can be generated locally. In this section, it is described how the final image can be generated leveraging Google Cloud Build. In order to use Google Cloud Build a `cloudbuild.yaml` configuration file is required. This file defines several steps of the total build pipeline, the individual steps are executed one after the other. Using a `cloudbuild.yaml` file allows to define the complete build process in a declarative way, making it easy to repeat and automate the build and the deployment process.  
 The content of the `cloudbuild.yaml` is as follows:
 ```
@@ -142,7 +141,7 @@ In the last step Google Cloud Run automatically generates a URL where the web pa
 {{< figure src="/images/posts/mapping.png" title="Mapping a custom domain to the Google Cloud Run service" >}}
 
 
-**Connecting GitHub and Google Cloud Builds**  
+## Connecting GitHub and Google Cloud Builds  
 This section focuses on the missing element that completes the workflow by connecting GitHub with Google Cloud Build.  
 To do this, a trigger must be set up in the Google Cloud Console at the Google Build Service. A name must be selected for this trigger, then it must be defined which event should activate this trigger. For the given case, the option *Push to branch* is selected here. Under Source, the GitHub repository and the branch can be selected. Finally, the reference to the `cloudbuild.yaml` file must be created.
 {{< figure src="/images/posts/trigger.png" title="Creating a trigger to automatically deploy the website on each git commit" >}}
