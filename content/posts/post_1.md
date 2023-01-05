@@ -136,25 +136,20 @@ The individual steps are described below:
 4. the fourth deploys the created container image to Google Cloud Run. The container is launched in a managed Kubernetes cluster. In this step the container image is referenced, a name is used which in this case is `hugo-website`, finally the region in which the container is to be started is specified and since this is to be a publicly accessible website, it is defined that users do not have to authenticate themselves.
 
 In the last step Google Cloud Run automatically generates a URL where the web page can be accessed. Using the *Manage Custom Domain* function and then *Add Mapping* in the Google Cloud Console, a custom domain can be linked to the Google Cloud Run service. To do this, the domain must be verified once with Google Cloud. To use a specific subdomain, a CNAME entry must then be set to *ghs.googlehosted.com* at the domain provider.
-| ![mapping](/images/posts/mapping.png 'Yellow Duck') |
-| :--: |
-| Mapping a custom domain to the Google Cloud Run service |
+{{< figure src="/images/posts/mapping.png" title="Mapping a custom domain to the Google Cloud Run service" >}}
+
 
 **Connecting GitHub and Google Cloud Builds**  
 This section focuses on the missing element that completes the workflow by connecting GitHub with Google Cloud Build.  
 To do this, a trigger must be set up in the Google Cloud Console at the Google Build Service. A name must be selected for this trigger, then it must be defined which event should activate this trigger. For the given case, the option *Push to branch* is selected here. Under Source, the GitHub repository and the branch can be selected. Finally, the reference to the `cloudbuild.yaml` file must be created.
-| ![trigger 1](/images/posts/trigger.png 'Yellow Duck') |
-| :--: |
-| Creating a trigger to automatically deploy the website on each *git commit* |  
+{{< figure src="/images/posts/trigger.png" title="Creating a trigger to automatically deploy the website on each git commit" >}}
 
 This completes the workflow. Now with each *git commit* towards the *GitHub* repository, the Google Cloud Build process is triggered, which creates the container image and then deploys the container to Google Cloud Run.
 
 
 
 # Summary
-| ![summary](/images/posts/summary.png 'Yellow Duck') |
-| :--: |
-| Presentation of the complete workflow |  
+{{< figure src="/images/posts/summary.png" title="Presentation of the complete workflow" >}}
 
 In this post, I describe the workflow I use to publish this website. For me it is the ideal workflow. I like the high degree of automation which allows me to publish fast and effortlessly. Maintaining this workflow requires negligible effort and running the workflow and the website is very cost-efficient.
 
