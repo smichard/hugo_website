@@ -29,10 +29,11 @@ tags: []
 {{< /calendly >}}
 
 # Download File
-[Download](/documents/test.pdf)
+[Download](/images/posts/test_image.jpg)
 
 # Figure
-{{< figure src="/images/posts/mapping.png" title="Caption" >}}
+{{< figure src="/images/posts/test_image.jpg" title="Caption" >}}
+
 
 # Notice
 {{< notice note >}}
