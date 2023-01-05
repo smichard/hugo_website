@@ -3,7 +3,7 @@ languageCode = "en"
 defaultContentLanguage = "en"
 
 title = "Home"
-theme = "KeepIt"
+theme = ["hugo-notice", "KeepIt"]
 
 paginate = 12
 enableEmoji = true
@@ -66,7 +66,7 @@ googleAnalytics = "UA-166794311-1"
     favicon = "static/favicon.ico"
     
 [params.gravatar]
-  #  email = "stephan.michard@gmail.com"   #uncomment and insert your email address to use gravatar
+  #  email = ""   #uncomment and insert your email address to use gravatar
 
 
 [params.social]
