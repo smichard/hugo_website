@@ -192,3 +192,8 @@ clientSecret = "" # Your client secret
     repo = ""               # The repo to store comments
     clientId = ""           # Your client ID
     clientSecret = ""       # Your client secret
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 6
