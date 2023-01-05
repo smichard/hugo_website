@@ -7,6 +7,7 @@ categories: []
 tags: []
 ---
 
+{{< toc >}}
 
 # Tweet
 {{< tweet 917359331535966209 >}}
@@ -51,3 +52,4 @@ This is a warning notice. Be warned!
 {{< notice info >}}
 This is a very good tip.
 {{< /notice >}}
+

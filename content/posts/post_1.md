@@ -7,6 +7,8 @@ categories: ["Google Cloud"]
 tags: ["Hugo","Cloud Run","Cloud Build"]
 ---
 
+{{< toc >}}  
+
 # Introduction
 In this first blog post I want to describe the workflow and the tools I use to operate this website and how I publish new content. My focus with this workflow is that I want to be able to publish new posts very quickly. Furthermore, the maintenance should be effortlessly and I want to minimize the dependence to a hosting provider. Last but not least, the website should be very cost efficient to run.
 
@@ -19,9 +21,10 @@ Being a big fan of Google Cloud Platform, I wanted to use Google Cloud Build and
 - Google Cloud Run - to run the container
 
 
-# How it all works together
+# How it's all connected
 In the following section I am going to describe how the tools work together to enable the workflow to publish the website easily and automatically. The source code for a sample website is hosted on GitHub - [link](https://github.com/smichard/boilerplates/tree/main/hugo_blog).
 
+## Hugo
 **Hugo basics**  
 A comprehensive introduction to the Hugo framework is beyond the scope of this post. Therefore, only the essential aspects will be presented here.  
 Once Hugo is installed on the PC, a new website can be created with the following command. This command creates the required structure and all essential files:
