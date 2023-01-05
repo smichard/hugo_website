@@ -11,7 +11,30 @@ h3.tagline {
 	font-size: 1.2em;
 	font-weight: 400;
 	margin-bottom: 25px;
+	display: inline-block;
+
+	 /*animation for tagline */
+	width: 27ch;
+	animation: typing 3s steps(27), blink .5s step-end infinite alternate;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 3px solid;
 }
+
+ /*animation for tagline */
+@keyframes typing {
+	from {
+	  width: 0
+	}
+  }
+
+ /*animation for tagline */
+  @keyframes blink {
+	50% {
+	  border-color: transparent
+	}
+  }
+
 
 /* Navbar */
 .navbar {
@@ -55,10 +78,19 @@ li {
 	font-size: 1.2em;
 }
 
+/* figcaption */
+figcaption {
+	color: white;
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 2em;
+}
+
 /* code blocks */
 .prettyprint {
 	/* background: #69696A;*/
-	background: #0d3042;
+	/* background: #0d3042 0f4058;*/
+	background: #115679;
 }
 
 .dark-theme .post-warp .post-content code:not([class]):not([class]) {
@@ -72,12 +104,12 @@ li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9
 	list-style-type: decimal;
 }
 li.L1, li.L3, li.L5, li.L7, li.L9 {
-	background: #0d3042;
+	background: #115679;
 }
 
 .post-warp .post-content code,
 .post-warp .post-content pre {
-	border-radius: 20px;
+	border-radius: 10px;
 }
 
 /* code tags */
