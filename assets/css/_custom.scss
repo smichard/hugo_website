@@ -89,12 +89,12 @@ figcaption {
 }
 
 /* Table of Content */
-.my_toc * {
-	font-size: 1.2em;
+/*.my_toc a, .my_toc * {
+	font-size: 1.2em !important;
 	font-weight: 400;
 	line-height: 2em;
-	color: red;
-}
+	color: red !important;
+}*/
 
 /* code blocks */
 .prettyprint {
