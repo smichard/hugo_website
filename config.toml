@@ -22,7 +22,7 @@ googleAnalytics = "UA-166794311-1"
   noreferrerLinks = true
 
 [Permalinks]
- posts = "/:year/:filename/"
+ posts = "/:year/:title/"
 
 [menu]
   [[menu.main]]
