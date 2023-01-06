@@ -1,14 +1,12 @@
 ---
 title: "Website setup and workflow"
-date: 2022-06-01
+date: 2023-01-06
 draft: false
 author: "Stephan Michard"
 categories: ["Google Cloud"]
 tags: ["Hugo","Cloud Run","Cloud Build", "Google Cloud"]
 ---
-
-{{< toc >}}  
-
+ 
 # Introduction
 In this first blog post I want to describe the workflow and the tools I use to operate this website and how I publish new content. My focus with this workflow is that I want to be able to publish new posts very quickly. Furthermore, the maintenance should be effortlessly and I want to minimize the dependence to a hosting provider. Last but not least, the website should be very cost efficient to run.
 
