@@ -1,5 +1,5 @@
 ---
-title: "Workflow to publish a personal website automatically on Google Cloud Run"
+title: "Website setup and workflow"
 date: 2022-06-01
 draft: true
 author: "Stephan Michard"
@@ -147,7 +147,6 @@ To do this, a trigger must be set up in the Google Cloud Console at the Google B
 {{< figure src="/images/posts/trigger.png" title="Creating a trigger to automatically deploy the website on each git commit" >}}
 
 This completes the workflow. Now with each *git commit* towards the *GitHub* repository, the Google Cloud Build process is triggered, which creates the container image and then deploys the container to Google Cloud Run.
-
 
 
 # Summary
