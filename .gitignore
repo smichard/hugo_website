@@ -5,6 +5,4 @@ ci/
 /public/
 /public/*
 /resources/_gen/
-changes.md
-/changes
-changes.pdf
+/resources/_gen/*
