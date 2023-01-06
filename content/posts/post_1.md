@@ -1,10 +1,10 @@
 ---
 title: "Website setup and workflow"
 date: 2022-06-01
-draft: true
+draft: false
 author: "Stephan Michard"
 categories: ["Google Cloud"]
-tags: ["Hugo","Cloud Run","Cloud Build"]
+tags: ["Hugo","Cloud Run","Cloud Build", "Google Cloud"]
 ---
 
 {{< toc >}}  
