@@ -1,7 +1,7 @@
 ---
 title: "Post 4"
 date: 2022-09-01
-draft: false
+draft: true
 author: "author"
 categories: ["category-1"]
 tags: ["tag-3","tag-4","tag-6"]
