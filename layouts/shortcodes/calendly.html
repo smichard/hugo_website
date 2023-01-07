@@ -29,7 +29,7 @@
         {{ end }}
         {{/*  add popup link  */}}
         {{ $onClickSnippet := print "Calendly.initPopupWidget({url: '" $calendarUrl "'});return false;" }}
-        <a href="" onclick={{ $onClickSnippet | safeJS }}>{{ $scheduleText }}</a>
+        <a href="" class="custom-calendly" onclick={{ $onClickSnippet | safeJS }}>{{ $scheduleText }}</a>
     {{ else }}
         {{ errorf "Invalid type parameter (%q) for calendly shortcode in page %q - supported types are: '%s'. %s" $type $.Page.File (delimit $allowedTypes "', '") $helpAppend }}
     {{ end }}
