@@ -24,6 +24,11 @@
         </div>
     </header>
     <div class="post-content">
+        <!-- ft-adjustment: adding the Table of Content (ToC) partial for small screens
+        The ToC is displayed only if the toc.enable parameter is set-->
+
+        {{ partial "toc_small.html" . }}
+
         <!--featured_image-->
 
         {{ $images := findRE "<img src=\"[^\"|\\\"]*\"" .Content -}}
@@ -109,3 +114,6 @@
 </article>
 {{- end }}
 
+{{ define "toc" -}}
+    {{ partial "toc_large.html" . }}
+{{- end }}

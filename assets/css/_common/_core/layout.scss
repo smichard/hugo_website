@@ -1,8 +1,8 @@
-  /** Layout **/
+  /** ft-adjustment: this file is created to override the  KeepIt theme's layout.css file**/
   main {
-    // this is done to show the ToC on pages where it is required
-    // Doesn't imact pages where ToC is not required
-    display: block
+    /*ft-adjustment: this style is required to show the ToC on pages where it is required
+   Doesn't imact pages where ToC is not required */
+    display: block;
   }
   .wrapper {
     display: flex;

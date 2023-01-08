@@ -1,0 +1,55 @@
+{{ if .Params.toc.enable }}
+<!-- ft-adjustment: adding the ToC (Table of content) for large screens -->
+<aside class="hidden lg:block tableOfContentContainer" id="tableOfContentContainer">
+    <h3>Table of contents</h3>
+    {{ .TableOfContents }}
+</aside>
+
+<script>
+    // ft-adjustment: Script to change color of links in wide screen
+    //  Table of Content as the visitor scrolls the page
+    window.addEventListener('DOMContentLoaded', () => {
+        
+        const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+
+                if (entry.intersectionRatio > 0) {
+                    clearActiveStatesInTableOfContents();
+                    document.querySelector(`aside nav li a[href="#${id}"]`).parentElement.classList.add('active');
+                }
+            });
+        });
+
+        
+        document.querySelectorAll('h1[id],h2[id],h3[id],h4[id]').forEach((section) => {
+            observerForTableOfContentActiveState.observe(section);
+        });
+
+    });
+
+    function clearActiveStatesInTableOfContents() {
+        document.querySelectorAll('aside nav li').forEach((section) => {
+            section.classList.remove('active');
+        });
+    }
+
+    // ft-adjustment: collapsible ToC on small screens
+    var expandBtn = document.querySelectorAll('.expand__button');
+
+    for (let i = 0; i < expandBtn.length; i++) {
+    expandBtn[i].addEventListener("click", function () {
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        this.querySelector('svg').classList.add('expand-icon__right');
+        this.querySelector('svg').classList.remove('expand-icon__down');
+        } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        this.querySelector('svg').classList.remove('expand-icon__right');
+        this.querySelector('svg').classList.add('expand-icon__down');
+        }
+    });
+}
+</script>
+{{- end }}
