@@ -254,7 +254,7 @@ on screens having min-width of 1024px
     .lg\:hidden {
 		display: none
 	}
-    main {
+    main.single__main {
         display: grid;
         grid-template-columns: 100% 12em;
         width: 80%;
@@ -285,7 +285,6 @@ on screens having min-width of 1024px
         color: #1a202c;
         li {
             padding-top: .25rem;
-            padding-bottom: .25rem;
             list-style: none;
             font-size: 1em;
             &.active {
