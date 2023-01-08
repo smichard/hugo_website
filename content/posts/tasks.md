@@ -1,7 +1,7 @@
 ---
 title: "Tasks"
 date: 2023-01-04T21:55:58Z
-draft: true
+draft: false
 author: "Stephan Michard"
 categories: []
 tags: []
