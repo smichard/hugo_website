@@ -5,7 +5,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: sleep
-       run: sleep 30
+       run: sleep 5
      - name: send message
        uses: s3krit/matrix-message-action@v0.0.3
        with:
