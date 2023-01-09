@@ -1,55 +1,90 @@
 {{ if .Params.toc.enable }}
 <!-- ft-adjustment: adding the ToC (Table of content) for large screens -->
-<aside class="hidden lg:block tableOfContentContainer" id="tableOfContentContainer">
-    <h3>Table of contents</h3>
-    {{ .TableOfContents }}
+<aside
+  class="hidden lg:block tableOfContentContainer"
+  id="tableOfContentContainer"
+>
+  <h3>Table of contents</h3>
+  {{ .TableOfContents }}
 </aside>
 
 <script>
-    // ft-adjustment: Script to change color of links in wide screen
-    //  Table of Content as the visitor scrolls the page
-    window.addEventListener('DOMContentLoaded', () => {
-        
-        const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                const id = entry.target.getAttribute('id');
-
-                if (entry.intersectionRatio > 0) {
-                    clearActiveStatesInTableOfContents();
-                    document.querySelector(`aside nav li a[href="#${id}"]`).parentElement.classList.add('active');
-                }
-            });
-        });
-
-        
-        document.querySelectorAll('h1[id],h2[id],h3[id],h4[id]').forEach((section) => {
-            observerForTableOfContentActiveState.observe(section);
-        });
-
-    });
-
-    function clearActiveStatesInTableOfContents() {
-        document.querySelectorAll('aside nav li').forEach((section) => {
-            section.classList.remove('active');
-        });
-    }
-
-    // ft-adjustment: collapsible ToC on small screens
-    var expandBtn = document.querySelectorAll('.expand__button');
-
-    for (let i = 0; i < expandBtn.length; i++) {
-    expandBtn[i].addEventListener("click", function () {
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-        this.querySelector('svg').classList.add('expand-icon__right');
-        this.querySelector('svg').classList.remove('expand-icon__down');
-        } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-        this.querySelector('svg').classList.remove('expand-icon__right');
-        this.querySelector('svg').classList.add('expand-icon__down');
+  // ft-adjustment: Script to change color of links in wide screen
+  //  Table of Content as the visitor scrolls the page
+  window.addEventListener("DOMContentLoaded", () => {
+    const tableContentLinks = document.querySelectorAll("aside #TableOfContents a");
+    tableContentLinks[0].parentElement.classList.add('active');
+    tableContentLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (!link.parentElement.className.includes("active")) {
+          document
+            .querySelectorAll("li")
+            .forEach((li) => li.classList.remove("active"));
+          link.parentElement.classList.add("active");
+          window.scrollTo(
+            0,
+            document.getElementById(link.getAttribute("href").replace("#", ""))
+              .offsetTop -
+              window.innerHeight / 4
+          );
         }
+      });
     });
-}
+
+     const tableContentHeaders = document.querySelectorAll(
+    "h1,h2,h3,h4,h5,h6"
+  );
+  let current;
+  window.addEventListener("scroll", () => {
+    tableContentHeaders.forEach((header) => {
+      if (
+        header.textContent !== "Table of contents" &&
+        window.pageYOffset >= header.offsetTop - window.innerHeight / 3
+      ) {
+        current = header;
+        document.querySelectorAll("aside li").forEach((li) => {
+          if (li.children[0].getAttribute("href") !== current.id)
+            li.classList.remove("active");
+        });
+        document
+          .querySelector(`aside a[href="#${current.id}"]`)
+          ?.parentElement.classList.add("active");
+        document
+          .querySelector("aside nav")
+          .scrollTo(
+            0,
+            document.querySelector(`aside a[href="#${current.id}"]`)
+              ?.parentElement.offsetTop - 50
+          );
+      }
+    });
+  });
+
+  });
+
+  function clearActiveStatesInTableOfContents() {
+    document.querySelectorAll("aside nav li").forEach((section) => {
+      section.classList.remove("active");
+    });
+  }
+
+  // ft-adjustment: collapsible ToC on small screens
+  var expandBtn = document.querySelectorAll(".expand__button");
+
+  for (let i = 0; i < expandBtn.length; i++) {
+    expandBtn[i].addEventListener("click", function () {
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        this.querySelector("svg").classList.add("expand-icon__right");
+        this.querySelector("svg").classList.remove("expand-icon__down");
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        this.querySelector("svg").classList.remove("expand-icon__right");
+        this.querySelector("svg").classList.add("expand-icon__down");
+      }
+    });
+  }
 </script>
 {{- end }}
