@@ -5,7 +5,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: sleep
-       run: sleep 30
+       run: sleep 35
      - name: send message
        uses: s3krit/matrix-message-action@v0.0.3
        with:
@@ -18,4 +18,4 @@ jobs:
             contributor: **${{ github.event.commits[0].author.name }}** <br />
             commit sha: **${{ github.sha }}** <br />
             commit history: **[link](https://github.com/smichard/hugo_website/commits/main)** <br />
-            project website: **[dev.michard.io](https://dev.michard.io)**
+            project website: **[stephan.michard.io](https://stephan.michard.io)**
