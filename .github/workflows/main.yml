@@ -5,7 +5,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: sleep
-       run: sleep 5
+       run: sleep 35
      - name: send message
        uses: s3krit/matrix-message-action@v0.0.3
        with:
@@ -13,7 +13,7 @@ jobs:
          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
          server: ${{ secrets.MATRIX_SERVER }}
          message: |
-            new code commit pushed to repository - test: **${{ github.event.repository.name }}** <br />
+            new code commit pushed to repository: **${{ github.event.repository.name }}** <br />
             commit message: **${{ github.event.head_commit.message }}** <br />
             contributor: **${{ github.event.commits[0].author.name }}** <br />
             commit sha: **${{ github.sha }}** <br />
