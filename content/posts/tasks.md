@@ -161,6 +161,9 @@ An attachements link should be added. Instead of opening the file in the browser
 [Download 1](/images/posts/test_image.jpg)
 [Download 2](/images/posts/test_doc.pdf)
 
+{{< download file="/images/posts/test_doc.pdf" title="Download pdf" >}}
+{{< download file="/images/posts/test_image.jpg" >}}
+
 # Bonus: Implement nicely looking Blockquote and
 
 I saw in your proposal, that you implemented a blockquote and alerts. If you have time left, please implement it here aswell:

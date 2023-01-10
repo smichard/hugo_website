@@ -7,8 +7,6 @@ categories: []
 tags: []
 ---
 
-{{< toc >}}
-
 # New Hugo Post
 ```
 hugo new posts/my-first-post.md
