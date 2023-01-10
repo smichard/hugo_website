@@ -121,6 +121,16 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 	border-radius: 10px;
 }
 
+.wrapper_download_left{
+
+}
+
+.wrapper_download_center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /* code tags */
 .pln,
 .tag,
