@@ -4,11 +4,9 @@
   <body class="dark-theme">
     <div class="wrapper">
         {{ partial "header.html" . }}
-    	 <main class="main">
-          <div class="container">
+
       		{{ block "content" . }}{{ end }}
-          </div>
-		   </main>
+
       {{ partial "footer.html" . }}
      </div>
   </body>
