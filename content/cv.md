@@ -38,8 +38,8 @@ The last years I have received various awards, here is an extract:
 - Top Newcomer Award Q2 2015
 
 # Curriculum Vitae
-Please find below my current CV. Feel free to download:  
-[Download](/documents/CV_Stephan_Michard.pdf)
+Please find below my current CV.  
+{{< download file="/documents/CV_Stephan_Michard.pdf" title="Download my CV" >}}  
 
 # Let's talk
 With the content on this website you got an impression about me. If you think it makes sense to talk I look forward to an interaction, you can find my Calendly link here:  

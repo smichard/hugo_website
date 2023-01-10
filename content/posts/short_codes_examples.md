@@ -30,7 +30,15 @@ hugo new posts/my-first-post.md
 {{< /calendly >}}
 
 # Download File
-[Download](/images/posts/test_image.jpg)
+
+## Standard
+{{< download file="/images/posts/test_image.jpg" >}}
+
+## Adjust title
+{{< download file="/images/posts/test_doc.pdf" title="Download pdf" >}}
+
+## Adjust title and center on page
+{{< download file="/images/posts/test_image.jpg" title="Download image" class="wrapper_download_center" >}}  
 
 # Figure
 {{< figure src="/images/posts/test_image.jpg" title="Caption" >}}
