@@ -85,10 +85,21 @@ I like this implementation:
 
 ```bash
 #!/bin/sh
-
 docker build --no-cache --force-rm -t site .
-
 docker run -p 8080:8080 site
+
+echo Some text to print out 
+cat file
+a=10
+b=$a
+let a+=10
+ls
+mkdir dir  
+mkdir -p dir_root/{dir_b}/{dir_l1,dir_l2} 
+cd dir_root
+cd "dir name"
+cd ~
+cp file $output
 ```
 
 ### HTML
