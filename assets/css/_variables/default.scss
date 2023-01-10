@@ -49,3 +49,16 @@ $dark-side-toc-links-color: #a0aec0;
 $dark-side-toc-link-active-color: #6eb5e0;
 $dark-side-toc-link-hover-color: #666;
 
+/* ft-adjustment: colors for collapsible ToC
+
+The collapsible ToC has 2 parts: the header and the body
+THe header is shown by default but the body is shown only when the header is clicked (expanded)
+
+In the following lines 'bg' refers to background
+
+*/
+
+$dark-collapsible-toc-header-title: white;
+$dark-collapsible-toc-header-bg: #051315;
+$dark-collapsible-toc-body-text: white;
+$dark-collapsible-toc-body-bg: #115679;
