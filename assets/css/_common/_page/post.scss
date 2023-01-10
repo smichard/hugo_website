@@ -274,8 +274,6 @@
       padding-left: 0.5rem;
       padding-bottom: 1rem;
       font-size: 1rem;
-      height: 550px;
-      overflow-y: scroll;
       li {
         padding-top: 0.25rem;
         list-style: none;
@@ -288,7 +286,7 @@
             width: 20px;
           }
           & > a {
-            color: $dark-large-toc-link-active-color;
+            color: $dark-side-toc-link-active-color;
             font-weight: 500;
           }
         }
@@ -301,7 +299,7 @@
       a {
         text-decoration: none;
         padding: 0.125rem 0;
-        color: $dark-large-toc-links-color;
+        color: $dark-side-toc-links-color;
         -webkit-transition: all 50ms ease-in-out;
         transition: all 50ms ease-in-out;
       }
@@ -310,7 +308,7 @@
     #TableOfContents a:hover,
     #TableOfContents a:focus,
     #TableOfContents a:active {
-      color: $dark-large-toc-link-hover-color;
+      color: $dark-side-toc-link-hover-color;
     }
   }
   
@@ -319,20 +317,6 @@
     border-radius: 10px;
   }
   
-  #TableOfContents::-webkit-scrollbar-track {
-    background: $dark-large-toc-scrollbar-track-bg;
-    border-radius: 10px;
-  }
-  
-  #TableOfContents::-webkit-scrollbar-thumb {
-    background: $dark-large-toc-scrollbar-thumb-bg;
-    border-radius: 10px;
-  }
-  
-  #TableOfContents::-webkit-scrollbar-thumb:hover {
-    background: $dark-large-toc-scrollbar-thumb-hover;
-    border-radius: 10px;
-  }
   
   
   /***** End large screen ToC CSS *****/
