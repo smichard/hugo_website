@@ -526,3 +526,83 @@
 }
 
 /***** 4. end code copy button CSS *****/
+
+
+
+.collapsable-code {
+	position: relative;
+	width: 100%;
+	margin: 40px 0;
+	input[type="checkbox"] {
+		position: absolute;
+		visibility: hidden;
+		&:checked ~ .code-toolbar pre, &:checked ~ pre {
+			height: 0;
+			padding: 0;
+			border-top: none;
+		}
+		&:checked ~ .code-toolbar {
+			padding: 0;
+			border-top: none;
+			.toolbar {
+				display: none;
+			}
+		}
+		&:checked ~ label {
+			border-radius: 10px;
+		}
+	}
+	&input[type="checkbox"]:checked
+     ~ label
+     .collapsable-code__toggle:after {
+		content: attr(data-label-expand);
+	}
+	label {
+		font-weight: normal;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		background: $var1;
+		padding: 10px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		min-width: 30px;
+		min-height: 30px;
+		margin: 0;
+		cursor: pointer;
+	}
+	&__title {
+		color: $var2;
+		padding: 3px 10px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	&__language {
+		font-size: 15px;
+		background: $var3;
+		color: $var4;
+		border-radius: 7px;
+		padding: 3px 10px;
+		align-self: center;
+	}
+	&__toggle {
+		color: $var5;
+		font-size: 16px;
+		padding: 3px 10px;
+		&:after {
+			content: attr(data-label-collapse);
+		}
+	}
+	pre {
+		margin-top: 0;
+		border-top-left-radius: 0 !important;
+		border-top-right-radius: 0 !important;
+	}
+	code:first-line, pre:first-line {
+		line-height: 0;
+	}
+	.code-toolbar {
+		margin: 0;
+	}
+}

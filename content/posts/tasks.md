@@ -81,9 +81,32 @@ I like this implementation:
 
 ## Testing code blocks
 
+### Collapsible code blocks
+
+{{< collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="false" lineNos="true">}}
+pre {
+     background: #1a1a1d;
+     padding: 20px;
+     border-radius: 8px;
+     font-size: 1rem;
+     overflow: auto;
+     @media (--phone) {
+         white-space: pre-wrap;
+         word-wrap: break-word;
+    }
+     code {
+         background: none !important;
+         color: #ccc;
+         padding: 0;
+         font-size: inherit !important;
+    }
+}
+{{< /collapsible-code >}}
+
+
 ### bash
 
-```bash
+```bash {linenos=table}
 #!/bin/sh
 docker build --no-cache --force-rm -t site .
 docker run -p 8080:8080 site
