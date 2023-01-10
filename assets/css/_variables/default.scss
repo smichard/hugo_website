@@ -40,13 +40,36 @@ $dark-pagination-link-active-color: #1DA1F2;
 
 $dark-border-color: #4a4b50;
 
-/* ft-adjustment: new colors for new components*/
 
-$dark-large-toc-heading-color: #002538;
-$dark-large-toc-links-color: #a0aec0;
-$dark-large-toc-link-active-color: #6eb5e0;
-$dark-large-toc-link-hover-color: #666;
-$dark-large-toc-scrollbar-color: #183153;
-$dark-large-toc-scrollbar-track-bg: #264b5e; 
-$dark-large-toc-scrollbar-thumb-bg: #c7ccce;
-$dark-large-toc-scrollbar-thumb-hover: #acaeaf;
+/* ft-adjustment: colors for side ToC */
+
+$dark-side-toc-heading-color: #002538;
+$dark-side-toc-links-color: white;
+$dark-side-toc-link-active-color: #6eb5e0;
+$dark-side-toc-link-hover-color: #1DA1F2;
+
+/* ft-adjustment: controls for spacing of side ToC */
+
+$side-toc-width: 13rem;
+$post-content-width: 75%;
+
+/* ft-adjustment: controls for side ToC border */
+
+$padding-from-left-border: 1rem;
+$left-border-type: solid;
+$left-border-color: white;
+$left-border-thickness: 2px;
+
+/* ft-adjustment: colors for collapsible ToC
+
+The collapsible ToC has 2 parts: the header and the body
+The header is shown by default but the body is shown only when the header is clicked (expanded)
+
+In the following lines 'bg' refers to background
+
+*/
+
+$dark-collapsible-toc-header-title: white;
+$dark-collapsible-toc-header-bg: #051315;
+$dark-collapsible-toc-body-text: white;
+$dark-collapsible-toc-body-bg: #115679;

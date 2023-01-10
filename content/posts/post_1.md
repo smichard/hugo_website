@@ -5,6 +5,9 @@ draft: false
 author: "Stephan Michard"
 categories: ["Google Cloud"]
 tags: ["Hugo","Cloud Run","Cloud Build", "Google Cloud"]
+
+toc:
+  enable: true
 ---
  
 # Introduction
