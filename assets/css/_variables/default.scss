@@ -40,7 +40,6 @@ $dark-pagination-link-active-color: #1DA1F2;
 
 $dark-border-color: #4a4b50;
 
-/* ft-adjustment: new colors for new components*/
 
 /* ft-adjustment: colors for side ToC */
 
@@ -48,6 +47,18 @@ $dark-side-toc-heading-color: #002538;
 $dark-side-toc-links-color: white;
 $dark-side-toc-link-active-color: #6eb5e0;
 $dark-side-toc-link-hover-color: #666;
+
+/* ft-adjustment: controls for spacing of side ToC */
+
+$side-toc-width: 13rem;
+$post-content-width: 75%;
+
+/* ft-adjustment: controls for side ToC border */
+
+$padding-from-left-border: 1rem;
+$left-border-type: solid;
+$left-border-color: white;
+$left-border-thickness: 2px;
 
 /* ft-adjustment: colors for collapsible ToC
 

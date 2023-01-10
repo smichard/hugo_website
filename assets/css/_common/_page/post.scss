@@ -272,8 +272,8 @@
 
   main.single__main {
     display: grid;
-    grid-template-columns: 100% 12em;
-    width: 80%;
+    grid-template-columns: 100% $side-toc-width;
+    width: $post-content-width;
 
     &>aside {
       &.tableOfContentContainer {
@@ -284,19 +284,18 @@
       }
 
       &>h3 {
-        padding-left: 0.5rem;
         font-weight: 700;
-        padding-bottom: 0.5rem;
-        padding-top: 1rem;
+        padding: 1rem 0 .5rem .5rem;
       }
     }
   }
 
   #TableOfContents {
     display: block;
-    padding-left: 0.5rem;
+    padding-left: $padding-from-left-border;
     padding-bottom: 1rem;
     font-size: 1rem;
+    border-left: $left-border-type $left-border-thickness $left-border-color;
 
     li {
       padding-top: 0.25rem;
