@@ -455,3 +455,9 @@
   }
   
   /***** End small screen ToC CSS *****/
+
+  #TableOfContents > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li {
+    list-style: none;
+  }
+
+  
