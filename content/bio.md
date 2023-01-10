@@ -18,6 +18,10 @@ Stephan joined Dell Technologies in 2015 from The Institute for Energy and Clima
 
 # High resolution images
 {{< figure src="/images/bio/image_1.jpg" title="" >}}
+{{< download file="/images/bio/image_1.jpg" title="Download image" class="wrapper_download_center" >}}  
 {{< figure src="/images/bio/image_2.jpg" title="" >}}
+{{< download file="/images/bio/image_2.jpg" title="Download image" class="wrapper_download_center" >}}  
 {{< figure src="/images/bio/image_3.jpg" title="" >}}
+{{< download file="/images/bio/image_3.jpg" title="Download image" class="wrapper_download_center" >}} 
+
 
