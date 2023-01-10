@@ -92,11 +92,11 @@
 
     code,
     pre {
-      padding: 7px;
-      font-size: 13px;
+      padding: .3rem 2.1rem;
       font-family: Consolas, Monaco, Menlo, Consolas, monospace;
       word-break: break-all;
       word-wrap: break-word;
+      overflow:auto;
     }
 
     code:not([class]) {
@@ -499,3 +499,30 @@
 }
 
 /***** 3. end download shortcode CSS *****/
+
+/***** 4. start code copy button CSS *****/
+
+.highlight {
+  position: relative;
+}
+.highlight pre {
+  padding-right: 75px;
+}
+.highlight-copy-btn {
+  cursor: pointer; 
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  border: 0;
+  border-radius: 4px;
+  padding: .3rem;
+  color: #fff;
+  background-color: rgb(80, 79, 79);
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #666;
+}
+
+/***** 4. end code copy button CSS *****/
