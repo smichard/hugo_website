@@ -12,22 +12,12 @@ tags: []
 hugo new posts/my-first-post.md
 ```
 
-# Vimeo
-{{< vimeo 146022717 >}}
-
-# Youtube
-{{< youtube w7Ft2ymGmfc >}}
+# Figure
+{{< figure src="/images/posts/test_image.jpg" title="Caption" >}}
 
 
-# Calendly 1
-
-{{< calendly calendar="stephan-michard" />}}
-
-# Calendly 2
-
-{{< calendly calendar="stephan-michard" >}}
-  Book a time to talk now!
-{{< /calendly >}}
+# Button
+{{< button href="https://www.spiegel.de" >}}Spiegel{{< /button >}}
 
 # Download File
 
@@ -40,24 +30,36 @@ hugo new posts/my-first-post.md
 ## Adjust title and center on page
 {{< download file="/images/posts/test_image.jpg" title="Download image" class="wrapper_download_center" >}}  
 
-# Figure
-{{< figure src="/images/posts/test_image.jpg" title="Caption" >}}
+# Calendly 1
+
+{{< calendly calendar="stephan-michard" />}}
+
+# Calendly 2
+
+{{< calendly calendar="stephan-michard" >}}
+  Book a time to talk now!
+{{< /calendly >}}
 
 
 # Notice
 {{< notice note >}}
-This is a warning notice. Be warned!
+It's worth to notice that: ...
 {{< /notice >}}
 
 {{< notice warning >}}
-This is a very good tip.
+This is a warning message.
 {{< /notice >}}
 
 {{< notice tip >}}
-This is a warning notice. Be warned!
-{{< /notice >}}
-
-{{< notice info >}}
 This is a very good tip.
 {{< /notice >}}
 
+{{< notice info >}}
+This is an info notice.
+{{< /notice >}}
+
+# Vimeo
+{{< vimeo 146022717 >}}
+
+# Youtube
+{{< youtube w7Ft2ymGmfc >}}
