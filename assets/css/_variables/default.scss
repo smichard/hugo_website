@@ -93,6 +93,11 @@ In config.toml, you have to look for this section:
 
     style = 'catppuccin-macchiato'
 
+In order to see a list of all possible (Chroma highlighting) styles, you can
+visit this website: https://xyproto.github.io/splash/docs/all.html
+
+Chroma is the default code highlighting engine for Hugo.
+
 */
 
 $header-background: #152b48;
