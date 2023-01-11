@@ -15,19 +15,19 @@ toc:
 
 # Notice
 {{< notice note >}}
-This is a warning notice. Be warned!
+It's worth to notice that: ...
 {{< /notice >}}
 
 {{< notice warning >}}
-This is a very good tip.
+This is a warning message.
 {{< /notice >}}
 
 {{< notice tip >}}
-This is a warning notice. Be warned!
+This is a very good tip.
 {{< /notice >}}
 
 {{< notice info >}}
-This is a very good tip.
+This is an info notice.
 {{< /notice >}}
 
 

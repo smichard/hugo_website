@@ -14,10 +14,11 @@ Dr. Stephan Michard is a Senior Solution Architect & CTO Ambassador at Dell Tech
 # Projects
 - **Cloud Bites Tutorial**  
   I created a tutorial to introduce the basics of application deployment in a cloud-native environment.  
-  [Available on GitHub](https://github.com/smichard/cloud_bites_tutorial)
+  {{< button href="https://github.com/smichard/cloud_bites_tutorial" >}}Available on GitHub{{< /button >}}
+
 - **graphR.**  
   Some time ago I created graphR a tool to automate and simplify the analysis of RV Tools exports.  
-  [Available on GitHub](https://github.com/smichard/graphR)
+  {{< button href="https://github.com/smichard/graphR" >}}Available on GitHub{{< /button >}}
 
 # Certifications
 I love to familiarize myself with new technologies, tools or work methods. That's why I constantly try to educate myself. Below is a list of certifications I have acquired in the last few years. Right now I'm trying to deepen my knowledge about Google Cloud, you can see the progress [here](https://www.cloudskillsboost.google/public_profiles/b9b38845-f98b-4adc-a1ac-177ce62c01ea):
