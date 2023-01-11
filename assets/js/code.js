@@ -1,8 +1,4 @@
-{{/* A single place to include scripts required at end of <body> tag */}}
-
-{{ if (findRE "<pre" .Content 1) }}
-<script>
-  (function () {
+(function () {
     "use strict";
   
     if (!document.queryCommandSupported("copy")) {
@@ -101,8 +97,3 @@
     });
   }
   
-</script>
-{{ end }}
-
-{{/*  {{ $js_file := resources.Get "js/code.js" | resources.Minify | resources.Fingerprint }}
-<script src="{{ $js_file.Permalink }}"></script>  */}}
