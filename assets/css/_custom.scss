@@ -95,6 +95,17 @@ a.custom-calendly {
     line-height: 2em;
 }
 
+/* download link positioning */
+.wrapper_download_left{
+
+}
+
+.wrapper_download_center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /* code blocks */
 .prettyprint {
 	/* background: #69696A;*/
@@ -119,17 +130,6 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 .post-warp .post-content code,
 .post-warp .post-content pre {
 	border-radius: 10px;
-}
-
-/* download link positioning */
-.wrapper_download_left{
-
-}
-
-.wrapper_download_center{
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 /* code tags */
