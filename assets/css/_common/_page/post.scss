@@ -92,26 +92,10 @@
 
     code,
     pre {
-      padding: .3rem 2.1rem;
       font-family: Consolas, Monaco, Menlo, Consolas, monospace;
       word-break: break-all;
       word-wrap: break-word;
       overflow:auto;
-    }
-
-    code:not([class]) {
-      padding: 5px 5px;
-      background: #fff;
-      border: 1px solid #ddd;
-      box-shadow: 1px 1px 0 #fff, 2px 2px 0 #ddd;
-      margin-left: 3px;
-      margin-right: 3px;
-
-      .dark-theme &:not([class]) {
-        background: transparent;
-        box-shadow: 1px 1px 0 $dark-font-secondary-color,
-          2px 2px 0 $dark-font-secondary-color;
-      }
     }
 
     ul {
@@ -489,7 +473,7 @@
 
 /* ft-adjustment: download shortcode */
 
-/***** 3. start download shortcode CSS *****/
+/***** 3. Start download shortcode CSS *****/
 
 .download {
   display: inline-block;
@@ -498,16 +482,14 @@
   border-radius: .3rem;
 }
 
-/***** 3. end download shortcode CSS *****/
+/***** 3. End download shortcode CSS *****/
 
-/***** 4. start code copy button CSS *****/
+/***** 4. Start code copy button CSS *****/
 
 .highlight {
   position: relative;
 }
-.highlight pre {
-  padding-right: 75px;
-}
+
 .highlight-copy-btn {
   cursor: pointer; 
   position: absolute;
@@ -525,9 +507,9 @@
   background-color: #666;
 }
 
-/***** 4. end code copy button CSS *****/
+/***** 4. End code copy button CSS *****/
 
-
+/***** 5. Start collapsible code block CSS *****/
 
 .collapsable-code {
 	position: relative;
@@ -600,3 +582,25 @@
 	}
 
 }
+
+/***** 5. End collapsible code block CSS *****/
+
+/***** 6. Start standard code block CSS *****/
+
+.highlight {
+
+  table tr pre {
+    padding: 0; /* ft-adjustment: no padding for code blocks with line number */
+  }
+
+  pre {
+    padding: .9rem; /* ft-adjustment: add padding for all code blocks without line number */
+  }
+
+  div {
+    overflow: auto; /* ft-adjustment: fix content overflow in small screens */
+  }
+
+}
+
+/***** 6. End standard code block CSS *****/
