@@ -5,6 +5,9 @@ draft: true
 author: "Stephan Michard"
 categories: []
 tags: []
+
+toc:
+  enable: true
 ---
 
 # New Hugo Post
@@ -18,6 +21,10 @@ hugo new posts/my-first-post.md
 
 # Button
 {{< button href="https://www.spiegel.de" >}}Spiegel{{< /button >}}
+
+# Blockquote
+
+> test jgldjlgdk
 
 # Download File
 
