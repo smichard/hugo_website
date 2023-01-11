@@ -521,7 +521,7 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		background: $var1;
+		background: $header-background;
 		padding: .7rem;
 		border-radius: .5rem;
 		min-width: 30px;
@@ -560,7 +560,7 @@
 
 	}
 	&__title {
-		color: $var2;
+		color: $header-title-text;
     font-size: 1rem;
 		padding: 3px 10px;
 		text-overflow: ellipsis;
@@ -568,16 +568,11 @@
 		overflow: hidden;
 	}
 	&__language {
-		background: $var3;
-		color: $var4;
+		background: $code-language-bg;
+		color: $code-language-text;
 		border-radius: 7px;
 		padding: 3px 10px;
 		align-self: center;
-	}
-	&__toggle {
-		color: $var5;
-		font-size: 16px;
-		padding: 3px 10px;
 	}
 	pre {
 		border-top-left-radius: 0 !important;
