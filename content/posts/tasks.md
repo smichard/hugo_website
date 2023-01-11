@@ -83,7 +83,25 @@ I like this implementation:
 
 ### Collapsible code blocks
 
-{{< collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="false" lineNos="true">}}
+Usage:
+
+```go
+{{</* collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="true" lineNos="true" */>}}
+/* Css code here */
+{{</* /collapsible-code */>}}
+```
+
+| Parameter | Required | Description | Default |
+|-----------|----------|-------------|---------|
+| language | Yes | The language of the code block. It is used for syntax highlighting. | |
+| title | No | The title of the code block. | |
+| id | No | The id of the code block. | |
+| isCollapsed | No | Whether the code block should be collapsed or not. | false |
+| lineNos | No | Whether line numbers should be displayed or not. | false |
+
+
+
+{{< collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="true" lineNos="true">}}
 pre {
      background: #1a1a1d;
      padding: 20px;
@@ -102,6 +120,7 @@ pre {
     }
 }
 {{< /collapsible-code >}}
+
 
 
 ### bash
