@@ -81,15 +81,91 @@ I like this implementation:
 
 ## Testing code blocks
 
-### Collapsible code blocks
+Tests:
+
+If we consider 'collapsiblility' and 'line number' as two features of code blocks, we have test cases:
+
+1. Collapsible (collapsed) code block with line numbers
+2. Collapsible (collapsed) code block without line numbers
+3. Collapsible (expanded) code block with line numbers
+4. Collapsible (expanded) code block without line numbers
+
+### 1. Collapsible (collapsed) code block with line numbers
 
 Usage:
 
 ```go
 {{</* collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="true" lineNos="true" */>}}
-/* Css code here */
+/* code here */
 {{</* /collapsible-code */>}}
 ```
+
+Example :
+
+{{< collapsible-code language="CSS" title="Really cool CSS snippet" id="1" isCollapsed="true" lineNos="true">}}
+pre {
+     background: #1a1a1d;
+     padding: 20px;
+     border-radius: 8px;
+     font-size: 1rem;
+     overflow: auto;
+     @media (--phone) {
+         white-space: pre-wrap;
+         word-wrap: break-word;
+    }
+     code {
+         background: none !important;
+         color: #ccc;
+         padding: 0;
+         font-size: inherit !important;
+    }
+}
+{{< /collapsible-code >}}
+
+### 2. Collapsible (collapsed) code block without line numbers
+
+If you don't want to show line numbers, either set the `lineNos` parameter to `false` or simply omit the parameter, in which case it defaults to `false`.
+
+Usage:
+
+```go
+{{</* collapsible-code language="python" title="Really cool snippet" isCollapsed="true" */>}}
+/* code here */
+{{</* /collapsible-code */>}}
+```
+
+Example:
+
+{{< collapsible-code language="python" title="Really cool Python snippet" isCollapsed="true" >}}
+first_name = "Stephan"
+last_name = "Michard"
+
+print("Hello",first_name last_name,"good to see you")
+
+print("Dear {} {}, hope you're well!".format(last_name,first_name))
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{< /collapsible-code >}}
+
+
+### 3. Collapsible (expanded) code block with line numbers
+
+If you want the code to be expanded (displayed), either you can set `isCollapsed` to `false` or simply omit the parameter in which case, it defaults to  `false`
+
+Usage:
+
+```go
+{{</* collapsible-code language="CSS" title="Really cool snippet" isCollapsed="false" lineNos="true" */>}}
+/* code here */
+{{</* /collapsible-code */>}}
+```
+
+Example :
 
 {{< collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="true" lineNos="false">}}
 pre {
@@ -111,11 +187,59 @@ pre {
 }
 {{< /collapsible-code >}}
 
+### 4. Collapsible (expanded) code block without line numbers
 
 
-### bash
+If you want the code to be expanded and to be shown without line numbers, you can simply omit the respective parameters.
 
-```bash {linenos=table}
+Usage:
+
+```go
+{{</* collapsible-code language="python" title="Really cool snippet" */>}}
+/* code here */
+{{</* /collapsible-code */>}}
+```
+
+Example:
+
+{{< collapsible-code language="python" title="Really cool Python snippet" >}}
+first_name = "Stephan"
+last_name = "Michard"
+
+print("Hello",first_name last_name,"good to see you")
+
+print("Dear {} {}, hope you're well!".format(last_name,first_name))
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{< /collapsible-code >}}
+
+## Standard code blocks
+
+If we consider stabdard code blocks, we have 2 test cases:
+
+1. Standard code block with line numbers
+2. Standard code block without line numbers
+
+### 1. Standard code block with line numbers
+
+Usage:
+
+````text
+```bash {linenos=true}
+#!/bin/sh
+mkdir dir  
+mkdir -p dir_root/{dir_b}/{dir_l1,dir_l2} 
+```
+````
+
+Example:
+
+```bash {linenos=true}
 #!/bin/sh
 docker build --no-cache --force-rm -t site .
 docker run -p 8080:8080 site
@@ -134,7 +258,22 @@ cd ~
 cp file $output
 ```
 
-### HTML
+### 2. Standard code block without line numbers
+
+Usage:
+
+````text
+```html
+<div class="my_toc">
+    <hr />
+    <h1>Table of contents</h1>
+    {{ .Page.TableOfContents }}
+    <hr />
+</div>
+```
+````
+
+Example:
 
 ```html
 <div class="my_toc">
@@ -144,6 +283,8 @@ cp file $output
     <hr />
 </div>
 ```
+
+## Other examples
 
 ### CSS
 
