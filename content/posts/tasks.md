@@ -96,7 +96,7 @@ Usage:
 
 ```go
 {{</* collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="true" lineNos="true" */>}}
-/* Css code here */
+/* code here */
 {{</* /collapsible-code */>}}
 ```
 
@@ -130,7 +130,7 @@ Usage:
 
 ```go
 {{</* collapsible-code language="python" title="Really cool snippet" isCollapsed="true" */>}}
-/* Css code here */
+/* code here */
 {{</* /collapsible-code */>}}
 ```
 
@@ -161,7 +161,7 @@ Usage:
 
 ```go
 {{</* collapsible-code language="CSS" title="Really cool snippet" isCollapsed="false" lineNos="true" */>}}
-/* Css code here */
+/* code here */
 {{</* /collapsible-code */>}}
 ```
 
@@ -196,7 +196,7 @@ Usage:
 
 ```go
 {{</* collapsible-code language="python" title="Really cool snippet" */>}}
-/* Css code here */
+/* code here */
 {{</* /collapsible-code */>}}
 ```
 
