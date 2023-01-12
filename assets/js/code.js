@@ -1,3 +1,12 @@
+// ft-adjustment: this file has all the JavaScript necessary for code blocks
+
+// The scripts on this page add the following functionalities :
+//    1. showing code copy buttons
+//    2. handling expand/collapse of collapsible code blocks
+
+
+///////////////// 1. JavaScript code to add code copy buttons to every code block ///////////////////////
+
 (function () {
     "use strict";
   
@@ -47,7 +56,9 @@
     var highlightBlocks = document.getElementsByClassName("highlight");
     Array.prototype.forEach.call(highlightBlocks, addCopyButton);
   })();
-  
+
+///////////////// 2. JavaScript code to handle collapsible code blocks ///////////////////////
+
   var coll = document.getElementsByClassName("collapsible");
   var i;
   
