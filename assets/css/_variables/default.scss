@@ -70,7 +70,7 @@ In the following lines 'bg' refers to background
 */
 
 $dark-collapsible-toc-header-title: white;
-$dark-collapsible-toc-header-bg: #051315;
+$dark-collapsible-toc-header-bg: #152b48;
 $dark-collapsible-toc-body-text: white;
 $dark-collapsible-toc-body-bg: #115679;
 
@@ -101,6 +101,6 @@ Chroma is the default code highlighting engine for Hugo.
 */
 
 $header-background: #152b48;
-$header-title-text: #c2c4c7;
-$code-language-bg: #3a4758;
-$code-language-text: #bec0be;
+$header-title-text: white;
+$code-language-bg: #115679;
+$code-language-text: white;
