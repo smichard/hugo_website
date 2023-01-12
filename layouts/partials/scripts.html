@@ -1,4 +1,4 @@
-{{/* A single place to include scripts required at end of <body> tag */}}
+{{/*  ft-adjustment: This partial has been created to include scripts required at end of <body> tag */}}
 
 {{ if (findRE "<pre" .Content 1) }} {{/* load the code.js file if there exists atleast one highlighted code block */}}
   {{ $js_file := resources.Get "js/code.js" | resources.Minify | resources.Fingerprint }}

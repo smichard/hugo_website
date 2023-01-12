@@ -1,3 +1,10 @@
+{{/* ft-adjustment: This file has created to override the theme's js.html partial
+
+The theme's partial has an issue with the images ('lightgallery' library to be precise).
+The issue has been fixed in this js.html partial
+
+*/}}
+
 {{ $cdn_url := .Scratch.Get "cdn_url" }}
 {{ $postHasImages :=  .Scratch.Get "postHasImages"}}
 {{ $jquery := resources.Get "/js/jquery.min.js" }}
