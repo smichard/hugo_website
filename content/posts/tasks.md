@@ -102,7 +102,7 @@ Usage:
 
 Example :
 
-{{< collapsible-code language="CSS" title="Really cool CSS snippet" id="1" isCollapsed="true" lineNos="true">}}
+{{< collapsible-code language="CSS" title="Really cool CSS snippet" isCollapsed="true" lineNos="true">}}
 pre {
      background: #1a1a1d;
      padding: 20px;
@@ -167,7 +167,7 @@ Usage:
 
 Example :
 
-{{< collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="false" lineNos="false">}}
+{{< collapsible-code language="CSS" title="Really cool snippet" isCollapsed="false" lineNos="false">}}
 pre {
      background: #1a1a1d;
      padding: 20px;
