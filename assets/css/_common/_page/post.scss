@@ -92,26 +92,10 @@
 
     code,
     pre {
-      padding: 7px;
-      font-size: 13px;
       font-family: Consolas, Monaco, Menlo, Consolas, monospace;
       word-break: break-all;
       word-wrap: break-word;
-    }
-
-    code:not([class]) {
-      padding: 5px 5px;
-      background: #fff;
-      border: 1px solid #ddd;
-      box-shadow: 1px 1px 0 #fff, 2px 2px 0 #ddd;
-      margin-left: 3px;
-      margin-right: 3px;
-
-      .dark-theme &:not([class]) {
-        background: transparent;
-        box-shadow: 1px 1px 0 $dark-font-secondary-color,
-          2px 2px 0 $dark-font-secondary-color;
-      }
+      overflow:auto;
     }
 
     ul {
@@ -489,7 +473,7 @@
 
 /* ft-adjustment: download shortcode */
 
-/***** 3. start download shortcode CSS *****/
+/***** 3. Start download shortcode CSS *****/
 
 .download {
   display: inline-block;
@@ -498,4 +482,123 @@
   border-radius: .3rem;
 }
 
-/***** 3. end download shortcode CSS *****/
+/***** 3. End download shortcode CSS *****/
+
+/***** 4. Start code copy button CSS *****/
+
+.highlight {
+  position: relative;
+}
+
+.highlight-copy-btn {
+  cursor: pointer; 
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  border: 0;
+  border-radius: 4px;
+  padding: .3rem;
+  color: #fff;
+  background-color: rgb(80, 79, 79);
+  min-width: 55px;
+  text-align: center;
+}
+.highlight-copy-btn:hover {
+  background-color: #666;
+}
+
+/***** 4. End code copy button CSS *****/
+
+/***** 5. Start collapsible code block CSS *****/
+
+.collapsable-code {
+	position: relative;
+	width: 100%;
+	margin: 40px 0;
+
+	label {
+		font-weight: normal;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		background: $header-background;
+		padding: .7rem;
+		border-radius: .5rem;
+		min-width: 30px;
+		min-height: 30px;
+		margin: 0;
+		cursor: pointer;
+
+    &.active {
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    svg {
+      padding: .5rem;
+
+      /* rotate the svg to right by 180deg if it's class is dn */
+
+      &.dn {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+      /* rotate the svg by 0deg if it's class is up */
+
+      &.up {
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+      }
+    }
+
+	}
+	&__title {
+		color: $header-title-text;
+    font-size: 1rem;
+		padding: 3px 10px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	&__language {
+		background: $code-language-bg;
+		color: $code-language-text;
+		border-radius: 7px;
+		padding: 3px 10px;
+		align-self: center;
+	}
+	pre {
+		border-top-left-radius: 0 !important;
+		border-top-right-radius: 0 !important;
+	}
+
+}
+
+/***** 5. End collapsible code block CSS *****/
+
+/***** 6. Start standard code block CSS *****/
+
+.highlight {
+
+  table tr pre {
+    padding: 0; /* ft-adjustment: no padding for code blocks with line number */
+  }
+
+  pre {
+    padding: .9rem; /* ft-adjustment: add padding for all code blocks without line number */
+  }
+
+  div {
+    overflow: auto; /* ft-adjustment: fix content overflow in small screens */
+  }
+
+}
+
+/***** 6. End standard code block CSS *****/

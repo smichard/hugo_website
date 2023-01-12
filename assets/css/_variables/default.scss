@@ -73,3 +73,34 @@ $dark-collapsible-toc-header-title: white;
 $dark-collapsible-toc-header-bg: #051315;
 $dark-collapsible-toc-body-text: white;
 $dark-collapsible-toc-body-bg: #115679;
+
+/* ft-adjustment: colors for collapsible code block
+
+The collapsible code block has broadly 2 components:
+    1. header (always shown)
+        1.1 language text
+        1.2 title text
+    2. body (contains the code)
+    
+For changing color of body, you have to change the style in config.toml. Note that this will affect colors of all 
+highlighted code blocks.
+
+In config.toml, you have to look for this section:
+
+[markup]
+
+  [markup.highlight]
+
+    style = 'catppuccin-macchiato'
+
+In order to see a list of all possible (Chroma highlighting) styles, you can
+visit this website: https://xyproto.github.io/splash/docs/all.html
+
+Chroma is the default code highlighting engine for Hugo.
+
+*/
+
+$header-background: #152b48;
+$header-title-text: #c2c4c7;
+$code-language-bg: #3a4758;
+$code-language-text: #bec0be;
