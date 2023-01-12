@@ -11,7 +11,7 @@ toc:
 ---
 
 # New Hugo Post
-```
+```bash
 hugo new posts/my-first-post.md
 ```
 
