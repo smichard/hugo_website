@@ -81,7 +81,7 @@ I like this implementation:
 
 ## Testing code blocks
 
-### Collapsible code blocks
+### Collapsible code block with line numbers
 
 Usage:
 
@@ -90,6 +90,8 @@ Usage:
 /* Css code here */
 {{</* /collapsible-code */>}}
 ```
+
+Example :
 
 {{< collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="true" lineNos="true">}}
 pre {
@@ -111,11 +113,51 @@ pre {
 }
 {{< /collapsible-code >}}
 
+### Collapsible code block without line numbers
 
+You can either set the `lineNos` parameter to `false` or simply omit the parameter, in which case it defaults to `false`.
 
-### bash
+Usage:
 
-```bash {linenos=table}
+```go
+{{</* collapsible-code language="python" title="Really cool snippet" id="1" isCollapsed="true" */>}}
+/* Css code here */
+{{</* /collapsible-code */>}}
+```
+
+Example:
+
+{{< collapsible-code language="python" title="Really cool snippet" id="1" isCollapsed="true" >}}
+first_name = "Stephan"
+last_name = "Michard"
+
+print("Hello",first_name last_name,"good to see you")
+
+print("Dear {} {}, hope you're well!".format(last_name,first_name))
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{< /collapsible-code >}}
+
+### Standard code block with line numbers
+
+Usage:
+
+````text
+```bash {linenos=true}
+#!/bin/sh
+mkdir dir  
+mkdir -p dir_root/{dir_b}/{dir_l1,dir_l2} 
+```
+````
+
+Example:
+
+```bash {linenos=true}
 #!/bin/sh
 docker build --no-cache --force-rm -t site .
 docker run -p 8080:8080 site
