@@ -83,7 +83,7 @@ I like this implementation:
 
 Tests:
 
-If we consider collapsiblility and line number features of code blocks, we have 4 cases for testing:
+If we consider 'collapsiblility' and 'line number' as two features of code blocks, we have test cases:
 
 1. Collapsible (collapsed) code block with line numbers
 2. Collapsible (collapsed) code block without line numbers
@@ -153,7 +153,7 @@ print(thisdict["brand"])
 {{< /collapsible-code >}}
 
 
-3. Collapsible (expanded) code block with line numbers
+### 3. Collapsible (expanded) code block with line numbers
 
 If you want the code to be expanded (displayed), either you can set `isCollapsed` to `false` or simply omit the parameter in which case, it defaults to  `false`
 
@@ -187,7 +187,7 @@ pre {
 }
 {{< /collapsible-code >}}
 
-4. Collapsible (expanded) code block without line numbers
+### 4. Collapsible (expanded) code block without line numbers
 
 
 If you want the code to be expanded and to be shown without line numbers, you can simply omit the respective parameters.
@@ -218,7 +218,7 @@ thisdict = {
 print(thisdict["brand"])
 {{< /collapsible-code >}}
 
-### Standard code block
+## Standard code blocks
 
 If we consider stabdard code blocks, we have 2 test cases:
 
