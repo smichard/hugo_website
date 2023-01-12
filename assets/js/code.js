@@ -83,7 +83,7 @@
     }
     // if isCollapsed is not defined, then show the content
     else {
-      coll[i].nextElementSibling.style.visibility = "visible";
+      coll[i].nextElementSibling.style.visibility = "collapse";
       // change the svg class to show the arrow pointing up
       svg.setAttribute("class", "up");
     }
