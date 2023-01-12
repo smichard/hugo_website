@@ -52,7 +52,7 @@ hugo
 
 ## Leveraging container technology
 To ensure the portability of the website, a container image is generated in the workflow. The following Dockerfile is used for this purpose:
-```
+```bash {linenos=table}
 FROM klakegg/hugo:0.105.0-ext-alpine-onbuild AS hugo
 
 FROM nginx:alpine
@@ -64,7 +64,7 @@ In this case, a Docker multi-stage build is used. Multi stage builds allow each 
 The first line takes care of building the static web pages, as described at the end of the previous section by the `hugo` command. In the following, the result of the build process is copied to the `/usr/share/nginx/html` folder of a *nginx* based container iamge.  
 The choice of *Alpine Linux* based container images leads to very lightweight and secure container images. On the one hand, this ensures short build times and, on the other hand, that small capacity is occupied in the container registry.  
 The last line of the Dockerfile ensures that the cofiguration file `nginx/default.conf` for the *nginx* webserver is present in the container image. This configuration file ensures that the container exposes port *8080*. This step simplifies subsequent hosting on Google Cloud Run, since Cloud Run expects this container port by default.   
-```
+```bash {linenos=table}
 server {
     listen       8080;
     server_name  localhost;
@@ -80,7 +80,7 @@ server {
 }
 ```
 The following commands can be used to create the container image locally and run the container locally. The website should then be available on `localhost:8080`:
-```
+```bash {linenos=table}
 docker build -t <image_name> .
 docker run -d -p 8080:8080 <image_name>
 ```
@@ -88,7 +88,7 @@ docker run -d -p 8080:8080 <image_name>
 ## Leveraging Google Cloud Builds and Google Cloud Run
 The last section described why container technology is used and how the final container image can be generated locally. In this section, it is described how the final image can be generated leveraging Google Cloud Build. In order to use Google Cloud Build a `cloudbuild.yaml` configuration file is required. This file defines several steps of the total build pipeline, the individual steps are executed one after the other. Using a `cloudbuild.yaml` file allows to define the complete build process in a declarative way, making it easy to repeat and automate the build and the deployment process.  
 The content of the `cloudbuild.yaml` is as follows:
-```
+```bash {linenos=table}
 steps:
 # This step fetches git submodulesbuilds.
 - name: gcr.io/cloud-builders/git
