@@ -91,7 +91,7 @@ Usage:
 {{</* /collapsible-code */>}}
 ```
 
-{{< collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="true" lineNos="true">}}
+{{< collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="true" lineNos="false">}}
 pre {
      background: #1a1a1d;
      padding: 20px;
@@ -172,7 +172,7 @@ figcaption {
       }
     }
   })();
-  ```
+```
 
 ### YAML
 
