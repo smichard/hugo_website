@@ -1,10 +1,5 @@
 // ft-adjustment: this file has all the JavaScript necessary for code blocks
 
-// The scripts on this page add the following functionalities :
-//    1. showing code copy buttons
-//    2. handling expand/collapse of collapsible code blocks
-
-
 ///////////////// 1. JavaScript code to add code copy buttons to every code block ///////////////////////
 
 (function () {
@@ -56,54 +51,3 @@
   var highlightBlocks = document.getElementsByClassName("highlight");
   Array.prototype.forEach.call(highlightBlocks, addCopyButton);
 })();
-
-///////////////// 2. JavaScript code to handle collapsible code blocks ///////////////////////
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  // get value of isCollapsed attribute
-  var isCollapsed = coll[i].getAttribute("isCollapsed");
-
-  // get the svg present in the collapsible element
-  var svg = coll[i].getElementsByTagName("svg")[0];
-
-  // if isCollapsed is true, then hide the content
-  if (isCollapsed == "true") {
-    coll[i].nextElementSibling.style.display = "none";
-    // change the svg class to show the arrow pointing down
-    svg.setAttribute("class", "dn");
-  }
-  // if isCollapsed is false, then show the content
-  else if (isCollapsed == "false") {
-    coll[i].nextElementSibling.style.display = "block";
-    // change the svg class to show the arrow pointing up
-    svg.setAttribute("class", "up");
-  }
-  // if isCollapsed is not defined, then show the content
-  else {
-    coll[i].nextElementSibling.style.display = "block";
-    // change the svg class to show the arrow pointing up
-    svg.setAttribute("class", "up");
-  }
-
-  coll[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    
-    if (content.style.display == "none") {
-      // if the content is collapsed, then show the content
-      content.style.display = "block";
-
-      // change the svg class to show the arrow pointing up
-      svg.setAttribute("class", "up");
-    } else {
-      // if the content is visible, then hide the content
-      content.style.display = "none";
-
-      // change the svg class to show the arrow pointing down
-      svg.setAttribute("class", "dn");
-    }
-  });
-}
