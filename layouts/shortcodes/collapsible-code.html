@@ -14,14 +14,14 @@
           {{ if .Get "title" }}<span class="collapsable-code__title">{{ .Get "title" | markdownify }}</span>{{ end }}
           <span class="collapsable-code__toggle" data-label-expand="{{ .Get "expand" | default "△" }}" data-label-collapse="{{ .Get "collapse" | default "▽" }}"></span>
         </label>
-        {{- highlight $code $lang $options -}}
+        {{- if  $lineNos -}}
+            {{- highlight $code $lang $options -}}
+        {{- else -}}
+            {{- highlight $code $lang -}}
+        {{- end -}}
     </div>
 
-  {{/*  {{- if  $lineNos -}}
-      {{- highlight $code $lang $options -}}
-  {{- else -}}
-      {{- highlight $code $lang -}}
-  {{- end -}}    */}}
+
 
 {{ else }}
   {{ errorf "If you want to use the \"collapsable code\" shortcode, you need to pass a mandatory \"language\" param. The issue occured in %q (%q)" .Page.File .Page.Permalink }}

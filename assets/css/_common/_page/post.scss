@@ -521,32 +521,6 @@
     visibility: hidden;
   }
 
-  input[type="checkbox"]:checked {
-    ~ pre,
-    ~ .code-toolbar div {
-      height: 0;
-      padding: 0;
-      border-top: none;
-    }
-
-    ~ .code-toolbar {
-      padding: 0;
-      border-top: none;
-
-      .toolbar {
-        display: none;
-      }
-    }
-
-    ~ label {
-      border-radius: 10px;
-    }
-
-    ~ label .collapsable-code__toggle:after {
-      content: attr(data-label-expand);
-    }
-  }
-
   label {
     position: relative;
     display: flex;
@@ -559,6 +533,10 @@
     min-height: 30px;
     margin: 0;
     cursor: pointer;
+  }
+
+  div.highlight{
+
   }
 
   &__title {

@@ -129,8 +129,18 @@ If you don't want to show line numbers, either set the `lineNos` parameter to `f
 Usage:
 
 ```go
-{{</* collapsible-code language="python" title="Really cool snippet" isCollapsed="true" */>}}
-/* code here */
+{{</* collapsible-code language="python" title="Really cool Python snippet" isCollapsed="true" */>}}
+first_name = "Stephan"
+last_name = "Michard"
+
+print("Hello",first_name last_name,"good to see you")
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
 {{</* /collapsible-code */>}}
 ```
 
@@ -141,8 +151,6 @@ first_name = "Stephan"
 last_name = "Michard"
 
 print("Hello",first_name last_name,"good to see you")
-
-print("Dear {} {}, hope you're well!".format(last_name,first_name))
 
 thisdict = {
   "brand": "Ford",
@@ -167,24 +175,14 @@ Usage:
 
 Example :
 
-{{< collapsible-code language="CSS" title="Really cool snippet" isCollapsed="false" lineNos="false">}}
+{{< collapsible-code language="CSS" title="Really cool snippet" isCollapsed="false" lineNos="true">}}
 pre {
      background: #1a1a1d;
      padding: 20px;
      border-radius: 8px;
      font-size: 1rem;
      overflow: auto;
-     @media (--phone) {
-         white-space: pre-wrap;
-         word-wrap: break-word;
     }
-     code {
-         background: none !important;
-         color: #ccc;
-         padding: 0;
-         font-size: inherit !important;
-    }
-}
 {{< /collapsible-code >}}
 
 ### 4. Collapsible (expanded) code block without line numbers
