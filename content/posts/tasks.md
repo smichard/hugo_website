@@ -83,60 +83,121 @@ I like this implementation:
 
 Tests:
 
-If we consider 'collapsiblility' and 'line number' as two features of code blocks, we have test cases:
+If we consider 'collapsiblility' and 'line number' as two features of code blocks, we have the following test cases:
 
-1. Collapsible (collapsed) code block with line numbers
-2. Collapsible (collapsed) code block without line numbers
-3. Collapsible (expanded) code block with line numbers
-4. Collapsible (expanded) code block without line numbers
+1. Collapsed code block with line numbers
+2. Collapsed code block without line numbers
+3. Expanded code block with line numbers
+4. Expanded code block without line numbers
+5. Code block where `lineNos` parameter is omitted
+6. Code block where `isCollapsed` parameter is omitted
 
-### 1. Collapsible (collapsed) code block with line numbers
+### 1. Collapsed code block with line numbers
 
-Usage:
+Code:
 
 ```go
-{{</* collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="true" lineNos="true" */>}}
-/* code here */
-{{</* /collapsible-code */>}}
-```
-
-Example :
-
-{{< collapsible-code language="CSS" title="Really cool CSS snippet" id="1" isCollapsed="true" lineNos="true">}}
+{{</* collapsible-code language="CSS" title="Really cool CSS snippet" isCollapsed="true" lineNos="true" */>}}
 pre {
      background: #1a1a1d;
      padding: 20px;
      border-radius: 8px;
      font-size: 1rem;
      overflow: auto;
-     @media (--phone) {
-         white-space: pre-wrap;
-         word-wrap: break-word;
-    }
-     code {
-         background: none !important;
-         color: #ccc;
-         padding: 0;
-         font-size: inherit !important;
-    }
 }
-{{< /collapsible-code >}}
-
-### 2. Collapsible (collapsed) code block without line numbers
-
-If you don't want to show line numbers, either set the `lineNos` parameter to `false` or simply omit the parameter, in which case it defaults to `false`.
-
-Usage:
-
-```go
-{{</* collapsible-code language="python" title="Really cool snippet" isCollapsed="true" */>}}
-/* code here */
 {{</* /collapsible-code */>}}
 ```
 
-Example:
+Result :
+
+{{< collapsible-code language="CSS" title="Really cool CSS snippet" isCollapsed="true" lineNos="true">}}
+pre {
+     background: #1a1a1d;
+     padding: 20px;
+     border-radius: 8px;
+     font-size: 1rem;
+     overflow: auto;
+}
+{{< /collapsible-code >}}
+
+### 2. Collapsed code block without line numbers
+
+If you don't want to show line numbers, either set the `lineNos` parameter to `false` or simply omit the parameter, in which case it defaults to `false`.
+
+Code:
+
+```go
+{{</* collapsible-code language="python" title="Really cool Python snippet" isCollapsed="true" */>}}
+first_name = "Stephan"
+last_name = "Michard"
+
+print("Hello",first_name last_name,"good to see you")
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{</* /collapsible-code */>}}
+```
+
+Result:
 
 {{< collapsible-code language="python" title="Really cool Python snippet" isCollapsed="true" >}}
+first_name = "Stephan"
+last_name = "Michard"
+
+print("Hello",first_name last_name,"good to see you")
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{< /collapsible-code >}}
+
+
+### 3. Expanded code block with line numbers
+
+If you want the code to be expanded (displayed), either you can set `isCollapsed` to `false` or simply omit the parameter in which case, it defaults to  `false`
+
+Code:
+
+```go
+{{</* collapsible-code language="CSS" title="Really cool snippet" isCollapsed="false" lineNos="true" */>}}
+pre {
+     background: #1a1a1d;
+     padding: 20px;
+     border-radius: 8px;
+     font-size: 1rem;
+     overflow: auto;
+    }
+{{</* /collapsible-code */>}}
+```
+
+Result :
+
+{{< collapsible-code language="CSS" title="Really cool snippet" isCollapsed="false" lineNos="true" >}}
+pre {
+     background: #1a1a1d;
+     padding: 20px;
+     border-radius: 8px;
+     font-size: 1rem;
+     overflow: auto;
+    }
+{{< /collapsible-code >}}
+
+### 4. Expanded code block without line numbers
+
+
+If you want the code to be expanded and to be shown without line numbers, you can simply omit the respective parameters.
+
+Code:
+
+```go
+{{</* collapsible-code language="python" title="Really cool Python snippet" */>}}
 first_name = "Stephan"
 last_name = "Michard"
 
@@ -150,57 +211,10 @@ thisdict = {
   "year": 1964
 }
 print(thisdict["brand"])
-{{< /collapsible-code >}}
-
-
-### 3. Collapsible (expanded) code block with line numbers
-
-If you want the code to be expanded (displayed), either you can set `isCollapsed` to `false` or simply omit the parameter in which case, it defaults to  `false`
-
-Usage:
-
-```go
-{{</* collapsible-code language="CSS" title="Really cool snippet" isCollapsed="false" lineNos="true" */>}}
-/* code here */
 {{</* /collapsible-code */>}}
 ```
 
-Example :
-
-{{< collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="true" lineNos="false">}}
-pre {
-     background: #1a1a1d;
-     padding: 20px;
-     border-radius: 8px;
-     font-size: 1rem;
-     overflow: auto;
-     @media (--phone) {
-         white-space: pre-wrap;
-         word-wrap: break-word;
-    }
-     code {
-         background: none !important;
-         color: #ccc;
-         padding: 0;
-         font-size: inherit !important;
-    }
-}
-{{< /collapsible-code >}}
-
-### 4. Collapsible (expanded) code block without line numbers
-
-
-If you want the code to be expanded and to be shown without line numbers, you can simply omit the respective parameters.
-
-Usage:
-
-```go
-{{</* collapsible-code language="python" title="Really cool snippet" */>}}
-/* code here */
-{{</* /collapsible-code */>}}
-```
-
-Example:
+Result:
 
 {{< collapsible-code language="python" title="Really cool Python snippet" >}}
 first_name = "Stephan"
@@ -218,6 +232,63 @@ thisdict = {
 print(thisdict["brand"])
 {{< /collapsible-code >}}
 
+
+### 5. Code block where `lineNos` parameter is omitted
+
+When `lineNos` parameter is omitted, the default behaviour is: no line numbers shown.
+
+Code:
+
+```go
+{{</* collapsible-code language="python" title="Really cool Python snippet" isCollapsed="true" */>}}
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{</* /collapsible-code */>}}
+```
+
+Result:
+
+{{< collapsible-code language="python" title="Really cool Python snippet" isCollapsed="true" >}}
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{< /collapsible-code >}}
+
+### 6. Code block where `isCollapsed` parameter is omitted
+
+When `isCollapsed` parameter is omitted, the default behaviour is: expanded codeblock.
+
+Code:
+
+```go
+{{</* collapsible-code language="python" title="Really cool Python snippet" lineNos="true" */>}}
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{</* /collapsible-code */>}}
+```
+
+Result:
+
+{{< collapsible-code language="python" title="Really cool Python snippet" lineNos="true" >}}
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{< /collapsible-code >}}
+
 ## Standard code blocks
 
 If we consider stabdard code blocks, we have 2 test cases:
@@ -227,7 +298,7 @@ If we consider stabdard code blocks, we have 2 test cases:
 
 ### 1. Standard code block with line numbers
 
-Usage:
+Code:
 
 ````text
 ```bash {linenos=true}
@@ -237,7 +308,7 @@ mkdir -p dir_root/{dir_b}/{dir_l1,dir_l2}
 ```
 ````
 
-Example:
+Result:
 
 ```bash {linenos=true}
 #!/bin/sh
@@ -260,7 +331,7 @@ cp file $output
 
 ### 2. Standard code block without line numbers
 
-Usage:
+Code:
 
 ````text
 ```html
@@ -273,7 +344,7 @@ Usage:
 ```
 ````
 
-Example:
+Result:
 
 ```html
 <div class="my_toc">
