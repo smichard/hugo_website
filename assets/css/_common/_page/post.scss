@@ -512,78 +512,100 @@
 /***** 5. Start collapsible code block CSS *****/
 
 .collapsable-code {
-	position: relative;
-	width: 100%;
-	margin: 40px 0;
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
 
-	label {
-		font-weight: normal;
-		position: relative;
-		display: flex;
-		justify-content: space-between;
-		background: $header-background;
-		padding: .7rem;
-		border-radius: .5rem;
-		min-width: 30px;
-		min-height: 30px;
-		margin: 0;
-		cursor: pointer;
-
-    &.active {
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-    }
-
-    svg {
-      padding: .5rem;
-
-      /* rotate the svg to right by 180deg if it's class is dn */
-
-      &.dn {
-        -webkit-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
-        transform: rotate(180deg);
-      }
-
-      /* rotate the svg by 0deg if it's class is up */
-
-      &.up {
-          -webkit-transform: rotate(0deg);
-          -moz-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-          -o-transform: rotate(0deg);
-          transform: rotate(0deg);
-      }
-    }
-
-	}
-
-  .highlight pre {
-    margin: 0;
+  input[type="checkbox"] {
+    position: absolute;
+    visibility: hidden;
   }
 
-	&__title {
-		color: $header-title-text;
-    font-size: 1rem;
-		padding: 3px 10px;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		overflow: hidden;
-	}
-	&__language {
-		background: $code-language-bg;
-		color: $code-language-text;
-		border-radius: 7px;
-		padding: 3px 10px;
-		align-self: center;
-	}
-	pre {
-		border-top-left-radius: 0 !important;
-		border-top-right-radius: 0 !important;
-	}
+  input[type="checkbox"]:checked {
+    ~ pre,
+    ~ .code-toolbar div {
+      height: 0;
+      padding: 0;
+      border-top: none;
+    }
 
+    ~ .code-toolbar {
+      padding: 0;
+      border-top: none;
+
+      .toolbar {
+        display: none;
+      }
+    }
+
+    ~ label {
+      border-radius: 10px;
+    }
+
+    ~ label .collapsable-code__toggle:after {
+      content: attr(data-label-expand);
+    }
+  }
+
+  label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: var(--background-secondary);
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    min-width: 30px;
+    min-height: 30px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__title {
+    flex: 1;
+    color: var(--color);
+    padding: 3px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__language {
+    background: var(--background);
+    color: var(--color);
+    border-radius: 10px;
+    padding: 3px 10px;
+  }
+
+  &__toggle {
+    color: var(--color);
+    font-size: 16px;
+    padding: 3px 10px;
+
+    &:after {
+      content: attr(data-label-collapse);
+    }
+  }
+
+  div.highlight {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    &::first-line {
+      line-height: 0;
+    }
+  }
+
+  code {
+    &::first-line {
+      line-height: 0;
+    }
+  }
+
+  .code-toolbar {
+    margin: 0;
+  }
 }
 
 /***** 5. End collapsible code block CSS *****/
