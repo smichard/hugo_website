@@ -8,8 +8,8 @@
     {{ $options := printf "%s%s" "lineNos=" $lineNos }}
 
     <div class="collapsable-code">
-        <input id="{{ .Get "id" | default $id }}" type="checkbox" {{ if ( eq ( .Get "isCollapsed" ) "true" ) -}} checked {{- end }} />
-        <label for="{{ .Get "id" | default $id }}">
+        <input id="{{ .Get "id" | default $id }}" class="toggle" type="checkbox" {{ if ( eq ( .Get "isCollapsed" ) "false" ) -}} checked {{- end }} />
+        <label for="{{ .Get "id" | default $id }}" class="lbl-toggle">
           <span class="collapsable-code__language">{{ .Get "language" }}</span>
           {{ if .Get "title" }}<span class="collapsable-code__title">{{ .Get "title" | markdownify }}</span>{{ end }}
           <span class="collapsable-code__toggle" data-label-expand="{{ .Get "expand" | default "△" }}" data-label-collapse="{{ .Get "collapse" | default "▽" }}"></span>
@@ -21,12 +21,6 @@
         {{- end -}}
     </div>
 
-
-
 {{ else }}
   {{ errorf "If you want to use the \"collapsable code\" shortcode, you need to pass a mandatory \"language\" param. The issue occured in %q (%q)" .Page.File .Page.Permalink }}
 {{ end }}
-
-
-
-

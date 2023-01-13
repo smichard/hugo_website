@@ -516,16 +516,18 @@
   width: 100%;
   margin: 40px 0;
 
+  // hide the checkbox
   input[type="checkbox"] {
     position: absolute;
     visibility: hidden;
   }
 
+  // 5.1 Styles for the code block header (always visible)
   label {
     position: relative;
     display: flex;
     justify-content: space-between;
-    background: var(--background-secondary);
+    background: $header-background;
     padding: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -535,13 +537,60 @@
     cursor: pointer;
   }
 
+  // 5.2 Styles for the code block body
   div.highlight{
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
 
+    pre {
+      margin: 0;
+    }
+
+  }
+
+  input[type="checkbox"]:checked ~ div.highlight {
+    max-height: 1000px;
+  }
+
+  input[type="checkbox"]:checked ~ label {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  input[type="checkbox"]:not(:checked) ~ label {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  input[type="checkbox"]:not(:checked) ~ div.highlight {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  /* code to change the triangle using data-label-expand and data-label-collapse attributes
+    the span tag with class 'collapsable-code__toggle' inside the label tag is used to display the triangle
+    this span tag has the data-label-expand and data-label-collapse attributes 
+  */
+
+
+  input[type="checkbox"]:checked ~ label span.collapsable-code__toggle:after {
+    content: attr(data-label-expand);
+    /* Explanation of this css block:
+    when the checkbox is checked, the content of the span tag with
+    class 'collapsable-code__toggle' inside the label tag is changed to the value of
+    the data-label-collapse attribute
+    Here check box is checked means the code block is expanded 
+    */
+  }
+
+  input[type="checkbox"]:not(:checked) ~ label span.collapsable-code__toggle:after {
+    content: attr(data-label-collapse);
   }
 
   &__title {
     flex: 1;
-    color: var(--color);
+    color: $header-title-text;
     padding: 3px 10px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -549,8 +598,8 @@
   }
 
   &__language {
-    background: var(--background);
-    color: var(--color);
+    background: $code-language-bg;
+    color: $code-language-text;
     border-radius: 10px;
     padding: 3px 10px;
   }
@@ -592,16 +641,19 @@
 
 .highlight {
 
-  table tr pre {
-    padding: 0; /* ft-adjustment: no padding for code blocks with line number */
+  table{
+    tr pre {
+      padding: 1.9rem .3rem;
+    }
   }
 
   pre {
-    padding: .9rem; /* ft-adjustment: add padding for all code blocks without line number */
+    padding: 1.9rem .9rem; /* ft-adjustment: add padding for all code blocks without line number */
   }
 
   div {
     overflow: auto; /* ft-adjustment: fix content overflow in small screens */
+    border-radius: .5rem;
   }
 
 }
