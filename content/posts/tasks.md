@@ -83,14 +83,16 @@ I like this implementation:
 
 Tests:
 
-If we consider 'collapsiblility' and 'line number' as two features of code blocks, we have test cases:
+If we consider 'collapsiblility' and 'line number' as two features of code blocks, we have the fowwloing test cases:
 
-1. Collapsible (collapsed) code block with line numbers
-2. Collapsible (collapsed) code block without line numbers
-3. Collapsible (expanded) code block with line numbers
-4. Collapsible (expanded) code block without line numbers
+1. Collapsed code block with line numbers
+2. Collapsed code block without line numbers
+3. Expanded code block with line numbers
+4. Expanded code block without line numbers
+5. Code block where `lineNos` parameter is omitted
+6. Code block where `isCollapsed` parameter is omitted
 
-### 1. Collapsible (collapsed) code block with line numbers
+### 1. Collapsed code block with line numbers
 
 Code:
 
@@ -118,7 +120,7 @@ pre {
 }
 {{< /collapsible-code >}}
 
-### 2. Collapsible (collapsed) code block without line numbers
+### 2. Collapsed code block without line numbers
 
 If you don't want to show line numbers, either set the `lineNos` parameter to `false` or simply omit the parameter, in which case it defaults to `false`.
 
@@ -157,7 +159,7 @@ print(thisdict["brand"])
 {{< /collapsible-code >}}
 
 
-### 3. Collapsible (expanded) code block with line numbers
+### 3. Expanded code block with line numbers
 
 If you want the code to be expanded (displayed), either you can set `isCollapsed` to `false` or simply omit the parameter in which case, it defaults to  `false`
 
@@ -187,7 +189,7 @@ pre {
     }
 {{< /collapsible-code >}}
 
-### 4. Collapsible (expanded) code block without line numbers
+### 4. Expanded code block without line numbers
 
 
 If you want the code to be expanded and to be shown without line numbers, you can simply omit the respective parameters.
@@ -222,6 +224,63 @@ print("Hello",first_name last_name,"good to see you")
 
 print("Dear {} {}, hope you're well!".format(last_name,first_name))
 
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{< /collapsible-code >}}
+
+
+### 5. Code block where `lineNos` parameter is omitted
+
+When `lineNos` parameter is omitted, the default behaviour is: no line numbers shown.
+
+Code:
+
+```go
+{{</* collapsible-code language="python" title="Really cool Python snippet" isCollapsed="true" */>}}
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{</* /collapsible-code */>}}
+```
+
+Result:
+
+{{< collapsible-code language="python" title="Really cool Python snippet" isCollapsed="true" >}}
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{< /collapsible-code >}}
+
+### 6. Code block where `isCollapsed` parameter is omitted
+
+When `isCollapsed` parameter is omitted, the default behaviour is: expanded codeblock.
+
+Code:
+
+```go
+{{</* collapsible-code language="python" title="Really cool Python snippet" lineNos="true" */>}}
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{</* /collapsible-code */>}}
+```
+
+Result:
+
+{{< collapsible-code language="python" title="Really cool Python snippet" lineNos="true" >}}
 thisdict = {
   "brand": "Ford",
   "model": "Mustang",
