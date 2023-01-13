@@ -83,7 +83,7 @@ I like this implementation:
 
 Tests:
 
-If we consider 'collapsiblility' and 'line number' as two features of code blocks, we have the fowwloing test cases:
+If we consider 'collapsiblility' and 'line number' as two features of code blocks, we have the following test cases:
 
 1. Collapsed code block with line numbers
 2. Collapsed code block without line numbers
