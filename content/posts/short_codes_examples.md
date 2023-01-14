@@ -69,7 +69,7 @@ pre {
 {{< /collapsible-code >}}
 
 # Button
-{{< button href="https://www.spiegel.de" >}}Spiegel{{< /button >}}
+{{< button href="https://www.spiegel.de" >}}      Spiegel {{< /button >}}
 
 # Blockquote
 
