@@ -11,6 +11,9 @@ enableRobotsTXT = true
 googleAnalytics = "UA-166794311-1"
 #disqusShortname = "michard"
 
+pygmentsUseClasses = true
+pygmentsCodefences = true
+
 [sitemap]
   changefreq = "monthly"
   filename = "sitemap.xml"
@@ -208,7 +211,6 @@ clientSecret = "" # Your client secret
     lineNoStart = 1
     lineNos = false
     lineNumbersInTable = true
-    noClasses = true
     noHl = false
     style = 'catppuccin-macchiato'
     tabWidth = 4
