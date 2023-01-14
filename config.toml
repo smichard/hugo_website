@@ -3,7 +3,7 @@ languageCode = "en"
 defaultContentLanguage = "en"
 
 title = "Home"
-theme = ["KeepIt"]
+theme = ["hugo-notice","KeepIt"]
 
 paginate = 12
 enableEmoji = true
