@@ -648,6 +648,13 @@
 .highlight {
 
   table{
+    &.lntable {
+      box-shadow: none;
+      td {
+        padding: 0;
+        border: 0;
+      }
+    }
     tr pre {
       padding: 1.9rem .3rem;
     }
