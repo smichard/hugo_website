@@ -18,54 +18,214 @@ hugo new posts/my-first-post.md
 # Figure
 {{< figure src="/images/posts/test_image.jpg" title="Caption" >}}
 
+# Code blocks
 
-# Standard code blocks
+## Standard code blocks
 
-## Without line numbers
-````go
-```bash
+### Standard code block with line numbers
+
+Code:
+
+````text
+```bash {linenos=true}
 #!/bin/sh
-docker build --no-cache --force-rm -t site .
-docker run -p 8080:8080 site
+mkdir dir  
+mkdir -p dir_root/{dir_b}/{dir_l1,dir_l2} 
 ```
 ````
 
-## With line numbers
-````go {linenos=table}
-```bash {linenos=table}
+Result:
+
+```bash {linenos=true}
 #!/bin/sh
 docker build --no-cache --force-rm -t site .
 docker run -p 8080:8080 site
+
+echo Some text to print out 
+cat file
+a=10
+b=$a
+let a+=10
+ls
+mkdir dir  
+mkdir -p dir_root/{dir_b}/{dir_l1,dir_l2} 
+cd dir_root
+cd "dir name"
+cd ~
+cp file $output
+```
+
+### Standard code block without line numbers
+
+Code:
+
+````text
+```html
+<div class="my_toc">
+    <hr />
+    <h1>Table of contents</h1>
+    {{ .Page.TableOfContents }}
+    <hr />
+</div>
 ```
 ````
 
-# Collapsible code blocks
+Result:
 
-Usage:
+```html
+<div class="my_toc">
+    <hr />
+    <h1>Table of contents</h1>
+    {{ .Page.TableOfContents }}
+    <hr />
+</div>
+```
+
+## Collapsible code blocks
+
+1. Collapsed code block with line numbers
+2. Collapsed code block without line numbers
+3. Expanded code block with line numbers
+4. Expanded code block without line numbers
+
+### 1. Collapsed code block with line numbers
+
+Code:
+
 ```go
-{{</* collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="true" lineNos="true" */>}}
-/* Css code here */
-{{</* /collapsible-code */>}}
-```
-
-{{< collapsible-code language="CSS" title="Really cool snippet" id="1" isCollapsed="false" lineNos="false">}}
+{{</* collapsible-code language="CSS" title="Really cool CSS snippet" isCollapsed="true" lineNos="true" */>}}
 pre {
      background: #1a1a1d;
      padding: 20px;
      border-radius: 8px;
      font-size: 1rem;
      overflow: auto;
-     @media (--phone) {
-         white-space: pre-wrap;
-         word-wrap: break-word;
-    }
-     code {
-         background: none !important;
-         color: #ccc;
-         padding: 0;
-         font-size: inherit !important;
-    }
 }
+{{</* /collapsible-code */>}}
+```
+
+Result :
+
+{{< collapsible-code language="CSS" title="Really cool CSS snippet" isCollapsed="true" lineNos="true">}}
+pre {
+     background: #1a1a1d;
+     padding: 20px;
+     border-radius: 8px;
+     font-size: 1rem;
+     overflow: auto;
+}
+{{< /collapsible-code >}}
+
+### 2. Collapsed code block without line numbers
+
+If you don't want to show line numbers, either set the `lineNos` parameter to `false` or simply omit the parameter, in which case it defaults to `false`.
+
+Code:
+
+```go
+{{</* collapsible-code language="python" title="Really cool Python snippet" isCollapsed="true" */>}}
+first_name = "Stephan"
+last_name = "Michard"
+
+print("Hello",first_name last_name,"good to see you")
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{</* /collapsible-code */>}}
+```
+
+Result:
+
+{{< collapsible-code language="python" title="Really cool Python snippet" isCollapsed="true" >}}
+first_name = "Stephan"
+last_name = "Michard"
+
+print("Hello",first_name last_name,"good to see you")
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{< /collapsible-code >}}
+
+
+### 3. Expanded code block with line numbers
+
+If you want the code to be expanded (displayed), either you can set `isCollapsed` to `false` or simply omit the parameter in which case, it defaults to  `false`
+
+Code:
+
+```go
+{{</* collapsible-code language="CSS" title="Really cool snippet" isCollapsed="false" lineNos="true" */>}}
+pre {
+     background: #1a1a1d;
+     padding: 20px;
+     border-radius: 8px;
+     font-size: 1rem;
+     overflow: auto;
+    }
+{{</* /collapsible-code */>}}
+```
+
+Result :
+
+{{< collapsible-code language="CSS" title="Really cool snippet" isCollapsed="false" lineNos="true" >}}
+pre {
+     background: #1a1a1d;
+     padding: 20px;
+     border-radius: 8px;
+     font-size: 1rem;
+     overflow: auto;
+    }
+{{< /collapsible-code >}}
+
+### 4. Expanded code block without line numbers
+
+
+If you want the code to be expanded and to be shown without line numbers, you can simply omit the respective parameters.
+
+Code:
+
+```go
+{{</* collapsible-code language="python" title="Really cool Python snippet" */>}}
+first_name = "Stephan"
+last_name = "Michard"
+
+print("Hello",first_name last_name,"good to see you")
+
+print("Dear {} {}, hope you're well!".format(last_name,first_name))
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+{{</* /collapsible-code */>}}
+```
+
+Result:
+
+{{< collapsible-code language="python" title="Really cool Python snippet" >}}
+first_name = "Stephan"
+last_name = "Michard"
+
+print("Hello",first_name last_name,"good to see you")
+
+print("Dear {} {}, hope you're well!".format(last_name,first_name))
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
 {{< /collapsible-code >}}
 
 # Button
