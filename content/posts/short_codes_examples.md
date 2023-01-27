@@ -1,6 +1,6 @@
 ---
 title: "Shortcode examples"
-date: 2023-01-04T21:55:58Z
+date: 2026-01-04T21:55:58Z
 draft: true
 author: "Stephan Michard"
 categories: []
@@ -229,7 +229,7 @@ print(thisdict["brand"])
 {{< /collapsible-code >}}
 
 # Button
-{{< button href="https://www.spiegel.de" >}}      Spiegel {{< /button >}}
+{{< button href="https://www.spiegel.de" >}} Spiegel {{< /button >}}
 
 # Blockquote
 
