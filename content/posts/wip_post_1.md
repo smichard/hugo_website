@@ -1,6 +1,6 @@
 ---
 title: "Matrix and element"
-date: 2023-02-20T20:27:00+01:00
+date: 2022-02-20T20:27:00+01:00
 draft: true
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"

@@ -1,6 +1,6 @@
 ---
 title: "Visiting FOSDEM"
-date: 2023-01-25T23:04:06+01:00
+date: 2022-01-25T23:04:06+01:00
 draft: true
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"

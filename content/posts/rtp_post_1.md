@@ -1,6 +1,6 @@
 ---
 title: "Insider Research Podcast"
-date: 2023-01-24T10:53:35+01:00
+date: 2022-01-24T10:53:35+01:00
 draft: true
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
