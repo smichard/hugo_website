@@ -12,7 +12,7 @@ toc:
 ---
 
 # Introduction
-bla, bla, bla, a way to query systematically, not a api call, based on webscrapping, use moderately
+In the post, I want to present a small project with which it is possible to automatically query the maintenance information of Dell assets via the website [XYZ](XYZ). The script was tested for Dell PowerEdge servers and storage solutions. As a result, the script returns the product type, the service support level, and the expiration date of the service. The script uses web scrapping as an extraction method, therefore it should only be used moderately to avoid generating too much traffic and prevent the web servers from being overloaded.  
 
 # Getting started
 {{< notice info >}}
@@ -38,20 +38,20 @@ pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
 ```
 
 # Using the script
-
+Clone the GitHub repository:
 ```bash
-git clone 
+git clone XYZ
 ```
-
+Install the required python modules:
 ```python
 pip3 install -r requirements.txt
 ```
-
+Use the script XYZ
 ```python
 python main.py <your_service_tag>
 ```
 
-Example output:
+XYZ Example output:
 ```bash
 Product : PowerEdge MX740c
 Service Tag :  <your service tag>
