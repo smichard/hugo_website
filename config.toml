@@ -130,7 +130,8 @@ pygmentsCodefences = true
     #Googlescholar = "xxxx"
     #Researchgate = "xxxx"
     #Mastodon = "xxxx"
-    Thingiverse = "xxxx"
+    #Thingiverse = "xxxx"
+    #Matrix = "@smichard:matrix.org"
 
 [params.share]
 Twitter = true
