@@ -148,7 +148,17 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 	color: #FFF;
 }
 
+/* style for horizontal line*/
 hr{
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
+
+/* style fork awesome icons*/
+/* https://forkaweso.me/ */
+.fa {
+	font-size: 32px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }

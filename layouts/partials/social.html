@@ -22,9 +22,9 @@
 {{ with .Site.Params.Social.Strava}}
 <a href="https://www.strava.com/athletes/{{.}}" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-strava"></i></a>
 {{ end }}
-<!--{{ with .Site.Params.Social.Matrix }}
-<a href="https://twitter.com/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="fa fa-matrix-org"></i></a>
-{{ end }} -->
+{{ with .Site.Params.Social.Matrix }}
+<a href="https://matrix.to/#/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="fa fa-matrix-org"></i></a>
+{{ end }}
 {{ with .Site.Params.Social.Email}}
 <a href="mailto:{{.}}" rel="me noopener noreffer"><i class="iconfont icon-mail"></i></a>
 {{ end }}

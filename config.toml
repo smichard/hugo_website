@@ -131,7 +131,7 @@ pygmentsCodefences = true
     #Researchgate = "xxxx"
     #Mastodon = "xxxx"
     #Thingiverse = "xxxx"
-    #Matrix = "@smichard:matrix.org"
+    Matrix = "@smichard:matrix.org"
 
 [params.share]
 Twitter = true
