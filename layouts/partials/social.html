@@ -1,6 +1,9 @@
 {{ with .Site.Params.Social.Twitter }}
 <a href="https://twitter.com/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-twitter"></i></a>
 {{ end }}
+{{ with .Site.Params.Social.Mastodon}}
+<a href="{{ . }}" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-mastodon"></i></a>
+{{ end }}
 {{ with .Site.Params.Social.PostNews }}
 <a href="https://post.news/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-folder"></i></a> 
 {{ end }}

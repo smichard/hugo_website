@@ -129,7 +129,7 @@ pygmentsCodefences = true
     #Vine = "xxxx"
     #Googlescholar = "xxxx"
     #Researchgate = "xxxx"
-    #Mastodon = "xxxx"
+    #Mastodon = "@smichard:matrix.org"
     #Thingiverse = "xxxx"
     Matrix = "@smichard:matrix.org"
 
