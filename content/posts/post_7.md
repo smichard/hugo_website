@@ -45,5 +45,5 @@ Next year's KubeCon Europe is set to take place from March 19th to 22nd in Paris
 # References
 - KubeCon & CloudNativeCon website - [link](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/)
 - KubeCon & CloudNativeCon schedule - [link](https://kccnceu2023.sched.com/)
-- YouTube Playlist - [YouTube](https://youtube.com/playlist?list=PLj6h78yzYM2PyrvCoOii4rAopBswfz1p7)
-- Inside Envoy: The Proxy for the Future [YouTube](https://www.youtube.com/watch?v=uaksVVHDhYU&t=3s)
+- YouTube Playlist - [link](https://youtube.com/playlist?list=PLj6h78yzYM2PyrvCoOii4rAopBswfz1p7)
+- Inside Envoy: The Proxy for the Future [link](https://www.youtube.com/watch?v=uaksVVHDhYU&t=3s)
