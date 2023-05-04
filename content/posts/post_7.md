@@ -5,7 +5,7 @@ draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Review"]
-tags: ["KubeCon","Conference"]
+tags: ["KubeCon","Conference","Kubernetes", "CNCF"]
 
 toc:
   enable: true
