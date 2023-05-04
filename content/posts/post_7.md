@@ -6,9 +6,9 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Review"]
 tags: ["KubeCon","Conference"]
+
 toc:
-  enable: true
-status: published
+  enable: true
 ---
 
 # Introduction
