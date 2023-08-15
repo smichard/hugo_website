@@ -73,7 +73,7 @@ pygmentsCodefences = true
 
 
 [params.social]
-    Twitter = "StephanMichard"
+    #Twitter = "StephanMichard"
     Linkedin = "stephanmichard"
     GitHub = "smichard"
     Instagram = "stephanmichard"
