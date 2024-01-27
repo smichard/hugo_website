@@ -1,7 +1,6 @@
 hugo.exe
 .hugo_build.lock
 a_to_do.md
-ci/
 /public/
 /public/*
 /resources/_gen/

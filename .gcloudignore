@@ -14,6 +14,7 @@
 *.out
 .vscode
 
+ci/
 /public/
 /public/*
 /resources/_gen/
