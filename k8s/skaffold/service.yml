@@ -1,0 +1,20 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hugo-website-dev
+  namespace: dev
+  labels:
+    app: hugo-website-dev
+  annotations:
+    app.openshift.io/vcs-ref: main
+    app.openshift.io/vcs-uri: 'https://github.com/smichard/hugo_website'
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: hugo-website-dev
+    deployment: hugo-website-dev
+  type: ClusterIP

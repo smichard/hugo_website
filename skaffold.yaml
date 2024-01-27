@@ -1,0 +1,19 @@
+apiVersion: skaffold/v4beta7
+kind: Config
+metadata:
+  name: hugo-website-dev
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+    - image: quay.io/michard/hugo_website
+      custom:
+        buildCommand: ./custom_build.sh
+        dependencies:
+          paths:
+          - .
+manifests:
+  rawYaml:
+    - k8s/skaffold/deployment.yml
+    - k8s/skaffold/route.yml
+    - k8s/skaffold/service.yml
