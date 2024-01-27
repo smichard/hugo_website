@@ -7,7 +7,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## Unreleased changes
 
 ### Documentation
+- :robot: changelog file generated [`12911e2`](https://github.com/smichard/hugo_website/commit/12911e2)
 - :robot: changelog file generated [`21a50b4`](https://github.com/smichard/hugo_website/commit/21a50b4)
+
+### Build
+- :rocket: files added to use skaffold [`dff4449`](https://github.com/smichard/hugo_website/commit/dff4449)
 
 ### Chore
 - update smichard/conventional_changelog action to v2 [`bc226e8`](https://github.com/smichard/hugo_website/commit/bc226e8)
