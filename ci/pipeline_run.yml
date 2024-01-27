@@ -1,0 +1,33 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: hugo-website-run-
+spec:
+  pipelineRef:
+    name: hugo-website
+  serviceAccountName: pipeline
+  workspaces:
+  - name: shared-workspace
+    volumeClaimTemplate:
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 60Mi
+        storageClassName: managed-nfs-storage
+        volumeMode: Filesystem
+  - name: registry-credentials
+    secret:
+      secretName: quay-creds
+  params:
+  - name: git-url
+    value: "https://github.com/smichard/hugo_website"
+  - name: git-revision
+    value: "main"
+  - name: target-image
+    value: "quay.io/michard/hugo_website"
+  - name: message
+    value: "Hugo Website: new image build and pushed to external registry - Build Tag:"
+  - name: notification-secret
+    value: "matrix-secret"
