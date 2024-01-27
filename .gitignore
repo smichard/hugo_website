@@ -6,3 +6,5 @@ ci/
 /public/*
 /resources/_gen/
 /resources/_gen/*
+.DS_Store
+**/.DS_Store
