@@ -25,8 +25,6 @@ Before joining Red Hat in 2023, Stephan worked at Dell Technologies from 2015 to
 {{< download file="/images/bio/image_3.jpg" title="Download image" class="wrapper_download_center" >}} 
 {{< figure src="/images/bio/image_4.jpg" title="" >}}
 {{< download file="/images/bio/image_4.jpg" title="Download image" class="wrapper_download_center" >}} 
-{{< figure src="/images/bio/image_4.jpg" title="" >}}
-{{< download file="/images/bio/image_4.jpg" title="Download image" class="wrapper_download_center" >}} 
 {{< figure src="/images/bio/image_5.jpg" title="" >}}
 {{< download file="/images/bio/image_5.jpg" title="Download image" class="wrapper_download_center" >}} 
 

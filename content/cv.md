@@ -25,7 +25,9 @@ Before joining Red Hat in 2023, Stephan worked at Dell Technologies from 2015 to
   {{< button href="https://github.com/smichard/graphR" >}}Available on GitHub{{< /button >}}
 
 # Certifications
-I love to familiarize myself with new technologies, tools or work methods. That's why I constantly try to educate myself. Below is a list of certifications I have acquired in the last few years. Right now I'm trying to deepen my knowledge about Google Cloud, you can see the progress [here](https://www.cloudskillsboost.google/public_profiles/b9b38845-f98b-4adc-a1ac-177ce62c01ea):
+I love to familiarize myself with new technologies, tools or work methods. That's why I constantly try to educate myself. Below is a list of certifications I have acquired in the last few years. you can track my advancements on [Credly](https://www.credly.com/users/stephan-michard.07f77149/badges):
+  - LFC131: Green Software for Practitioners - Linux Foundation
+  - Red Hat Certified Specialist in Containers - Red Hat
   - Certified Kubernetes Application Developer (CKAD) - Linux Foundation
   - Enterprise Design Thinking Practitioner - IBM
   - IBM Garage Essentials - IBM
@@ -48,6 +50,4 @@ Please find below my current CV.
 
 # Let's talk
 With the content on this website you got an impression about me. If you think it makes sense to talk I look forward to an interaction, you can find my Calendly link here:  
-{{< calendly calendar="stephan-michard" >}}
-  Schedule time with me
-{{< /calendly >}}
+{{< button href="https://red.ht/meet_stephan" >}}Schedule time with me{{< /button >}}
