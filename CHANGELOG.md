@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.5 (2024-01-29)
+
+### Documentation
+- :robot: changelog file generated [`f4124eb`](https://github.com/smichard/hugo_website/commit/f4124eb)
+
+### Deployment
+- :rocket: image renamed [`e5a81cd`](https://github.com/smichard/hugo_website/commit/e5a81cd)
+
 ## 0.1.4 (2024-01-29)
 
 ### Documentation
