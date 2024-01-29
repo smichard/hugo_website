@@ -4,11 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
-## Unreleased changes
+## 0.1.3 (2024-01-29)
 
 ### Documentation
+- :robot: changelog file generated [`da47087`](https://github.com/smichard/hugo_website/commit/da47087)
 - :robot: changelog file generated [`12911e2`](https://github.com/smichard/hugo_website/commit/12911e2)
 - :robot: changelog file generated [`21a50b4`](https://github.com/smichard/hugo_website/commit/21a50b4)
+
+### Deployment
+- :rocket: added post on Green Software Course [`6d24f49`](https://github.com/smichard/hugo_website/commit/6d24f49)
 
 ### Build
 - :rocket: files added to use skaffold [`dff4449`](https://github.com/smichard/hugo_website/commit/dff4449)
