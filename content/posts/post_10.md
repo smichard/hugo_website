@@ -8,10 +8,9 @@ categories: ["Review"]
 tags: ["Certification","Learning","Sustainability"]
 toc:
   enable: false
-status: published
 ---
 
-### Green Software: Harnessing Efficiency and Sustainability in the Digital World
+# Green Software: Harnessing Efficiency and Sustainability in the Digital World
 
 In today's rapidly advancing technological landscape, the concept of green software is gaining pivotal importance. Green software represents the intersection of digital innovation and environmental consciousness, focusing on creating applications that are not only efficient but also minimize their carbon footprint. The "Green Software for Practitioners (LFC131)" course, offered by the Linux Foundation, serves as an insightful gateway into this emerging field. It comprehensively covers the nuances of developing applications that are both high-performing and environmentally sustainable. Motivated by a desire to explore the concept of green IT and understand how to run applications efficiently with a carbon footprint in mind, I decided to enroll in this course.
 
