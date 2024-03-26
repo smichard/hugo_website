@@ -4,6 +4,28 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.6 (2024-03-26)
+
+### Feature
+- :rocket: added new post [`f0d0e22`](https://github.com/smichard/hugo_website/commit/f0d0e22)
+
+### Bug Fixes
+- :fire: removed social share buttons [`2b57e38`](https://github.com/smichard/hugo_website/commit/2b57e38)
+- :bug: added introduction with reference to opensourcers [`a968e12`](https://github.com/smichard/hugo_website/commit/a968e12)
+- :bug: fixed headline in post [`9a485d7`](https://github.com/smichard/hugo_website/commit/9a485d7)
+- :fire: deleted unfinished posts [`d081c28`](https://github.com/smichard/hugo_website/commit/d081c28)
+
+### Documentation
+- :robot: changelog file generated [`a3ec919`](https://github.com/smichard/hugo_website/commit/a3ec919)
+
+### Chore
+- update quay.io/michard/devspaces_base_image docker tag to v0.1.9 [`7bc793d`](https://github.com/smichard/hugo_website/commit/7bc793d)
+- update quay.io/michard/devspaces_base_image docker tag to v0.1.5 [`48ea028`](https://github.com/smichard/hugo_website/commit/48ea028)
+
+### Other
+- Merge pull request #21 from smichard/renovate/quay.io-michard-devspaces_base_image-0.x [`1854a48`](https://github.com/smichard/hugo_website/commit/1854a48)
+- Merge pull request #20 from smichard/renovate/quay.io-michard-devspaces_base_image-0.x [`f2d2a06`](https://github.com/smichard/hugo_website/commit/f2d2a06)
+
 ## 0.1.5 (2024-01-29)
 
 ### Documentation
