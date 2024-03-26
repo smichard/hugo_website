@@ -60,7 +60,7 @@ pygmentsCodefences = true
     baidu_verification = ""
 
     avatar = "/images/me/avatar.jpeg" #comment it to use gravatar
-    socialShare = true
+    socialShare = false
 
     description = "" # site description
     keywords = "" # site keywords
