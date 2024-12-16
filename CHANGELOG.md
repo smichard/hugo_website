@@ -4,6 +4,35 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.8 (2024-12-16)
+
+### Feature
+- :rocket: new post added [`2fc16c0`](https://github.com/smichard/hugo_website/commit/2fc16c0)
+- :fire: removed links to social networks which are not used [`5b1938a`](https://github.com/smichard/hugo_website/commit/5b1938a)
+
+### Bug Fixes
+- :bug: removed bugs [`faadd31`](https://github.com/smichard/hugo_website/commit/faadd31)
+
+## 0.1.7 (2024-11-13)
+
+### Documentation
+- :robot: changelog file generated [`a2ab7b3`](https://github.com/smichard/hugo_website/commit/a2ab7b3)
+
+### Chore
+- update dependency lightgallery to v2.8.1 [`d993e7d`](https://github.com/smichard/hugo_website/commit/d993e7d)
+- update anothrnick/github-tag-action action to v1.69.0 [`3bbee29`](https://github.com/smichard/hugo_website/commit/3bbee29)
+- update smichard/conventional_changelog action to v2.0.5 [`3b2d7dc`](https://github.com/smichard/hugo_website/commit/3b2d7dc)
+- update quay.io/michard/tekton_base_image docker tag to v0.1.14 [`be44b5f`](https://github.com/smichard/hugo_website/commit/be44b5f)
+- update quay.io/michard/devspaces_base_image docker tag to v0.1.20 [`c1a551b`](https://github.com/smichard/hugo_website/commit/c1a551b)
+- update quay.io/michard/devspaces_base_image docker tag to v0.1.16 [`7c3a92a`](https://github.com/smichard/hugo_website/commit/7c3a92a)
+
+### Other
+- Merge pull request #24 from smichard/renovate/anothrnick-github-tag-action-1.x [`a94b2e3`](https://github.com/smichard/hugo_website/commit/a94b2e3)
+- Merge pull request #26 from smichard/renovate/smichard-conventional_changelog-2.x [`e311bbb`](https://github.com/smichard/hugo_website/commit/e311bbb)
+- Merge pull request #25 from smichard/renovate/quay.io-michard-tekton_base_image-0.x [`b5a8cb5`](https://github.com/smichard/hugo_website/commit/b5a8cb5)
+- Merge pull request #23 from smichard/renovate/quay.io-michard-devspaces_base_image-0.x [`760c436`](https://github.com/smichard/hugo_website/commit/760c436)
+- Merge pull request #22 from smichard/renovate/quay.io-michard-devspaces_base_image-0.x [`9c8aed2`](https://github.com/smichard/hugo_website/commit/9c8aed2)
+
 ## 0.1.6 (2024-03-26)
 
 ### Feature
