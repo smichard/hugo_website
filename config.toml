@@ -9,7 +9,6 @@ paginate = 12
 enableEmoji = true
 enableRobotsTXT = true
 googleAnalytics = "UA-166794311-1"
-#disqusShortname = "michard"
 
 pygmentsUseClasses = true
 pygmentsCodefences = true
@@ -114,7 +113,7 @@ pygmentsCodefences = true
     #Patreon = "xxxx"
     #Steam = "xxxx"
     #Twitch = "xxxx"
-    Strava = "22220275"
+    #Strava = "22220275"
     #Skype = "xxxx"
     #Whatsapp = "xxxx"
     #Zhihu = "xxxx"
@@ -131,7 +130,7 @@ pygmentsCodefences = true
     #Researchgate = "xxxx"
     #Mastodon = "@smichard:matrix.org"
     #Thingiverse = "xxxx"
-    Matrix = "@smichard:matrix.org"
+    #Matrix = "@smichard:matrix.org"
 
 [params.share]
 Twitter = true
