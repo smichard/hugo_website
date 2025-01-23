@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.13 (2025-01-23)
+
+### Documentation
+- :robot: changelog file generated [`5b7d0c3`](https://github.com/smichard/hugo_website/commit/5b7d0c3)
+
+### Test
+- :truck: [`0b58b69`](https://github.com/smichard/hugo_website/commit/0b58b69)
+
+### Build
+- :rocket: workflow adjusted [`6dad33d`](https://github.com/smichard/hugo_website/commit/6dad33d)
+
 ## 0.1.12 (2025-01-23)
 
 ## 0.1.11 (2025-01-23)
