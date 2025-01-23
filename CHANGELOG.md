@@ -4,6 +4,38 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.12 (2025-01-23)
+
+## 0.1.11 (2025-01-23)
+
+### Test
+- :truck: test [`89f02b8`](https://github.com/smichard/hugo_website/commit/89f02b8)
+
+### Chore
+- update quay.io/michard/nginx_base_image docker tag to v0.2.9 [`dc2a3f2`](https://github.com/smichard/hugo_website/commit/dc2a3f2)
+
+## 0.1.10 (2025-01-23)
+
+### Documentation
+- :robot: changelog file generated [`efb1cc5`](https://github.com/smichard/hugo_website/commit/efb1cc5)
+
+### Build
+- :rocket: github workflow adjusted to use github as build platform [`d6d40c2`](https://github.com/smichard/hugo_website/commit/d6d40c2)
+- :rocket: workflow adjusted to new build setup [`006cfa2`](https://github.com/smichard/hugo_website/commit/006cfa2)
+- :rocket: adjusted to new build setup [`78e56f5`](https://github.com/smichard/hugo_website/commit/78e56f5)
+
+### Chore
+- update quay.io/michard/nginx_base_image docker tag to v0.2.9 [`df4b570`](https://github.com/smichard/hugo_website/commit/df4b570)
+- update dependency ubuntu to v24 [`d35f3dd`](https://github.com/smichard/hugo_website/commit/d35f3dd)
+- update anothrnick/github-tag-action action to v1.71.0 [`a3ea847`](https://github.com/smichard/hugo_website/commit/a3ea847)
+- update smichard/conventional_changelog action to v2.0.6 [`4ee8440`](https://github.com/smichard/hugo_website/commit/4ee8440)
+
+### Other
+- Merge pull request #32 from smichard/renovate/quay.io-michard-tekton_base_image-0.x [`6e858f4`](https://github.com/smichard/hugo_website/commit/6e858f4)
+- Merge pull request #30 from smichard/renovate/ubuntu-24.x [`ccfde16`](https://github.com/smichard/hugo_website/commit/ccfde16)
+- Merge pull request #29 from smichard/renovate/anothrnick-github-tag-action-1.x [`28e03e0`](https://github.com/smichard/hugo_website/commit/28e03e0)
+- Merge pull request #28 from smichard/renovate/smichard-conventional_changelog-2.x [`4e689ea`](https://github.com/smichard/hugo_website/commit/4e689ea)
+
 ## 0.1.9 (2025-01-22)
 
 ### Documentation
