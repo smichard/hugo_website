@@ -77,8 +77,12 @@ jobs:
         git fetch --tags
         TAG=$(git describe --tags --abbrev=0 || echo "latest")
         echo "TAG=$TAG" >> $GITHUB_ENV
-        echo "Current build tag:"
-        echo $TAG
+        echo "Current build tag: $TAG"
+
+    - name: Get git submodules
+      id: submodules
+      run: |
+        git submodule update --init --recursive
 
     - name: Build the container image
       run: |
