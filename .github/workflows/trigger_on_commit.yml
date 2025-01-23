@@ -82,7 +82,7 @@ jobs:
 
     - name: Build the container image
       run: |
-        docker build -f Containerfile -t quay.io/michard/hugo_website:${{ env.TAG }} .
+        docker build -f Dockerfile -t quay.io/michard/hugo_website:${{ env.TAG }} .
 
     - name: Push the container image to the target registry
       run: |
