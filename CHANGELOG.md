@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.17 (2025-02-03)
+
+### Feature
+- :rocket: cv updated [`d0c8afc`](https://github.com/smichard/hugo_website/commit/d0c8afc)
+
+### Documentation
+- :robot: changelog file generated [`5cf7ea5`](https://github.com/smichard/hugo_website/commit/5cf7ea5)
+
+### Build
+- :rocket: updated run script to use podman [`80ed599`](https://github.com/smichard/hugo_website/commit/80ed599)
+
+## 0.1.16 (2025-01-23)
+
+### Chore
+- update smichard/conventional_changelog action to v2.0.10 [`91985f0`](https://github.com/smichard/hugo_website/commit/91985f0)
+
 ## 0.1.15 (2025-01-23)
 
 ### Test
