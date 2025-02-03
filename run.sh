@@ -1,5 +1,5 @@
 #!/bin/sh
 
-docker build --no-cache --force-rm -t site .
+podman build --arch=arm64 --no-cache --force-rm -t site .
 
-docker run -p 8080:8080 site
+podman run -p 8080:8080 site
