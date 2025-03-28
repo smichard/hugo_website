@@ -26,6 +26,10 @@ Before joining Red Hat in 2023, Stephan worked at Dell Technologies from 2015 to
 
 # Certifications
 I love to familiarize myself with new technologies, tools or work methods. That's why I constantly try to educate myself. Below is a list of certifications I have acquired in the last few years. you can track my advancements on [Credly](https://www.credly.com/users/stephan-michard.07f77149/badges):
+  - Red Hat Certified OpenShift Application Developer - Red Hat
+  - Certified Facilitator of LEGO® SERIOS PLAY® Methods and Materials - Hello Agile
+  - Red Hat Certified Specialist in OpenShift AI - Red Hat
+  - Red Hat Certified Specialist in OpenShift Virtualization - Red Hat
   - LFC131: Green Software for Practitioners - Linux Foundation
   - Red Hat Certified Specialist in Containers - Red Hat
   - Certified Kubernetes Application Developer (CKAD) - Linux Foundation
