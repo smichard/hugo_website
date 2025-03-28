@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.18 (2025-03-28)
+
+### Documentation
+- :robot: changelog file generated [`e5a32ff`](https://github.com/smichard/hugo_website/commit/e5a32ff)
+
+### Other
+- feat: [`381ffb6`](https://github.com/smichard/hugo_website/commit/381ffb6)
+
 ## 0.1.17 (2025-02-03)
 
 ### Feature
