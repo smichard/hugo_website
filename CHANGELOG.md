@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.19 (2025-05-07)
+
+### Documentation
+- :robot: changelog file generated [`b852c61`](https://github.com/smichard/hugo_website/commit/b852c61)
+
+### Chore
+- update quay.io/michard/devspaces_base_image docker tag to v0.1.26 [`c310f26`](https://github.com/smichard/hugo_website/commit/c310f26)
+
 ## 0.1.18 (2025-03-28)
 
 ### Documentation
