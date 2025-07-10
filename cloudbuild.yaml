@@ -15,7 +15,7 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'europe-north1-docker.pkg.dev/${PROJECT_ID}/hugo-website:${BUILD_ID}'
+  - 'europe-north1-docker.pkg.dev/${PROJECT_ID}/hugo-website/website:${BUILD_ID}'
   - '.'
 
 # This step pushes the image to Container Registry
@@ -25,7 +25,7 @@ steps:
   id: Push
   args:
   - 'push'
-  - 'europe-north1-docker.pkg.dev/${PROJECT_ID}/hugo-website:${BUILD_ID}'
+  - 'europe-north1-docker.pkg.dev/${PROJECT_ID}/hugo-website/website:${BUILD_ID}'
 
 # deploy container image to Google Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
@@ -35,7 +35,7 @@ steps:
   - 'deploy'
   - 'hugo-website'
   - '--image'
-  - 'europe-north1-docker.pkg.dev/${PROJECT_ID}/hugo-website:${BUILD_ID}'
+  - 'europe-north1-docker.pkg.dev/${PROJECT_ID}/hugo-website/website:${BUILD_ID}'
   - '--region'
   - 'europe-north1'
   - '--platform'
