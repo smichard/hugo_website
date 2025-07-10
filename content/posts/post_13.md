@@ -1,5 +1,5 @@
 ---
-title: "Remembering Prof. Hans-Joachim Queisser"
+title: "Remembering Prof. Dr. Hans-Joachim Queisser"
 date: 2025-07-10
 draft: false
 author: "Stephan Michard"
