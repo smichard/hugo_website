@@ -84,29 +84,17 @@ jobs:
       run: |
         git submodule update --init --recursive
 
-    - name: Build the container image
-      run: |
-        docker build -f Dockerfile -t quay.io/michard/hugo_website:${{ env.TAG }} .
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
 
-    - name: Push the container image to the target registry
-      run: |
-        docker push quay.io/michard/hugo_website:${{ env.TAG }}
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
 
-  notification:
-    needs: build_and_push
-    runs-on: ubuntu-latest
-    steps:
-      - name: notification
-        uses: s3krit/matrix-message-action@v0.0.3
-        with:
-          room_id: ${{ secrets.MATRIX_ROOM_ID }}
-          access_token: ${{ secrets.MATRIX_ACCESS_TOKEN }}
-          server: ${{ secrets.MATRIX_SERVER }}
-          message: |
-            "${{ github.repository }}":<br />
-            **new updates pushed to the repository — triggering quay build**<br />
-            commit message: **${{ github.event.head_commit.message }}** <br />
-            contributor: **${{ github.actor }}** <br />
-            commit sha: **${{ github.sha }}** <br />
-            commit history: **[link](https://github.com/${{ github.repository }}/commits/main)** <br />
-            image registry: **[Quay.io](https://quay.io/repository/michard/hugo_website?tab=tags)** <br />
+    - name: Build container image and push
+      uses: docker/build-push-action@v6
+      with:
+        context: .
+        file: Containerfile
+        platforms: linux/amd64
+        push: true
+        tags: quay.io/michard/hugo_website:${{ env.TAG }},quay.io/michard/hugo_website:latest
