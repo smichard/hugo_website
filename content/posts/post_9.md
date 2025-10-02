@@ -34,3 +34,6 @@ Stephan
 
 
 {{< figure src="/images/posts/post_9.jpg" title="" >}}
+
+# References
+- LinkedIn Post - [link](https://www.linkedin.com/posts/stephanmichard_newbeginnings-dayone-redhat-activity-7081977766358724608-RMwY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAtEiQcBEy8d8vSnm8NBZWZ0faicZji_MK0)

@@ -34,3 +34,6 @@ Best,
 Stephan
 
 {{< figure src="/images/posts/post_8.jpg" title="" >}}
+
+# References
+- LinkedIn Post - [link](https://www.linkedin.com/posts/stephanmichard_dear-linkedin-network-i-wanted-to-take-activity-7080540586331533312-UMhR?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAtEiQcBEy8d8vSnm8NBZWZ0faicZji_MK0)
