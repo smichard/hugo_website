@@ -2,7 +2,7 @@ name: on-commit
 on:
   push:
     paths:
-      - 'Dockerfile'
+      - 'Containerfile'
       - 'config.toml'
       - 'assets/**'
       - 'content/**'
@@ -94,7 +94,7 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         context: .
-        file: Containerfile
+        file: Dockerfile
         platforms: linux/amd64
         push: true
         tags: quay.io/michard/hugo_website:${{ env.TAG }},quay.io/michard/hugo_website:latest
