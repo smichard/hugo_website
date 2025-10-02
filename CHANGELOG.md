@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.27 (2025-10-02)
+
+### Feature
+- :sparkles: new post added [`e9e597d`](https://github.com/smichard/hugo_website/commit/e9e597d)
+
+### Documentation
+- :robot: changelog file generated [`9cacc1c`](https://github.com/smichard/hugo_website/commit/9cacc1c)
+
+### Build
+- :bug: GitHub actions adjusted - removed Matrix [`841e921`](https://github.com/smichard/hugo_website/commit/841e921)
+
+### Chore
+- update anothrnick/github-tag-action action to v1.75.0 [`ffbcbec`](https://github.com/smichard/hugo_website/commit/ffbcbec)
+- update quay.io/michard/devspaces_base_image docker tag to v0.1.27 [`1e97686`](https://github.com/smichard/hugo_website/commit/1e97686)
+
+### Style
+- :sparkles: LinkedIn Links added [`8f95c1d`](https://github.com/smichard/hugo_website/commit/8f95c1d)
+
+### Other
+- Merge pull request #40 from smichard/renovate/anothrnick-github-tag-action-1.x [`1dfcc31`](https://github.com/smichard/hugo_website/commit/1dfcc31)
+- Merge pull request #39 from smichard/renovate/quay.io-michard-devspaces_base_image-0.x [`c2185f3`](https://github.com/smichard/hugo_website/commit/c2185f3)
+
+## 0.1.26 (2025-10-02)
+
+### Chore
+- update dependency lightgallery to v2.8.3 [`b8967d6`](https://github.com/smichard/hugo_website/commit/b8967d6)
+
 ## 0.1.25 (2025-10-02)
 
 ### Documentation
