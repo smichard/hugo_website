@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.29 (2025-10-02)
+
+### Build
+- :bug: GitHub Action adjusted - trigger updated [`e9969e9`](https://github.com/smichard/hugo_website/commit/e9969e9)
+
+### Chore
+- update quay.io/michard/nginx_base_image docker tag to v0.2.13 [`8006df2`](https://github.com/smichard/hugo_website/commit/8006df2)
+
+## 0.1.28 (2025-10-02)
+
+### Documentation
+- :robot: changelog file generated [`cf1dfea`](https://github.com/smichard/hugo_website/commit/cf1dfea)
+
+### Build
+- :sparkles: trigger build [`f2440d1`](https://github.com/smichard/hugo_website/commit/f2440d1)
+- :bug: GitHub Action adjusted - Dockerfile instead of Containerfile [`1f772d0`](https://github.com/smichard/hugo_website/commit/1f772d0)
+
+### Chore
+- update quay.io/michard/nginx_base_image docker tag to v0.2.13 [`3201410`](https://github.com/smichard/hugo_website/commit/3201410)
+
 ## 0.1.27 (2025-10-02)
 
 ### Feature
