@@ -2,7 +2,7 @@ name: on-commit
 on:
   push:
     paths:
-      - 'Containerfile'
+      - 'Dockerfile'
       - 'config.toml'
       - 'assets/**'
       - 'content/**'
