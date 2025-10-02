@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.25 (2025-10-02)
+
+### Documentation
+- :robot: changelog file generated [`b3e575d`](https://github.com/smichard/hugo_website/commit/b3e575d)
+
+### Chore
+- update quay.io/michard/devspaces_base_image docker tag to v0.1.27 [`1e97686`](https://github.com/smichard/hugo_website/commit/1e97686)
+- update actions/checkout action to v5 [`e69017f`](https://github.com/smichard/hugo_website/commit/e69017f)
+- update quay.io/michard/tekton_base_image docker tag to v0.1.30 [`26086b7`](https://github.com/smichard/hugo_website/commit/26086b7)
+
+### Other
+- Merge pull request #38 from smichard/renovate/actions-checkout-5.x [`17796b5`](https://github.com/smichard/hugo_website/commit/17796b5)
+- Merge pull request #33 from smichard/renovate/quay.io-michard-tekton_base_image-0.x [`1520796`](https://github.com/smichard/hugo_website/commit/1520796)
+
 ## 0.1.24 (2025-09-30)
 
 ### Other
