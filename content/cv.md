@@ -9,11 +9,19 @@ tags: []
 
 # Biography
 For a newspaper interview, I was lucky enough to have a biographical text about me prepared by a professional writer:  
-Dr. Stephan Michard currently holds the position of Associate Principal Solution Architect at Red Hat. Based in North Rhine-Westphalia, Germany, Stephan is actively engaged with customers and partners throughout Germany, focusing on the development and implementation of robust digital business strategies. Drawing upon a rich blend of business acumen and profound technological expertise, he has a distinguished history of crafting both software and hardware solutions for intricate business and IT landscapes. Stephan's advisory prowess extends to a strategic tier, where he collaborates closely with a specialized team to conceive and actualize bespoke IT solutions.  
-Previously serving as a Advisory Solution Architect and CTO Ambassador at Dell Technologies, Stephan's role involved evangelizing Dell Technologies' suite of technologies, skills, and services. This included fostering internal and external awareness of the value these offerings bring to both customers and the industry at large. His ambassadorship emphasized his proficiency in promoting and implementing cutting-edge technologies that align with business objectives.  
-With a comprehensive background collaborating with clients spanning diverse industries, Stephan boasts extensive expertise acquired within the automotive sector. His portfolio encompasses the design of global-scale data center solutions, underscored by his mastery of software-defined storage, hyper-converged infrastructure (HCI), cloud solutions, application development, and enhancing the developer experience.  
-Presently, Stephan plays a pivotal role in Red Hat's Partner Ecosystem Team, where his focus centers on cultivating partnerships and advancing technology in collaboration with strategic allies. This role seamlessly aligns with his enduring commitment to driving innovation and technological excellence in the IT landscape.  
-Before joining Red Hat in 2023, Stephan worked at Dell Technologies from 2015 to 2023. Prior to entering the IT industry, he was employed at the Institute for Energy and Climate Research in Jülich, where he served as a research scientist. Stephan holds both a Diploma in Electrical Engineering and a PhD in Electrical Engineering from RWTH Aachen University. He is proficient in German, French, and English.
+Dr. Stephan Michard serves as Associate Principal Solution Architect at Red Hat, where he advises enterprise customers and partners across Germany on building open, scalable, and intelligent technology platforms. Based in North Rhine-Westphalia, Stephan plays a central role in helping organizations design and implement cloud and AI-driven architectures that translate technological innovation into tangible business outcomes.
+
+Combining strategic insight with deep technical expertise, Stephan draws on more than a decade of experience spanning solution architecture, IT strategy, and enterprise consulting. His work focuses on bridging business objectives with modern technology platforms — empowering organizations to innovate faster, operate more efficiently, and remain resilient in an era of constant change.
+
+Before joining Red Hat, Stephan spent eight years at Dell Technologies, where he served as Advisory Solution Architect and CTO Ambassador. In this capacity, he was responsible for evangelizing emerging technologies, shaping IT transformation strategies, and engaging with enterprise clients — particularly within the automotive and industrial sectors. His portfolio includes global-scale solution design across data center modernization, software-defined storage, hyper-converged infrastructure (HCI), cloud platforms, and developer experience enablement.
+
+Earlier in his career, Stephan worked as a research scientist at the Institute for Energy and Climate Research in Jülich, focusing on solar cell innovation. He holds both a Diploma and a PhD in Electrical Engineering from RWTH Aachen University.
+
+In his current role, Stephan is an advocate for open-source innovation and AI adoption, collaborating closely with Red Hat’s partner ecosystem to drive technological progress through co-creation and strategic enablement. His professional philosophy is rooted in the belief that technology is most powerful when it advances both human potential and business value.
+
+Outside of his professional life, Stephan is an avid runner and cyclist, often training for endurance events such as half marathons. He is passionate about continuous learning and enjoys sharing insights on cloud strategy, AI platforms, and open innovation through writing, mentoring, and speaking engagements.
+
+Stephan is fluent in German, English, and French.
 
 # Projects
 - **Cloud Bites Tutorial**  
