@@ -13,8 +13,17 @@ When creating this website, my focus was to use a simple framework that allows m
 
 
 # whoami
-My name is Stephan Michard, I was born and raised close to Cologne. My interest in science, physics, and technology, in general, led me to pursue studies of electrical engineering at the technical university in Aachen and at the University of New South Wales in Sydney. At the end of my studies, I joined the Institute for Energy and Climate Research in Jülich to work on my Diploma thesis. Subsequently, I stayed in Jülich as a research scientist to pursue a PhD thesis in solar cell research. After some time as a postdoc, I decided to join a US-based technology company. In my role, I work with customers across Germany to develop and implement digital business strategies. I provide consultancy at a strategic level and work with a team of specialists to create the necessary IT infrastructure solutions. I specialize in designing data center and cloud platform solutions on a global scale and have expertise in areas such as software-defined storage, hyper-converged infrastructure, cloud solutions, app development, and developer experience.  
-During my free time, I enjoy being outdoors and participating in endurance sports like cycling and running. I am currently training for my next half marathon. Alongside this, I like to listen to podcasts:
+My name is Stephan Michard, and I was born and raised near Cologne, Germany. My curiosity for how things work — from physics to computing — led me to study electrical engineering at RWTH Aachen University and the University of New South Wales in Sydney.
+
+I began my career at the Institute for Energy and Climate Research in Jülich, where I completed my Diploma and later earned my PhD in Electrical Engineering, focusing on solar cell research. After several years as a research scientist and postdoc, I decided to shift from pure research to applied technology — joining the IT industry to bring ideas to life at scale.
+
+Today, I work as an Associate Principal Solution Architect at Red Hat, helping organizations and partners across Germany design and implement cloud and AI platforms that enable sustainable digital transformation. My focus is on bridging strategy and execution — turning business intent into scalable, open, and intelligent technology platforms.
+
+Over the years, I’ve built experience in data center architecture, cloud-native solutions, software-defined infrastructure, and developer experience design. I enjoy working with forward-thinking teams who challenge assumptions and use technology to create real, measurable outcomes.
+
+When I’m not working, I spend most of my time outdoors — running, cycling, or training for my next half marathon. I’m passionate about endurance sports.
+
+I also enjoy exploring new ideas through podcasts that challenge my thinking about technology, business, and society:
 - Pivot - [link](https://podcasts.voxmedia.com/show/pivot)
 - The Prof G Pod with Scott Galloway - [link](https://podcasts.voxmedia.com/show/the-prof-g-pod-with-scott-galloway)
 - Zurück zur Zukunft - [link](https://zurueckzurzukunft.de)
