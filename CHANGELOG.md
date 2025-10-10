@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.32 (2025-10-10)
+
+### Feature
+- :sparkles: new posts added [`5e94a92`](https://github.com/smichard/hugo_website/commit/5e94a92)
+
+### Documentation
+- :robot: changelog file generated [`0b29e55`](https://github.com/smichard/hugo_website/commit/0b29e55)
+
 ## 0.1.31 (2025-10-06)
 
 ### Documentation
