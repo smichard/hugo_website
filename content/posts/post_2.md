@@ -1,6 +1,6 @@
 ---
 title: "Computerwoche - Interview"
-date: 2023-01-18T10:40:28+01:00
+date: 2023-01-18
 draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"

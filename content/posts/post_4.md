@@ -1,6 +1,6 @@
 ---
 title: "Visiting FOSDEM - a review"
-date: 2023-02-05T23:04:06+01:00
+date: 2023-02-05
 draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"

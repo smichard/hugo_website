@@ -1,6 +1,6 @@
 ---
 title: "graphR. - Visualizing RV Tool exports"
-date: 2023-01-29T21:01:31+01:00
+date: 2023-01-29
 draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
