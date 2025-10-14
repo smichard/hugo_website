@@ -18,7 +18,7 @@ This new tool builds on the foundation of the [Compound Interest Calculator](htt
 This is not a crystal ball. It’s a scenario explorer — a way to understand how uncertain markets shape financial trajectories.
 
 You can try the web tool here:  
-{{< button href="https://compound-simulation-139537757990.europe-north1.run.app/" >}}Open the Compound Simulation Tool{{< /button >}}
+{{< button href="https://compound-simulation.michard.io/" >}}Open the Compound Simulation Tool{{< /button >}}
 
 # What the Tool Does
 
@@ -104,5 +104,5 @@ It can be used as a teaching aid, a scenario testing environment, or a personal 
 
 # References
 - Related Post – Compound Interest Calculator - [link](https://michard.io/2025/compound-simulation-exploring-portfolio-uncertainty/)
-- Web App – [link](https://compound-simulation-139537757990.europe-north1.run.app/)
+- Web App – [link](https://compound-simulation.michard.io/)
 - GitHub Repository – [link](https://github.com/smichard/compound_simulation)
