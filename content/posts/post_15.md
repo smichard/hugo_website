@@ -103,5 +103,5 @@ Ultimately, the calculator is designed to make complex relationships between tim
 
 # References
 - YouTube Video - Nischa: Why Net Worth Skyrockets After $100K - [link](https://www.youtube.com/watch?v=F3Q-1W4QEVI)
-- Web App – [link](https://compound-calculator.michard.io/)
-- GitHub Repository – [link](https://github.com/smichard/compound_interest_calculator)
+- Web App - [link](https://compound-calculator.michard.io/)
+- GitHub Repository - [link](https://github.com/smichard/compound_interest_calculator)

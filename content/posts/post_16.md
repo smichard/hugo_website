@@ -103,6 +103,6 @@ Compound Simulation brings uncertainty to the forefront. By combining Monte Carl
 It can be used as a teaching aid, a scenario testing environment, or a personal planning companion. And since it’s open source, you can easily adapt it to your own assumptions, risk parameters, or visualization preferences.
 
 # References
-- Related Post – Compound Interest Calculator - [link](https://michard.io/2025/compound-simulation-exploring-portfolio-uncertainty/)
-- Web App – [link](https://compound-simulation.michard.io/)
-- GitHub Repository – [link](https://github.com/smichard/compound_simulation)
+- Related Post - Compound Interest Calculator - [link](https://michard.io/2025/compound-simulation-exploring-portfolio-uncertainty/)
+- Web App - [link](https://compound-simulation.michard.io/)
+- GitHub Repository - [link](https://github.com/smichard/compound_simulation)
