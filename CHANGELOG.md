@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.37 (2025-12-15)
+
+### Chore
+- update actions/checkout action to v6 [`1917f90`](https://github.com/smichard/hugo_website/commit/1917f90)
+
+## 0.1.36 (2025-12-10)
+
+### Chore
+- update quay.io/michard/devspaces_base_image docker tag to v0.1.28 [`6bc5fbf`](https://github.com/smichard/hugo_website/commit/6bc5fbf)
+
+## 0.1.35 (2025-11-24)
+
+### Documentation
+- :robot: changelog file generated [`cf73397`](https://github.com/smichard/hugo_website/commit/cf73397)
+
+### Other
+- new post about homelab added [`18f3cf2`](https://github.com/smichard/hugo_website/commit/18f3cf2)
+
 ## 0.1.34 (2025-11-24)
 
 ### Other
