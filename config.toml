@@ -33,14 +33,19 @@ pygmentsCodefences = true
     weight = 1
 
   [[menu.main]]
+    name = "News"
+    url = "/news/"
+    weight = 2
+
+  [[menu.main]]
     name = "Categories"
     url = "/categories/"
-    weight = 2
+    weight = 3
 
   [[menu.main]]
     name = "Tags"
     url = "/tags/"
-    weight = 3
+    weight = 4
 
 [params]
     since = 2012
@@ -130,11 +135,12 @@ pygmentsCodefences = true
     #Researchgate = "xxxx"
     #Mastodon = "@smichard:matrix.org"
     #Thingiverse = "xxxx"
-    #Matrix = "@smichard:matrix.org"
+    matrix = "@smichard:matrix.org"
+    Feedly = "https://feedly.com/i/subscription/content/feed%2Fhttps%3A%2F%2Ffeedly.com%2Ff%2FBoYe8xfqZVzrDQgoOUhWIGCj"
 
 [params.share]
-Twitter = true
-Facebook = false
+#Twitter = false
+#Facebook = false
 #Reddit = true
 Linkedin = true
 #Pinterest = true
