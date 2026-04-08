@@ -1,6 +1,6 @@
 ---
 title: "Photos"
-draft: true
+draft: false
 layout: "photos"
 ---
 
