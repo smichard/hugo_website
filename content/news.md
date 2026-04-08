@@ -1,6 +1,6 @@
 ---
 title: "News"
-draft: ture
+draft: true
 layout: "news"
 ---
 
