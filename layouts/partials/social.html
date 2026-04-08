@@ -26,15 +26,14 @@
 <a href="https://www.strava.com/athletes/{{.}}" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-strava"></i></a>
 {{ end }}
 {{ with .Site.Params.Social.Feedly }}
-<a href="{{ . }}" target="_blank" rel="me noopener noreffer"><i class="fa fa-newspaper-o" style="font-size: 1.8em;"></i></a>
+<a href="{{ . }}" target="_blank" rel="me noopener noreffer"><img src="/feedly_logo.png" alt="Feedly" style="width:2.1em;height:2.1em;object-fit:contain;vertical-align:text-bottom;"></a>
+{{ end }}
+{{ with .Site.Params.Social.Substack}}
+<a href="{{.}}" target="_blank" rel="me noopener noreffer"><img src="/substack_logo.png" alt="Substack" style="width:1.9em;height:1.9em;object-fit:contain;vertical-align:text-bottom;"></a>
 {{ end }}
 {{ with .Site.Params.Social.Matrix }}
 <a href="https://matrix.to/#/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="fa fa-matrix-org"></i></a>
 {{ end }}
 {{ with .Site.Params.Social.Email}}
 <a href="mailto:{{.}}" rel="me noopener noreffer"><i class="iconfont icon-mail"></i></a>
-{{ end }}
-
-{{ with .Site.Params.Social.Substack}}
-<a href="{{.}}" target="_blank" rel="me noopener noreffer"><i class="iconfont icon-mail"></i></a>
 {{ end }}
