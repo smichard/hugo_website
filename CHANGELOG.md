@@ -4,6 +4,31 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.43 (2026-04-08)
+
+### Other
+- news draft status [`949e68b`](https://github.com/smichard/hugo_website/commit/949e68b)
+- news and photos added [`e411cd2`](https://github.com/smichard/hugo_website/commit/e411cd2)
+- feedly link added [`f007a50`](https://github.com/smichard/hugo_website/commit/f007a50)
+
+## 0.1.42 (2026-03-26)
+
+### Chore
+- update docker/setup-qemu-action action to v4 [`d930d17`](https://github.com/smichard/hugo_website/commit/d930d17)
+
+## 0.1.41 (2026-03-26)
+
+### Chore
+- update smichard/conventional_changelog action to v2.0.11 [`1fda2fd`](https://github.com/smichard/hugo_website/commit/1fda2fd)
+
+## 0.1.40 (2026-03-08)
+
+### Documentation
+- :robot: changelog file generated [`e7fb925`](https://github.com/smichard/hugo_website/commit/e7fb925)
+
+### Other
+- CV updated [`4418dcd`](https://github.com/smichard/hugo_website/commit/4418dcd)
+
 ## 0.1.39 (2026-01-05)
 
 ### Documentation
