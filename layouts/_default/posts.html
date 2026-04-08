@@ -3,7 +3,7 @@
 <main class="main">
     <div class="container">
         <div class="post-warp archive">
-            <h2 class="post-title" style="text-align:right;padding-bottom:2em">&nbsp;{{ $data.Plural | humanize }}{{ .Title }}&nbsp;</h2>
+            <h2 class="post-title">{{ $data.Plural | humanize }}{{ .Title }}</h2>
             {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
             <h2>{{ .Key }}</h2>
 

@@ -1,0 +1,160 @@
+{{ define "content" -}}
+<div class="post-warp">
+    <header class="post-header">
+        <h2 class="post-title">{{ .Title }}</h2>
+    </header>
+    <div class="post-content">
+        {{ with .Content }}<div class="photo-intro">{{ . }}</div>{{ end }}
+        <div id="photo-grid" class="photo-grid">
+            <div id="photo-loading" class="photo-loading">Loading photos...</div>
+        </div>
+    </div>
+</div>
+
+<style>
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
+    padding: 16px 0;
+}
+
+.photo-grid-item {
+    border-radius: 6px;
+    cursor: pointer;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+}
+
+.photo-grid-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.photo-grid-item:hover img {
+    transform: scale(1.04);
+    transition: transform 0.3s ease;
+}
+
+.photo-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
+
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+.lightbox-overlay.active { display: flex; }
+.lightbox-overlay img {
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 4px;
+    cursor: default;
+}
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 28px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+@media (max-width: 600px) {
+    .photo-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; }
+}
+</style>
+
+<div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+(function () {
+    var BUCKET = 'hugo_website_pictures';
+    var API_URL = 'https://storage.googleapis.com/storage/v1/b/' + BUCKET + '/o?maxResults=1000';
+    var MAX_PHOTOS = 30;
+    var IMAGE_EXTS = /\.(jpe?g|png|gif|webp|avif)$/i;
+
+    var grid     = document.getElementById('photo-grid');
+    var loading  = document.getElementById('photo-loading');
+    var lightbox = document.getElementById('lightbox');
+    var lbImg    = document.getElementById('lightbox-img');
+
+    document.getElementById('lightbox-close').onclick = close;
+    lightbox.onclick = function(e) { if (e.target === lightbox) close(); };
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+
+    function open(src) { lbImg.src = src; lightbox.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function close()   { lightbox.classList.remove('active'); lbImg.src = ''; document.body.style.overflow = ''; }
+
+    function shuffle(arr) {
+        for (var i = arr.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+        }
+        return arr;
+    }
+
+    function publicUrl(name) {
+        return 'https://storage.googleapis.com/' + BUCKET + '/' +
+            name.split('/').map(function(part) { return encodeURIComponent(part); }).join('/');
+    }
+
+    fetch(API_URL)
+        .then(function(res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            return res.json();
+        })
+        .then(function(data) {
+            var all = data.items || [];
+            var imgs = all.filter(function(item) { return IMAGE_EXTS.test(item.name); });
+
+            if (imgs.length === 0) {
+                loading.textContent = 'No photos found.';
+                return;
+            }
+
+            var selected = shuffle(imgs).slice(0, MAX_PHOTOS);
+            loading.remove();
+
+            selected.forEach(function(item) {
+                var src = publicUrl(item.name);
+                var wrap = document.createElement('div');
+                wrap.className = 'photo-grid-item';
+                wrap.onclick = function() { open(src); };
+
+                var img = document.createElement('img');
+                img.alt = item.name.split('/').pop().replace(/\.[^.]+$/, '');
+                img.onerror = function() { wrap.style.display = 'none'; };
+                img.src = src;
+
+                wrap.appendChild(img);
+                grid.appendChild(wrap);
+            });
+        })
+        .catch(function(err) {
+            loading.textContent = 'Failed to load photos: ' + err.message;
+        });
+})();
+</script>
+{{- end }}

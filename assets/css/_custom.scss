@@ -3,6 +3,21 @@ h1, h2, h3 {
 	color: #1DA1F2;
 }
 
+/* Layout: content area width and gutters — override theme defaults here */
+.post-warp {
+	max-width: 820px;
+}
+
+.container {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+h1.post-title, h2.post-title {
+	text-align: left !important;
+	padding-bottom: 2em;
+}
+
 h2.description {
 	color: #FFF;
 	font-size: 2.4em;
