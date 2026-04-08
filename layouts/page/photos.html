@@ -14,22 +14,23 @@
 <style>
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 12px;
-    padding: 16px 0;
+    padding: 12px 0;
 }
 
 .photo-grid-item {
     border-radius: 6px;
     cursor: pointer;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
 }
 
 .photo-grid-item img {
     width: 100% !important;
+    max-width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important;
+    object-fit: cover !important;
     display: block !important;
     margin: 0 !important;
     padding: 0 !important;

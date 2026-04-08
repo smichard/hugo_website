@@ -142,6 +142,7 @@ pygmentsCodefences = true
     #Thingiverse = "xxxx"
     matrix = "@smichard:matrix.org"
     Feedly = "https://feedly.com/i/subscription/content/feed%2Fhttps%3A%2F%2Ffeedly.com%2Ff%2FBoYe8xfqZVzrDQgoOUhWIGCj"
+    Substack = "https://substack.com/@stephanmichard"
 
 [params.share]
 #Twitter = false

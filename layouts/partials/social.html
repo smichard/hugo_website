@@ -34,3 +34,7 @@
 {{ with .Site.Params.Social.Email}}
 <a href="mailto:{{.}}" rel="me noopener noreffer"><i class="iconfont icon-mail"></i></a>
 {{ end }}
+
+{{ with .Site.Params.Social.Substack}}
+<a href="{{.}}" target="_blank" rel="me noopener noreffer"><i class="iconfont icon-mail"></i></a>
+{{ end }}
