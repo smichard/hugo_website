@@ -1,0 +1,244 @@
+{{ define "content" -}}
+<main class="single__main">
+    <div class="container">
+        <article class="post-warp">
+            <header class="post-header">
+                <h1 class="post-title">{{ .Title }}</h1>
+            </header>
+            <div class="post-content">
+                {{ with .Content }}<div class="news-intro">{{ . }}</div>{{ end }}
+
+                <div id="feed-loading" class="feed-loading">Loading latest posts...</div>
+                <div id="feed-error" class="feed-error" style="display:none;"></div>
+                <div id="feed-grid" class="feed-grid"></div>
+            </div>
+        </article>
+    </div>
+</main>
+
+<style>
+.news-intro {
+    margin-bottom: 2rem;
+}
+
+.feed-loading {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
+
+.feed-error {
+    text-align: center;
+    padding: 20px;
+    color: #f92672;
+}
+
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 8px 0 24px;
+}
+
+.feed-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #4a4b50;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feed-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.feed-card-image {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.feed-card-image-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #1e3a4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a6d85;
+    font-size: 2rem;
+}
+
+.feed-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+    gap: 8px;
+}
+
+.feed-card-date {
+    font-size: 0.75rem;
+    color: #7a9bb5;
+}
+
+.feed-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.feed-card-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.feed-card-title a:hover {
+    color: #2d96bd;
+}
+
+.feed-card-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #a9a9b3;
+    flex: 1;
+    margin: 0;
+}
+
+.feed-card-link {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 0.8rem;
+    color: #2d96bd;
+    text-decoration: none;
+}
+
+.feed-card-link:hover {
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .feed-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+    .feed-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<script>
+(function () {
+    var FEED_URL = '{{ .Params.feedURL }}';
+    var API_URL  = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(FEED_URL) + '&count=15';
+    var MAX_DESC = 120;
+
+    var grid    = document.getElementById('feed-grid');
+    var loading = document.getElementById('feed-loading');
+    var error   = document.getElementById('feed-error');
+
+    function stripHtml(html) {
+        var tmp = document.createElement('div');
+        tmp.innerHTML = html;
+        return tmp.textContent || tmp.innerText || '';
+    }
+
+    function truncate(text, max) {
+        text = text.trim();
+        return text.length > max ? text.slice(0, max).replace(/\s+\S*$/, '') + '…' : text;
+    }
+
+    function formatDate(dateStr) {
+        var d = new Date(dateStr);
+        return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+
+    function renderCard(item) {
+        var card = document.createElement('div');
+        card.className = 'feed-card';
+
+        if (item.thumbnail) {
+            var img = document.createElement('img');
+            img.className = 'feed-card-image';
+            img.src = item.thumbnail;
+            img.alt = item.title;
+            img.onerror = function () {
+                var ph = document.createElement('div');
+                ph.className = 'feed-card-image-placeholder';
+                ph.textContent = '✦';
+                card.replaceChild(ph, img);
+            };
+            card.appendChild(img);
+        } else {
+            var ph = document.createElement('div');
+            ph.className = 'feed-card-image-placeholder';
+            ph.textContent = '✦';
+            card.appendChild(ph);
+        }
+
+        var body = document.createElement('div');
+        body.className = 'feed-card-body';
+
+        var date = document.createElement('div');
+        date.className = 'feed-card-date';
+        date.textContent = formatDate(item.pubDate);
+
+        var title = document.createElement('h3');
+        title.className = 'feed-card-title';
+        var titleLink = document.createElement('a');
+        titleLink.href = item.link;
+        titleLink.target = '_blank';
+        titleLink.rel = 'noopener noreferrer';
+        titleLink.textContent = item.title;
+        title.appendChild(titleLink);
+
+        var desc = document.createElement('p');
+        desc.className = 'feed-card-desc';
+        desc.textContent = truncate(stripHtml(item.description), MAX_DESC);
+
+        var link = document.createElement('a');
+        link.className = 'feed-card-link';
+        link.href = item.link;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'Read more →';
+
+        body.appendChild(date);
+        body.appendChild(title);
+        body.appendChild(desc);
+        body.appendChild(link);
+        card.appendChild(body);
+
+        return card;
+    }
+
+    fetch(API_URL)
+        .then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            return res.json();
+        })
+        .then(function (data) {
+            loading.remove();
+
+            if (data.status !== 'ok' || !data.items || data.items.length === 0) {
+                error.style.display = 'block';
+                error.textContent = 'No posts found.';
+                return;
+            }
+
+            data.items.forEach(function (item) {
+                grid.appendChild(renderCard(item));
+            });
+        })
+        .catch(function (err) {
+            loading.remove();
+            error.style.display = 'block';
+            error.textContent = 'Failed to load posts: ' + err.message;
+        });
+})();
+</script>
+{{- end }}
