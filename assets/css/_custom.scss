@@ -177,3 +177,29 @@ hr{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
   }
+
+/* Image-based social icons (Feedly, Substack) — use CSS mask so they
+   inherit the link color and respond to hover exactly like iconfont icons */
+.social-links .icon-img {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	vertical-align: text-bottom;
+	background-color: currentColor;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	-webkit-mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+}
+
+.social-links .icon-feedly {
+	-webkit-mask-image: url('/feedly_logo.png');
+	mask-image: url('/feedly_logo.png');
+}
+
+.social-links .icon-substack {
+	-webkit-mask-image: url('/substack_logo.png');
+	mask-image: url('/substack_logo.png');
+}
