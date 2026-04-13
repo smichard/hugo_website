@@ -4,6 +4,38 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.48 (2026-04-13)
+
+### Other
+- hovering effect feedly & substack [`d78d25e`](https://github.com/smichard/hugo_website/commit/d78d25e)
+- news grid extended to 18 [`e05a232`](https://github.com/smichard/hugo_website/commit/e05a232)
+
+## 0.1.47 (2026-04-12)
+
+### Other
+- rss feed added [`d1820b2`](https://github.com/smichard/hugo_website/commit/d1820b2)
+
+## 0.1.46 (2026-04-12)
+
+### Other
+- rss catcher added [`6ca05cb`](https://github.com/smichard/hugo_website/commit/6ca05cb)
+
+## 0.1.45 (2026-04-09)
+
+### Other
+- code highlighting adjusted [`07ee334`](https://github.com/smichard/hugo_website/commit/07ee334)
+
+## 0.1.44 (2026-04-08)
+
+### Documentation
+- :robot: changelog file generated [`a5835d2`](https://github.com/smichard/hugo_website/commit/a5835d2)
+
+### Other
+- Merge branch 'main' of https://github.com/smichard/hugo_website [`24a5f73`](https://github.com/smichard/hugo_website/commit/24a5f73)
+- draft status removed [`74ca2b9`](https://github.com/smichard/hugo_website/commit/74ca2b9)
+- news and photos finalized [`f7d2409`](https://github.com/smichard/hugo_website/commit/f7d2409)
+- news and photo pages added [`5a4c90d`](https://github.com/smichard/hugo_website/commit/5a4c90d)
+
 ## 0.1.43 (2026-04-08)
 
 ### Other
