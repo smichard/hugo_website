@@ -34,7 +34,7 @@ A detailed description of all RunPod services is out of scope for this post. The
 
 RunPod uses templates to save pod configurations for reuse. A template defines the container image, the start command, the storage allocation, and other runtime parameters. I maintain a small collection of private templates, each configured for a different model.
 
-{{< figure src="/images/posts/post_22/runpod_templates.png" title="A selection of saved vLLM templates on RunPod, each pointing to a different model from Hugging Face" >}}
+{{< figure src="/images/posts/post_24/list_of_private_templates.png" title="A selection of saved vLLM templates on RunPod, each pointing to a different model from Hugging Face" >}}
 
 The container image for all of these templates is `vllm/vllm-openai:latest`, which bundles *vLLM* with an OpenAI-compatible API server. The model itself is specified in the container start command, which means swapping models is a matter of editing a single line rather than building a new image.
 
@@ -47,7 +47,7 @@ When creating or editing a template, the key fields are:
 - **Container image:** `vllm/vllm-openai:latest`
 - **Container start command:** the vLLM arguments, including the model reference
 
-{{< figure src="/images/posts/post_22/runpod_template_edit.png" title="Template configuration for the vllm_gemma-3-12b template, showing the container image and start command" >}}
+{{< figure src="/images/posts/post_24/vllm_start_cmd.png" title="Template configuration for the vllm_gemma-3-12b template, showing the container image and start command" >}}
 
 Throughout the following steps, any value written in `<angle brackets>` is a placeholder and must be replaced with your actual value before running the command.
 
@@ -76,7 +76,7 @@ The parameters worth noting:
 
 Once the template is configured, deploying it requires selecting a GPU and clicking deploy. RunPod shows available hardware with current pricing.
 
-{{< figure src="/images/posts/post_22/runpod_gpu_selection.png" title="GPU selection on RunPod, ranging from RTX 3090 class cards to H200 and B200 datacenter accelerators" >}}
+{{< figure src="/images/posts/post_24/gpu_selection.png" title="GPU selection on RunPod, ranging from RTX 3090 class cards to H200 and B200 datacenter accelerators" >}}
 
 For most inference workloads with 8 to 12 billion parameter models, an RTX 4090 or L4 is a practical and cost-effective choice. Larger models with higher memory requirements will need 48 GB or 80 GB class cards. The per-hour pricing shown in the interface makes it easy to estimate cost for a session before committing.
 
@@ -92,7 +92,7 @@ With the pod running, the endpoint can be added to Open WebUI as an external con
 - **Provider type:** OpenAI
 - **API type:** Chat Completions
 
-{{< figure src="/images/posts/post_22/runpod_openwebui_connection.png" title="Adding the RunPod vLLM endpoint as an external OpenAI-compatible connection in Open WebUI" >}}
+{{< figure src="/images/posts/post_24/open_webui_configuration.png" title="Adding the RunPod vLLM endpoint as an external OpenAI-compatible connection in Open WebUI" >}}
 
 Once saved, the model served by vLLM on RunPod appears in the model selector alongside any other configured backends. From a user perspective, the interface is identical to any other configured model, whether local or a commercial API.
 
