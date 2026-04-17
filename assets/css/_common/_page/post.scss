@@ -256,8 +256,9 @@
 
   main.single__main {
     display: grid;
-    grid-template-columns: 100% $side-toc-width;
+    grid-template-columns: 1fr $side-toc-width;
     width: $post-content-width;
+    margin: 0 auto;
 
     &>aside {
       &.tableOfContentContainer {

@@ -1,3 +1,20 @@
+/* ── TOC width knob ─────────────────────────────────────────────────────
+   Change $toc-width below to resize the right-side Table of Contents.
+   Rebuild the site after editing (hugo server / hugo).
+   ──────────────────────────────────────────────────────────────────────── */
+$toc-width: 13rem;
+
+@media (min-width: 1024px) {
+  main.single__main {
+    grid-template-columns: 1fr $toc-width;
+    width: auto;
+    max-width: 1200px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+/* ─────────────────────────────────────────────────────────────────────── */
+
 h1.post-title,
 h1, h2, h3 {
 	color: #1DA1F2;
