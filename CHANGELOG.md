@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.52 (2026-04-17)
+
+### Other
+- publishing dates adjusted [`c2aeb36`](https://github.com/smichard/hugo_website/commit/c2aeb36)
+- number of posts on post page adjusted [`1741b41`](https://github.com/smichard/hugo_website/commit/1741b41)
+- date breaking up adjusted [`561d2b8`](https://github.com/smichard/hugo_website/commit/561d2b8)
+
+## 0.1.51 (2026-04-17)
+
+### Other
+- posts added [`086d76b`](https://github.com/smichard/hugo_website/commit/086d76b)
+- style adjusted [`6c5d901`](https://github.com/smichard/hugo_website/commit/6c5d901)
+- claude md added [`ae53e38`](https://github.com/smichard/hugo_website/commit/ae53e38)
+
+## 0.1.50 (2026-04-15)
+
+### Other
+- Update docker/setup-qemu-action action to v4 [`fe0f2bc`](https://github.com/smichard/hugo_website/commit/fe0f2bc)
+
+## 0.1.49 (2026-04-15)
+
+### Documentation
+- :robot: changelog file generated [`ad01cbc`](https://github.com/smichard/hugo_website/commit/ad01cbc)
+
+### Other
+- Update docker/build-push-action action to v7 [`27c3486`](https://github.com/smichard/hugo_website/commit/27c3486)
+
 ## 0.1.48 (2026-04-13)
 
 ### Other
