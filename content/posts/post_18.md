@@ -35,8 +35,8 @@ At a high level, the architecture looks like this:
 - Several containers run on the hosts.
 - A dedicated container network called `external`, where Traefik and all services that are exposed to the home network reside.
 - An internal DNS setup and a private domain, such as `home.example.com`, where services are exposed as subdomains like:
-    - _https://pihole.home.example.com_
-    - _https://ntfy.home.example.com_ 
+    - `https://pihole.home.example.com`
+    - `https://ntfy.home.example.com`
 
 Clients on the home network resolve these hostnames to the internal IP address of the homelab host, ensuring that traffic remains entirely within the local network. The local DNS server is automatically assigned to clients connected to the internal network, making all services immediately accessible to any device on the same network.  
 Traefik acts as the single entry point for HTTP and HTTPS. It terminates TLS, routes requests to the appropriate container based on the hostname, and applies middlewares such as redirects and authentication where required.
