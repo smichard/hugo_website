@@ -5,7 +5,7 @@ defaultContentLanguage = "en"
 title = "Home"
 theme = ["hugo-notice","KeepIt"]
 
-paginate = 12
+paginate = 25
 enableEmoji = true
 enableRobotsTXT = true
 googleAnalytics = "UA-166794311-1"
