@@ -12,7 +12,7 @@ toc:
 
 {{< figure src="/images/posts/books/entzug.jpg" title="" >}}
 
-This post is a little different from the usual technical content on this blog. I recently finished reading *Entzug* by Christoph Peters, and I wanted to write down a few thoughts about it.
+I recently finished reading *Entzug* by Christoph Peters, and I wanted to write down a few thoughts about it.
 
 ## The Author
 

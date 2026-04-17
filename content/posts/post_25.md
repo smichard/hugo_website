@@ -1,7 +1,7 @@
 ---
 title: "Book Review: The Start-Up of You by Reid Hoffman and Ben Casnocha"
-date: 2027-04-17
-draft: true
+date: 2025-04-12
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Books"]
@@ -12,7 +12,7 @@ toc:
 
 {{< figure src="/images/posts/books/startup_of_you.jpg" title="" >}}
 
-I came across this book through Scott Galloway's podcast, where Hoffman was a guest. Galloway has a way of making you want to read things immediately, and this was one of those cases. I picked it up while I was at a point in my career where I was actively looking for a change, which in hindsight was probably the ideal moment to read it.
+This post is a little different from the usual technical content on this blog. I came across this book through Scott Galloway's podcast, where Hoffman was a guest. Galloway has a way of making you want to read things immediately, and this was one of those cases. I picked it up while I was at a point in my career where I was actively looking for a change, which in hindsight was probably the ideal moment to read it.
 
 ## The Authors
 
