@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.55 (2026-04-19)
+
+### Other
+- Update docker/setup-buildx-action action to v4 [`d988683`](https://github.com/smichard/hugo_website/commit/d988683)
+
+## 0.1.54 (2026-04-19)
+
+### Documentation
+- :robot: changelog file generated [`40d2d33`](https://github.com/smichard/hugo_website/commit/40d2d33)
+
+### Other
+- Update docker/build-push-action action to v7 [`402b426`](https://github.com/smichard/hugo_website/commit/402b426)
+
 ## 0.1.53 (2026-04-17)
 
 ### Documentation
