@@ -5,7 +5,7 @@ draft: true
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
-tags: ["Red Hat","documentation","tooling"]
+tags: ["Red Hat","Documentation","Tooling"]
 toc:
   enable: false
 ---

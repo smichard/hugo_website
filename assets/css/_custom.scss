@@ -157,6 +157,13 @@ a.custom-calendly {
 	align-items: center;
 }
 
+/* Links inside post body */
+.post-warp .post-content a {
+	text-decoration: underline;
+	text-decoration-color: #FFF;
+	text-underline-offset: 3px;
+}
+
 /* code blocks */
 .prettyprint {
 	/* background: #69696A;*/

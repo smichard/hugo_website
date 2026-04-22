@@ -4,7 +4,7 @@ date: 2027-04-16
 draft: true
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
-categories: ["Review"]
+categories: ["Books"]
 tags: ["book-review","literature"]
 toc:
   enable: false
