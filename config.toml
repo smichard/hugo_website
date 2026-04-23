@@ -5,13 +5,15 @@ defaultContentLanguage = "en"
 title = "Home"
 theme = ["hugo-notice","KeepIt"]
 
-paginate = 25
 enableEmoji = true
 enableRobotsTXT = true
 googleAnalytics = "UA-166794311-1"
 
 pygmentsUseClasses = true
 pygmentsCodefences = true
+
+[pagination]
+  pagerSize = 25
 
 [sitemap]
   changefreq = "monthly"
@@ -159,9 +161,6 @@ Linkedin = true
 
 # Used only for Seo schema
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-
-[author]
-  name = "Stephan Michard"
 
   [params.publisher]
     name = "Stephan Michard"

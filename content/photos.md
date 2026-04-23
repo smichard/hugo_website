@@ -1,6 +1,7 @@
 ---
 title: "Photos"
 draft: false
+type: "page"
 layout: "photos"
 ---
 

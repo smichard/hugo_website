@@ -1,6 +1,7 @@
 ---
 title: "News"
 draft: false
+type: "page"
 layout: "news"
 feedURL: "https://raw.githubusercontent.com/smichard/news-feed/refs/heads/main/rss.xml"
 ---

@@ -1,5 +1,5 @@
-  {{ $style := resources.Get "css/main.scss" | resources.ToCSS | resources.Minify}}
-  {{ $highlight := resources.Get "css/code-highlight.css" | resources.ToCSS | resources.Minify}}
+  {{ $style := resources.Get "css/main.scss" | css.Sass | resources.Minify}}
+  {{ $highlight := resources.Get "css/code-highlight.css" | css.Sass | resources.Minify}}
   {{ $iconfont := resources.Get "font/iconfont.css" }}
   <link rel="stylesheet" href="{{ $iconfont.RelPermalink }}">
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">

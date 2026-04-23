@@ -4,13 +4,22 @@
    ──────────────────────────────────────────────────────────────────────── */
 $toc-width: 13rem;
 
-@media (min-width: 1024px) {
-  main.single__main {
-    grid-template-columns: 1fr $toc-width;
-    width: auto;
-    max-width: 1200px;
-    padding-left: 1em;
-    padding-right: 1em;
+/* TOC sidebar: hide between 1024-1399px (not enough room beside centered content) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  aside.tableOfContentContainer {
+    display: none !important;
+  }
+}
+
+/* TOC sidebar: fixed to the right of the centered .post-warp on wide screens */
+@media (min-width: 1400px) {
+  aside.tableOfContentContainer {
+    position: fixed;
+    left: calc(50% + 460px + 1rem);
+    top: 79px;
+    width: $toc-width;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
   }
 }
 /* ─────────────────────────────────────────────────────────────────────── */
