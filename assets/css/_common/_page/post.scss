@@ -53,23 +53,11 @@
     }
 
     h2::before {
-      content: "";
-      margin-right: 5px;
-      color: $light-post-link-color;
-
-      .dark-theme & {
-        color: $dark-post-link-color;
-      }
+      content: none;
     }
 
     h3::before {
-      content: "";
-      margin-right: 5px;
-      color: $light-post-link-color;
-
-      .dark-theme & {
-        color: $dark-post-link-color;
-      }
+      content: none;
     }
 
     a {
