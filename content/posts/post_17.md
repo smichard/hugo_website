@@ -7,12 +7,12 @@ authorLink: "https://stephan.michard.io"
 categories: ["Innovation"]
 tags: ["Workshop","Strategy","Collaboration"]
 toc:
-  enable: true
+  enable: false
 ---
 
-{{< figure src="/images/posts/lsp.jpg" title="From Complexity to Clarity: Building Shared Understanding - AI generated" >}}
+{{< figure src="/images/posts/post_17/lsp.jpg" title="From Complexity to Clarity: Building Shared Understanding - AI generated" >}}
 
-# Introduction: From Scepticism to Breakthroughs
+## Introduction: From Scepticism to Breakthroughs
 
 The first time I introduced **LEGO® SERIOUS PLAY® (LSP)** in an IT strategy workshop, I was met with polite smiles and raised eyebrows.  
 “LEGO and enterprise IT? Really?”
@@ -23,7 +23,7 @@ Last year, I took the step to become a **Certified Facilitator for the LEGO® SE
 
 LSP is not a playful gimmick. It’s a structured facilitation method that helps teams surface hidden knowledge, build shared understanding, and make strategic decisions with clarity.
 
-# Why LEGO SERIOUS PLAY Works in IT
+## Why LEGO SERIOUS PLAY Works in IT
 
 LSP is powerful because it combines **hands-on building**, **metaphorical thinking**, and **structured facilitation**. In IT, where teams deal with complexity, silos, and competing perspectives, this combination is uniquely effective:
 
@@ -34,10 +34,10 @@ LSP is powerful because it combines **hands-on building**, **metaphorical thinki
 3. **A Universal Language:**  
     LEGO bricks cut through jargon and hierarchy. Whether it’s a solution architect, a product manager, or an operations engineer, everyone can build and everyone can contribute. It levels the playing field and gives each voice equal weight.
     
-# How the Process Works
+## How the Process Works
 LSP isn’t free play—it’s a facilitated, structured method. As a facilitator, I guide participants through a clear process:
 
-## Core Steps of the LEGO SERIOUS PLAY Process
+### Core Steps of the LEGO SERIOUS PLAY Process
 
 The LSP method follows a structured process that ensures all participants are actively engaged and can contribute meaningfully. Each step builds on the previous one, moving from individual ideas to a shared understanding of complex systems.
 
@@ -60,7 +60,7 @@ The LSP method follows a structured process that ensures all participants are ac
 **Example from practice:**. 
 In a recent architecture strategy workshop, one participant used a single red brick to symbolize a “single point of failure.” That simple metaphor shifted the discussion from vague risk statements to a concrete redesign strategy. This kind of clarity is hard to achieve just with slides.
 
-# Where LEGO SERIOUS PLAY Creates Real Value in IT
+## Where LEGO SERIOUS PLAY Creates Real Value in IT
 
 1. **Strategic Planning and Architecture:**  
     When building roadmaps for complex IT transformations, LSP makes hidden assumptions visible. Business and technical perspectives align more quickly because everyone can literally see the future state in front of them.
@@ -72,7 +72,7 @@ In a recent architecture strategy workshop, one participant used a single red br
     Instead of vague PowerPoint bullets, participants build tangible representations of goals, key results, and dependencies. The visual, tactile nature of these models makes alignment much more concrete.
     
 
-# Conclusion - A Facilitator’s Perspective
+## Conclusion - A Facilitator’s Perspective
 
 What I find most fascinating as a facilitator is the moment of collective “aha”, when a group that began the session with crossed arms and quiet skepticism suddenly leans in. Once the first models are on the table, the conversation accelerates: people start building, storytelling, and connecting dots in ways that traditional workshops rarely achieve.   
 
@@ -87,7 +87,7 @@ And that skeptical start I mentioned at the beginning? It’s now one of my favo
 
 If you’re curious how LSP could help your team tackle complex IT challenges, [get in touch](https://red.ht/meet_stephan) or connect with me on LinkedIn.
 
-# References
+## References
 
 - Per Kristiansen & Robert Rasmussen: Building a Better Business Using the Lego Serious Play Method - Wiley, 2014
 - David Hillmer: PLAY! Der unverzichtbare LEGO® SERIOUS PLAY® Praxis-Guide für Workshops, Coachings und Moderation - Hanser, 2023

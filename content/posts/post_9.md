@@ -11,12 +11,12 @@ toc:
   enable: false
 ---
 
-# Introduction
+## Introduction
 
 On July 1st, I embarked on a new journey with Red Hat as a Senior Solution Architect. In this role, I will be providing technical consultancy to partners within the Red Hat Ecosystem Team. I am eagerly looking forward to this exciting new challenge.  
 Here is the LinkedIn post where I announced my new position:
 
-# LinkedIn Announcement
+## LinkedIn Announcement
 
 Greetings to my LinkedIn network,
 
@@ -33,7 +33,7 @@ Cheers
 Stephan
 
 
-{{< figure src="/images/posts/post_9.jpg" title="" >}}
+{{< figure src="/images/posts/post_09/redhat.jpg" title="" >}}
 
-# References
+## References
 - LinkedIn Post - [link](https://www.linkedin.com/posts/stephanmichard_newbeginnings-dayone-redhat-activity-7081977766358724608-RMwY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAtEiQcBEy8d8vSnm8NBZWZ0faicZji_MK0)

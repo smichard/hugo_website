@@ -8,7 +8,7 @@ categories: ["Sustainability"]
 tags: ["Sustainability","SCI","Carbon Intensity","Carbon Footprint"]
 
 toc:
-  enable: true
+  enable: false
 ---
 
 ## Introduction
@@ -22,7 +22,7 @@ The energy consumed for operating data centers is directly linked to the choices
 
 Understanding the comprehensive impact of these factors — ranging from application design to data center infrastructure and energy sourcing — allows for a detailed assessment of the energy and GHG footprint associated with software operations. This holistic view enables organizations to make informed decisions aimed at reducing their environmental impact.
 
-{{< figure src="/images/posts/post_12_1.jpg" title="This diagram outlines the various components influencing the energy and greenhouse gas footprint of software operations, including applications, data center infrastructure, operational energy consumption, and energy utilities." >}}
+{{< figure src="/images/posts/post_12/sci_1.jpg" title="This diagram outlines the various components influencing the energy and greenhouse gas footprint of software operations, including applications, data center infrastructure, operational energy consumption, and energy utilities." >}}
 
 
 ## Introducing the Software Carbon Intensity Framework
@@ -36,12 +36,12 @@ Although the formula might appear complex at first glance, its components are st
 - **M (Embodied Carbon)**: The CO₂ emissions resulting from manufacturing the hardware that runs the software.
 - **R (Rate of Use)**: How the software scales—this could be per user, per API call, or any other relevant unit.
 
-{{< figure src="/images/posts/post_12_2.jpg" title="Components of the Software Carbon Intensity (SCI) Framework" >}}
+{{< figure src="/images/posts/post_12/sci_2.jpg" title="Components of the Software Carbon Intensity (SCI) Framework" >}}
 
 The SCI formula helps organizations derive a carbon footprint for their software applications by considering both operational and embodied emissions relative to their usage scale. It is important to recognize that the SCI framework is designed to monitor an application's environmental impact during its ongoing operation, rather than to compare different applications. Such comparisons would require standardized testing procedures and uniform hardware—conditions typically feasible only under controlled laboratory settings, which are unlikely in realistic, real-world scenarios.
 
 The following image illustrates how the key metrics for calculating the SCI value can be derived:
-{{< figure src="/images/posts/post_12_3.jpg" title="Deriving the Key Components of the Software Carbon Intensity Framework" >}}
+{{< figure src="/images/posts/post_12/sci_3.jpg" title="Deriving the Key Components of the Software Carbon Intensity Framework" >}}
 
 
 ## Why the SCI Framework Matters

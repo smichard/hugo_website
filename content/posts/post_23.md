@@ -34,6 +34,6 @@ The novel is clearly shaped by personal experience. It is difficult to imagine h
 
 *Entzug* is one of the better novels I have read in a while — not an easy read, but a genuinely important one.
 
-# References
+## References
 
 - Christoph Peters: Entzug - Luchterhand Literaturverlag - [link](https://brockmann-buecher.buchhandlung.de/shop/article/57187342/christoph_peters_entzug.html)

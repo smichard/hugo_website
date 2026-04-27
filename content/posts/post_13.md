@@ -11,7 +11,7 @@ toc:
   enable: false
 ---
 
-{{< figure src="/images/posts/hans_queisser.jpg" title="Hans-Joachim Queisser" >}}
+{{< figure src="/images/posts/post_13/hans_queisser.jpg" title="Hans-Joachim Queisser" >}}
 
 Sometimes, you meet someone without knowing the lasting impact they’ll have on your life.
 

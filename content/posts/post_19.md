@@ -12,7 +12,7 @@ toc:
 
 {{< figure src="/images/posts/post_19/overview.png" title="Overview of the modular self-hosted AI stack - AI generated" >}}
 
-# Introduction
+## Introduction
 
 In my previous post about my [homelab]({{< relref "post_18.md" >}}), I described the foundation I use for self-hosted services: a small set of low-power machines, Docker Compose for deployment, Traefik as the reverse proxy, and internal DNS to expose services with clean HTTPS hostnames. I have been running this setup for several years with very little maintenance overhead. That setup turned out to be a good base not only for classic self-hosting, but also for local AI workloads. Over the past year or so, I started extending it with tools to use and experiment with AI services.
 
@@ -27,13 +27,13 @@ The result is a local AI stack built from four components:
 
 Individually, each of these tools is useful. Combined, they form a practical self-hosted AI environment that fits neatly into the same Traefik-centered architecture as the rest of my homelab.
 
-# Base platform and prerequisites
+## Base platform and prerequisites
 
 The AI stack runs on the same infrastructure described in the [previous post]({{< relref "post_18.md" >}}): refurbished thin clients running CentOS Stream 9, Docker and Docker Compose, Traefik as the reverse proxy, and internal DNS for clean HTTPS hostnames. The key design principle carries over as well: every externally reachable service joins the `external` Docker network and is exposed through Traefik using labels, giving a consistent way to publish services under HTTPS without managing ports or certificates per application.
 
 My current setup is CPU-only. That matters. It is perfectly usable for orchestration, document processing, web-augmented prompting, and smaller local models, but it is not the right environment for large, latency-sensitive inference workloads. In practice, that constraint pushed me toward an architecture where the user interface, routing, tools, and document workflows run locally, while the model backend remains flexible enough to use either local or remote providers.
 
-# Architecture overview
+## Architecture overview
 
 At a high level, the request flow looks like this:
 
@@ -53,7 +53,7 @@ This separation of concerns is what makes the stack useful:
 
 Traefik remains the single public entry point. From an operations perspective, that is valuable because the AI stack behaves like any other part of the homelab.
 
-# Open WebUI as the central interface
+## Open WebUI as the central interface
 
 Open WebUI is the part of the stack I interact with every day. It provides the browser-based interface for conversations, model selection, file uploads, and tool-assisted prompting. The important point is that Open WebUI does not need to know anything about individual model providers. It only needs a single OpenAI-compatible endpoint, which in this setup is LiteLLM.
 
@@ -86,7 +86,7 @@ services:
 
 The exact image tag and environment variables may differ depending on the release and your setup, but the pattern stays the same: persistent storage for state, Traefik labels for routing, and a backend API endpoint that points to LiteLLM.
 
-# LiteLLM as the model gateway
+## LiteLLM as the model gateway
 
 LiteLLM is the glue that makes the rest of the system flexible. It exposes a single OpenAI-style API while allowing multiple backends underneath. That means I can define logical model names and map them to either local inference backends or remote providers.
 
@@ -131,7 +131,7 @@ In a homelab context, this indirection is more valuable than it may seem at firs
 In March 2026, LiteLLM was subject to a suspected supply chain attack in which versions v1.82.7 and v1.82.8 on PyPI contained a malicious payload designed to harvest credentials and exfiltrate them to an external domain. Users running the official LiteLLM Docker image were not affected, as that deployment path pins dependencies and does not rely on the compromised PyPI packages. If you installed LiteLLM via `pip` during the affected window, treat any secrets on that system as compromised and rotate them immediately. See the official incident report for full details and verified safe versions.
 {{< /notice >}}
 
-# SearXNG for live, privacy-friendly search
+## SearXNG for live, privacy-friendly search
 
 One of the biggest limitations of a plain chat interface is the lack of current information. SearXNG solves that problem cleanly. It is a self-hosted metasearch engine that aggregates results from multiple sources and gives me a search API under my own control.
 
@@ -168,7 +168,7 @@ Once connected to Open WebUI as a tool, the flow is straightforward:
 
 This gives me something I find genuinely useful in practice: a private interface for AI-assisted research that is not trapped behind a vendor-specific search integration.
 
-# Docling for document parsing
+## Docling for document parsing
 
 The fourth component, Docling, addresses a different problem. Large language models work best with clean text, but many real documents are messy. PDFs, slide decks, and office files often contain broken text flows, layout artifacts, or table structures that are not useful when passed to a model as-is.
 
@@ -203,7 +203,7 @@ The typical usage pattern is:
 
 This is especially useful for technical notes, whitepapers, internal PDFs, or vendor documentation where the raw file format is not suitable for direct prompting.
 
-# Conclusion
+## Conclusion
 
 This stack did not start as an attempt to build a local alternative to a commercial AI product. It emerged naturally from an existing homelab that already had strong building blocks: containerized services, Traefik, DNS-based routing, and a bias toward self-hosting.
 
@@ -213,8 +213,7 @@ Just as important, it stays operationally consistent with the rest of the homela
 
 Future extensions are obvious: adding a vector database, introducing GPU-backed local inference, wiring the stack into event-driven automations with n8n, routing requests to model endpoints running on specialized inference platforms, or using Open WebUI as a gateway to interact with AI agents. But even without those additions, this combination already covers a large share of the AI workflows I actually care about.
 
-# References
-
+## References
 - My Homelab: A Traefik-centered Self-hosting Setup - [link]({{< relref "post_18.md" >}})
 - Open WebUI - project site - [link](https://openwebui.com/)
 - Open WebUI - GitHub - [link](https://github.com/open-webui/open-webui)

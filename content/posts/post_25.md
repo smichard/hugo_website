@@ -34,7 +34,7 @@ Whether the book caused any of that is genuinely unclear to me. It may have been
 
 For anyone early in their career, in the middle of a transition, or just feeling stuck, this book is worth the few hours it takes to read. It is not a work of profound original thought, but it is honest, practical, and — at the right moment — it lands.
 
-# References
+## References
 
 - The Start-Up of You - [link](https://brockmann-buecher.buchhandlung.de/shop/article/15354375/reid_hoffman_ben_casnocha_the_startup_of_you_revised_and_updated_.html)
 - Scott Galloway - Prof G Pod - [link](https://podcasts.apple.com/us/podcast/civility-in-tech-centrists-and-advice-from-a/id1498802610?i=1000582505419)

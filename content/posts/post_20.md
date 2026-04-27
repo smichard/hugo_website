@@ -10,7 +10,7 @@ toc:
   enable: false
 ---
 
-# Introduction
+## Introduction
 
 In this post, I want to describe how to deploy **Red Hat OpenShift** in a blank Amazon Web Services (AWS) environment using a fully automated and repeatable approach. This post is part of a series of two posts: 1. This post covers the cluster provisioning step. 2. The installation of OpenShift AI on top of the running OpenShift cluster is covered in a separate post: [Install OpenShift AI on OpenShift]({{< relref "post_21.md" >}}). If you already have an OpenShift cluster available, feel free to jump straight to that post.
 Both workflows build on two GitHub repositories that cover both infrastructure provisioning and the installation of the AI platform components, and they reduce what could easily be a multi-hour manual effort to a handful of shell commands.
@@ -41,7 +41,7 @@ Once the environment is provisioned, the service overview page contains the AWS 
 
 With the AWS environment in place, the [ocp-on-aws](https://github.com/alvarolop/ocp-on-aws) repository handles the rest of the cluster provisioning. The repository wraps the OpenShift IPI installer in a shell script and manages user creation, cluster-admin group configuration, and the pull secret in a structured, repeatable way.
 
-### Preparing the repository
+## Preparing the repository
 
 Throughout the following steps, any value written in `<angle brackets>` is a placeholder and must be replaced with your actual value before running the command.
 
@@ -73,7 +73,7 @@ users:
   - <user_name>
 ```
 
-### Configuring the installation
+## Configuring the installation
 
 5. Copy the configuration template:
 ```bash
@@ -93,7 +93,7 @@ The key values to review:
 - **`RHOCM_PULL_SECRET` (Line 31):** Retrieve this from the [Hybrid Cloud Console](https://console.redhat.com/openshift/install/pull-secret).
 - **`WORKER_REPLICAS` (Line 47):** Set to the number of worker nodes required for your workload.
 
-### Running the installation
+## Running the installation
 
 7. Start the cluster installation:
 ```bash
@@ -110,13 +110,13 @@ Once the installer finishes, the cluster API and console URLs, along with the `k
 
 The installation script also bootstraps a set of *Argo CD* applications that manage cluster-level configurations through GitOps from the start. This gives the cluster a solid, declarative baseline before any additional workloads are installed.
 
-# Conclusion
+## Conclusion
 
 The combination of the AWS blank environment and the `ocp-on-aws` repository makes it straightforward to spin up a fully functional OpenShift cluster in under an hour with minimal manual intervention. The IPI installer handles the infrastructure details, and the GitOps bootstrap ensures a consistent cluster configuration from the first login.
 
 With the cluster in place, the next step is installing OpenShift AI and enabling GPU support, which is covered in the follow-up post: [Install OpenShift AI on OpenShift]({{< relref "post_21.md" >}}).
 
-# References
+## References
 
 - ocp-on-aws - GitHub repository by Álvaro López Medina - [link](https://github.com/alvarolop/ocp-on-aws)
 - rhoai-gitops - GitHub repository by Álvaro López Medina - [link](https://github.com/alvarolop/rhoai-gitops)

@@ -11,11 +11,11 @@ toc:
   enable: false
 ---
 
-# Introduction
+## Introduction
 At the end of June, I parted ways with Dell Technologies after 8.5 wonderful years. I had an amazing time at the company, working alongside fantastic colleagues, and I learned a great deal during my tenure.  
 Here is the LinkedIn post where I announced my departure from Dell Technologies:  
 
-# LinkedIn Announcement
+## LinkedIn Announcement
 
 Dear LinkedIn Network,
 
@@ -33,7 +33,7 @@ Best,
 
 Stephan
 
-{{< figure src="/images/posts/post_8.jpg" title="" >}}
+{{< figure src="/images/posts/post_08/dell.jpg" title="" >}}
 
-# References
+## References
 - LinkedIn Post - [link](https://www.linkedin.com/posts/stephanmichard_dear-linkedin-network-i-wanted-to-take-activity-7080540586331533312-UMhR?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAtEiQcBEy8d8vSnm8NBZWZ0faicZji_MK0)

@@ -34,7 +34,7 @@ If you are new to working with AI coding tools and looking for a structured intr
 
 It is not a bad book. It is just not a particularly precise one, and the field it covers has already moved on.
 
-# References
+## References
 
 - Vibe Coding - Gene Kim and Steve Yegge - [link](https://brockmann-buecher.buchhandlung.de/shop/article/55851040/gene_kim_steve_yegge_vibe_coding.html)
 

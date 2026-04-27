@@ -9,10 +9,10 @@ categories: ["Projects"]
 tags: ["R","Shiny","Finance"]
 
 toc:
-  enable: true
+  enable: false
 ---
 
-# Introduction
+## Introduction
 
 Understanding how capital develops over time is a cornerstone of financial planning. While compound interest formulas are straightforward on paper, the interplay between savings rate, interest, and time is often less intuitive. To address this, I built the Compound Interest Calculator – a Shiny app that visualizes how capital grows based on different input parameters.
 
@@ -23,14 +23,14 @@ The idea for this tool was sparked after watching a [YouTube video](https://www.
 You can try the web tool here:  
 {{< button href="https://compound-calculator.michard.io" >}} Open the Compound Interest Calculator {{< /button >}}
 
-# Prerequisites
+## Prerequisites
 
 The easiest way to use the calculator is online (see above).  
 If you want to run it locally, you’ll need:
 - An environment capable of running containers, e.g. Podman, or
 - R with Shiny installed.
 
-# Getting Started
+## Getting Started
 
 The online version is straightforward:
 
@@ -38,7 +38,7 @@ The online version is straightforward:
 2. Enter your investment parameters, e.g. start year, savings rate, interest rate, investment period.
 3. Click Calculate and explore the generated charts and tables.
 
-## Input Parameters
+### Input Parameters
 - **Start Year:** The year when the investment begins.
 - **Initial Capital:** The amount of money you start with.
 - **Savings Rate:** The amount of money you plan to save regularly.
@@ -49,7 +49,7 @@ The online version is straightforward:
 - **Savings Suspension:** The number of years after which you plan to stop saving money.
 - **Target Value:** A specific capital value you aim to achieve. The app will indicate when (or if) this value is reached.
   
-## Generated Diagrams
+### Generated Diagrams
 - **Overview:** Shows the growth of accumulated savings and total capital over time.
 - **Distribution:** Displays a pie chart showing the distribution between total savings and total interest earned.
 - **Savings Rate:** Represents the annual savings rate in relation to the value of the generated interest each year. This visualization illustrates the development of both the savings rate and the generated interest over time. Additionally, it highlights the year when the generated interest surpasses the annual savings rate.
@@ -58,7 +58,7 @@ The online version is straightforward:
 - **Values:** A table that provides a detailed breakdown of the capital at the beginning of the year, savings amount per year, generated interest per year, and capital at the end of the year.
 
 
-# Run Locally
+## Run Locally
 
 If you want to host the calculator yourself:
 1. Clone this repository
@@ -94,14 +94,14 @@ http://localhost:3838/
 ```
 You should now see your Shiny app running!
 
-# Summary
+## Summary
 The Compound Interest Calculator helps bridge the gap between abstract formulas and practical insights. It turns the often-theoretical concept of compound growth into something tangible and interactive. By visualizing how capital evolves over time, it allows users to experiment with different savings rates, investment horizons, and interest assumptions — and to see immediately how these variables influence the trajectory of their capital.
 
 Whether used for personal financial planning, educational purposes, or illustrating investment concepts, the tool provides a clear and structured way to explore “what-if” scenarios. It highlights key inflection points — such as when generated interest surpasses annual savings — making the dynamics of compounding easier to grasp and communicate.
 
 Ultimately, the calculator is designed to make complex relationships between time, capital, and interest transparent, empowering users to make more informed, data-driven decisions about their long-term financial strategies.
 
-# References
+## References
 - YouTube Video - Nischa: Why Net Worth Skyrockets After $100K - [link](https://www.youtube.com/watch?v=F3Q-1W4QEVI)
 - Web App - [link](https://compound-calculator.michard.io/)
 - GitHub Repository - [link](https://github.com/smichard/compound_interest_calculator)

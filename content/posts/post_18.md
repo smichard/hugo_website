@@ -7,12 +7,12 @@ authorLink: "https://stephan.michard.io"
 categories: ["Homelab"]
 tags: ["homelab","container","self-hosting"]
 toc:
-  enable: true
+  enable: false
 ---
 
-{{< figure src="/images/posts/homelab.png" title="Summary of Homelab services - AI generated" >}}
+{{< figure src="/images/posts/post_18/homelab.png" title="Summary of Homelab services - AI generated" >}}
 
-# Introduction
+## Introduction
 
 Several years ago, I began building a small homelab with two primary objectives in mind: gaining hands-on experience with containers and modern application deployment, and running selected services locally to avoid storing certain data in public cloud environments. In hindsight, this environment evolved into a solid foundation for a local AI stack as well, which I now operate alongside the rest of my setup and will detail in a future post. Although the focus here is on a homelab, the technical stack described can be deployed just as easily in any cloud environment; all that is required is a virtual machine running a Linux distribution of your choice and a container engine.
     
@@ -20,7 +20,7 @@ What began as an experiment has turned into a stable setup that I use every day.
 
 In this post I will walk through how I structure this homelab, explain how Traefik ties everything together, and outline a selection of the services currently running in my lab.
 
-# Hardware and base platform
+## Hardware and base platform
 
 The homelab does not run on high-end servers. Most of the hosts are refurbished x86 thin clients with the following specifications:
 - 16 to 32 GB of RAM per node
@@ -29,7 +29,7 @@ The homelab does not run on high-end servers. Most of the hosts are refurbished 
 
 The environment uses CentOS Stream 9 as the operating system. On top of that, I run Docker and Docker Compose. Nearly every component in the homelab is containerized, with Traefik positioned in front of these containers as a reverse proxy and routing layer.
 
-# Architecture overview
+## Architecture overview
 
 At a high level, the architecture looks like this:
 - Several containers run on the hosts.
@@ -42,7 +42,7 @@ Clients on the home network resolve these hostnames to the internal IP address o
 Traefik acts as the single entry point for HTTP and HTTPS. It terminates TLS, routes requests to the appropriate container based on the hostname, and applies middlewares such as redirects and authentication where required.
 
 
-# Traefik as the center of the homelab
+## Traefik as the center of the homelab
 
 Traefik is an open-source reverse proxy and edge router that integrates well with containerized environments. It monitors the container socket, automatically discovers running containers, and uses labels defined on those containers to configure routing.
 
@@ -141,7 +141,7 @@ services:
 
 With this pattern, every service becomes available over HTTPS under its own subdomain without additional manual configuration in Traefik.
 
-# Core services in my homelab
+## Core services in my homelab
 
 On top of Traefik, I run a set of core services that provide DNS, monitoring, automation, messaging, logging, and secrets management. The key components are:
 - **Pi-hole – DNS:** Provides network-wide DNS resolution and ad-blocking, and handles internal DNS for homelab hostnames such as `*.home.example.com`. Blocking unwanted domains for devices on the network.
@@ -154,7 +154,7 @@ On top of Traefik, I run a set of core services that provide DNS, monitoring, au
 - **Vaultwarden – Secrets Management:** A self-hosted Bitwarden-compatible server for securely managing passwords and sensitive information within the homelab. It stores credentials and secrets for services and accounts, enables secure sharing across devices.
     
 
-# Conclusion
+## Conclusion
 
 What began as a simple playground for learning containers and avoiding public cloud services for certain use cases has evolved into a practical, resilient platform for running everyday services at home. Centering the setup around Traefik, standardizing on containerized services, and using a wildcard domain with automated TLS have kept the architecture both manageable and extensible. The use of modest, low-power refurbished thin clients has also proven effective in keeping costs and energy consumption low while still offering sufficient resources.
 
@@ -162,7 +162,7 @@ Over time, the homelab has also turned out to be a solid foundation for hosting 
 
 With these principles such as simple routing, consistent domains and TLS, lightweight hardware, and containerized services, one can build a flexible environment that supports DNS, monitoring, automation, messaging, secrets management, and more, tailored to one's own needs.
 
-# References
+## References
 
 - CentOS Stream - [link](https://www.centos.org/)
 - Traefik - reverse proxy - [link](https://github.com/traefik/traefik)

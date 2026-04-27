@@ -11,10 +11,10 @@ toc:
   enable: false
 ---
 
-# Introduction
+## Introduction
 On October 1st, I was promoted to Associate Principal Solution Architect at Red Hat. This milestone marks not just a new title, but also an opportunity to reflect on the journey of the past two years.
 
-# Reflections
+## Reflections
 Time has passed remarkably quickly since I joined Red Hat in mid-2023. In that period, I’ve had the privilege to:
 - Work with highly skilled and deeply technical colleagues across Europe.
 - Engage in diverse and challenging projects, many of which operate at the forefront of technology.
@@ -29,7 +29,7 @@ This promotion is not a finish line but rather a signal to run a bit faster, con
 The path ahead is dynamic, and I look forward to building further, learning more, and — hopefully — still keeping a smile on the way.
 
 
-{{< figure src="/images/posts/post_14.png" title="" >}}
+{{< figure src="/images/posts/post_14/image.png" title="" >}}
 
-# References
+## References
 - LinkedIn Post - [link](https://www.linkedin.com/posts/stephanmichard_redhat-levelup-continuouslearning-activity-7379556031388884992-kWWV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAtEiQcBEy8d8vSnm8NBZWZ0faicZji_MK0)

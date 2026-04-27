@@ -8,17 +8,17 @@ categories: ["Projects"]
 tags: ["Container","Kubernetes","Google-Cloud", "Tutorial"]
 
 toc:
-  enable: true
+  enable: false
 ---
 
-# Introduction
+## Introduction
 Last year I created a tutorial which explains the basics of application deployment in a cloud-native environment. I have also recorded videos for the individual chapters for a Dell internal learning platform, these are not publicly available.   
 With this post I describe the individual chapters of the tutorial, the individual parts of the tutorial follow on from each other. The corresponding code can be found on GitHub. A simple website serves as a sample application and can be run as a container in various cloud environments. The sample application’s source code is part of the tutorial.  
 For simplicity, do not attempt this while using a corporate firewall. Comments, additions, and collaboration are welcome.
 
 {{< button href="https://github.com/smichard/cloud_bites_tutorial" >}} Find the code on GitHub {{< /button >}}  
 ***
-# 1. Setup of local environment
+## 1. Setup of local environment
 The tutorial provides a virtual machine (VM) to ensure a consistent development environment. This VM is deployed using [Vagrant](https://www.vagrantup.com/). Vagrant allows it to leverage a declarative configuration file that describes the required software, packages, and operating system configuration. The VM used in this tutorial is based on Ubuntu 20.04 LTS. The VM is allocated 1 vCPU and 4 GB of RAM.  
 We recommend [Virtualbox](https://www.virtualbox.org/) as the virtualization software for this tutorial.  
 This tutorial uses [Visual Studio Code](https://code.visualstudio.com/) as a code editor.  
@@ -40,7 +40,7 @@ The VM has been configured to mount the host PC's file system, it is available i
 cd /vagrant
 ```
 
-# 2. Build and run Docker containers locally
+## 2. Build and run Docker containers locally
 In this section, a container with the demo application is created first. This container is started locally can be reached via the host PC’s web browser.  
 
 Switch to the directory:
@@ -83,7 +83,7 @@ docker login
 docker push <dockerhub_username>/<image_name>
 ```
 
-# 3. Deploy a local Kubernetes cluster using K3D
+## 3. Deploy a local Kubernetes cluster using K3D
 In the following section you are going to use the [K3D](https://k3d.io) project to locally deploy a minimal Kubernetes cluster. K3D is a lightweight wrapper to run [K3S](https://k3s.io), Rancher Lab’s minimal Kubernetes distribution, in Docker. K3D makes it very easy to create single- and multi-node K3S clusters in Docker, e.g. for local development on Kubernetes. A good introduction to K3D with some use cases can be found in the [DevOps Toolkit YouTube video](https://www.youtube.com/watch?v=mCesuGk-Fks).  
 
 Deploy a local K3D cluster with three control planes and three worker nodes:
@@ -108,7 +108,7 @@ kubectl get deployments,replicasets,pods,services
 ```
 The website is then available via the host PC's web browser under *localhost:8080*.
 
-# 4. Basic operations to handle Pods and Deployments
+## 4. Basic operations to handle Pods and Deployments
 The following section details a few basic commands for handling pods and deployments. The following commands create two pods named `my-pod-1` and `my-pod-2` each with the container image `nginx:alpine`. The last command shows all pods running in the default namespace:
 ```bash
 kubectl run my-pod-1 --image=nginx:alpine
@@ -150,7 +150,7 @@ kubectl rollout undo deployment dpl-demo-1 --to-revision=2
 ```
 If the deployment is rolled back, the number of pods for the corresponding ReplicaSet is scaled, meaning no new ReplicaSet is created, but an existing one is used.  
 
-# 5. Deploy a remote Kubernetes cluster using Google Cloud – part 1
+## 5. Deploy a remote Kubernetes cluster using Google Cloud – part 1
 In the following section, a Kubernetes cluster is deployed in a public cloud. For this purpose, we use [Google Cloud](https://cloud.google.com/) in this tutorial. For simplicity, we assume that a Google Cloud account already exists.
 {{< notice warning >}}
 Costs are generated at the public cloud provider used in the following tutorial sections. It is, therefore, vital to limit the runtime of the clusters and prevent possible idle time to minimize costs.
@@ -205,9 +205,9 @@ The Kubernetes cluster can be deleted with the following command:
 gcloud container clusters delete my-gke-cluster
 ```
 
-# 6. Deploy a remote Kubernetes cluster using Google Cloud – part 2
+## 6. Deploy a remote Kubernetes cluster using Google Cloud – part 2
 In this section, another Kubernetes cluster is created on Google Cloud. This time, the Cloud Console is used:
-{{< figure src="/images/posts/google_cloud_gke.png" title="Google Cloud Screenshot" >}}
+{{< figure src="/images/posts/post_06/google_cloud_gke.png" title="Google Cloud Screenshot" >}}
 
 Once the Kubernetes Cluster has been created successfully, fetch its credentials:
 ```bash
@@ -227,7 +227,7 @@ kubectl get services
 It is crucial to delete the Kubernetes cluster if unused to keep costs low.
 {{< /notice >}}
 
-# 7. Deploy a remote Kubernetes cluster leveraging Terraform
+## 7. Deploy a remote Kubernetes cluster leveraging Terraform
 In this section a Kubernetes cluster is created on Google Cloud leveraging [Terraform](https://www.terraform.io). Terraform is an infrastructure as code tool allowing one to build infrastructure safely and efficiently in a declarative way on various platforms.    
 First the Google Cloud environment has to be prepared by enabling a couple of API's:
 ```bash
@@ -282,7 +282,7 @@ If you don’t need your Google Cloud project anymore, you can delete the projec
 gcloud projects delete ${PROJECT_ID}
 ```
 
-# 8. Visualize Kubernetes workloads with VMware Octant
+## 8. Visualize Kubernetes workloads with VMware Octant
 You will explore, in this section, the various Kubernetes clusters created earlier with [VMware Octant](https://octant.dev/). Octant is a tool for developers to understand how applications run on a Kubernetes cluster. It aims to be part of the developer’s toolkit for gaining insight and approaching complexity found in Kubernetes. Octant offers a combination of introspective tooling, cluster navigation, and object management. It also provides a plugin system to extend its capabilities further.   
 
 Start Octant:
@@ -291,12 +291,12 @@ octant
 ```
 The Octant application can be reached via a web browser of the host PC using *localhost:8001*.
 
-# Summary
+### Summary
 The tutorial gives a quick overview of the basics of application deployment in a cloud-native environment. This tutorial is intended to provide an easy introduction with a quick learning curve. There is by far no claim to completeness. There are certainly ways to improve or expand the tutorial.  
 You can download the slides I used to present the tutorial via the following link:
 {{< download file="/documents/Cloud_Bites_Slides.pdf" title="Download slide deck" >}}  
 
-# References
+## References
 - GitHub - [link](https://github.com/smichard/cloud_bites_tutorial)
 - Cloud-Native Computing Foundation - [link](https://www.cncf.io/)
 - Virtualbox - [link](https://www.virtualbox.org/)

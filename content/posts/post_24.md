@@ -12,7 +12,7 @@ toc:
 
 {{< figure src="/images/posts/post_24/overview.png" title="Conceptual illustration of the extended AI stack with elastic cloud GPU resources for running large language models on demand - AI generated" >}}
 
-# Introduction
+## Introduction
 
 In this post, I want to describe how I extended the local AI stack I built in my homelab with on-demand GPU-backed model inference, without adding any GPU hardware to the lab itself.
 
@@ -30,7 +30,7 @@ I use [RunPod](https://www.runpod.io/) for this setup for a few practical reason
 
 A detailed description of all RunPod services is out of scope for this post. The focus here is on one specific workflow: deploying a *vLLM* inference server with a model loaded from *Hugging Face*, and connecting the resulting endpoint to Open WebUI.
 
-# Deploying a vLLM Inference Server on RunPod
+## Deploying a vLLM Inference Server on RunPod
 
 RunPod uses templates to save pod configurations for reuse. A template defines the container image, the start command, the storage allocation, and other runtime parameters. I maintain a small collection of private templates, each configured for a different model.
 
@@ -82,7 +82,7 @@ For most inference workloads with 8 to 12 billion parameter models, an RTX 4090 
 
 After deployment, RunPod assigns a public HTTPS endpoint to the pod. The vLLM server is reachable at that endpoint on port 8000, with the path structure matching the OpenAI API.
 
-# Connecting the Endpoint to Open WebUI
+## Connecting the Endpoint to Open WebUI
 
 With the pod running, the endpoint can be added to Open WebUI as an external connection. In Open WebUI, navigate to **Admin Panel** then **Settings** and add a new connection with the following values:
 
@@ -98,7 +98,7 @@ Once saved, the model served by vLLM on RunPod appears in the model selector alo
 
 Alternatively, the endpoint can be added to LiteLLM as a named model alias. This is the better option if you want centralized credential management or want to expose the RunPod model alongside other backends under a consistent naming scheme across the stack.
 
-# Why This Setup Works Well
+## Why This Setup Works Well
 
 The combination of a self-hosted orchestration stack and on-demand GPU inference fits well with a homelab where tooling and workflows are in place but on-premises compute is intentionally kept lean.
 
@@ -109,13 +109,13 @@ A few things make this pattern practical:
 - **No changes to the existing stack.** Open WebUI, LiteLLM, SearXNG, and Docling continue to work exactly as before. The RunPod endpoint is just another backend.
 - **Automatable.** RunPod exposes an API for managing pods, so deployments can be triggered programmatically. Combined with LiteLLM's routing, it becomes possible to bring a model endpoint up on demand and tear it down again when it is no longer needed.
 
-# Conclusion
+## Conclusion
 
 Adding RunPod as an on-demand GPU backend closes the main gap in a CPU-only homelab AI stack. The setup requires no changes to the existing infrastructure and takes only a few minutes from template to running endpoint. The result is the ability to experiment with current, capable models at low cost, using the same interface and workflows already in place.
 
 For on-demand model access that does not warrant the cost of persistent GPU hardware, this pattern is worth considering.
 
-# References
+## References
 
 - My Homelab: A Traefik-centered Self-hosting Setup - [link]({{< relref "post_18.md" >}})
 - My Local AI Stack: Open WebUI, LiteLLM, SearXNG, and Docling - [link]({{< relref "post_19.md" >}})

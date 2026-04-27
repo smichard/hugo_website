@@ -8,7 +8,7 @@ categories: ["Projects"]
 tags: ["coding","documentation","tutorial"]
 
 toc:
-  enable: true
+  enable: false
 ---
 This article was published on March 25, 2024, on [opensourcerers.org](https://www.opensourcerers.org/2024/03/25/enhancing-code-project-documentation-through-automated-changelogs/):
 

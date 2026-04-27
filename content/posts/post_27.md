@@ -36,7 +36,7 @@ There is also something in this book that reads as written for an audience beyon
 
 The first two books earned their readership straightforwardly. This one is harder to recommend to anyone who has already read them.
 
-# References
+## References
 
 - Die Assistentin - Caroline Wahl - [link](https://brockmann-buecher.buchhandlung.de/shop/article/55298156/caroline_wahl_die_assistentin.html)
 

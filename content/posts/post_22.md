@@ -12,7 +12,7 @@ toc:
 
 {{< figure src="/images/posts/post_22/overview.png" title="Workflow diagram of rh-mastery process - AI generated" >}}
 
-# Introduction
+## Introduction
 
 In this post, I want to describe a tool built by my colleague **Francisco J. Lopez Grüber** that solves a problem most people quietly live with: Red Hat product documentation is comprehensive and well-maintained, but it lives on the internet. Accessing it requires a browser, a connection, and knowing where to look. For offline environments, air-gapped labs, or anything beyond casual browsing, that dependency quickly becomes friction.
 
@@ -102,11 +102,11 @@ The Markdown output from rh-mastery is structured and annotated, which makes it 
 
 [qmd](https://github.com/tobi/qmd), built by Tobias Lütke, is a lightweight tool for querying local Markdown files. Pointed at the directory tree produced by rh-mastery, it gives AI agents fast, accurate access to the full Red Hat documentation corpus — entirely offline and without relying on external APIs or web retrieval. The combination is particularly effective in environments where internet access is restricted, or when a development workflow benefits from a self-contained, version-locked knowledge source.
 
-# Conclusion
+## Conclusion
 
 rh-mastery turns what would otherwise be an ongoing manual effort into a single repeatable command. The container image keeps the setup clean, and the Markdown output opens up practical AI-assisted use cases that go beyond what a standard documentation browser can offer. Francisco's tool fills a gap that is easy to overlook until you actually need it.
 
-# References
+## References
 
 - rh-mastery - GitHub repository by Francisco J. Lopez Grüber - [link](https://github.com/flg-redhat/rh_mastery)
 - qmd - GitHub repository by Tobias Lütke - [link](https://github.com/tobi/qmd)
