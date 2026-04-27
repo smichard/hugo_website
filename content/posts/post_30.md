@@ -1,14 +1,13 @@
 ---
 title: "A Hugo Theme for Your CV"
-date: 2027-04-16
-draft: true
+date: 2026-08-22
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
 tags: ["Hugo", "CV", "Git", "Workflow", "Tooling"]
 toc:
   enable: false
-status: RTP
 ---
 
 ## Introduction

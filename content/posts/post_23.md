@@ -1,7 +1,7 @@
 ---
 title: "Book Review: Entzug by Christoph Peters"
-date: 2027-04-16
-draft: true
+date: 2026-08-08
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Books"]

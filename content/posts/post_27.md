@@ -1,7 +1,7 @@
 ---
 title: "Book Review: Die Assistentin by Caroline Wahl"
-date: 2027-04-17
-draft: true
+date: 2026-09-05
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Books"]

@@ -1,7 +1,7 @@
 ---
 title: "qmd: Semantic search accross markdown notes"
-date: 2027-04-16
-draft: true
+date: 2026-06-27
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
