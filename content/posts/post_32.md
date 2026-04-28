@@ -10,6 +10,8 @@ toc:
   enable: false
 ---
 
+{{< figure src="/images/posts/post_32/overview.png" title="Drop-in OpenAI-compatible inference on OpenShift — RHAIIS packages vLLM for production, with hardware flexibility and a secure external endpoint out of the box - AI generated" >}}
+
 ## Introduction
 
 In this post, I want to describe how to deploy the **Red Hat AI Inference Server (RHAIIS)** on OpenShift and expose it as an OpenAI-compatible API endpoint. This post builds on [Deploying OpenShift on AWS with Automated Cluster Provisioning]({{< relref "post_20.md" >}}), which covers getting a working OpenShift cluster into place. If you already have a cluster running, you can skip directly to the deployment steps.

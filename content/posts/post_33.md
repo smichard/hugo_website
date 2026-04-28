@@ -11,7 +11,7 @@ toc:
 status: wip
 ---
 
-{{< figure src="/images/posts/post_33/overview.png" title="tbd - AI generated" >}}
+{{< figure src="/images/posts/post_33/overview.png" title="Hermes Agent on OpenShift: Private by default, cloud access when needed - AI generated" >}}
 
 ## Introduction
 

@@ -10,7 +10,7 @@ toc:
   enable: false
 ---
 
-{{< figure src="/images/posts/post_29/overview.png" title="Workflow diagram of rh-mastery process - AI generated" >}}
+{{< figure src="/images/posts/post_29/overview.png" title="One system, full control: Tududi brings together task management, calendar sync, and developer integrations without giving up your data - AI generated" >}}
 
 ## Introduction
 
@@ -25,6 +25,8 @@ Tududi follows a [Getting Things Done](https://en.wikipedia.org/wiki/Getting_Thi
 The tech stack is React on the frontend, Node.js on the backend, and SQLite as the database. That last point matters for a homelab: the entire database is a single file, which makes backups trivial. Deployment is a single container, and configuration is handled through environment variables.
 
 Tududi reached v1.0.0 in March 2026, which marks the end of the beta phase. The project has around 2.6k stars on GitHub and is actively developed. There is also a hosted option at *[cloud.tududi.com](https://cloud.tududi.com/)* for anyone who does not want to run it themselves.
+
+{{< figure src="/images/posts/post_29/screenshot.png" title="Screenshot of Tududi interface" >}}
 
 ## How It Fits Into the Homelab
 

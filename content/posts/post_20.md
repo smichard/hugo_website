@@ -10,6 +10,8 @@ toc:
   enable: false
 ---
 
+{{< figure src="/images/posts/post_20/overview.png" title="The full provisioning pipeline: CLI setup, ocp-on-aws config, and a single script that spins up VPCs, EC2 instances, DNS records, and an Argo CD baseline - AI generated" >}}
+
 ## Introduction
 
 In this post, I want to describe how to deploy **Red Hat OpenShift** in a blank Amazon Web Services (AWS) environment using a fully automated and repeatable approach. This post is part of a series of two posts: 1. This post covers the cluster provisioning step. 2. The installation of OpenShift AI on top of the running OpenShift cluster is covered in a separate post: [Install OpenShift AI on OpenShift]({{< relref "post_21.md" >}}). If you already have an OpenShift cluster available, feel free to jump straight to that post.

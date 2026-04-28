@@ -10,6 +10,8 @@ toc:
   enable: false
 ---
 
+{{< figure src="/images/posts/post_30/overview.png" title="tbd - AI generated" >}}
+
 ## Introduction
 
 When I was still working as a researcher, LaTeX was part of the daily workflow. Writing papers in it made the jump to a LaTeX CV feel natural at the time. But some years later, outside of academia, the setup started to feel unnecessarily complicated.

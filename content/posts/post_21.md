@@ -10,6 +10,8 @@ toc:
   enable: false
 ---
 
+{{< figure src="/images/posts/post_21/overview.png" title="From GitOps repo to verified GPU access in minutes: automated MachineSet provisioning, node isolation, and hardware profiles for AI workloads on OpenShift - AI generated" >}}
+
 ## Introduction
 
 In this post, I want to describe how to install **Red Hat OpenShift AI** on an existing OpenShift cluster and configure it to run GPU-accelerated workloads. The approach uses the [rhoai-gitops](https://github.com/alvarolop/rhoai-gitops) repository, created and maintained by my colleague **Álvaro López Medina**, which automates the installation of OpenShift AI, the required operators, and the NVIDIA GPU stack through a single script backed by a *GitOps* approach.
