@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.61 (2026-04-28)
+
+### Other
+- posts added [`634a58e`](https://github.com/smichard/hugo_website/commit/634a58e)
+
+## 0.1.60 (2026-04-27)
+
+### Other
+- structure and schedule [`a96cd5c`](https://github.com/smichard/hugo_website/commit/a96cd5c)
+
+## 0.1.59 (2026-04-27)
+
+### Documentation
+- :robot: changelog file generated [`2e30523`](https://github.com/smichard/hugo_website/commit/2e30523)
+
+### Other
+- structure reorganized [`440ad62`](https://github.com/smichard/hugo_website/commit/440ad62)
+- cosind highlights adjusted [`c3af575`](https://github.com/smichard/hugo_website/commit/c3af575)
+
 ## 0.1.58 (2026-04-23)
 
 ### Documentation
