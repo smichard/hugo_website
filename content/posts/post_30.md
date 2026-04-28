@@ -10,7 +10,7 @@ toc:
   enable: false
 ---
 
-{{< figure src="/images/posts/post_30/overview.png" title="tbd - AI generated" >}}
+{{< figure src="/images/posts/post_30/overview.png" title="Resume-as-code: content lives in YAML, design in CSS, versions in Git — the same workflow developers already use, applied to a professional CV - AI generated" >}}
 
 ## Introduction
 
