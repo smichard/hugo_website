@@ -10,6 +10,8 @@ toc:
   enable: false
 ---
 
+{{< figure src="/images/posts/post_31/overview.png" title="tbd - AI generated" >}}
+
 ## Introduction
 
 I have been using Obsidian for several years. What started as a place for personal notes gradually grew into something larger: bookmarks saved as markdown files, project notes, research output, and increasingly, a knowledge base maintained and organized by AI agents following Andrej Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) concept. The idea formulated by Karpathy is to build a personal Wiki, curated, agent-maintained collection of structured markdown notes. Once that kind of setup grows past a few hundred files, finding something quickly matters more than it used to.
