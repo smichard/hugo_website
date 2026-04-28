@@ -301,7 +301,7 @@ The inference server exposes a standard OpenAI-compatible API, which means *Open
 
 In Open WebUI, go to **Settings > Connections** and add a new external connection. Set the URL to the route hostname with the `/v1` suffix, add the API key created in step 3 as a bearer token, set the provider type to **OpenAI**, and the API type to **Chat Completions**. Leave the model ID field empty so Open WebUI queries the `/v1/models` endpoint and discovers available models automatically.
 
-{{< figure src="/images/posts/post_32/open_webui.jpg" title="Open WebUI external connection configured against the Red Hat AI Inference Server endpoint" >}}
+{{< figure src="/images/posts/post_32/open_webui.png" title="Open WebUI external connection configured against the Red Hat AI Inference Server endpoint" >}}
 
 Once saved, the Qwen model appears in the model selector alongside any other configured providers.
 
