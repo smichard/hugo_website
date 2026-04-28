@@ -61,12 +61,12 @@ Peter Steinberger, the creator of *OpenClaw*, another widely-used AI agent frame
 
 ## References
 
-- Hermes Agent on GitHub - [github.com/NousResearch/hermes-agent](https://github.com/nousresearch/hermes-agent)
-- Hermes Agent Documentation - [hermes-agent.nousresearch.com](https://hermes-agent.nousresearch.com/docs/)
-- Nous Research - [nousresearch.com](https://nousresearch.com/)
-- Matrix - [matrix.org](https://matrix.org/)
-- OpenRouter - [openrouter.ai](https://openrouter.ai/)
-- Andrej Karpathy LLM Wiki concept - [gist.github.com/karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
-- Marp - [marp.app](https://marp.app/)
-- agentskills.io - [agentskills.io](https://agentskills.io/)
-- Peter Steinberger TED talk - [youtube.com](https://www.youtube.com/watch?v=7rzYDM6vMtI)st
+- Hermes Agent on GitHub - [link](https://github.com/nousresearch/hermes-agent)
+- Hermes Agent Documentation - [link](https://hermes-agent.nousresearch.com/docs/)
+- Nous Research - [link](https://nousresearch.com/)
+- Matrix - [link](https://matrix.org/)
+- OpenRouter - [link](https://openrouter.ai/)
+- Andrej Karpathy LLM Wiki concept - [link](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
+- Marp - [link](https://marp.app/)
+- agentskills.io - [link](https://agentskills.io/)
+- Peter Steinberger TED talk - [link](https://www.youtube.com/watch?v=7rzYDM6vMtI)
