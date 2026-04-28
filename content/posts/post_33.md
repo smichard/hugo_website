@@ -27,13 +27,6 @@ The setup connects two namespaces on the same cluster. The *Red Hat AI Inference
 
 Externally, Hermes exposes an OpenAI-compatible API on port 8642, secured with a bearer token. An OpenShift Route with TLS termination handles the public endpoint.
 
-```mermaid
-graph LR
-    A[Route HTTPS] --> B[Service port 8642]
-    B --> C[Deployment hermes]
-    C --> D[(PVC data)]
-    C --> E[vLLM Service\nrhaiis internal]
-```
 
 ## Prerequisites
 
