@@ -1,5 +1,5 @@
 ---
-title: "Hermes"
+title: "Hermes Agent: A Personal AI That Gets More Useful Over Time"
 date: 2026-05-02
 draft: false
 author: "Stephan Michard"
@@ -10,7 +10,7 @@ toc:
   enable: false
 ---
 
-te{{< figure src="/images/posts/post_28/overview.png" title="tbd - AI generated" >}}
+{{< figure src="/images/posts/post_28/overview.png" title="How Hermes Agent Works: From Closed-Loop Learning to Multi-Platform Deployment - AI generated" >}}
 
 ## Introduction
 

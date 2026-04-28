@@ -10,7 +10,7 @@ toc:
   enable: false
 ---
 
-{{< figure src="/images/posts/post_31/overview.png" title="tbd - AI generated" >}}
+{{< figure src="/images/posts/post_31/overview.png" title="QMD Architecture: Local Execution, Hybrid Search Pipeline, and LLM Reranking - AI generated" >}}
 
 ## Introduction
 
