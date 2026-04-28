@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) and to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## 0.1.69 (2026-04-28)
+
+### Other
+- image captions added [`21cacb5`](https://github.com/smichard/hugo_website/commit/21cacb5)
+
+## 0.1.68 (2026-04-28)
+
+### Other
+- image added [`80277bb`](https://github.com/smichard/hugo_website/commit/80277bb)
+
+## 0.1.67 (2026-04-28)
+
+### Other
+- images added [`7226389`](https://github.com/smichard/hugo_website/commit/7226389)
+- post added [`60d1ba7`](https://github.com/smichard/hugo_website/commit/60d1ba7)
+
+## 0.1.66 (2026-04-28)
+
+### Documentation
+- :robot: changelog file generated [`1cb2dac`](https://github.com/smichard/hugo_website/commit/1cb2dac)
+
+### Other
+- content added [`e2e0165`](https://github.com/smichard/hugo_website/commit/e2e0165)
+
 ## 0.1.65 (2026-04-28)
 
 ### Documentation
