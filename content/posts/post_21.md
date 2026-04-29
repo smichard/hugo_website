@@ -25,7 +25,23 @@ Before proceeding, ensure the following are in place:
 - A running OpenShift cluster with sufficient compute capacity
 - The [OpenShift CLI (oc)](https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html/cli_tools/openshift-cli-oc#cli-getting-started) installed and available on your workstation
 - Cluster-admin access
-- If GPU support is needed: sufficient AWS quota for GPU instance types (e.g., `g5.4xlarge`)
+- If GPU support is needed: sufficient AWS quota for GPU instance types
+
+## Selecting the correct GPU instance node type
+
+Selecting the right GPU instance type for your workload is a decision that is worth getting right before you provision anything, the instance family determines not just raw performance but also memory capacity, which directly constrains which models you can load and at what precision. Undersizing leads to out-of-memory failures, oversizing means paying for capacity you do not use.
+
+Consult the [AWS recommended GPU instances for deep learning](https://docs.aws.amazon.com/dlami/latest/devguide/gpu.html) to identify instance families suited to your workload, then cross-reference with the [EC2 instance type availability by region](https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-regions.html) to confirm that your target region actually offers the instance type you need. GPU instance availability varies significantly across regions and is a common source of unexpected quota errors at deployment time.
+
+The following AWS instance types are commonly used in OpenShift AI GPU deployments:
+
+| Instance Name | GPU | GPU RAM | vCPUs | RAM |
+|---|---|---|---|---|
+| `g5.4xlarge` | 1x NVIDIA A10G | 24 GiB | 16 | 64 GiB |
+| `g5.12xlarge` | 4x NVIDIA A10G | 96 GiB | 48 | 192 GiB |
+| `g5.24xlarge` | 4x NVIDIA A10G | 96 GiB | 96 | 384 GiB |
+| `g5.48xlarge` | 8x NVIDIA A10G | 192 GiB | 192 | 768 GiB |
+| `p4d.24xlarge` | 8x NVIDIA A100 | 320 GiB | 96 | 1,152 GiB |
 
 ## Installing OpenShift AI
 
@@ -148,3 +164,7 @@ The end result is an OpenShift AI environment with full GPU access, ready for ru
 - OpenShift AI - Product documentation - [link](https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed)
 - OpenShift CLI (oc) - Getting started - [link](https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html/cli_tools/openshift-cli-oc#cli-getting-started)
 - NVIDIA GPU Operator documentation - [link](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/index.html)
+- AWS EC2 instance type availability by region - [link](https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-regions.html)
+- AWS recommended GPU instances for deep learning - [link](https://docs.aws.amazon.com/dlami/latest/devguide/gpu.html)
+- G5-Instances von Amazon EC2 - [link](https://aws.amazon.com/de/ec2/instance-types/g5/)
+- Amazon-EC2-P4-Instances - [link](https://aws.amazon.com/de/ec2/instance-types/p4/)

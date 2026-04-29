@@ -27,7 +27,7 @@ Before starting, a Linux workstation or jump host is recommended for running the
 
 - [**OpenShift CLI (oc)**](https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html/cli_tools/openshift-cli-oc#cli-getting-started) – required to interact with the OpenShift cluster
 - [**AWS CLI**](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) – required to provision and manage AWS infrastructure
-- **htpasswd** – required to generate user credentials for the cluster
+- [**htpasswd**](https://httpd.apache.org/docs/current/programs/htpasswd.html) – required to generate user credentials for the cluster
 
 These are fundamental prerequisites. The installation scripts will fail or behave unexpectedly without them.
 
@@ -125,4 +125,5 @@ With the cluster in place, the next step is installing OpenShift AI and enabling
 - Red Hat Demo Platform - [link](https://catalog.demo.redhat.com/catalog)
 - OpenShift CLI - Getting started - [link](https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html/cli_tools/openshift-cli-oc#cli-getting-started)
 - AWS CLI - Installation guide - [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- htpasswd - [link](https://httpd.apache.org/docs/current/programs/htpasswd.html)
 - Red Hat Hybrid Cloud Console - Pull Secret - [link](https://console.redhat.com/openshift/install/pull-secret)
