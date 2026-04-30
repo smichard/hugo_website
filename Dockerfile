@@ -5,6 +5,7 @@ FROM hugomods/hugo:exts as builder
 # Base URL
 ARG HUGO_BASEURL=
 ENV HUGO_BASEURL=${HUGO_BASEURL}
+ENV HUGO_ENV=production
 # Build site
 COPY . /src
 # Replace below build command at will.
