@@ -37,11 +37,11 @@ The following AWS instance types are commonly used in OpenShift AI GPU deploymen
 
 | Instance Name | GPU | GPU RAM | vCPUs | RAM |
 |---|---|---|---|---|
-| `g5.4xlarge` | 1x NVIDIA A10G | 24 GiB | 16 | 64 GiB |
-| `g5.12xlarge` | 4x NVIDIA A10G | 96 GiB | 48 | 192 GiB |
-| `g5.24xlarge` | 4x NVIDIA A10G | 96 GiB | 96 | 384 GiB |
-| `g5.48xlarge` | 8x NVIDIA A10G | 192 GiB | 192 | 768 GiB |
-| `p4d.24xlarge` | 8x NVIDIA A100 | 320 GiB | 96 | 1,152 GiB |
+| g5.4xlarge | 1x NVIDIA A10G | 24 GiB | 16 | 64 GiB |
+| g5.12xlarge | 4x NVIDIA A10G | 96 GiB | 48 | 192 GiB |
+| g5.24xlarge | 4x NVIDIA A10G | 96 GiB | 96 | 384 GiB |
+| g5.48xlarge | 8x NVIDIA A10G | 192 GiB | 192 | 768 GiB |
+| p4d.24xlarge | 8x NVIDIA A100 | 320 GiB | 96 | 1,152 GiB |
 
 ## Installing OpenShift AI
 
