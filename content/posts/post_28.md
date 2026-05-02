@@ -4,8 +4,8 @@ date: 2026-05-02
 draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
-categories: ["Books"]
-tags: ["book-review","literature"]
+categories: ["Tools"]
+tags: ["homelab", "self-hosting", "productivity", "container", "ai"]
 toc:
   enable: false
 ---
@@ -14,12 +14,12 @@ toc:
 
 ## Introduction
 
-I came across [*Hermes Agent project*](https://github.com/nousresearch/hermes-agent) in early March 2026 and deployed it a couple of days later. A couple of weeks in I am still using it daily, and the use cases keep expanding rather than converging. Most tools settle into a narrow routine or fall off altogether. What keeps this one going is that the agent gets more useful the longer you run it. The project is young and moving fast, with new releases every few days. The initial setup requires patience: getting the configuration to a point where it actually saves time takes effort, and the frequent updates occasionally introduce breaking changes. That said, it is genuinely fun to use, and you learn a fair amount along the way.
+I came across [*Hermes Agent project*](https://github.com/nousresearch/hermes-agent) in early March 2026 and deployed version 0.2.0 a couple days later. A couple of weeks in I am still using it daily, and the use cases keep expanding rather than converging. Most tools settle into a narrow routine or fall off altogether. What keeps this one going is that the agent gets more useful the longer you run it. The project is young and moving fast, with new releases every few days. The initial setup requires patience: getting the configuration to a point where it actually saves time takes effort, and the frequent updates occasionally introduce breaking changes. That said, it is genuinely fun to use, and you learn a fair amount along the way.
 
 Hermes Agent is an open-source, self-hosted AI agent framework built by [*Nous Research*](https://nousresearch.com/), an independent AI research lab based in Austin, Texas. Nous Research is best known for the Hermes model family, a series of open-weight models fine-tuned on Llama that are used widely in the open-source AI community. The agent framework shares the name but is a separate product. It is MIT-licensed, model-agnostic, and runs on your own infrastructure, either as a self-hosted Python service or as a containerized deployment.
 
 
-# How It Works
+## How It Works
 
 The part that makes Hermes Agent different from most agent frameworks is the skill system. The agent ships with a set of preconfigured skills covering common tasks. Beyond that, you can ask it to create a skill from something it just did: it writes a structured markdown document capturing the approach, what worked, and edge cases. The next time a similar task appears, the agent loads the relevant skill rather than starting from scratch. Skills can be triggered directly by asking Hermes to run one, or set on a schedule and executed automatically at defined intervals. Over time this turns completed work into a growing library of reusable operating knowledge.
 
