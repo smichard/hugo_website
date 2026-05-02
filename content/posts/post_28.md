@@ -39,7 +39,7 @@ The first is my bookmarks folder. I have been saving links as markdown files in 
 
 The second is a knowledge base built on the [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) principle described by Andrej Karpathy. The idea is to maintain a curated set of structured markdown files that an AI agent helps write and update over time. Topics, entities, comparisons, each in its own file. The agent both contributes to this knowledge base and draws from it when working on research tasks.
 
-The third is a local mirror of Red Hat product documentation. A colleague built a tool called *rh-mastery* that pulls documentation from docs.redhat.com, converts it to Markdown, and stores it in a structured local directory. Pointed at that directory, Hermes can query accurate, version-tracked product documentation without touching the internet. For someone who spends a lot of time with Red Hat products, this closes a gap that is easy to overlook until you actually need it. More on rh-mastery in a [upcomming post]({{< relref "post_22.md" >}}).
+The third is a local mirror of Red Hat product documentation. A colleague built a tool called *rh-mastery* that pulls documentation from docs.redhat.com, converts it to Markdown, and stores it in a structured local directory. Pointed at that directory, Hermes can query accurate, version-tracked product documentation without touching the internet. For someone who spends a lot of time with Red Hat products, this closes a gap that is easy to overlook until you actually need it. More on rh-mastery in a upcomming post.
 
 ## Practical Uses
 
