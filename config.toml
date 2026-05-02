@@ -7,7 +7,7 @@ theme = ["hugo-notice","KeepIt"]
 
 enableEmoji = true
 enableRobotsTXT = true
-googleAnalytics = "UA-166794311-1"
+googleAnalytics = ""
 
 pygmentsUseClasses = true
 pygmentsCodefences = true
