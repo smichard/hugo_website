@@ -24,6 +24,8 @@ The inference server will load a model from Hugging Face Hub and expose a `/v1/c
 
 The **Red Hat AI Inference Server** is the supported, enterprise-packaged distribution of vLLM. Red Hat provides a hardened container image distributed through `registry.redhat.io`, tested against specific GPU driver and CUDA versions and with a defined support lifecycle. The API surface is identical to upstream vLLM. Any client that works against a plain vLLM server works against RHAIIS without modification.
 
+Deploying RHAIIS directly on OpenShift is one way to reach a running inference endpoint through Red Hat technology. Red Hat OpenShift AI offers other paths, e.g. model serving through KServe, where OpenShift AI manages the deployment lifecycle via a web dashboard and exposes RHAIIS through a `ServingRuntime`, or a [Model as a Service](https://github.com/opendatahub-io/models-as-a-service) approach that provisions shared inference endpoints across a cluster, so teams can consume models without operating their own deployment. The approach in this post is the most direct option, suited for cases where you want a single inference endpoint.
+
 ## Prerequisites
 
 This setup requires the following:
@@ -32,7 +34,6 @@ This setup requires the following:
 - [**Node Feature Discovery (NFD) Operator**](https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/specialized_hardware_and_driver_enablement/psap-node-feature-discovery-operator) installed and running to detect GPU hardware on the node.
 - [**NVIDIA GPU Operator**](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/index.html) installed to provide the CUDA runtime and device plugin.
 - [**OpenShift CLI (oc)**](https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html/cli_tools/openshift-cli-oc#cli-getting-started) – required to interact with the OpenShift cluster, installed and logged into the cluster.
-- Valid Red Hat credentials for `registry.redhat.io` stored in your local Docker config.
 - A Hugging Face access token if you intend to use a gated model such as Llama. Publicly available models like Granite do not require one.
 
 ## Deploying the Red Hat AI Inference Server
@@ -40,37 +41,24 @@ This setup requires the following:
 The deployment consists of a namespace, two secrets, a PersistentVolumeClaim for model caching, a Deployment, a Service, and a Route. All deployment files are available in the [smichard/agent_on_ocp](https://github.com/smichard/agent_on_ocp) GitHub repository. The steps below apply them in sequence.
 
 1. Clone the repository:
- ```bash
+```bash
 git clone https://github.com/smichard/agent_on_ocp.git
 cd rhaiis
 ```
 
 2. Create a Namespace
 ```bash
-oc new-project rhaii-namespace
+oc new-project rhaiis
 ```
 
 3. Create the required Secrets
-
-The inference server needs access to two external services: `registry.redhat.io` to pull the container image, and Hugging Face Hub to download the model weights at startup.
-
-**Red Hat registry credentials:**
-
-```bash
-oc create secret generic redhat-registry-secret \
-  --from-file=.dockercfg=$HOME/.docker/config.json \
-  --type=kubernetes.io/dockercfg \
-  -n rhaii-namespace
-```
-
-This assumes your local Docker config already contains credentials for `registry.redhat.io`. If not, run `docker login registry.redhat.io` first.
 
 **Hugging Face access token:**
 
 ```bash
 oc create secret generic hf-secret \
   --from-literal=HF_TOKEN=<your_huggingface_token> \
-  -n rhaii-namespace
+  -n rhaiis
 ```
 
 **API key for the inference endpoint:**
@@ -78,19 +66,28 @@ oc create secret generic hf-secret \
 The server requires clients to present an API key as a bearer token. Storing it as a secret keeps it out of the Deployment spec.
 
 ```bash
-oc create secret generic rhaiis-api-key \
-  --from-literal=VLLM_API_KEY=<your_api_key> \
-  -n rhaii-namespace
+oc create secret generic vllm-api-key-secret \
+  --from-literal=VLLM_API_KEY=$(openssl rand -hex 32) \
+  -n rhaiis
 ```
 
 4. Create the ConfigMap
 
-Set the Hugging Face model ID you want to serve. Any model supported by vLLM works here.
+Set the Hugging Face model ID you want to serve. Any model supported by vLLM works here. Research which model fits your use case before settling on one, the only hard requirement is that it is support to run using the vLLM inference server.
 
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vllm-config
+  namespace: rhaiis
+data:
+  MODEL_NAME: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+```
+
+Apply the file to create the ConfigMap:
 ```bash
-oc create configmap vllm-config \
-  --from-literal=MODEL_NAME=Qwen/Qwen2.5-1.5B-Instruct \
-  -n rhaii-namespace
+oc apply -f configmap.yaml
 ```
 
 5. Create a PersistentVolumeClaim
@@ -102,13 +99,13 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: model-cache
-  namespace: rhaii-namespace
+  namespace: rhaiis
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 20Gi
+      storage: 150Gi
 ```
 
 Apply the file to create the PVC:
@@ -120,14 +117,16 @@ oc apply -f pvc.yaml
 
 The Deployment below references the RHAIIS container image and pulls the model ID from the ConfigMap created in step 4. To serve a different model, update the ConfigMap rather than editing the Deployment spec. The `HF_TOKEN` and `VLLM_API_KEY` values are injected from the secrets created in step 3.
 
-Check the [official documentation](https://docs.redhat.com/en/documentation/red_hat_ai_inference_server/3.4) for the current image tag before applying. Depending on the model size, the number of GPUs and the CPU and memory allocations will need to be adjusted. The example below uses a single GPU and is sized for smaller models.
+{{< notice note >}}
+Depending on the model size, the number of GPUs and the CPU and memory allocations will need to be adjusted. The example below was tested on an AWS `g5.12xlarge` node (4x NVIDIA A10G, 24 GB VRAM per GPU) and uses all four GPUs via tensor parallelism.
+{{< /notice >}}
 
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rhaiis-vllm
-  namespace: rhaii-namespace
+  namespace: rhaiis
   labels:
     app: rhaiis-vllm
 spec:
@@ -177,6 +176,8 @@ spec:
               value: /cache
             - name: HF_HUB_OFFLINE
               value: '0'
+            - name: VLLM_ALLOW_LONG_MAX_MODEL_LEN
+              value: '1'
           command:
             - python
             - '-m'
@@ -185,18 +186,20 @@ spec:
             - '--port=8000'
             - '--model=$(MODEL_NAME)'
             - '--served-model-name=$(MODEL_NAME)'
-            - '--tensor-parallel-size=1'
+            - '--tensor-parallel-size=4'
             - '--gpu-memory-utilization=0.85'
-            - '--max-model-len=30000'
+            - '--max-model-len=65536'
+            - '--enable-auto-tool-choice'
+            - '--tool-call-parser=hermes'
           resources:
-            requests:
-              cpu: "2"
-              memory: "8Gi"
-              nvidia.com/gpu: "1"
             limits:
-              cpu: "10"
-              memory: "16Gi"
-              nvidia.com/gpu: "1"
+              cpu: '10'
+              nvidia.com/gpu: '4'
+              memory: 128Gi
+            requests:
+              cpu: '2'
+              memory: 32Gi
+              nvidia.com/gpu: '4'
           volumeMounts:
             - name: model-cache
               mountPath: /cache
@@ -210,13 +213,21 @@ Apply the file to create the deployment:
 oc apply -f deployment.yaml
 ```
 
+The container reads the model ID from the ConfigMap at startup and downloads it from HuggingFace into `/cache` (backed by the PVC). Initial startup takes several minutes depending on model size and network speed.
 The first startup takes a few minutes while vLLM downloads the model weights and initializes the engine. Follow progress with:
 
 ```bash
-oc logs -f deployment/rhaiis-vllm -n rhaii-namespace
+oc logs -f deployment/rhaiis-vllm -n rhaiis
 ```
 
 The server is ready when the log shows `Application startup complete`.
+{{< figure src="/images/posts/post_32/vllm_startup.png" title="vLLM server log output on startup, showing all registered API routes and the final Application startup complete confirmation" >}}
+
+
+Once the pod is running, you can verify GPU access from the pod terminal with `nvidia-smi`. All four GPUs should be visible, each running a tensor-parallel worker process.
+
+{{< figure src="/images/posts/post_32/nvidia_smi.png" title="nvidia-smi output from inside the vLLM pod, confirming all four A10G GPUs are visible and each tensor-parallel worker has allocated roughly 20 GB of VRAM" >}}
+
 
 7. Create a Service and Route
 
@@ -227,30 +238,35 @@ apiVersion: v1
 kind: Service
 metadata:
   name: rhaiis-vllm
-  namespace: rhaii-namespace
+  namespace: rhaiis
+  labels:
+    app: rhaiis-vllm
 spec:
   selector:
     app: rhaiis-vllm
   ports:
-    - protocol: TCP
-      port: 80
+    - name: http
+      protocol: TCP
+      port: 8000
       targetPort: 8000
 ```
 
-Create a TLS-terminated Route to expose the endpoint outside the cluster (optional):
+Create a TLS-terminated Route if you want to expose the endpoint outside the cluster:
 
 ```yaml
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: rhaiis-vllm
-  namespace: rhaii-namespace
+  namespace: rhaiis
+  labels:
+    app: rhaiis-vllm
 spec:
   to:
     kind: Service
     name: rhaiis-vllm
   port:
-    targetPort: 8000
+    targetPort: http
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
@@ -263,17 +279,28 @@ oc apply -f route.yaml
 oc get route rhaiis-vllm -n rhaii-namespace -o jsonpath='{.spec.host}'
 ```
 
-OpenShift builds the hostname from the route and namespace names following the pattern `<route-name>-<namespace>.apps.<cluster-domain>`. The result looks something like `rhaiis-vllm-rhaii-namespace.apps.ocp.example.com`.
+OpenShift builds the hostname from the route and namespace names following the pattern `<route-name>-<namespace>.apps.<cluster-domain>`. The result looks something like `rhaiis-vllm-rhaiis-namespace.apps.ocp.example.com`.
 
 ## Testing the Endpoint
 
 Store the hostname and API key in shell variables to keep the commands readable:
 
+Set environment variables once:
+
 ```bash
-RHAIIS_HOST=$(oc get route rhaiis-vllm -n rhaii-namespace -o jsonpath='{.spec.host}')
-RHAIIS_API_KEY=<your_api_key>
+export RHAIIS_HOST=$(oc get route rhaiis-vllm -n rhaiis -o jsonpath='{.spec.host}')
+export RHAIIS_API_KEY=$(oc get secret vllm-api-key-secret -n rhaiis \
+  -o jsonpath='{.data.VLLM_API_KEY}' | base64 -d)
+export MODEL=$(oc get configmap vllm-config -n rhaiis \
+  -o jsonpath='{.data.MODEL_NAME}')
 ```
 
+Verify all three are populated before proceeding:
+
+```bash
+echo "Host : ${RHAIIS_HOST}"
+echo "Key  : ${RHAIIS_API_KEY}"
+echo "Model: ${MODEL}"
 **List available models:**
 
 ```bash
@@ -284,15 +311,16 @@ curl -s https://$RHAIIS_HOST/v1/models \
 **Send a chat completion request:**
 
 ```bash
-curl -s https://$RHAIIS_HOST/v1/chat/completions \
-  -H "Authorization: Bearer $RHAIIS_API_KEY" \
+curl -sS \
+  "https://${RHAIIS_HOST}/v1/chat/completions" \
+  -H "Authorization: Bearer ${RHAIIS_API_KEY}" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "Qwen2.5-1.5B-Instruct",
+    "model": "'"${MODEL}"'",
     "messages": [{"role": "user", "content": "What is OpenShift?"}],
     "temperature": 0.1,
     "max_tokens": 200
-  }' | jq .choices[0].message.content
+  }' | jq -r '.choices[0].message.content'
 ```
 
 A successful response confirms the server is running, the model is loaded, and the API key authentication is working.
@@ -313,9 +341,11 @@ The Red Hat AI Inference Server puts the vLLM engine into OpenShift, or any othe
 
 ## References
 
+- GitHub repository with eployment files - [link](https://github.com/smichard/agent_on_ocp)
 - Deploying OpenShift on AWS with Automated Cluster Provisioning - [link]({{< relref "post_20.md" >}})
 - My Local AI Stack: Open WebUI, LiteLLM, SearXNG, and Docling - [link]({{< relref "post_19.md" >}})
 - Extending the Local AI Stack with On-Demand GPU Inference on RunPod - [link]({{< relref "post_24.md" >}})
+- Model as a Service GitHub repository - [link](https://github.com/opendatahub-io/models-as-a-service)
 - Node Feature Discovery Operator - [link](https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/specialized_hardware_and_driver_enablement/psap-node-feature-discovery-operator)
 - NVIDIA GPU Operator - [link](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/index.html)
 - OpenShift CLI (oc) - [link](https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html/cli_tools/openshift-cli-oc#cli-getting-started)

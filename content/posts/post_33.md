@@ -8,7 +8,6 @@ categories: ["OpenShift"]
 tags: ["openshift", "ai", "hermes", "agent", "vllm"]
 toc:
   enable: false
-status: wip
 ---
 
 {{< figure src="/images/posts/post_33/overview.png" title="Hermes Agent on OpenShift: Private by default, cloud access when needed - AI generated" >}}
@@ -30,15 +29,9 @@ Externally, Hermes exposes an OpenAI-compatible API on port 8642, secured with a
 
 ## Prerequisites
 
-1. The RHAIIS deployment from [the previous post]({{< relref "post_32.md" >}}) must be running in the `rhaiis` namespace with a deployment named `rhaiis-vllm`. Retrieve the API key that was stored as a secret:
-
-```bash
-oc get secret rhaiis-api-key -n rhaiis \
-  -o jsonpath='{.data.VLLM_API_KEY}' | base64 -d
-```
-
+1. The RHAIIS deployment from [the previous post]({{< relref "post_32.md" >}}) must be running in the `rhaiis` namespace with a deployment named `rhaiis-vllm`.
 2. An [OpenRouter](https://openrouter.ai/keys) API key for the fallback model.
-3. [OpenShift CLI (oc)](https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html/cli_tools/openshift-cli-oc#cli-getting-started) authenticated to the cluster with cluster-admin rights.
+
 
 ## Deploying Hermes Agent
 
@@ -76,8 +69,11 @@ Three secrets are needed: one for the vLLM bearer token, one for the OpenRouter 
 Hermes reads the `OPENAI_API_KEY` environment variable for custom OpenAI-compatible endpoints. The vLLM API key from the `rhaiis` namespace is passed in under that name:
 
 ```bash
+export RHAIIS_API_KEY=$(oc get secret vllm-api-key-secret -n rhaiis \
+  -o jsonpath='{.data.VLLM_API_KEY}' | base64 -d)
+
 oc create secret generic hermes-vllm-secret \
-  --from-literal=OPENAI_API_KEY=<VLLM_API_KEY value> \
+  --from-literal=OPENAI_API_KEY="${RHAIIS_API_KEY}" \
   -n hermes
 ```
 
@@ -116,20 +112,33 @@ kind: ConfigMap
 metadata:
   name: hermes-config
   namespace: hermes
+  labels:
+    app: hermes
 data:
   config.yaml: |
     model:
-      provider: openai_compatible
-      base_url: http://rhaiis-vllm.rhaiis.svc.cluster.local:8000/v1
-      default: Qwen/Qwen2.5-1.5B-Instruct
+      provider: "custom"
+      base_url: "http://rhaiis-vllm.rhaiis.svc.cluster.local:8000/v1"
+      default: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+
     fallback_model:
-      provider: openrouter
-      model: qwen/qwen-2.5-72b-instruct
-    api_server:
-      port: 8642
+      provider: "openrouter"
+      model: "anthropic/claude-sonnet-4-6"
+
+    terminal:
+      backend: "local"
+      cwd: "/opt/data/workspace"
+      timeout: 180
+      lifetime_seconds: 300
+
+    compression:
+      enabled: true
+      threshold: 0.50
+      target_ratio: 0.20
+      protect_last_n: 20
 ```
 
-Adjust `model.default` to match the `--served-model-name` value used in the RHAIIS deployment. Adjust `fallback_model.model` to any model available on OpenRouter.
+Adjust `model.default` to match the `--served-model-name` value used in the RHAIIS deployment. Adjust `fallback_model.model` to the OpenRouter model you want to use as a fallback.
 
 ```bash
 oc apply -f configmap.yaml
@@ -145,12 +154,14 @@ kind: PersistentVolumeClaim
 metadata:
   name: hermes-data
   namespace: hermes
+  labels:
+    app: hermes
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 10Gi
+      storage: 5Gi
 ```
 
 Apply the file to create the PVC:
@@ -180,7 +191,15 @@ spec:
       labels:
         app: hermes
     spec:
+      tolerations:
+        - key: nvidia.com/gpu
+          effect: NoSchedule
+          operator: Exists
       serviceAccountName: hermes
+      securityContext:
+        runAsUser: 10000
+        runAsNonRoot: true
+        fsGroup: 10000
       volumes:
         - name: hermes-data
           persistentVolumeClaim:
@@ -190,10 +209,9 @@ spec:
             name: hermes-config
       containers:
         - name: hermes
-          image: nousresearch/hermes-agent:v2026.4.23
+          image: nousresearch/hermes-agent:latest
           imagePullPolicy: Always
-          ports:
-            - containerPort: 8642
+          args: ["gateway"]
           env:
             - name: OPENAI_API_KEY
               valueFrom:
@@ -210,11 +228,21 @@ spec:
                 secretKeyRef:
                   name: hermes-api-secret
                   key: API_SERVER_KEY
+            - name: API_SERVER_ENABLED
+              value: "true"
+            - name: API_SERVER_HOST
+              value: "0.0.0.0"
+            - name: API_SERVER_PORT
+              value: "8642"
+          ports:
+            - name: api
+              containerPort: 8642
+              protocol: TCP
           volumeMounts:
             - name: hermes-data
-              mountPath: /home/hermes/.hermes
+              mountPath: /opt/data
             - name: hermes-config
-              mountPath: /home/hermes/.hermes/config.yaml
+              mountPath: /opt/data/config.yaml
               subPath: config.yaml
           resources:
             requests:
@@ -223,12 +251,30 @@ spec:
             limits:
               cpu: "2"
               memory: "2Gi"
+          livenessProbe:
+            tcpSocket:
+              port: 8642
+            initialDelaySeconds: 30
+            periodSeconds: 30
+          readinessProbe:
+            tcpSocket:
+              port: 8642
+            initialDelaySeconds: 15
+            periodSeconds: 10
+      restartPolicy: Always
 ```
 
 Apply the file to create the deployment:
 ```bash
 oc apply -f deployment.yaml
 ```
+
+The API server is ready when the logs show:
+```
+[api_server] Listening on 0.0.0.0:8642
+```
+
+{{< figure src="/images/posts/post_33/hermes_startup.png" title="Hermes Gateway starting up, with 83 skills bundled and the messaging platform scheduler ready to accept requests" >}}
 
 7. Create a Service and Route
 
@@ -239,11 +285,14 @@ kind: Service
 metadata:
   name: hermes
   namespace: hermes
+  labels:
+    app: hermes
 spec:
   selector:
     app: hermes
   ports:
-    - protocol: TCP
+    - name: api
+      protocol: TCP
       port: 8642
       targetPort: 8642
 ```
@@ -255,12 +304,14 @@ kind: Route
 metadata:
   name: hermes
   namespace: hermes
+  labels:
+    app: hermes
 spec:
   to:
     kind: Service
     name: hermes
   port:
-    targetPort: 8642
+    targetPort: api
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
@@ -273,19 +324,6 @@ oc apply -f route.yaml
 oc get route hermes -n hermes -o jsonpath='{.spec.host}'
 ```
 
-Monitor startup until the pod reaches `Running`:
-
-```bash
-oc get pods -n hermes -l app=hermes -w
-oc logs -f deployment/hermes -n hermes
-```
-
-The API server is ready when the logs show:
-
-```
-[api_server] Listening on 0.0.0.0:8642
-```
-
 ## Testing the Endpoint
 
 Store the hostname and API key in shell variables to keep the commands readable:
@@ -295,6 +333,13 @@ export HERMES_HOST=$(oc get route hermes -n hermes \
   -o jsonpath='{.spec.host}')
 export HERMES_KEY=$(oc get secret hermes-api-secret -n hermes \
   -o jsonpath='{.data.API_SERVER_KEY}' | base64 -d)
+```
+
+Verify that the variables are populated before proceeding:
+
+```bash
+echo "HERMES_HOST : ${HERMES_HOST}"
+echo "HERMES_API_KEY  : ${HERMES_KEY}"
 ```
 
 **List available models:**
@@ -314,7 +359,7 @@ curl -sS \
   -H "Content-Type: application/json" \
   -d '{
     "model": "Qwen2.5-1.5B-Instruct",
-    "messages": [{"role": "user", "content": "Hello, what can you do?"}]
+    "messages": [{"role": "user", "content": "What is OpenShift?"}]
   }' | jq -r '.choices[0].message.content'
 ```
 
@@ -336,6 +381,18 @@ Update `configmap.yaml` and set `model.default` to any model name served by the 
 oc apply -f configmap.yaml
 oc rollout restart deployment/hermes -n hermes
 ```
+
+## Connecting to Open WebUI
+
+Hermes Agent exposes a standard OpenAI-compatible API, which means *Open WebUI* can connect to it directly as an external provider. As described in the prvious cases it is very easy to add the Hermes endpoint to the existing stack.
+
+In Open WebUI, go to **Settings > Connections** and add a new external connection. Set the URL to the Hermes route hostname with the `/v1` suffix, add the Hermes API server key created in step 3 as a bearer token, set the provider type to **OpenAI**, and the API type to **Chat Completions**. Leave the model ID field empty so Open WebUI queries the `/v1/models` endpoint and discovers available models automatically.
+
+{{< figure src="/images/posts/post_33/open_webui.png" title="Open WebUI external connection configured against the Hermes Agent endpoint" >}}
+
+Once saved, the model appears in the model selector alongside any other configured providers. Requests go from Open WebUI through Hermes to the vLLM server running on the same cluster.
+
+{{< figure src="/images/posts/post_33/model_selection.png" title="Hermes agent is available in the Open WebUI interface alongside the model served by RHAIIS" >}}
 
 ## Conclusion
 
