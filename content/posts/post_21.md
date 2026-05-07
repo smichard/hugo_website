@@ -1,6 +1,6 @@
 ---
 title: "Installing OpenShift AI on OpenShift"
-date: 2026-05-06
+date: 2026-05-09
 draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
