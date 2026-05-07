@@ -1,6 +1,6 @@
 ---
 title: "Deploying OpenShift on AWS with Automated Cluster Provisioning"
-date: 2026-05-16
+date:  2026-05-09
 draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
@@ -19,7 +19,7 @@ Both workflows build on two GitHub repositories that cover both infrastructure p
 
 I should be upfront: one purpose of this post is also to serve as a personal reference for future me, who will inevitably return here after six months asking "wait, what was the exact command again?" Consider this the written documentation I should have filed away the first time.
 
-A special thanks goes to my colleague [**Álvaro López Medina**](https://github.com/alvarolop), who created and maintains the [ocp-on-aws](https://github.com/alvarolop/ocp-on-aws) and [rhoai-gitops](https://github.com/alvarolop/rhoai-gitops) repositories. Without his work and support, setting up this environment would have been significantly more involved.
+A special thanks goes to my team mate [**Álvaro López Medina**](https://github.com/alvarolop), who created and maintains the [ocp-on-aws](https://github.com/alvarolop/ocp-on-aws) and [rhoai-gitops](https://github.com/alvarolop/rhoai-gitops) repositories. Without his work and support, setting up this environment would have been significantly more involved.
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ Once the environment is provisioned, the service overview page contains the AWS 
 
 With the AWS environment in place, the [ocp-on-aws](https://github.com/alvarolop/ocp-on-aws) repository handles the rest of the cluster provisioning. The repository wraps the OpenShift IPI installer in a shell script and manages user creation, cluster-admin group configuration, and the pull secret in a structured, repeatable way.
 
-## Preparing the repository
+### Preparing the repository
 
 Throughout the following steps, any value written in `<angle brackets>` is a placeholder and must be replaced with your actual value before running the command.
 
@@ -75,7 +75,7 @@ users:
   - <user_name>
 ```
 
-## Configuring the installation
+### Configuring the installation
 
 5. Copy the configuration template:
 ```bash
@@ -95,7 +95,7 @@ The key values to review:
 - **`RHOCM_PULL_SECRET` (Line 31):** Retrieve this from the [Hybrid Cloud Console](https://console.redhat.com/openshift/install/pull-secret).
 - **`WORKER_REPLICAS` (Line 47):** Set to the number of worker nodes required for your workload.
 
-## Running the installation
+### Running the installation
 
 7. Start the cluster installation:
 ```bash

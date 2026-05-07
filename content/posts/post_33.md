@@ -14,7 +14,7 @@ toc:
 
 ## Introduction
 
-In this post, I want to describe how to deploy *Hermes Agent* on OpenShift and wire it to a self-hosted model endpoint running on the same cluster. This is a direct continuation of two earlier posts: [Deploying OpenShift on AWS]({{< relref "post_20.md" >}}), which covers getting a cluster into place, and the post on running the [Red Hat AI Inference Server on OpenShift]({{< relref "post_32.md" >}}), which covers the model serving layer that Hermes will talk to.
+In this post, I want to describe how to deploy the *Hermes Agent* on OpenShift and wire it to a self-hosted model endpoint running on the same cluster. This is a direct continuation of two earlier posts: [Deploying OpenShift on AWS]({{< relref "post_20.md" >}}), which covers getting a cluster into place, and the post on running the [Red Hat AI Inference Server on OpenShift]({{< relref "post_32.md" >}}), which covers the model serving layer that Hermes will talk to.
 
 If you want background on what Hermes Agent is and why it is worth running, the companion post [Hermes Agent: A Personal AI That Gets More Useful Over Time]({{< relref "post_28.md" >}}) covers that in more detail. This post focuses on the mechanics of getting it running on OpenShift.
 

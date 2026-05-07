@@ -14,17 +14,25 @@ When creating this website, my focus was to use a simple framework that allows m
 
 
 # whoami
-My name is Stephan Michard, and I was born and raised near Cologne, Germany. My curiosity for how things work — from physics to computing — led me to study electrical engineering at RWTH Aachen University and the University of New South Wales in Sydney.
+My name Stephan Michard, a Solution Architect and technology strategist based near Cologne, Germany.
 
-I began my career at the Institute for Energy and Climate Research in Jülich, where I completed my Diploma and later earned my PhD in Electrical Engineering, focusing on solar cell research. After several years as a research scientist and postdoc, I decided to shift from pure research to applied technology — joining the IT industry to bring ideas to life at scale.
+I work at Red Hat, where I help enterprises and strategic partners across Central Europe design and deliver cloud and AI platforms that translate business strategy into scalable, production-ready systems. My focus is on bridging the gap between vision and execution: aligning stakeholders, shaping solution architectures, and driving measurable outcomes.
 
-Today, I work as an Associate Principal Solution Architect at Red Hat, helping organizations and partners across Germany design and implement cloud and AI platforms that enable sustainable digital transformation. My focus is on bridging strategy and execution — turning business intent into scalable, open, and intelligent technology platforms.
+Currently, I operate at the intersection of partner ecosystems and enterprise transformation. I lead solution development with global system integrators, co-creating joint offerings and supporting complex, high-impact engagements across EMEA. My work spans hybrid cloud, OpenShift-based platforms, and emerging AI workloads.
 
-Over the years, I’ve built experience in data center architecture, cloud-native solutions, software-defined infrastructure, and developer experience design. I enjoy working with forward-thinking teams who challenge assumptions and use technology to create real, measurable outcomes.
+My background is in electrical engineering, with a PhD from RWTH Aachen University and research experience in solar energy systems at the Institute for Energy and Climate Research in Jülich. I started my career in science before moving into the IT industry. Prior to Red Hat, I spent eight years at Dell Technologies and EMC, progressing from Systems Engineer to Advisory Solutions Architect and CTO Ambassador, working with customers in automotive, manufacturing, and the public sector on data center modernization and hybrid cloud architecture.
 
-When I’m not working, I spend most of my time outdoors — running, cycling, or training for my next half marathon. I’m passionate about endurance sports.
+Over time, I've developed a strong focus on:
 
-I also enjoy exploring new ideas through podcasts that challenge my thinking about technology, business, and society:
+- Designing cloud-native platforms that scale across organizations
+- Enabling partners and customers to adopt open, composable architectures
+- Turning abstract strategy into concrete, deliverable solutions
+
+I'm particularly interested in how AI is reshaping software platforms and how organizations can adopt it pragmatically without losing architectural integrity.
+
+Outside of work, I train for endurance sports, mainly running and cycling, and enjoy the discipline and long-term thinking they require.
+
+I regularly explore ideas at the intersection of technology, business, and society through podcasts such as:
 - Pivot - [link](https://podcasts.voxmedia.com/show/pivot)
 - The Prof G Pod with Scott Galloway - [link](https://podcasts.voxmedia.com/show/the-prof-g-pod-with-scott-galloway)
 - Zurück zur Zukunft - [link](https://zurueckzurzukunft.de)

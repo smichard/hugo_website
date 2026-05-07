@@ -34,9 +34,9 @@ A detailed description of all RunPod services is out of scope for this post. The
 
 RunPod uses templates to save pod configurations for reuse. A template defines the container image, the start command, the storage allocation, and other runtime parameters. I maintain a small collection of private templates, each configured for a different model.
 
-{{< figure src="/images/posts/post_24/list_of_private_templates.png" title="A selection of saved vLLM templates on RunPod, each pointing to a different model from Hugging Face" >}}
+{{< figure src="/images/posts/post_24/list_of_private_templates.png" title="A selection of saved vLLM templates on RunPod, each using to a different model from Hugging Face" >}}
 
-The container image for all of these templates is `vllm/vllm-openai:latest`, which bundles *vLLM* with an OpenAI-compatible API server. The model itself is specified in the container start command, which means swapping models is a matter of editing a single line rather than building a new image.
+The container image for all of these templates is `vllm/vllm-openai:latest`, which bundles *vLLM* with an OpenAI-compatible API server. The model itself is specified in the container start command, which means swapping models is a matter of editing a single line.
 
 ## Creating a Template
 
@@ -51,7 +51,7 @@ When creating or editing a template, the key fields are:
 
 Throughout the following steps, any value written in `<angle brackets>` is a placeholder and must be replaced with your actual value before running the command.
 
-A start command for deploying the `RedHatAI/Qwen3-8B-FP8-dynamic` model looks like this:
+A start command for deploying the Red Hat's validated `RedHatAI/Qwen3-8B-FP8-dynamic` model looks like this:
 
 ```bash
 --host 0.0.0.0 --port 8000 \
@@ -84,11 +84,11 @@ After deployment, RunPod assigns a public HTTPS endpoint to the pod. The vLLM se
 
 ## Connecting the Endpoint to Open WebUI
 
-With the pod running, the endpoint can be added to Open WebUI as an external connection. In Open WebUI, navigate to **Admin Panel** then **Settings** and add a new connection with the following values:
+With the pod running and the model loaded, the endpoint can be added to Open WebUI as an external connection. In Open WebUI, navigate to **Admin Panel** then **Settings** and add a new connection with the following values:
 
 - **Connection type:** External
 - **URL:** `https://<runpod_endpoint>/v1`
-- **Auth:** Bearer, with the API key set in the vLLM start command
+- **Auth:** API key set in the vLLM start command
 - **Provider type:** OpenAI
 - **API type:** Chat Completions
 
@@ -105,7 +105,7 @@ The combination of a self-hosted orchestration stack and on-demand GPU inference
 A few things make this pattern practical:
 
 - **Low cost for experimentation.** Models run only when needed. A session of an hour or two to test a new model costs a few dollars at most.
-- **Access to current models.** Any model available on Hugging Face can be loaded into vLLM, which means it is straightforward to test recently released models without waiting for them to appear in a managed API.
+- **Access to current models.** Many of the recently published models available on Hugging Face can be loaded into vLLM, which means it is straightforward to test recently released models without waiting for them to appear in a managed API.
 - **No changes to the existing stack.** Open WebUI, LiteLLM, SearXNG, and Docling continue to work exactly as before. The RunPod endpoint is just another backend.
 - **Automatable.** RunPod exposes an API for managing pods, so deployments can be triggered programmatically. Combined with LiteLLM's routing, it becomes possible to bring a model endpoint up on demand and tear it down again when it is no longer needed.
 

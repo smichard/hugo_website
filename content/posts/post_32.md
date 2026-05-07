@@ -22,7 +22,7 @@ The inference server will load a model from Hugging Face Hub and expose a `/v1/c
 
 *vLLM* is an open-source inference engine designed for high-throughput LLM serving. It handles memory-efficient attention via *PagedAttention*, continuous batching, and GPU-optimized execution, and it exposes an OpenAI-compatible HTTP API out of the box. I covered how to run vLLM on the GPU cloud provider RunPod in a [previous post]({{< relref "post_24.md" >}}).
 
-The **Red Hat AI Inference Server** is the supported, enterprise-packaged distribution of vLLM. Red Hat provides a hardened container image distributed through `registry.redhat.io`, tested against specific GPU driver and CUDA versions and with a defined support lifecycle. The API surface is identical to upstream vLLM. Any client that works against a plain vLLM server works against RHAIIS without modification.
+The **Red Hat AI Inference Server** is the supported, enterprise-packaged distribution of vLLM. Red Hat provides a hardened container image distributed through `registry.redhat.io`, tested against specific GPU driver and CUDA versions and with a defined support lifecycle. The API surface is identical to upstream vLLM. Any client that works against a plain vLLM inference server works against RHAIIS without modification.
 
 Deploying RHAIIS directly on OpenShift is one way to reach a running inference endpoint through Red Hat technology. Red Hat OpenShift AI offers other paths, e.g. model serving through KServe, where OpenShift AI manages the deployment lifecycle via a web dashboard and exposes RHAIIS through a `ServingRuntime`, or a [Model as a Service](https://github.com/opendatahub-io/models-as-a-service) approach that provisions shared inference endpoints across a cluster, so teams can consume models without operating their own deployment. The approach in this post is the most direct option, suited for cases where you want a single inference endpoint.
 
@@ -34,7 +34,7 @@ This setup requires the following:
 - [**Node Feature Discovery (NFD) Operator**](https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/specialized_hardware_and_driver_enablement/psap-node-feature-discovery-operator) installed and running to detect GPU hardware on the node.
 - [**NVIDIA GPU Operator**](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/index.html) installed to provide the CUDA runtime and device plugin.
 - [**OpenShift CLI (oc)**](https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html/cli_tools/openshift-cli-oc#cli-getting-started) – required to interact with the OpenShift cluster, installed and logged into the cluster.
-- A Hugging Face access token if you intend to use a gated model such as Llama. Publicly available models like Granite do not require one.
+- A Hugging Face access token if you intend to use a gated model. Publicly available models like [Granite](https://huggingface.co/ibm-granite/collections) do not require one.
 
 ## Deploying the Red Hat AI Inference Server
 
@@ -214,7 +214,7 @@ oc apply -f deployment.yaml
 ```
 
 The container reads the model ID from the ConfigMap at startup and downloads it from HuggingFace into `/cache` (backed by the PVC). Initial startup takes several minutes depending on model size and network speed.
-The first startup takes a few minutes while vLLM downloads the model weights and initializes the engine. Follow progress with:
+Follow the progress with:
 
 ```bash
 oc logs -f deployment/rhaiis-vllm -n rhaiis
@@ -298,9 +298,10 @@ export MODEL=$(oc get configmap vllm-config -n rhaiis \
 Verify all three are populated before proceeding:
 
 ```bash
-echo "Host : ${RHAIIS_HOST}"
-echo "Key  : ${RHAIIS_API_KEY}"
+echo "RHAIIS_HOST : ${RHAIIS_HOST}"
+echo "RHAIIS_API_KEY  : ${RHAIIS_API_KEY}"
 echo "Model: ${MODEL}"
+
 **List available models:**
 
 ```bash
@@ -333,7 +334,7 @@ In Open WebUI, go to **Settings > Connections** and add a new external connectio
 
 {{< figure src="/images/posts/post_32/open_webui.png" title="Open WebUI external connection configured against the Red Hat AI Inference Server endpoint" >}}
 
-Once saved, the Qwen model appears in the model selector alongside any other configured providers.
+Once saved, the deployed model appears in the model selector alongside any other configured providers.
 
 ## Conclusion
 
@@ -349,6 +350,7 @@ The Red Hat AI Inference Server puts the vLLM engine into OpenShift, or any othe
 - Node Feature Discovery Operator - [link](https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/specialized_hardware_and_driver_enablement/psap-node-feature-discovery-operator)
 - NVIDIA GPU Operator - [link](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/index.html)
 - OpenShift CLI (oc) - [link](https://docs.redhat.com/en/documentation/openshift_container_platform/4.18/html/cli_tools/openshift-cli-oc#cli-getting-started)
+- Granite family of models on Hugging Face - [link](https://huggingface.co/ibm-granite/collections)
 - smichard/agent_on_ocp - GitHub repository - [link](https://github.com/smichard/agent_on_ocp)
 - Red Hat AI Inference Server - Documentation - [link](https://docs.redhat.com/en/documentation/red_hat_ai_inference_server/3.4)
 - Deploying Red Hat AI Inference Server on OpenShift - [link](https://docs.redhat.com/en/documentation/red_hat_ai_inference_server/3.4/html-single/deploying_red_hat_ai_inference_server_in_openshift_container_platform/index)

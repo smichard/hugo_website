@@ -7,14 +7,14 @@ authorLink: "https://stephan.michard.io"
 categories: ["Homelab"]
 tags: ["homelab","container","self-hosting"]
 toc:
-  enable: false
+  enable: false
 ---
 
-{{< figure src="/images/posts/post_18/homelab.png" title="Summary of Homelab services - AI generated" >}}
+{{< figure src="/images/posts/homelab.png" title="Summary of Homelab services - AI generated" >}}
 
 ## Introduction
 
-Several years ago, I began building a small homelab with two primary objectives in mind: gaining hands-on experience with containers and modern application deployment, and running selected services locally to avoid storing certain data in public cloud environments. In hindsight, this environment evolved into a solid foundation for a local AI stack as well, which I now operate alongside the rest of my setup and will detail in a future post. Although the focus here is on a homelab, the technical stack described can be deployed just as easily in any cloud environment; all that is required is a virtual machine running a Linux distribution of your choice and a container engine.
+Several years ago, I began building a small homelab with two primary objectives in mind: gaining hands-on experience with containers and modern application deployment, and running selected services locally to avoid storing certain data in public cloud environments. In hindsight, this environment evolved into a solid foundation for a local AI stack as well, which I now operate alongside the rest of my setup and will detail in a future post. Although the focus here is on a homelab, the technical stack described can be deployed just as easily in any cloud environment, e.g. a VPS or or any hyperscaler, all that is required is a virtual machine running a Linux distribution of your choice and a container engine.
     
 What began as an experiment has turned into a stable setup that I use every day. At the center of this setup is Traefik, which handles all incoming HTTP and HTTPS traffic and lets me access every service over SSL with clean domains like _service-name.home.example.com_ instead of a collection of raw IP addresses and ports.
 
@@ -32,8 +32,8 @@ The environment uses CentOS Stream 9 as the operating system. On top of that, I 
 ## Architecture overview
 
 At a high level, the architecture looks like this:
-- Several containers run on the hosts.
-- A dedicated container network called `external`, where Traefik and all services that are exposed to the home network reside.
+- Several containers run on the hosts
+- A dedicated container network called `external`, where Traefik and all services that are exposed to the home network reside
 - An internal DNS setup and a private domain, such as `home.example.com`, where services are exposed as subdomains like:
     - `https://pihole.home.example.com`
     - `https://ntfy.home.example.com`
@@ -54,9 +54,9 @@ In my setup, Traefik provides three main benefits:
     Every service gets its own subdomain, such as `pihole.home.example.com` or `ntfy.home.example.com`. This means I do not have to remember that one service is on port 8080, another on 9090, and so on.
 3. Centralized routing and security  
     Since everything goes through Traefik, I can:
-    - Redirect all HTTP traffic to HTTPS.
-    - Protect specific endpoints with basic auth or other middleware.
-    - Inspect and debug routes using the Traefik dashboard.
+    - Redirect all HTTP traffic to HTTPS
+    - Protect specific endpoints with basic auth or other middleware
+    - Inspect and debug routes using the Traefik dashboard
         
 
 ## Traefik Docker Compose configuration
@@ -171,8 +171,7 @@ With these principles such as simple routing, consistent domains and TLS, lightw
 - ntfy - publish/subscribe push notifications - [link](https://github.com/binwiederhier/ntfy)
 - Doozle - web based interface to monitor logs - [link](https://github.com/amir20/dozzle)
 - Beszel - resource monitoring for multiple clients - [link](https://github.com/henrygd/beszel)
-- Uptime Kuma - monitoring tool [link](https://github.com/louislam/uptime-kuma)
+- Uptime Kuma - monitoring tool - [link](https://github.com/louislam/uptime-kuma)
 - n8n - workflow automation - [link](https://github.com/n8n-io/n8n)
 - Vaultwarden - Bitwarden-compatible server - [link](https://github.com/dani-garcia/vaultwarden)
-- Youtube Video -  Techno Tim: Put Wildcard Certificates and SSL on EVERYTHING - [link](https://www.youtube.com/watch?v=liV3c9m_OX8)  
-    
+- Youtube Video -  Techno Tim: Put Wildcard Certificates and SSL on EVERYTHING - [link](https://www.youtube.com/watch?v=liV3c9m_OX8)

@@ -1,6 +1,6 @@
 ---
 title: "AI-Assisted Coding with OpenShift Dev Spaces"
-date: 2027-04-26
+date: 2027-05-05
 draft: true
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
@@ -14,9 +14,9 @@ toc:
 
 ## Introduction
 
-In this post, I want to describe how to configure *Red Hat OpenShift Dev Spaces* for AI-assisted code generation with a private model server by connecting a coding assistant extension to the *Red Hat AI Inference Server (RHAIIS)* running on the same cluster. Team mates published a similar setup [more than two years ago](https://www.opensourcerers.org/2023/11/06/a-personal-ai-assistant-for-developers-that-doesnt-phone-home/), using Ollama as the local inference server. The idea was to give developers an AI coding assistant that never sends data to an external API. That principle still applies.
+In this post, I want to describe how to configure *Red Hat OpenShift Dev Spaces* for AI-assisted code generation with a private model server by connecting a coding assistant extension to the *Red Hat AI Inference Server (RHAIIS)* running on the same cluster. Team mates published a [similar setup](https://www.opensourcerers.org/2023/11/06/a-personal-ai-assistant-for-developers-that-doesnt-phone-home/) more than two years ago, using Ollama as the local inference server. The idea was to give developers an AI coding assistant that never sends data to an external API. That principle still applies.
 
-This post updates the pattern with a different backend. RHAIIS was covered in an [earlier post in this series]({{< relref "post_32.md" >}}). The model request from the editor goes to an internal Kubernetes service address and never leaves the cluster network.
+This post updates the pattern with a different backend. The RHAIIS deploymend was covered in an [earlier post in this series]({{< relref "post_32.md" >}}). The model request goes to an internal Kubernetes service address and never leaves the cluster network.
 
 ## OpenShift Dev Spaces
 
@@ -69,7 +69,7 @@ The `postStart` event runs the `copyconfig` command every time the workspace sta
 
 ## The Continue configuration
 
-The AI coding extension used here is [Continue](https://www.continue.dev/), an open-source VS Code extension that provides chat, inline editing, autocomplete, and agent mode. It is available through [Open VSX](https://open-vsx.org/), which is the extension registry OpenShift Dev Spaces uses. There are other extensions that work with OpenAI-compatible APIs in the same way; Continue is the example in this post. The repository includes VS Code configuration files that instruct the editor to install the extension automatically on workspace startup, so no manual installation is required.
+The AI coding extension used here is [Continue](https://www.continue.dev/), an open-source VS Code extension that provides chat, inline editing, autocomplete, and agent mode. It is available through [Open VSX](https://open-vsx.org/), which is the extension registry OpenShift Dev Spaces uses. There are other extensions that work with OpenAI-compatible APIs in the same way, Continue is the example in this post. The repository includes VS Code configuration files that instruct the editor to install the extension automatically on workspace startup, so no manual installation is required.
 
 The `continue-config.yaml` below is a minimal example. It defines two model entries against the RHAIIS endpoint and a local embedding model. For a full reference of available options, see the [Continue configuration reference](https://docs.continue.dev/reference):
 
@@ -142,7 +142,7 @@ Because the workspace uses ephemeral storage, the `.env` file does not survive a
 
 Make sure `.continue/.env` is listed in the repository's `.gitignore` file to avoid accidentally committing it to the git repository.
 
-{{< figure src="/images/posts/post_35/continue.png" title="tbd" >}}
+{{< figure src="/images/posts/post_35/continue.png" title="Continue extension running inside OpenShift Dev Spaces, using a model served by RHAIIS to answer coding questions" >}}
 
 ## Conclusion
 
