@@ -137,13 +137,13 @@ nvidia-smi
 
 For a complete reference on hardware profiles and toleration configuration, the [Red Hat OpenShift AI documentation](https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/2.16/html/managing_openshift_ai/managing-hardware-profiles) covers the options in detail.
 
-# Conclusion
+## Conclusion
 
 The `rhoai-gitops` repository makes the Red Hat OpenShift AI installation genuinely straightforward: one script handles the operator stack, the GPU node provisioning, and the GitOps wiring. The manual steps that remain — creating the hardware profile and configuring the workbench — are minimal and need to be done only once per cluster.
 
 The end result is an OpenShift AI environment with full GPU access, ready for running Jupyter notebooks, training jobs, or serving models. If you provisioned the underlying cluster using the approach described in [Deploying OpenShift on AWS with Automated Cluster Provisioning]({{< relref "post_20.md" >}}), the two repositories together cover the entire path from a blank AWS account to a working AI platform within a short timeframe of approximately two hours.
 
-# References
+## References
 
 - rhoai-gitops - GitHub repository by Álvaro López Medina - [link](https://github.com/alvarolop/rhoai-gitops)
 - ocp-on-aws - GitHub repository by Álvaro López Medina - [link](https://github.com/alvarolop/ocp-on-aws)
