@@ -24,7 +24,7 @@ This post updates the pattern with a different backend. The RHAIIS deploymend wa
 
 After installing the operator, the next step is creating a *CheCluster* resource, which provisions the Dev Spaces control plane. Once it is up, the Dev Spaces interface is accessible through the OpenShift web console via the application launcher in the top-right corner.
 
-{{< figure src="/images/posts/post_35/launch_devspaces.png" title="OpenShift web console application launcher with the Red Hat OpenShift Dev Spaces entry" >}}
+{{< figure src="/images/posts/post_35/launch_devspaces.png" title="OpenShift web console application launcher with the Red Hat OpenShift Dev Spaces menu entry" >}}
 
 The core workflow is simple: paste a git repository URL into the Dev Spaces interface, and the platform creates a containerized workspace from a `devfile` in the repository root. The workspace runs as a pod on the same cluster, which is what makes the internal service address approach work. A workspace pod and a RHAIIS pod can reach each other the same way any two pods on the same cluster can.
 

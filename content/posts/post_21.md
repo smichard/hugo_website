@@ -10,7 +10,7 @@ toc:
   enable: false
 ---
 
-{{< figure src="/images/posts/post_21/overview.png" title="From GitOps repo to verified GPU access in minutes: automated MachineSet provisioning, node isolation, and hardware profiles for AI workloads on OpenShift - AI generated" >}}
+{{< figure src="/images/posts/post_21/overview.png" title="From GitOps repo to OpenShift AI deployment with verified GPU access in minutes - AI generated]" >}}
 
 ## Introduction
 

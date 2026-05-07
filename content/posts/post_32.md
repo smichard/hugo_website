@@ -220,13 +220,14 @@ Follow the progress with:
 oc logs -f deployment/rhaiis-vllm -n rhaiis
 ```
 
-The server is ready when the log shows `Application startup complete`.
+The server is ready when the log shows *Application startup complete*.
+
 {{< figure src="/images/posts/post_32/vllm_startup.png" title="vLLM server log output on startup, showing all registered API routes and the final Application startup complete confirmation" >}}
 
 
 Once the pod is running, you can verify GPU access from the pod terminal with `nvidia-smi`. All four GPUs should be visible, each running a tensor-parallel worker process.
 
-{{< figure src="/images/posts/post_32/nvidia_smi.png" title="nvidia-smi output from inside the vLLM pod, confirming all four A10G GPUs are visible and each tensor-parallel worker has allocated roughly 20 GB of VRAM" >}}
+{{< figure src="/images/posts/post_32/nvidia_smi.png" title="nvidia-smi output from inside the vLLM pod, confirming all four A10G GPUs are visible and each tensor-parallel worker has allocated approximately 20 GB of VRAM" >}}
 
 
 7. Create a Service and Route
