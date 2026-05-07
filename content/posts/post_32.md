@@ -190,7 +190,7 @@ spec:
             - '--gpu-memory-utilization=0.85'
             - '--max-model-len=65536'
             - '--enable-auto-tool-choice'
-            - '--tool-call-parser=hermes'
+            - '--tool-call-parser=qwen3_coder'
           resources:
             limits:
               cpu: '10'
