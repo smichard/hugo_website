@@ -19,7 +19,7 @@ I came across the [*Hermes Agent project*](https://github.com/nousresearch/herme
 Hermes Agent is an open-source, self-hosted AI agent framework built by [*Nous Research*](https://nousresearch.com/), an independent AI research lab based in Austin, Texas. Nous Research is best known for the Hermes model family, a series of open-weight models fine-tuned on Llama that are used widely in the open-source AI community. The agent framework shares the name but is a separate project. It is MIT-licensed, model-agnostic, and runs on your own infrastructure, either as a self-hosted Python service or as a containerized deployment.
 
 
-# How It Works
+## How It Works
 
 The part that makes Hermes Agent different from most agent frameworks is the skill system. The agent ships with a set of preconfigured skills covering common tasks. Beyond that, you can ask it to create a skill from something it just did: it writes a structured Markdown document capturing the approach, what worked, and describes possible edge cases. The next time a similar task appears, the agent loads the relevant skill rather than starting from scratch. Skills can be triggered directly by asking Hermes to run one, or set on a schedule and executed automatically at defined intervals. Over time this turns completed work into a growing library of reusable operating knowledge. Version v0.12.0 added an Autonomous Curator to keep that library from growing unwieldy. It runs on a seven-day cycle by default, grades skills by usage, consolidates overlapping ones, and removes those that have stopped being useful. A short report is written after each run, so you can see what changed and why.
 
