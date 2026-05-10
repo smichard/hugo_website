@@ -103,7 +103,7 @@ The Compose service definition for LiteLLM follows the same pattern:
 ```yaml
 services:
   litellm:
-    image: ghcr.io/berriai/litellm:main-latest
+    image: litellm/litellm:main-v1.83.14-stable.patch.3
     container_name: litellm
     restart: unless-stopped
     command: ["--config", "/app/config.yaml", "--port", "4000"]
