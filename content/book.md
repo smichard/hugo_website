@@ -1,6 +1,6 @@
 ---
 title: "Book"
-draft: true
+draft: false
 type: "page"
 layout: "book"
 ---
