@@ -10,6 +10,7 @@ If you want to get the latest edition, fill out the form below.
 
 ![](/images/posts/books/own_your_ai_stack.png)
 
+**Abstract:**  
 A practical, hands-on guide to building and operating your own AI stack, from lightweight homelab setups to production-ready platforms. This book includes specific code examples and walks through real architectures, covering local AI setups, deploying cloud-based platforms, exposing AI inference endpoints, and working with AI agents.
 
 If you want to move beyond using AI APIs and start owning the full stack, infrastructure, models, and workflows, this guide shows you how to get there step by step.
