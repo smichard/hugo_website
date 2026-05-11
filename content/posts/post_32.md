@@ -73,7 +73,7 @@ oc create secret generic vllm-api-key-secret \
 
 4. Create the ConfigMap
 
-Set the Hugging Face model ID you want to serve. Any model supported by vLLM works here. Research which model fits your use case before settling on one, the only hard requirement is that it is support to run using the vLLM inference server.
+Set the Hugging Face model ID you want to serve. Research which model fits your use case before settling on one, the only hard requirement is that the model is supported by the vLLM inference server. The ConfigMap also carries the tool call parser name, which the deployment references to set the correct parsing mode for the chosen model.
 
 ```yaml
 apiVersion: v1
@@ -83,6 +83,7 @@ metadata:
   namespace: rhaiis
 data:
   MODEL_NAME: "Qwen/Qwen3-Coder-30B-A3B-Instruct"
+  TOOL_CALL_PARSER: "qwen3_coder"
 ```
 
 Apply the file to create the ConfigMap:
@@ -190,7 +191,7 @@ spec:
             - '--gpu-memory-utilization=0.85'
             - '--max-model-len=65536'
             - '--enable-auto-tool-choice'
-            - '--tool-call-parser=qwen3_coder'
+            - '--tool-call-parser=$(TOOL_CALL_PARSER)'
           resources:
             limits:
               cpu: '10'

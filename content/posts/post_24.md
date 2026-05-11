@@ -76,7 +76,7 @@ The parameters worth noting:
 
 Once the template is configured, deploying it requires selecting a GPU and clicking deploy. RunPod shows available hardware with current pricing.
 
-{{< figure src="/images/posts/post_24/gpu_selection.png" title="GPU selection on RunPod, ranging from RTX 3090 class cards to H200 and B200 datacenter accelerators" >}}
+{{< figure src="/images/posts/post_24/gpu_selection.png" title="GPU selection on RunPod, ranging from *RTX 2000 Ada* class cards to *H200* and *B200* datacenter accelerators" >}}
 
 For most inference workloads with 8 to 12 billion parameter models, an RTX 4090 or L4 is a practical and cost-effective choice. Larger models with higher memory requirements will need 48 GB or 80 GB class cards. The per-hour pricing shown in the interface makes it easy to estimate cost for a session before committing.
 
