@@ -155,7 +155,7 @@ spec:
             sizeLimit: "16Gi"
       containers:
         - name: vllm
-          image: registry.redhat.io/rhaiis/vllm-cuda-rhel9:latest
+          image: registry.redhat.io/rhaiis/vllm-cuda-rhel9:3.3.1-1775680192
           imagePullPolicy: Always
           env:
             - name: HF_TOKEN
@@ -179,6 +179,11 @@ spec:
               value: '0'
             - name: VLLM_ALLOW_LONG_MAX_MODEL_LEN
               value: '1'
+            - name: TOOL_CALL_PARSER
+              valueFrom:
+                configMapKeyRef:
+                  name: vllm-config
+                  key: TOOL_CALL_PARSER
           command:
             - python
             - '-m'
