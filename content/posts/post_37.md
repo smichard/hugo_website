@@ -45,9 +45,11 @@ Rather than providing a traditional setup script, the [Tank OS GitHub repository
 
 This is an uncommon way to explore a new project. The approach makes sense here because the setup involves several environment-specific details, including QEMU firmware paths, the difference between rootful and rootless Podman, and SSH key locations. An agent can adapt these to your machine setup without requiring manual edits to a configuration file.
 
+## Building, Booting, and Running OpenClaw 
+
 Once the agent has produced the `smoke-test.sh` script, the rest of the workflow runs through that script in four phases.
 
-## Phase 1: Building the Disk Image
+### Phase 1: Building the Disk Image
 
 First, make sure the default Podman machine is running:
 
@@ -72,7 +74,7 @@ The build takes a few minutes. When it finishes, the QCOW2 file is in the output
 
 {{< figure src="/images/posts/post_37/build_step.png" title="Terminal output once the build step completes." >}}
 
-## Phase 2: Starting the VM
+### Phase 2: Starting the VM
 
 ```bash
 ./smoke-test.sh vm
@@ -82,7 +84,7 @@ This starts QEMU with Apple's Hypervisor Framework for acceleration, four virtua
 
 The terminal shows the VM console as the OS starts. The OpenClaw Podman service launches automatically as a systemd user unit.
 
-## Phase 3: Connecting to OpenClaw
+### Phase 3: Connecting to OpenClaw
 
 Open a second terminal and wait for the VM's SSH daemon to accept connections, then log in:
 
@@ -125,7 +127,7 @@ Open `http://127.0.0.1:18789` in a browser. Paste the gateway token when prompte
 
 {{< figure src="/images/posts/post_37/openclaw_gateway.png" title="OpenClaw Gateway Dashboard running locally" >}}
 
-## Adding a Model Provider
+### Adding a Model Provider
 
 Tank OS stores API keys as Podman secrets rather than in configuration files. From inside the VM, create a secret for your provider:
 
