@@ -1,7 +1,7 @@
 ---
 title: "Running the Red Hat AI Inference Server on OpenShift"
-date: 2027-04-22
-draft: true
+date: 2026-05-17
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["OpenShift"]
