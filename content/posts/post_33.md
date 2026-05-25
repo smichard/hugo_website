@@ -1,7 +1,7 @@
 ---
 title: "Deploying Hermes Agent on OpenShift"
-date: 2027-04-24
-draft: true
+date: 2026-05-24
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["OpenShift"]
