@@ -1,7 +1,7 @@
 ---
 title: "Deploying OpenClaw on OpenShift"
-date: 2027-04-26
-draft: true
+date: 2026-06-07
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["OpenShift"]
