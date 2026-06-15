@@ -1,7 +1,7 @@
 ---
 title: "Tank OS: Running OpenClaw locally in a safe and open way"
-date: 2026-05-15
-draft: true
+date: 2026-06-14
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
