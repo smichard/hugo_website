@@ -8,7 +8,6 @@ categories: ["Personal"]
 tags: ["Sport","Triathlon","Challenge Roth"]
 toc:
   enable: false
-status: published
 ---
 
 {{< figure src="/images/posts/post_38/challenge_roth.jpg" title="" >}}
