@@ -1,7 +1,7 @@
 ---
 title: "Book Review: Vibe Coding by Gene Kim and Steve Yegge"
 date: 2026-07-11
-draft: false
+draft: true
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Books"]
