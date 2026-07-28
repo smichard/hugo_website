@@ -1,0 +1,20 @@
+<section class="home-section home-section--wide">
+  <div class="home-section-header">
+    <h2>Photography</h2>
+    <a class="home-section-link" href="/photos/">Full gallery &rarr;</a>
+  </div>
+  <div id="home-photo-grid" class="photo-grid photo-grid--teaser">
+    <div id="home-photo-loading" class="photo-loading">Loading photos&hellip;</div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.initPhotoGallery({
+      gridId: "home-photo-grid",
+      loadingId: "home-photo-loading",
+      max: 6,
+      linkTo: "/photos/"
+    });
+  });
+</script>

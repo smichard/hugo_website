@@ -1,6 +1,11 @@
 {{ $main := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $main.Permalink }}"></script>
 
+{{ if or .IsHome (eq .Params.layout "photos") }}
+{{ $gallery := resources.Get "js/gallery.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $gallery.Permalink }}"></script>
+{{ end }}
+
 {{ if eq (getenv "HUGO_ENV") "production" }}
     <!-- Google Analytics -->
     {{ template "_internal/google_analytics.html" . }}
