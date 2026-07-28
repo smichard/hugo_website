@@ -11,7 +11,9 @@
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: var(--space-5);
-  align-items: start;
+  // Desktop: vertically center the profile column against the taller
+  // About + Certifications column. Reset on mobile (single column) below.
+  align-items: center;
 }
 
 .home-hero-profile {
@@ -30,12 +32,13 @@
 @media (max-width: 720px) {
   .home-hero-grid {
     grid-template-columns: 1fr;
+    align-items: start;
   }
 }
 
 .home-hero-avatar {
-  width: 84px;
-  height: 84px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: var(--space-2);
