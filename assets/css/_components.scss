@@ -262,3 +262,42 @@ a.download:hover {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: var(--space-3);
 }
+
+// Card variant with a thumbnail on top (project cards)
+
+.card--media {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-media {
+  aspect-ratio: 16 / 9;
+  background: var(--bg-inset);
+  overflow: hidden;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-media--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.card-media--empty svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 0.4;
+}
+
+.card-body {
+  padding: var(--space-3);
+}
