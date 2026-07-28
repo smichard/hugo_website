@@ -6,7 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Sustainability"]
 tags: ["Sustainability","SCI","Carbon Intensity","Carbon Footprint"]
-
+thumbnail: "/images/posts/post_12/sci_1.jpg"
 toc:
   enable: false
 ---

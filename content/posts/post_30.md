@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
 tags: ["Hugo", "CV", "Git", "Workflow", "Tooling"]
+thumbnail: "/images/posts/post_30/overview.png"
 toc:
   enable: false
 ---

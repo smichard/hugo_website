@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift", "devspaces", "ai", "vllm", "coding-assistant"]
+thumbnail: "/images/posts/post_35/overview.png"
 toc:
   enable: false
 ---

@@ -6,7 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["LinkedIn"]
 tags: ["Professional","Announcement","Work"]
-
+thumbnail: "/images/posts/post_14/image.png"
 toc:
   enable: false
 ---

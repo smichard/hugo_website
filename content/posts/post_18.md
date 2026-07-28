@@ -6,11 +6,12 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Homelab"]
 tags: ["homelab","container","self-hosting"]
+thumbnail: "/images/posts/post_18/overview.png"
 toc:
   enable: false
 ---
 
-{{< figure src="/images/posts/homelab.png" title="Summary of Homelab services - AI generated" >}}
+{{< figure src="/images/posts/post_18/homelab.png" title="Summary of Homelab services - AI generated" >}}
 
 ## Introduction
 

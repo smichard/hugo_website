@@ -3,8 +3,7 @@ title: "Compound Interest Calculator – Visualizing Capital Growth"
 date: 2025-10-25
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io
-"
+authorLink: "https://stephan.michard.io"
 categories: ["Projects"]
 tags: ["R","Shiny","Finance"]
 

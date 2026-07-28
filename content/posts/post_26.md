@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Books"]
 tags: ["book-review","ai","coding"]
+thumbnail: "/images/posts/books/vibe_coding.jpg"
 toc:
   enable: false
 ---

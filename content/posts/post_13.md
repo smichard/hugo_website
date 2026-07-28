@@ -6,7 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: [""]
 tags: ["Personal"]
-
+thumbnail: "/images/posts/post_13/hans_queisser.jpg"
 toc:
   enable: false
 ---

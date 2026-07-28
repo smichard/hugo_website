@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
 tags: ["Markdown", "ai", "workflow"]
+thumbnail: "/images/posts/post_31/overview.png"
 toc:
   enable: false
 ---

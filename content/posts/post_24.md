@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Homelab"]
 tags: ["homelab","AI","runpod","vllm","self-hosting"]
+thumbnail: "/images/posts/post_24/overview.png"
 toc:
   enable: false
 ---

@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Personal"]
 tags: ["Sport","Triathlon","Challenge Roth"]
+thumbnail: "/images/posts/post_38/challenge_roth.jpg"
 toc:
   enable: false
 ---

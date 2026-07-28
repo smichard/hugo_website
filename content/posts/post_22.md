@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
 tags: ["Red Hat","Documentation","Tooling"]
+thumbnail: "/images/posts/post_22/overview.png"
 toc:
   enable: false
 ---

@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Books"]
 tags: ["book-review","career","leadership"]
+thumbnail: "/images/posts/books/startup_of_you.jpg"
 toc:
   enable: false
 ---

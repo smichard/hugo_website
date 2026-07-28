@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Homelab"]
 tags: ["homelab","AI","container","self-hosting"]
+thumbnail: "/images/posts/post_19/overview.png"
 toc:
   enable: false
 ---
