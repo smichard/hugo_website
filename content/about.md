@@ -9,12 +9,12 @@ aliases: ["/cv/"]
 credly_url: "https://www.credly.com/users/stephan-michard.07f77149/badges"
 ---
 
-# hello world
+## hello world
 This website was created as an experiment and a way for me to keep track of the various pieces of content I create or am featured in. Occasionally I am interviewed for a newspaper or podcast, or I sometimes create my own texts and technical documentation. The idea is to share useful content on an irregular basis.  
 When creating this website, my focus was to use a simple framework that allows me to publish content quickly and easily. Therefore, I use the Hugo framework to generate static web pages and host them on Google Cloud. Google Cloud allows through the services Cloud Build and Cloud Run to create and publish a container very easily, quickly, and cost-efficiently. I outline the exact workflow in my first post: [Website setup and workflow]({{< ref "/posts/post_1" >}} "Website setup and workflow").  
 
 
-# whoami
+## whoami
 My name Stephan Michard, a Solution Architect and technology strategist based near Cologne, Germany.
 
 I work at Red Hat, where I help enterprises and strategic partners across Central Europe design and deliver cloud and AI platforms that translate business strategy into scalable, production-ready systems. My focus is on bridging the gap between vision and execution: aligning stakeholders, shaping solution architectures, and driving measurable outcomes.
@@ -40,28 +40,7 @@ I regularly explore ideas at the intersection of technology, business, and socie
 - Doppelgänger Tech Talk - [link](https://www.doppelgaenger.io/)
 - Pushing Limits - [link](https://pushing-limits.de/)
 
-# Certifications
+## Certifications
 I love to familiarize myself with new technologies, tools, or work methods, so I constantly try to educate myself. You can track my advancements on [Credly](https://www.credly.com/users/stephan-michard.07f77149/badges).
 
 {{< certifications >}}
-
-# Awards
-The last years I have received various awards, here is an extract:
-- Dell Presidents Club 2022
-- Dell exSEllence class 2019
-- EMC Elect 2016 & 2017
-- Top Newcomer Award Q2 2015
-
-# Press
-{{< download file="/documents/Computerwoche-Aus_Multi-Cloud_wird_Poly-Cloud.pdf" title="Aus Multi-Cloud wird Poly-Cloud (Computerwoche)" class="wrapper_download_left" >}}
-{{< download file="/documents/Computerwoche-Wie_Cloud-Native_Ihr_Business_befeuert.pdf" title="Wie Cloud-Native Ihr Business befeuert (Computerwoche)" class="wrapper_download_left" >}}
-
-For high-resolution portrait photos and a formal third-person bio for press or media use, see the [press kit]({{< ref "/bio" >}}).
-
-# Curriculum Vitae
-Please find below my current CV.  
-{{< download file="/documents/CV_Stephan_Michard.pdf" title="Download my CV" >}}
-
-# Let's talk
-With the content on this website you got an impression about me. If you think it makes sense to talk I look forward to an interaction, you can find my Calendly link here:  
-{{< button href="https://red.ht/meet_stephan" >}}Schedule time with me{{< /button >}}

@@ -1,6 +1,6 @@
 {{ define "content" }}
 <div class="post-warp archive">
-    <h2 class="post-title">{{ humanize .Title }}</h2>
+    <h1 class="post-title">{{ humanize .Title }}</h1>
     {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
     <h2 class="archive-year">{{ .Key }}</h2>
 

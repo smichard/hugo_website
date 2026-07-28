@@ -8,7 +8,7 @@ tags: []
 ---
 
 
-# Biography
+## Biography
 I am an Associate Principal Solution Architect at Red Hat, where I work with partners and enterprise customers to design open, scalable, and intelligent technology platforms that enable sustainable business transformation. My professional journey bridges IT strategy, solution architecture, and sales, giving me a holistic understanding of how technology translates into measurable business outcomes.
 
 Over the past decade, I’ve guided organizations through the complexities of cloud modernization, hybrid architectures, and AI-driven innovation. My work centers on creating solutions that are not only technically sound but strategically aligned — enabling my customers to innovate confidently while retaining flexibility and control in an increasingly dynamic landscape.
@@ -21,9 +21,15 @@ I see my role as a bridge between technology and intent: helping teams turn abst
 
 Outside of work, I stay connected with the tech community by mentoring, writing, and speaking about cloud ecosystems, AI adoption, and open innovation. I’m passionate about lifelong learning and about empowering others to navigate the fast-moving intersection of people, process, and technology.
 
+## Curriculum Vitae
+Please find below my current CV.
+{{< download file="/documents/CV_Stephan_Michard.pdf" title="Download my CV" >}}
 
+## Let's talk
+If you think it makes sense to talk, I look forward to hearing from you.
+{{< button href="https://red.ht/meet_stephan" >}}Schedule time with me{{< /button >}}
 
-# High resolution images
+## High resolution images
 {{< figure src="/images/bio/image_1.jpg" title="" >}}
 {{< download file="/images/bio/image_1.jpg" title="Download image" class="wrapper_download_center" >}}  
 {{< figure src="/images/bio/image_2.jpg" title="" >}}
@@ -34,5 +40,3 @@ Outside of work, I stay connected with the tech community by mentoring, writing,
 {{< download file="/images/bio/image_4.jpg" title="Download image" class="wrapper_download_center" >}} 
 {{< figure src="/images/bio/image_5.jpg" title="" >}}
 {{< download file="/images/bio/image_5.jpg" title="Download image" class="wrapper_download_center" >}} 
-
-

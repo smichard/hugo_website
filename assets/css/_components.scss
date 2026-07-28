@@ -71,6 +71,11 @@
 :root[data-theme="dark"] .theme-toggle-sun { display: none; }
 :root[data-theme="dark"] .theme-toggle-moon { display: inline-flex; }
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle-sun { display: none; }
+  :root:not([data-theme="light"]) .theme-toggle-moon { display: inline-flex; }
+}
+
 .nav-toggle {
   display: none;
   background: none;

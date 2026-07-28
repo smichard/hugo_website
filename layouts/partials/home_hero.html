@@ -2,7 +2,15 @@
   <div class="container home-hero-grid">
     <div class="home-hero-profile">
       {{ with .Site.Params.avatar }}
-      <img class="home-hero-avatar" src="{{ . }}" alt="{{ $.Site.Params.author }}">
+      {{ partial "responsive-image.html" (dict
+          "src" .
+          "alt" $.Site.Params.author
+          "class" "home-hero-avatar"
+          "sizes" "150px"
+          "maxWidth" 300
+          "loading" "eager"
+          "fetchpriority" "high"
+      ) }}
       {{ end }}
       <h1 class="home-hero-name">{{ .Site.Params.author }}</h1>
       {{ with .Site.Params.subtitle }}

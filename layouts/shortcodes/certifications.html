@@ -1,6 +1,6 @@
 {{/* Minimal placeholder rendering; Phase 4 replaces this with a styled grid. */}}
 <ul class="certifications-list">
-  {{ range site.Data.certifications }}
+  {{ range hugo.Data.certifications }}
   <li>{{ .name }} <span class="cert-issuer">— {{ .issuer }}</span></li>
   {{ end }}
 </ul>

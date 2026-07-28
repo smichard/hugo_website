@@ -1,102 +1,62 @@
-{{ if .IsHome -}}
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "WebSite",
-  "url": "{{ .Site.BaseURL }}",
-  {{ if .Site.Params.author -}}
-  "author": {
-    "@type": "Person",
-    "name": "{{ .Site.Params.author }}"
-  },
-  {{- end }}
-  {{ if .Site.Params.description -}}
-  "description": "{{ .Site.Params.description }}",
-  {{- end }}
-  {{ with .Site.Params.image -}}
-  "image": "{{ .url | absURL }}",
-  {{- end }}
-  {{ with .Site.Params.logo -}}
-  "thumbnailUrl": "{{ .url | absURL }}",
-  {{- end }}
-  {{ with .Site.Copyright -}}
-  "license": "{{ . }}",
-  {{- end }}
-  "name": "{{ .Site.Title }}"
-}
-</script>
-{{/*
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "http://example.com/search?&q={query}",
-    "query-input": "required"
-  } */}}
-{{- else if .IsPage -}}
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BlogPosting",
-  "headline": "{{ .Title }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ .Permalink }}"
-  },
-  {{ if ge (.Param "lua.image.width") 696 -}}
-  "image": {
-    "@type": "ImageObject",
-    "url": "{{ .Param "lua.image.url" | absURL }}",
-    "width": {{ .Param "lua.image.width" }},
-    "height": {{ .Param "lua.image.height" }}
-  },
-  {{- else if ge .Site.Params.image.width 696 -}}
-   "image": {
-    "@type": "ImageObject",
-    "url": "{{ .Site.Params.image.url | absURL }}",
-    "width": {{ .Site.Params.image.width }},
-    "height": {{ .Site.Params.image.height }}
-  },
-  {{- end }}
-  "genre": "{{ .Type }}",
-  {{ with .Params.tags -}}
-  "keywords": "{{ delimit . ", " }}",
-  {{- end }}
-  "wordcount": {{ .WordCount }},
-  "url": "{{ .Permalink }}",
-  {{ if not .PublishDate.IsZero -}}
-  "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
-  {{- else if not .Date.IsZero -}}
-  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
-  {{- end }}
-  {{ with .Lastmod -}}
-  "dateModified": "{{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
-  {{- end }}
-  {{ with .Site.Copyright -}}
-  "license": "{{ . }}",
-  {{- end }}
-  {{ with .Site.Params.publisher -}}
-  "publisher": {
-    "@type": "Organization",
-    "name": "{{ .name }}",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ .logo.url | absURL }}",
-      "width": {{ .logo.width }},
-      "height": {{ .logo.height }}
-    }
-  },
-  {{- end }}
-  {{ if .Params.author -}}
-  "author": {
-    "@type": "Person",
-    "name": "{{ .Params.author }}"
-  },
-  {{- else if .Site.Params.author -}}
-  "author": {
-    "@type": "Person",
-    "name": "{{ .Site.Params.author }}"
-  },
-  {{- end }}
-  "description": "{{ .Description }}"
-}
-</script>
-{{- end }}
+{{- $seo := partial "seo_values.html" . -}}
+{{- $personID := printf "%s#person" .Site.BaseURL -}}
+{{- $sameAs := slice -}}
+{{- with .Site.Params.social.Linkedin -}}{{- $sameAs = $sameAs | append (printf "https://www.linkedin.com/in/%s" .) -}}{{- end -}}
+{{- with .Site.Params.social.GitHub -}}{{- $sameAs = $sameAs | append (printf "https://github.com/%s" .) -}}{{- end -}}
+{{- with .Site.Params.social.Instagram -}}{{- $sameAs = $sameAs | append (printf "https://www.instagram.com/%s/" .) -}}{{- end -}}
+
+{{- $person := dict
+  "@type" "Person"
+  "@id" $personID
+  "name" .Site.Params.author
+  "url" .Site.BaseURL
+  "sameAs" $sameAs
+-}}
+
+{{- $entity := dict
+  "@type" "WebPage"
+  "@id" .Permalink
+  "url" .Permalink
+  "name" $seo.title
+  "description" $seo.description
+  "author" (dict "@id" $personID)
+-}}
+
+{{- if .IsHome -}}
+  {{- $entity = dict
+    "@type" "WebSite"
+    "@id" (printf "%s#website" .Site.BaseURL)
+    "url" .Site.BaseURL
+    "name" .Site.Title
+    "description" $seo.description
+    "author" (dict "@id" $personID)
+    "image" $seo.imageURL
+  -}}
+{{- else if and .IsPage (eq .Type "posts") -}}
+  {{- $entity = dict
+    "@type" "BlogPosting"
+    "@id" (printf "%s#article" .Permalink)
+    "headline" .Title
+    "description" $seo.description
+    "url" .Permalink
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+    "datePublished" (.PublishDate.Format "2006-01-02T15:04:05-07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
+    "wordCount" .WordCount
+    "keywords" (.Params.tags | default slice)
+    "image" (dict
+      "@type" "ImageObject"
+      "url" $seo.imageURL
+      "width" $seo.imageWidth
+      "height" $seo.imageHeight
+    )
+    "author" (dict "@id" $personID)
+    "publisher" (dict "@id" $personID)
+  -}}
+{{- end -}}
+
+{{- $schema := dict
+  "@context" "https://schema.org"
+  "@graph" (slice $entity $person)
+-}}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>

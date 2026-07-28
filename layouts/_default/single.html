@@ -28,20 +28,17 @@
                 <!--featured_image-->
 
                 {{ with .Params.featured_image }}
-                {{- $img := . -}}
-                <img src="{{ printf "%s%s" $cdn_url $img }}" class="featured_image">
+                {{ partial "responsive-image.html" (dict
+                    "src" .
+                    "alt" $.Title
+                    "class" "featured_image"
+                    "sizes" "(max-width: 42rem) 100vw, 42rem"
+                    "maxWidth" 1400
+                ) }}
                 {{ end }}
                 <!-- end featured_image-->
 
-                {{ $reAltIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)?\">" }}
-                {{ $reAltOut :=  ( printf "<figure><img src=\"%s$1\" loading=\"lazy\" alt=\"$2\"><figcaption class=\"image-caption\">$2</figcaption></figure>" $cdn_url ) }}
-                {{ $altContent := .Content | replaceRE $reAltIn $reAltOut | safeHTML }}
-
-                {{ $reAltTitleIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)?\" title=\"([^\"]+)?\" />" }}
-                {{ $reAltTitleOut := ( printf "<figure><img src=\"%s$1\" loading=\"lazy\" alt=\"$2\" title=\"$3\"><figcaption class=\"image-caption\">$2</figcaption></figure>" $cdn_url ) }}
-                {{ $finalContent := $altContent | replaceRE $reAltTitleIn $reAltTitleOut | safeHTML }}
-
-                {{ $finalContent }}
+                {{ .Content }}
     </div>
 
     <div class="post-copyright">

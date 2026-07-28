@@ -157,6 +157,10 @@
   padding: 0 var(--space-2);
 }
 
+.expand__content[hidden] {
+  display: none;
+}
+
 .expand__content--toc nav ul {
   padding-left: 1rem;
 }

@@ -1,0 +1,151 @@
+.news-intro {
+  margin-bottom: 2rem;
+}
+
+.feed-loading {
+  padding: 40px;
+  color: #888;
+  text-align: center;
+}
+
+.feed-error {
+  padding: 20px;
+  color: #f92672;
+  text-align: center;
+}
+
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 8px 0 24px;
+}
+
+.feed-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #4a4b50;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+  }
+}
+
+.feed-card-media {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-inset);
+}
+
+.feed-card-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  max-height: none !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+}
+
+.feed-card-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+  background: linear-gradient(135deg, #0d2233 0%, #1e3a4f 60%, #153045 100%);
+}
+
+.feed-card-favicon {
+  width: 48px;
+  height: 48px;
+  margin: 0 !important;
+  object-fit: contain;
+  border-radius: 10px !important;
+  opacity: 0.85;
+}
+
+.feed-card-domain {
+  color: #5a8aaa;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+
+.feed-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.feed-card-date {
+  color: #7a9bb5;
+  font-size: 0.75rem;
+}
+
+.feed-card-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+
+  &::before {
+    content: none !important;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: #2d96bd;
+    }
+  }
+}
+
+.feed-card-desc {
+  flex: 1;
+  margin: 0;
+  color: #a9a9b3;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.feed-card-link {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 0.8rem;
+  text-decoration: none;
+
+  &:hover {
+    color: #2d96bd;
+  }
+}
+
+@media (max-width: 900px) {
+  .feed-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .feed-grid {
+    grid-template-columns: 1fr;
+  }
+}

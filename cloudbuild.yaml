@@ -9,6 +9,30 @@ steps:
   - '--init'
   - '--recursive'
 
+# Fail before packaging or deployment if Hugo reports a production warning.
+- name: hugomods/hugo:exts
+  id: Validate build
+  entrypoint: hugo
+  env:
+  - 'HUGO_ENV=production'
+  args:
+  - '--cacheDir'
+  - '/tmp/hugo-cache'
+  - '--destination'
+  - '/workspace/.site-check'
+  - '--cleanDestinationDir'
+  - '--minify'
+  - '--enableGitInfo'
+  - '--panicOnWarning'
+
+# Check generated SEO, accessibility, JSON-LD, and local asset references.
+- name: python:3.13-alpine
+  id: Validate output
+  entrypoint: python3
+  args:
+  - 'scripts/validate_site.py'
+  - '.site-check'
+
 # This step builds the container image.
 - name: 'gcr.io/cloud-builders/docker'
   id: Build

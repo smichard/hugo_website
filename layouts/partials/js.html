@@ -6,6 +6,11 @@
 <script src="{{ $gallery.Permalink }}"></script>
 {{ end }}
 
+{{ if eq .Params.layout "news" }}
+{{ $news := resources.Get "js/news.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $news.Permalink }}"></script>
+{{ end }}
+
 {{ if eq (getenv "HUGO_ENV") "production" }}
     <!-- Google Analytics -->
     {{ template "_internal/google_analytics.html" . }}

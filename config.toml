@@ -1,8 +1,8 @@
 baseURL = "https://www.stephan.michard.io/"
-languageCode = "en"
+locale = "en-US"
 defaultContentLanguage = "en"
 
-title = "Home"
+title = "Stephan Michard"
 theme = ["hugo-notice","KeepIt"]
 
 enableEmoji = true
@@ -59,7 +59,7 @@ pygmentsCodefences = true
     author = "Dr. Stephan Michard"               # Author's name
     subtitle = ""       # Subtitle
     tagline = "a collection of random thoughts" # tagline
-    headtitle = "vCard - Stephan Michard" #website title for header
+    headtitle = "Stephan Michard" #website title for header
     cdn_url = ""           # Base CDN URL
     dateFormatToUse = "" # set date format, default "2 January 2006"
     
@@ -72,8 +72,8 @@ pygmentsCodefences = true
     avatar = "/images/me/avatar.jpeg" #comment it to use gravatar
     socialShare = false
 
-    description = "" # site description
-    keywords = "" # site keywords
+    description = "Personal website of Dr. Stephan Michard about cloud-native platforms, AI, open source, technology strategy, projects, and endurance sports."
+    keywords = "cloud-native, artificial intelligence, open source, technology strategy, OpenShift"
 
     license= 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
     favicon = "static/favicon.ico"
@@ -178,33 +178,6 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     url = "cover.png"
     width = 800
     height = 600
-
-[params.gitalk]
-owner = ""       # Your GitHub ID
-repo = ""        # The repo to store comments
-clientId = ""    # Your client ID
-clientSecret = "" # Your client secret
-
-[params.valine]
-  enable = false
-  language = 'en'
-  appId = 'your appId'
-  appKey = 'your appKey'
-  notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
-  verify = false # Verification code
-  avatar = 'mm'
-  placeholder = 'your comments ...'
-  visitor = true
-
-[params.utterances]       # https://utteranc.es/
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-
-[params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-    clientId = ""           # Your client ID
-    clientSecret = ""       # Your client secret
 
 [markup]
   [markup.tableOfContents]

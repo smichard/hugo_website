@@ -1,0 +1,45 @@
+{{- $title := site.Title -}}
+{{- if not .IsHome -}}
+  {{- $title = printf "%s | %s" (.Params.heading | default .Title) site.Title -}}
+{{- end -}}
+
+{{- $description := site.Params.description -}}
+{{- with .Description -}}
+  {{- $description = . -}}
+{{- else -}}
+  {{- if and .IsPage (eq .Type "posts") -}}
+    {{- $description = .RawContent | replaceRE `(?m)^\{\{< figure.*>\}\}\s*` "" -}}
+    {{- $description = $description | replaceRE `(?m)^#{1,6}\s+` "" -}}
+    {{- $description = $description | replaceRE `\[([^\]]+)\]\([^)]+\)` "$1" -}}
+    {{- $description = $description | replaceRE "[*_`~]" "" -}}
+  {{- else if and .IsPage .Summary -}}
+    {{- $description = .Summary -}}
+  {{- end -}}
+{{- end -}}
+{{- $description = $description | plainify | replaceRE `\s+` " " | strings.TrimSpace | truncate 160 -}}
+
+{{- $imageURL := site.Params.image.url | absURL -}}
+{{- $imageWidth := site.Params.image.width -}}
+{{- $imageHeight := site.Params.image.height -}}
+{{- $imageResource := false -}}
+{{- with .Params.thumbnail -}}
+  {{- $imageResource = resources.Get (strings.TrimPrefix "/" .) -}}
+{{- end -}}
+{{- if not $imageResource -}}
+  {{- $imageResource = .Resources.GetMatch "{*feature*,*cover*,*thumbnail*}*" -}}
+{{- end -}}
+{{- with $imageResource -}}
+  {{- with .Fit "1200x630 webp q82" -}}
+    {{- $imageURL = .Permalink -}}
+    {{- $imageWidth = .Width -}}
+    {{- $imageHeight = .Height -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return (dict
+  "title" $title
+  "description" $description
+  "imageURL" $imageURL
+  "imageWidth" $imageWidth
+  "imageHeight" $imageHeight
+) -}}

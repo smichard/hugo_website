@@ -1,5 +1,5 @@
 {{ define "content" }}
-<main class="main">
+<div class="main">
   <div class="container">
   {{ $termName := .Data.Plural }}
   {{ $terms := .Data.Terms.ByCount }}
@@ -7,7 +7,7 @@
   {{ $type := .Type }}
   <!-- Categories Page -->
   <div class="post-warp {{.Data.Plural}}">
-      <h2 class="post-title">&nbsp;{{ .Data.Plural | humanize }}&nbsp;</h2>
+      <h1 class="post-title">&nbsp;{{ .Data.Plural | humanize }}&nbsp;</h1>
   {{ if and $.Site.Taxonomies.categories (eq $termName "categories") }}
 
   <div class="categories-card">
@@ -47,5 +47,5 @@
   </div>
 
   </div>
-</main>
+</div>
 {{end }}

@@ -1,4 +1,10 @@
-{{ $file_url := .Get "file" | absURL }}
+{{ $file := .Get "file" }}
+{{ $file_url := $file | absURL }}
+{{ if hasPrefix $file "/images/" }}
+    {{ with resources.Get (strings.TrimPrefix "/" $file) }}
+        {{ $file_url = .Permalink }}
+    {{ end }}
+{{ end }}
 {{ $title := .Get "title" | default "Download file" }}
 {{ $class := .Get "class" | default "wrapper_download_left" }}
 

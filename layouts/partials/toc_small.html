@@ -1,12 +1,12 @@
 {{ if .Params.toc.enable }}
 <div class="expand" id="toc-static">
-  <div class="expand__button" aria-label="Expand Button">
+  <button class="expand__button" type="button" aria-expanded="false" aria-controls="toc-content">
     {{ "Table of Contents" }}
     <span class="expand-icon expand-icon__right">
         {{ partial "svgs/arrow-right.svg" (dict "width" 30 "height" 30) }}
     </span>
-</div>
-  <div class="expand__content expand__content--toc">
+  </button>
+  <div class="expand__content expand__content--toc" id="toc-content" hidden>
     {{ .TableOfContents }}
   </div>
 </div>

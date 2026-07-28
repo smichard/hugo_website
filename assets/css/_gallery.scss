@@ -16,6 +16,11 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
   display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
 }
 
 .photo-grid-item img {
@@ -28,7 +33,8 @@
   transition: transform 0.3s ease;
 }
 
-.photo-grid-item:hover img {
+.photo-grid-item:hover img,
+.photo-grid-item:focus-visible img {
   transform: scale(1.04);
 }
 
@@ -70,4 +76,8 @@
   cursor: pointer;
   background: none;
   border: none;
+}
+
+.lightbox-close:focus-visible {
+  outline-color: #fff;
 }

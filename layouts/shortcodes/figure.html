@@ -2,14 +2,14 @@
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end -}}
-    <img src="{{ .Get "src" }}"
-         {{- if or (.Get "alt") (.Get "caption") }}
-         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
-         {{- end -}}
-         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
-         data-src="{{ .Get "src" }}" 
-    /><!-- Closing img tag -->
+    {{- $alt := .Get "alt" | default (.Get "caption") | default (.Get "title") | default .Page.Title | markdownify | plainify -}}
+    {{- partial "responsive-image.html" (dict
+        "src" (.Get "src")
+        "alt" $alt
+        "title" (.Get "title")
+        "sizes" "(max-width: 42rem) 100vw, 42rem"
+        "maxWidth" 1400
+    ) -}}
     {{- if .Get "link" }}</a>{{ end -}}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption>

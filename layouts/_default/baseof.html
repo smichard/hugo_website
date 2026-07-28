@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.Language.Locale }}">
   {{ partial "head.html" . }}
   <body>
     <div class="wrapper">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         {{ partial "header.html" . }}
 
-        <div class="page-content">
+        <main class="page-content" id="main-content" tabindex="-1">
           {{ block "content" . }}{{ end }}
-        </div>
+        </main>
 
       {{ partial "footer.html" . }}
      </div>

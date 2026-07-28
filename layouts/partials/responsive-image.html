@@ -1,0 +1,57 @@
+{{- $src := .src -}}
+{{- $image := .resource -}}
+{{- if and (not $image) $src (not (urls.Parse $src).IsAbs) -}}
+  {{- $image = resources.Get (strings.TrimPrefix "/" $src) -}}
+{{- end -}}
+{{- $alt := .alt | default "" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $sizes := .sizes | default "100vw" -}}
+{{- $maxWidth := .maxWidth | default 1400 -}}
+
+{{- if and $image (reflect.IsImageResourceProcessable $image) -}}
+  {{- $renderWidth := $maxWidth -}}
+  {{- if lt $image.Width $renderWidth -}}
+    {{- $renderWidth = $image.Width -}}
+  {{- end -}}
+  {{- $rendered := $image.Resize (printf "%dx webp q82" $renderWidth) -}}
+  {{- $variants := slice -}}
+  {{- range (slice 480 800 1400) -}}
+    {{- if and (le . $maxWidth) (le . $image.Width) -}}
+      {{- $variants = $variants | append ($image.Resize (printf "%dx webp q82" .)) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $hasRendered := false -}}
+  {{- range $variants -}}
+    {{- if eq .Width $rendered.Width -}}
+      {{- $hasRendered = true -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $hasRendered -}}
+    {{- $variants = $variants | append $rendered -}}
+  {{- end -}}
+<img
+  src="{{ $rendered.RelPermalink }}"
+  srcset="{{ range $index, $variant := $variants }}{{ if $index }}, {{ end }}{{ $variant.RelPermalink }} {{ $variant.Width }}w{{ end }}"
+  sizes="{{ $sizes }}"
+  width="{{ $rendered.Width }}"
+  height="{{ $rendered.Height }}"
+  alt="{{ $alt }}"
+  loading="{{ $loading }}"
+  decoding="async"
+  {{- with .class }} class="{{ . }}"{{ end -}}
+  {{- with .title }} title="{{ . }}"{{ end -}}
+  {{- with .fetchpriority }} fetchpriority="{{ . }}"{{ end -}}
+>
+{{- else -}}
+{{- if and $src (not (urls.Parse $src).IsAbs) -}}
+  {{- warnf "Unable to process local image %q" $src -}}
+{{- end -}}
+<img
+  src="{{ $src }}"
+  alt="{{ $alt }}"
+  loading="{{ $loading }}"
+  decoding="async"
+  {{- with .class }} class="{{ . }}"{{ end -}}
+  {{- with .title }} title="{{ . }}"{{ end -}}
+>
+{{- end -}}

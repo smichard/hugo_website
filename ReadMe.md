@@ -28,6 +28,11 @@ hugo
 ```
 This compiles the website into static files in preparation for deployment.
 
+Before publishing, run the same production checks used by Cloud Build:
+```bash
+sh scripts/check_site.sh
+```
+
 ## Containerization
 To ensure consistency across different environments, the website is containerized using Docker. The Dockerfile in this repository is tailored for minimal footprint and high performance.
 

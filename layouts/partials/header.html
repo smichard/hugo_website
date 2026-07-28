@@ -1,15 +1,17 @@
 <header class="site-header">
   <div class="container">
     <a class="site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle menu" aria-controls="site-nav" aria-expanded="false">
       {{ partial "icons.html" "menu" }}
     </button>
-    <nav class="site-nav" id="site-nav">
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-      <a class="menu-item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+      {{ $menuSection := strings.Trim "/" .URL }}
+      {{ $isActive := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq $currentPage.Section $menuSection) (eq .URL (printf "/%s/" $currentPage.Type)) (and (ne .URL "/") (hasPrefix $currentPage.RelPermalink .URL)) }}
+      <a class="menu-item{{ if $isActive }} active{{ end }}" href="{{ .URL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $isActive }} aria-current="page"{{ end }}>{{ .Name }}</a>
       {{ end }}
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
         <span class="theme-toggle-sun">{{ partial "icons.html" "sun" }}</span>
         <span class="theme-toggle-moon">{{ partial "icons.html" "moon" }}</span>
       </button>

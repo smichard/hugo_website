@@ -1,0 +1,7 @@
+{{- partial "responsive-image.html" (dict
+    "src" .Destination
+    "alt" (.Text | plainify | default .Page.Title)
+    "title" .Title
+    "sizes" "(max-width: 42rem) 100vw, 42rem"
+    "maxWidth" 1400
+) -}}

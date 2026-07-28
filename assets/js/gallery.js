@@ -13,6 +13,8 @@ window.initPhotoGallery = function (options) {
   var lightbox = options.lightboxId ? document.getElementById(options.lightboxId) : null;
   var lbImg = options.lightboxImgId ? document.getElementById(options.lightboxImgId) : null;
   var linkTo = options.linkTo || null;
+  var closeBtn = null;
+  var openTrigger = null;
 
   if (!grid) return;
 
@@ -30,15 +32,32 @@ window.initPhotoGallery = function (options) {
   }
 
   if (lightbox && lbImg) {
-    var closeBtn = options.lightboxCloseId ? document.getElementById(options.lightboxCloseId) : null;
+    closeBtn = options.lightboxCloseId ? document.getElementById(options.lightboxCloseId) : null;
     var close = function () {
+      if (!lightbox.classList.contains("active")) return;
       lightbox.classList.remove("active");
-      lbImg.src = "";
+      lightbox.setAttribute("aria-hidden", "true");
+      lightbox.hidden = true;
+      lbImg.removeAttribute("src");
+      lbImg.alt = "";
       document.body.style.overflow = "";
+      if (openTrigger) openTrigger.focus();
+      openTrigger = null;
     };
-    if (closeBtn) closeBtn.onclick = close;
-    lightbox.onclick = function (e) { if (e.target === lightbox) close(); };
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    if (closeBtn) closeBtn.addEventListener("click", close);
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox) close();
+    });
+    document.addEventListener("keydown", function (event) {
+      if (!lightbox.classList.contains("active")) return;
+      if (event.key === "Escape") {
+        event.preventDefault();
+        close();
+      } else if (event.key === "Tab" && closeBtn) {
+        event.preventDefault();
+        closeBtn.focus();
+      }
+    });
   }
 
   fetch(API_URL)
@@ -51,30 +70,45 @@ window.initPhotoGallery = function (options) {
       var imgs = all.filter(function (item) { return IMAGE_EXTS.test(item.name); });
 
       if (imgs.length === 0) {
+        grid.setAttribute("aria-busy", "false");
         if (loading) loading.textContent = "No photos found.";
         return;
       }
 
       var selected = shuffle(imgs).slice(0, max);
       if (loading) loading.remove();
+      grid.setAttribute("aria-busy", "false");
 
       selected.forEach(function (item) {
         var src = publicUrl(item.name);
-        var wrap = document.createElement(linkTo ? "a" : "div");
+        var alt = item.name.split("/").pop().replace(/\.[^.]+$/, "").replace(/[_-]+/g, " ");
+        var wrap = document.createElement(linkTo ? "a" : (lightbox ? "button" : "div"));
         wrap.className = "photo-grid-item";
-        if (linkTo) wrap.href = linkTo;
+        if (linkTo) {
+          wrap.href = linkTo;
+          wrap.setAttribute("aria-label", "View photo in full gallery: " + alt);
+        } else if (lightbox) {
+          wrap.type = "button";
+          wrap.setAttribute("aria-label", "Open photo: " + alt);
+        }
 
         if (lightbox && lbImg && !linkTo) {
-          wrap.onclick = function () {
+          wrap.addEventListener("click", function () {
+            openTrigger = wrap;
             lbImg.src = src;
+            lbImg.alt = alt;
+            lightbox.hidden = false;
+            lightbox.setAttribute("aria-hidden", "false");
             lightbox.classList.add("active");
             document.body.style.overflow = "hidden";
-          };
+            if (closeBtn) closeBtn.focus();
+          });
         }
 
         var img = document.createElement("img");
-        img.alt = item.name.split("/").pop().replace(/\.[^.]+$/, "");
+        img.alt = alt;
         img.loading = "lazy";
+        img.decoding = "async";
         img.onerror = function () { wrap.style.display = "none"; };
         img.src = src;
 
@@ -83,6 +117,7 @@ window.initPhotoGallery = function (options) {
       });
     })
     .catch(function (err) {
+      grid.setAttribute("aria-busy", "false");
       if (loading) loading.textContent = "Failed to load photos: " + err.message;
     });
 };
