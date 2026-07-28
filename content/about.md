@@ -52,6 +52,12 @@ The last years I have received various awards, here is an extract:
 - EMC Elect 2016 & 2017
 - Top Newcomer Award Q2 2015
 
+# Press
+{{< download file="/documents/Computerwoche-Aus_Multi-Cloud_wird_Poly-Cloud.pdf" title="Aus Multi-Cloud wird Poly-Cloud (Computerwoche)" class="wrapper_download_left" >}}
+{{< download file="/documents/Computerwoche-Wie_Cloud-Native_Ihr_Business_befeuert.pdf" title="Wie Cloud-Native Ihr Business befeuert (Computerwoche)" class="wrapper_download_left" >}}
+
+For high-resolution portrait photos and a formal third-person bio for press or media use, see the [press kit]({{< ref "/bio" >}}).
+
 # Curriculum Vitae
 Please find below my current CV.  
 {{< download file="/documents/CV_Stephan_Michard.pdf" title="Download my CV" >}}

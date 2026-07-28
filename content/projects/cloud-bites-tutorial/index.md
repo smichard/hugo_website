@@ -8,3 +8,5 @@ weight: 1
 ---
 
 A tutorial to introduce the basics of application deployment in a cloud-native environment.
+
+{{< download file="/documents/Cloud_Bites_Slides.pdf" title="Download the slides" >}}

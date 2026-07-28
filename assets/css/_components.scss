@@ -162,6 +162,36 @@
 
 .btn svg { width: 0.9rem; height: 0.9rem; }
 
+// Download / button shortcodes (content-authored links)
+
+a.download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+a.download:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.wrapper_download_left {
+  margin: var(--space-1) 0;
+}
+
+.wrapper_download_center {
+  text-align: center;
+  margin: var(--space-2) 0;
+}
+
 // Tags / badges
 
 .tag {
