@@ -63,8 +63,14 @@ ul, ol { padding-left: 1.25rem; }
   min-height: 100vh;
 }
 
-.main {
+// Grows to fill remaining viewport height so the footer sticks to the
+// bottom on short pages, regardless of what markup a page's own
+// "content" block renders internally.
+.page-content {
   flex: 1;
+}
+
+.main {
   padding: var(--space-5) 0 var(--space-6);
 }
 

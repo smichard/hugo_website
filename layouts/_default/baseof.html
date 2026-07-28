@@ -5,7 +5,9 @@
     <div class="wrapper">
         {{ partial "header.html" . }}
 
-      		{{ block "content" . }}{{ end }}
+        <div class="page-content">
+          {{ block "content" . }}{{ end }}
+        </div>
 
       {{ partial "footer.html" . }}
      </div>

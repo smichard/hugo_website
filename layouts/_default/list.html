@@ -1,5 +1,4 @@
 {{ define "content" }}
-{{ $data := .Data }}
 <div class="post-warp archive">
     <h2 class="post-title">{{ humanize .Title }}</h2>
     {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
