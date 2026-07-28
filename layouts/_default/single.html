@@ -8,18 +8,17 @@
                 <span class="post-time">
                     {{ i18n "on" }} <time datetime={{.Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} >{{ .Date.Format (.Site.Params.dateFormatToUse | default "2 January 2006") }}</time>
                 </span>
-                {{ i18n "in" }}
                 {{ with .Params.categories -}}
-                <i class="iconfont icon-folder"></i>
+                &middot;
                 <span class="post-category">
                         {{ range . }}
                         {{- $name := . -}}
                         {{- with $.Site.GetPage "taxonomy" (printf "categories/%s" $name) | default ($.Site.GetPage "taxonomy" (printf "categories/%s" ($name | urlize))) -}}
-                        <a href="{{ .Permalink }}"> {{ $name }} </a>
+                        <a href="{{ .Permalink }}">{{ $name }}</a>
                         {{ end -}}
                         {{ end }}
                 </span> {{- end }}
-                <i class="iconfont icon-timer"></i>
+                &middot;
                 {{.ReadingTime }} min
         </div>
     </header>
@@ -95,19 +94,12 @@
 
     <div class="post-nav">
         {{ if .PrevInSection }}
-        <a href="{{.PrevInSection.Permalink}}" class="prev" rel="prev" title="{{ .PrevInSection.Title}}"><i class="iconfont icon-dajiantou"></i>&nbsp;{{ .PrevInSection.Title}}</a>
+        <a href="{{.PrevInSection.Permalink}}" class="prev" rel="prev" title="{{ .PrevInSection.Title}}">&larr;&nbsp;{{ .PrevInSection.Title}}</a>
         {{ end }}
         {{ if .NextInSection }}
-        <a href="{{.NextInSection.Permalink}}" class="next" rel="next" title="{{.NextInSection.Title}}">{{.NextInSection.Title}}&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
+        <a href="{{.NextInSection.Permalink}}" class="next" rel="next" title="{{.NextInSection.Title}}">{{.NextInSection.Title}}&nbsp;&rarr;</a>
         {{ end }}
     </div>
-
-    <!--<div class="post-comment">
-        {{ if ( .Params.showComments | default true ) }}
-        {{ partial "comments.html" . }}
-        {{ end }}
-    </div>-->
 </article>
-{{ partial "toc_large.html" . }}
 {{- end }}
 

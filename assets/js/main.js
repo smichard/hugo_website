@@ -11,6 +11,16 @@
     });
   }
 
+  var expandButtons = document.querySelectorAll(".expand__button");
+  expandButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var content = btn.nextElementSibling;
+      var isOpen = content.style.maxHeight;
+      content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
+      btn.classList.toggle("expand__button--open", !isOpen);
+    });
+  });
+
   var themeToggle = document.getElementById("theme-toggle");
 
   if (themeToggle) {
