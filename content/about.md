@@ -5,7 +5,8 @@ draft: false
 type: "page"
 author: "Stephan Michard"
 tags: []
-menu: "main"
+aliases: ["/cv/"]
+credly_url: "https://www.credly.com/users/stephan-michard.07f77149/badges"
 ---
 
 # hello world
@@ -38,3 +39,23 @@ I regularly explore ideas at the intersection of technology, business, and socie
 - Zurück zur Zukunft - [link](https://zurueckzurzukunft.de)
 - Doppelgänger Tech Talk - [link](https://www.doppelgaenger.io/)
 - Pushing Limits - [link](https://pushing-limits.de/)
+
+# Certifications
+I love to familiarize myself with new technologies, tools, or work methods, so I constantly try to educate myself. You can track my advancements on [Credly](https://www.credly.com/users/stephan-michard.07f77149/badges).
+
+{{< certifications >}}
+
+# Awards
+The last years I have received various awards, here is an extract:
+- Dell Presidents Club 2022
+- Dell exSEllence class 2019
+- EMC Elect 2016 & 2017
+- Top Newcomer Award Q2 2015
+
+# Curriculum Vitae
+Please find below my current CV.  
+{{< download file="/documents/CV_Stephan_Michard.pdf" title="Download my CV" >}}
+
+# Let's talk
+With the content on this website you got an impression about me. If you think it makes sense to talk I look forward to an interaction, you can find my Calendly link here:  
+{{< button href="https://red.ht/meet_stephan" >}}Schedule time with me{{< /button >}}
