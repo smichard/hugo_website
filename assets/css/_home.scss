@@ -9,9 +9,16 @@
 
 .home-hero-grid {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 320px 1fr;
   gap: var(--space-5);
   align-items: start;
+}
+
+.home-hero-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .home-hero-about {
@@ -36,6 +43,8 @@
 
 .home-hero-name {
   margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 .home-hero-subtitle {
