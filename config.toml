@@ -81,7 +81,6 @@ pygmentsCodefences = true
     tagline = "a collection of random thoughts" # tagline
     headtitle = "vCard - Stephan Michard" #website title for header
     cdn_url = ""           # Base CDN URL
-    home_mode = "" # post or other
     dateFormatToUse = "" # set date format, default "2 January 2006"
     
     google_verification = ""
