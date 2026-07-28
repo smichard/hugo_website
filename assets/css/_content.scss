@@ -149,6 +149,60 @@
   padding-left: 1rem;
 }
 
+// Collapsible code shortcode
+
+.collapsable-code {
+  position: relative;
+  margin: var(--space-2) 0;
+}
+
+.collapsable-code .toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lbl-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  padding: 0.5rem 0.9rem;
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  user-select: none;
+}
+
+.collapsable-code__language {
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* unchecked = content visible -> invite "collapse"; checked = content hidden -> invite "expand" */
+.collapsable-code__toggle::before {
+  content: attr(data-label-collapse);
+}
+
+.toggle:checked + .lbl-toggle .collapsable-code__toggle::before {
+  content: attr(data-label-expand);
+}
+
+.collapsable-code .toggle + .lbl-toggle + .highlight {
+  display: block;
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.collapsable-code .toggle:checked ~ .highlight {
+  display: none;
+}
+
 // Copy-to-clipboard button on code blocks
 
 .highlight { position: relative; }
