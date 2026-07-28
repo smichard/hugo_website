@@ -1,0 +1,103 @@
+// Generic content-page chrome shared by posts, about, projects, book, etc.
+// Post-specific bits (TOC, share links, prev/next nav) are layered on top
+// in their own stylesheet once those templates are redesigned.
+
+.post-warp {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.post-header {
+  margin-bottom: var(--space-3);
+}
+
+.post-title {
+  margin-bottom: var(--space-1);
+}
+
+.post-meta {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.post-content {
+  font-size: 1.05rem;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  margin-top: var(--space-4);
+}
+
+.post-content img {
+  border-radius: var(--radius);
+  margin: var(--space-2) 0;
+}
+
+.post-content blockquote {
+  margin: var(--space-3) 0;
+  padding: var(--space-1) var(--space-3);
+  border-left: 3px solid var(--accent);
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.post-content code {
+  background: var(--bg-inset);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.post-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--space-3) 0;
+}
+
+.post-content th,
+.post-content td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.image-caption {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+}
+
+// Archive-style listing (posts index, terms, book)
+
+.archive {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.archive-item {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.archive-item-link {
+  color: var(--text);
+}
+
+.archive-item-date {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}

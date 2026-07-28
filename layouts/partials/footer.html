@@ -1,24 +1,20 @@
-<footer class="footer">
+<footer class="site-footer">
+  <div class="container">
     <div class="copyright">
-        &copy;
-        {{ if .Site.Params.since }}
-        <span itemprop="copyrightYear">{{ .Site.Params.since }} - {{ now.Format "2006" }}</span>
-        {{ else }}
-        <span itemprop="copyrightYear">{{ now.Format "2006" }}</span>
-        {{ end }}
-
-        {{ if .Site.Params.author }}
-            <span class="author" itemprop="copyrightHolder">
-                <a href="{{ .Site.BaseURL }}">{{ .Site.Params.author }}</a> |
-            </span>
-        {{ end }}
-
-        <span>
-            Crafted by
-            <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreferrer">KeepIt</a> &amp;
-            <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hugo</a>
-        </span>
+      &copy;
+      {{ if .Site.Params.since }}
+      <span itemprop="copyrightYear">{{ .Site.Params.since }}&ndash;{{ now.Format "2006" }}</span>
+      {{ else }}
+      <span itemprop="copyrightYear">{{ now.Format "2006" }}</span>
+      {{ end }}
+      {{ with .Site.Params.author }}
+      <a href="{{ $.Site.BaseURL }}">{{ . }}</a>
+      {{ end }}
     </div>
+    <div class="social-links">
+      {{ partial "social.html" . }}
+    </div>
+  </div>
 </footer>
 
 {{ partial "js.html" . }}
