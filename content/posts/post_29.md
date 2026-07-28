@@ -1,7 +1,7 @@
 ---
 title: "Task Management with Tududi"
 date: 2026-07-25
-draft: false
+draft: true
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]

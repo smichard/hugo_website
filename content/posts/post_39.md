@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
 tags: ["cli", "terminal", "ai", "agents", "productivity"]
+thumbnail: "/images/posts/post_39/overview.png"
 toc:
   enable: false
 ---
