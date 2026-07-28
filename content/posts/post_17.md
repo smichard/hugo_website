@@ -6,7 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Innovation"]
 tags: ["Workshop","Strategy","Collaboration"]
-thumbnail: "/images/posts/post_17/overview.png"
+thumbnail: "/images/posts/post_17/lsp.jpg"
 toc:
   enable: false
 ---
