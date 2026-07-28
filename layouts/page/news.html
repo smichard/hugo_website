@@ -69,6 +69,10 @@
     object-fit: cover !important;
     object-position: center !important;
     display: block;
+    /* override global .post-content img margin/radius, which otherwise
+       pushes the absolutely-positioned image 16px down from the top edge */
+    margin: 0 !important;
+    border-radius: 0 !important;
 }
 
 .feed-card-image-placeholder {
@@ -88,6 +92,7 @@
     border-radius: 10px;
     object-fit: contain;
     opacity: 0.85;
+    margin: 0 !important;
 }
 
 .feed-card-domain {
