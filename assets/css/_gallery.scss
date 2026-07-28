@@ -2,10 +2,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: var(--space-1);
+  margin-bottom: var(--space-6);
 }
 
 .photo-grid--teaser {
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  margin-bottom: 0;
 }
 
 .photo-grid-item {
