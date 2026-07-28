@@ -1,0 +1,16 @@
+{{ define "content" }}
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">{{ .Title }}</h1>
+        {{ with .Params.summary }}<p class="post-meta">{{ . }}</p>{{ end }}
+    </header>
+    {{ with .Params.github }}
+    <a class="btn" href="{{ . }}" target="_blank" rel="noopener noreferrer">
+        {{ partial "icons.html" "github" }} View on GitHub
+    </a>
+    {{ end }}
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}
