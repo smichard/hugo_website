@@ -50,29 +50,9 @@ pygmentsCodefences = true
     weight = 4
 
   [[menu.main]]
-    name = "Book"
-    url = "/book/"
-    weight = 5
-
-  [[menu.main]]
     name = "News"
     url = "/news/"
-    weight = 6
-
-  [[menu.main]]
-    name = "Feedback"
-    url = "/feedback/"
-    weight = 7
-
-  [[menu.main]]
-    name = "Categories"
-    url = "/categories/"
-    weight = 8
-
-  [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 9
+    weight = 5
 
 [params]
     since = 2012

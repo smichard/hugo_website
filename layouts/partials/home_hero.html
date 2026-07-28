@@ -1,17 +1,20 @@
 <section class="home-hero">
-  <div class="container">
-    {{ with .Site.Params.avatar }}
-    <img class="home-hero-avatar" src="{{ . }}" alt="{{ $.Site.Params.author }}">
-    {{ end }}
-    <h1 class="home-hero-name">{{ .Site.Params.author }}</h1>
-    {{ with .Site.Params.subtitle }}
-    <p class="home-hero-subtitle">{{ . }}</p>
-    {{ end }}
-    {{ with .Site.Params.tagline }}
-    <p class="home-hero-tagline">{{ . }}</p>
-    {{ end }}
-    <div class="social-links">
-      {{ partial "social.html" . }}
+  <div class="container home-hero-grid">
+    <div class="home-hero-profile">
+      {{ with .Site.Params.avatar }}
+      <img class="home-hero-avatar" src="{{ . }}" alt="{{ $.Site.Params.author }}">
+      {{ end }}
+      <h1 class="home-hero-name">{{ .Site.Params.author }}</h1>
+      {{ with .Site.Params.subtitle }}
+      <p class="home-hero-subtitle">{{ . }}</p>
+      {{ end }}
+      {{ with .Site.Params.tagline }}
+      <p class="home-hero-tagline">{{ . }}</p>
+      {{ end }}
+      <div class="social-links">
+        {{ partial "social.html" . }}
+      </div>
     </div>
+    {{ partial "home_about_block.html" . }}
   </div>
 </section>

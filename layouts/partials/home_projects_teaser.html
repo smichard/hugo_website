@@ -1,4 +1,4 @@
-{{ $projects := where site.RegularPages "Section" "projects" }}
+{{ $projects := where site.RegularPages "Type" "projects" }}
 {{ $projects = $projects.ByWeight }}
 {{ if $projects }}
 <section class="home-section home-section--wide">

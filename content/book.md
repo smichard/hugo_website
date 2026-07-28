@@ -1,8 +1,10 @@
 ---
-title: "Book"
+title: "Own Your AI Stack"
 draft: false
-type: "page"
+type: "projects"
 layout: "book"
+summary: "A practitioner's guide to building and operating your own AI stack, from homelab experiments to production-grade platforms."
+weight: 3
 ---
 
 Turns out "a collection of random thoughts" is not the most compelling way to onboard someone into AI and OpenShift. Who knew. This book pulls together the most useful posts from this blog, reorganizes them into something that actually flows. Same content, less chaos.  
