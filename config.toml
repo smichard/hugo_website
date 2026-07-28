@@ -30,8 +30,8 @@ pygmentsCodefences = true
 
 [menu]
   [[menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "Posts"
+    url = "/posts/"
     weight = 1
 
   [[menu.main]]
@@ -45,18 +45,18 @@ pygmentsCodefences = true
     weight = 3
 
   [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
-    weight = 4
-
-  [[menu.main]]
     name = "Photos"
     url = "/photos/"
-    weight = 5
+    weight = 4
 
   [[menu.main]]
     name = "News"
     url = "/news/"
+    weight = 5
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
     weight = 6
 
 [params]

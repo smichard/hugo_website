@@ -1,6 +1,6 @@
 {{ define "content" }}
 <div class="archive">
-    <h2 class="post-title">{{ .Title }}</h2>
+    <h2 class="post-title projects-title">{{ .Title }}</h2>
     <div class="card-grid projects-grid">
         {{ range (where site.RegularPages "Type" "projects").ByWeight }}
         <a class="card" href="{{ .RelPermalink }}">
