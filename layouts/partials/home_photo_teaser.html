@@ -10,10 +10,13 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Mobile shows a 3-column grid (three rows of three); wider screens
+    // keep the teaser to a single row of seven.
+    var mobile = window.matchMedia("(max-width: 720px)").matches;
     window.initPhotoGallery({
       gridId: "home-photo-grid",
       loadingId: "home-photo-loading",
-      max: 7,
+      max: mobile ? 9 : 7,
       linkTo: "/photos/"
     });
   });

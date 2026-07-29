@@ -10,6 +10,14 @@
   margin-bottom: 0;
 }
 
+// Mobile shows the teaser as a 3 x 3 grid (nine images loaded via JS);
+// wider screens keep a single row of seven.
+@media (max-width: 720px) {
+  .photo-grid--teaser {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .photo-grid-item {
   border-radius: var(--radius);
   cursor: pointer;

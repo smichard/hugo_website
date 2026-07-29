@@ -18,7 +18,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 8px 0 24px;
+  padding: 8px 0 0;
+  margin-bottom: var(--space-6);
 }
 
 .feed-card {
