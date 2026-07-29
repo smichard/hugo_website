@@ -26,7 +26,7 @@ steps:
   - '--panicOnWarning'
 
 # Check generated SEO, accessibility, JSON-LD, and local asset references.
-- name: python:3.13-alpine
+- name: python:3.14-alpine
   id: Validate output
   entrypoint: python3
   args:
