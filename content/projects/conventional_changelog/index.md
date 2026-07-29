@@ -1,8 +1,8 @@
 ---
-title: "Dummy"
+title: "Conventional Changelog"
 date: 2022-11-02T20:34:39Z
 draft: false
-summary: "Dummy"
+summary: "Conventional Changelog"
 github: "https://github.com/smichard/graphR"
-weight: 4
+weight: 3
 ---
