@@ -10,7 +10,7 @@ steps:
   - '--recursive'
 
 # Fail before packaging or deployment if Hugo reports a production warning.
-- name: hugomods/hugo:exts
+- name: hugomods/hugo:debian-0.164.0@sha256:79151e1fef4a53b7a01470370055519f643f8f2b7400f72588a5946e75c81a6d
   id: Validate build
   entrypoint: hugo
   env:

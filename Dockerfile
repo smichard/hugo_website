@@ -1,7 +1,7 @@
 #####################################################################
 #                            Build Stage                            #
 #####################################################################
-FROM hugomods/hugo:exts as builder
+FROM hugomods/hugo:debian-0.164.0@sha256:79151e1fef4a53b7a01470370055519f643f8f2b7400f72588a5946e75c81a6d AS builder
 # Base URL
 ARG HUGO_BASEURL=
 ENV HUGO_BASEURL=${HUGO_BASEURL}
