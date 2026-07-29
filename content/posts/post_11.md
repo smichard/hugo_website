@@ -6,7 +6,6 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Projects"]
 tags: ["coding","documentation","tutorial"]
-
 toc:
   enable: false
 ---

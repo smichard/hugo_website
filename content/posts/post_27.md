@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Books"]
 tags: ["book-review","literature"]
+thumbnail: "/images/posts/books/die_dssistention.jpg"
 toc:
   enable: false
 ---

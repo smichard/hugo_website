@@ -1,0 +1,346 @@
+// Generic content-page chrome shared by posts, about, projects, book, etc.
+// Post-specific bits (TOC, share links, prev/next nav) are layered on top
+// in their own stylesheet once those templates are redesigned.
+
+.post-warp {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.post-header {
+  margin-bottom: var(--space-3);
+}
+
+.post-title {
+  margin-bottom: var(--space-1);
+}
+
+.post-meta {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.post-content {
+  font-size: 1.05rem;
+}
+
+.post-warp > .btn {
+  margin-bottom: var(--space-2);
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  margin-top: var(--space-4);
+}
+
+.post-content img {
+  border-radius: var(--radius);
+  margin: var(--space-2) 0;
+}
+
+.post-content blockquote {
+  margin: var(--space-3) 0;
+  padding: var(--space-1) var(--space-3);
+  border-left: 3px solid var(--accent);
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.post-content code {
+  background: var(--bg-inset);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.post-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--space-3) 0;
+}
+
+.post-content th,
+.post-content td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.image-caption {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+}
+
+// Archive-style listing (posts index, terms, book)
+
+.archive {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.projects-title {
+  margin-bottom: var(--space-4);
+}
+
+.projects-grid {
+  margin-bottom: var(--space-6);
+}
+
+.archive-year {
+  margin-top: var(--space-5);
+}
+
+.archive-item {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.archive-item-link {
+  color: var(--text);
+}
+
+.archive-item-date {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+// Collapsible table of contents (rarely used -- only shortcode-demo content
+// enables it today -- kept simple rather than a full sidebar layout)
+
+.expand {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-3);
+}
+
+.expand__button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  padding: var(--space-1) var(--space-2);
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.expand-icon svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  transition: transform 0.15s ease;
+}
+
+.expand__button--open .expand-icon svg {
+  transform: rotate(90deg);
+}
+
+.expand__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+  padding: 0 var(--space-2);
+}
+
+.expand__content[hidden] {
+  display: none;
+}
+
+.expand__content--toc nav ul {
+  padding-left: 1rem;
+}
+
+// Collapsible code shortcode
+
+.collapsable-code {
+  position: relative;
+  margin: var(--space-2) 0;
+}
+
+.collapsable-code .toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lbl-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  padding: 0.5rem 0.9rem;
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  user-select: none;
+}
+
+.collapsable-code__language {
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* unchecked = content visible -> invite "collapse"; checked = content hidden -> invite "expand" */
+.collapsable-code__toggle::before {
+  content: attr(data-label-collapse);
+}
+
+.toggle:checked + .lbl-toggle .collapsable-code__toggle::before {
+  content: attr(data-label-expand);
+}
+
+.collapsable-code .toggle + .lbl-toggle + .highlight {
+  display: block;
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.collapsable-code .toggle:checked ~ .highlight {
+  display: none;
+}
+
+// Copy-to-clipboard button on code blocks
+
+.highlight { position: relative; }
+
+.highlight-copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.highlight-copy-btn:hover {
+  color: var(--text);
+}
+
+// Post footer chrome
+
+.post-copyright {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.copyright-item {
+  margin: 0.25rem 0;
+}
+
+.post-tags {
+  margin-top: var(--space-2);
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+// Pagination
+
+.pagination {
+  list-style: none;
+  display: flex;
+  gap: 0.4rem;
+  padding: 0;
+  margin: var(--space-4) 0 0;
+}
+
+.page-item .page-link a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+
+.page-item.active .page-link a,
+.page-item .page-link a:hover {
+  background: var(--bg-inset);
+  color: var(--text);
+  text-decoration: none;
+}
+
+// Categories / tag-cloud pages
+
+.categories-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.card-item .categories {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+}
+
+.card-item .categories h2 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-1);
+}
+
+.card-item .archive-item {
+  border-bottom: none;
+  padding: 0.15rem 0;
+}
+
+.more-post-link {
+  font-size: 0.85rem;
+}
+
+.tag-cloud-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: var(--space-3);
+}
+
+.custom-cloud-links {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--bg-inset);
+  color: var(--text-muted);
+}
+
+.custom-cloud-links:hover {
+  color: var(--accent);
+  text-decoration: none;
+}

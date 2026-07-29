@@ -1,0 +1,32 @@
+<div class="home-hero-about">
+  <div class="home-hero-about-section home-bio">
+    <div class="home-section-header">
+      <h2>About</h2>
+      <a class="home-section-link" href="/about/">Full bio &amp; certifications &rarr;</a>
+    </div>
+    <p>
+      I'm a Solution Architect and technology strategist at Red Hat, where I help enterprises
+      design cloud and AI platforms that turn strategy into production-ready systems. My
+      background is in electrical engineering, with a PhD from RWTH Aachen University and
+      research roots in solar energy systems.
+    </p>
+    <p>
+      Outside of work I train for endurance sports, and I write here about cloud-native
+      platforms, AI adoption, and open-source ecosystems.
+    </p>
+  </div>
+  {{ $certs := hugo.Data.certifications }}
+  {{ if $certs }}
+  <div class="home-hero-about-section">
+    <div class="home-section-header">
+      <h2>Certifications</h2>
+      <a class="home-section-link" href="/about/#certifications">All {{ len $certs }} &rarr;</a>
+    </div>
+    <div class="certifications-strip">
+      {{ range first 6 $certs }}
+      <span class="tag">{{ .name }}</span>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>

@@ -246,17 +246,6 @@ print(thisdict["brand"])
 ## Adjust title and center on page
 {{< download file="/images/posts/test_image.jpg" title="Download image" class="wrapper_download_center" >}}  
 
-# Calendly 1
-
-{{< calendly calendar="stephan-michard" />}}
-
-# Calendly 2
-
-{{< calendly calendar="stephan-michard" >}}
-  Book a time to talk now!
-{{< /calendly >}}
-
-
 # Notice
 {{< notice note >}}
 It's worth to notice that: ...

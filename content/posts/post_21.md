@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift","aws","gitops","gpu","nvidia","rhoai"]
+thumbnail: "/images/posts/post_21/overview.png"
 toc:
   enable: false
 ---

@@ -1,32 +1,14 @@
-{{/* ft-adjustment: This file has been created to override the theme's js.html partial
+{{ $main := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $main.Permalink }}"></script>
 
-The theme's partial had an issue with the images ('lightgallery' library to be precise).
-The issue has been fixed in this js.html partial.
+{{ if or .IsHome (eq .Params.layout "photos") }}
+{{ $gallery := resources.Get "js/gallery.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $gallery.Permalink }}"></script>
+{{ end }}
 
-*/}}
-
-{{ $cdn_url := .Scratch.Get "cdn_url" }}
-{{ $postHasImages :=  .Scratch.Get "postHasImages" }}
-{{ $jquery := resources.Get "/js/jquery.min.js" }}
-{{ $lazysizes := resources.Get "/js/lazysizes.min.js" }}
-{{ $prettify := resources.Get "/js/prettify.min.js" }}
-{{ $dynamic := resources.Get "/js/dynamic.to.top.min.js" }}
-{{ $main := resources.Get "/js/main.js" }}
-{{ $lightGallery := resources.Get "/js/lightGallery-all.min.js" }}
-{{ $lightGallery_init := resources.Get "/js/lightGallery-init.js" }}
-
-{{ if .IsPage }}
-    {{ if $postHasImages }}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        {{ $vendorScript := slice $jquery $lazysizes $prettify $dynamic $main $lightGallery $lightGallery_init | resources.Concat "/js/vendor_gallery.js" | resources.Minify }}
-        <script src="{{ printf "%s%s" $cdn_url $vendorScript.RelPermalink }}" async></script>
-    {{ else }}
-        {{ $vendorScript := slice $jquery $prettify $dynamic $main | resources.Concat "/js/vendor_no_gallery.js" | resources.Minify }}
-        <script src="{{ printf "%s%s" $cdn_url $vendorScript.RelPermalink }}" async></script>
-    {{ end }}
-{{ else }}
-    {{ $vendorScript := slice $jquery $main | resources.Concat "/js/vendor_main.js" | resources.Minify }}
-    <script src="{{ printf "%s%s" $cdn_url $vendorScript.RelPermalink }}" async></script>
+{{ if eq .Params.layout "news" }}
+{{ $news := resources.Get "js/news.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $news.Permalink }}"></script>
 {{ end }}
 
 {{ if eq (getenv "HUGO_ENV") "production" }}

@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift", "ai", "hermes", "agent", "vllm"]
+thumbnail: "/images/posts/post_33/overview.png"
 toc:
   enable: false
 ---

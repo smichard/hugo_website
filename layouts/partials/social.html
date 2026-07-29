@@ -1,39 +1,21 @@
-{{ with .Site.Params.Social.Twitter }}
-<a href="https://twitter.com/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-twitter"></i></a>
+{{ with .Site.Params.social.Linkedin }}
+<a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn">{{ partial "icons.html" "linkedin" }}</a>
 {{ end }}
-{{ with .Site.Params.Social.Mastodon}}
-<a href="{{ . }}" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-mastodon"></i></a>
+{{ with .Site.Params.social.GitHub }}
+<a href="https://github.com/{{ . }}" target="_blank" rel="me noopener noreferrer" aria-label="GitHub">{{ partial "icons.html" "github" }}</a>
 {{ end }}
-{{ with .Site.Params.Social.PostNews }}
-<a href="https://post.news/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-folder"></i></a> 
+{{ with .Site.Params.social.Instagram }}
+<a href="https://www.instagram.com/{{ . }}/" target="_blank" rel="me noopener noreferrer" aria-label="Instagram">{{ partial "icons.html" "instagram" }}</a>
 {{ end }}
-{{ with .Site.Params.Social.Instagram }}
-<a href="https://www.instagram.com/{{.}}/" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-instagram"></i></a> 
+{{ with .Site.Params.social.Feedly }}
+<a href="{{ . }}" target="_blank" rel="me noopener noreferrer" aria-label="Feedly">{{ partial "icons.html" "feedly" }}</a>
 {{ end }}
-{{ with .Site.Params.Social.LinkedIn }}
-<a href="https://linkedin.com/in/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-linkedin"></i></a>
+{{ with .Site.Params.social.Substack }}
+<a href="{{ . }}" target="_blank" rel="me noopener noreferrer" aria-label="Substack">{{ partial "icons.html" "substack" }}</a>
 {{ end }}
-{{ with .Site.Params.Social.Youtubecustom}}
-<a href="https://www.youtube.com/c/{{.}}" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-youtube"></i></a>
+{{ with .Site.Params.social.matrix }}
+<a href="https://matrix.to/#/{{ . }}" target="_blank" rel="me noopener noreferrer" aria-label="Matrix">{{ partial "icons.html" "matrix" }}</a>
 {{ end }}
-{{ with .Site.Params.Social.Youtubechannel}}
-<a href="https://www.youtube.com/channel/{{.}}" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-youtube"></i></a>
-{{ end }}
-{{ with .Site.Params.Social.Github }}
-<a href="https://github.com/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-github"></i></a>
-{{ end }}
-{{ with .Site.Params.Social.Strava}}
-<a href="https://www.strava.com/athletes/{{.}}" rel="me noopener noreffer" target="_blank"><i class="iconfont icon-strava"></i></a>
-{{ end }}
-{{ with .Site.Params.Social.Feedly }}
-<a href="{{ . }}" target="_blank" rel="me noopener noreffer"><span class="icon-img icon-feedly" aria-label="Feedly"></span></a>
-{{ end }}
-{{ with .Site.Params.Social.Substack}}
-<a href="{{.}}" target="_blank" rel="me noopener noreffer"><span class="icon-img icon-substack" aria-label="Substack"></span></a>
-{{ end }}
-{{ with .Site.Params.Social.Matrix }}
-<a href="https://matrix.to/#/{{.}}" target="_blank" rel="me noopener noreffer" target="_blank"><i class="fa fa-matrix-org"></i></a>
-{{ end }}
-{{ with .Site.Params.Social.Email}}
-<a href="mailto:{{.}}" rel="me noopener noreffer"><i class="iconfont icon-mail"></i></a>
+{{ with .Site.Params.social.Email }}
+<a href="mailto:{{ . }}" rel="me noopener noreferrer" aria-label="Email">{{ partial "icons.html" "email" }}</a>
 {{ end }}

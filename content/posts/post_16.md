@@ -13,7 +13,7 @@ toc:
 ## Introduction
 Financial planning is often built on a deterministic story: *“If I invest X € each month at 5 % per year, I’ll have Y € in 20 years.”* But real markets are anything but deterministic. Price fluctuations, volatility, and unexpected shocks can significantly change outcomes.
 
-This new tool builds on the foundation of the [Compound Interest Calculator](https://michard.io/2025/compound-simulation-exploring-portfolio-uncertainty/), which takes a deterministic view of capital growth. This new tool introduces a probabilistic perspective by using Monte Carlo simulation to explore a spectrum of possible portfolio trajectories based on the users assumptions. Instead of a single projected curve, it generates a fan chart that visualizes uncertainty bands, the likelihood of reaching specific targets, and how sensitive outcomes are to your savings rate.
+This new tool builds on the foundation of the [Compound Interest Calculator]({{< ref "/posts/post_15.md" >}}), which takes a deterministic view of capital growth. This new tool introduces a probabilistic perspective by using Monte Carlo simulation to explore a spectrum of possible portfolio trajectories based on the users assumptions. Instead of a single projected curve, it generates a fan chart that visualizes uncertainty bands, the likelihood of reaching specific targets, and how sensitive outcomes are to your savings rate.
 
 This is not a crystal ball. It’s a scenario explorer — a way to understand how uncertain markets shape financial trajectories.
 

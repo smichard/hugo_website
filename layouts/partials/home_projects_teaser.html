@@ -1,0 +1,15 @@
+{{ $projects := where site.RegularPages "Type" "projects" }}
+{{ $projects = $projects.ByWeight }}
+{{ if $projects }}
+<section class="home-section home-section--wide">
+  <div class="home-section-header">
+    <h2>Projects</h2>
+    <a class="home-section-link" href="/projects/">All projects &rarr;</a>
+  </div>
+  <div class="card-grid">
+    {{ range first 4 $projects }}
+    {{ partial "project_card.html" . }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

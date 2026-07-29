@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
 tags: ["openclaw", "ai", "agent", "podman", "container"]
+thumbnail: "/images/posts/post_37/overview.png"
 toc:
   enable: false
 ---

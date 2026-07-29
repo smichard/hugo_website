@@ -1,0 +1,107 @@
+.home-hero {
+  padding: var(--space-6) 0 var(--space-5);
+  border-bottom: 1px solid var(--border);
+}
+
+.home-hero .container {
+  max-width: var(--wide-width);
+}
+
+.home-hero-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-5);
+  // Desktop: vertically center the profile column against the taller
+  // About + Certifications column. Reset on mobile (single column) below.
+  align-items: center;
+}
+
+.home-hero-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-hero-about {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (max-width: 720px) {
+  .home-hero-grid {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+.home-hero-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--space-2);
+}
+
+.home-hero-name {
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.home-hero-subtitle {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-2);
+}
+
+.home-hero-tagline {
+  max-width: 34rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-3);
+}
+
+.home-section {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-3) 0;
+}
+
+.home-section--wide {
+  max-width: var(--wide-width);
+}
+
+.home-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.home-section-header h2 {
+  margin-bottom: 0;
+}
+
+.home-section-link {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.home-bio p {
+  color: var(--text-muted);
+}
+
+.certifications-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.certifications-strip .tag {
+  text-align: center;
+}

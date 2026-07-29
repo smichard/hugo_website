@@ -5,15 +5,16 @@ draft: false
 type: "page"
 author: "Stephan Michard"
 tags: []
-menu: "main"
+aliases: ["/cv/"]
+credly_url: "https://www.credly.com/users/stephan-michard.07f77149/badges"
 ---
 
-# hello world
+## hello world
 This website was created as an experiment and a way for me to keep track of the various pieces of content I create or am featured in. Occasionally I am interviewed for a newspaper or podcast, or I sometimes create my own texts and technical documentation. The idea is to share useful content on an irregular basis.  
 When creating this website, my focus was to use a simple framework that allows me to publish content quickly and easily. Therefore, I use the Hugo framework to generate static web pages and host them on Google Cloud. Google Cloud allows through the services Cloud Build and Cloud Run to create and publish a container very easily, quickly, and cost-efficiently. I outline the exact workflow in my first post: [Website setup and workflow]({{< ref "/posts/post_1" >}} "Website setup and workflow").  
 
 
-# whoami
+## whoami
 My name Stephan Michard, a Solution Architect and technology strategist based near Cologne, Germany.
 
 I work at Red Hat, where I help enterprises and strategic partners across Central Europe design and deliver cloud and AI platforms that translate business strategy into scalable, production-ready systems. My focus is on bridging the gap between vision and execution: aligning stakeholders, shaping solution architectures, and driving measurable outcomes.
@@ -38,3 +39,8 @@ I regularly explore ideas at the intersection of technology, business, and socie
 - Zurück zur Zukunft - [link](https://zurueckzurzukunft.de)
 - Doppelgänger Tech Talk - [link](https://www.doppelgaenger.io/)
 - Pushing Limits - [link](https://pushing-limits.de/)
+
+## Certifications
+I love to familiarize myself with new technologies, tools, or work methods, so I constantly try to educate myself. You can track my advancements on [Credly](https://www.credly.com/users/stephan-michard.07f77149/badges).
+
+{{< certifications >}}

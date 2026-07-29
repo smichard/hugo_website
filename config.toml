@@ -1,8 +1,8 @@
 baseURL = "https://www.stephan.michard.io/"
-languageCode = "en"
+locale = "en-US"
 defaultContentLanguage = "en"
 
-title = "Home"
+title = "Stephan Michard"
 theme = ["hugo-notice","KeepIt"]
 
 enableEmoji = true
@@ -35,13 +35,13 @@ pygmentsCodefences = true
     weight = 1
 
   [[menu.main]]
-    name = "Book"
-    url = "/book/"
+    name = "Projects"
+    url = "/projects/"
     weight = 2
 
   [[menu.main]]
-    name = "News"
-    url = "/news/"
+    name = "Book"
+    url = "/book/"
     weight = 3
 
   [[menu.main]]
@@ -50,23 +50,22 @@ pygmentsCodefences = true
     weight = 4
 
   [[menu.main]]
-    name = "Categories"
-    url = "/categories/"
+    name = "News"
+    url = "/news/"
     weight = 5
 
   [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
+    name = "About"
+    url = "/about/"
     weight = 6
 
 [params]
-    since = 2012
-    author = "Stephan Michard"               # Author's name
-    subtitle = "Dr. Stephan Michard"       # Subtitle
+    since = 2022
+    author = "Dr. Stephan Michard"               # Author's name
+    subtitle = ""       # Subtitle
     tagline = "a collection of random thoughts" # tagline
-    headtitle = "vCard - Stephan Michard" #website title for header
+    headtitle = "Stephan Michard" #website title for header
     cdn_url = ""           # Base CDN URL
-    home_mode = "" # post or other
     dateFormatToUse = "" # set date format, default "2 January 2006"
     
     google_verification = ""
@@ -78,8 +77,8 @@ pygmentsCodefences = true
     avatar = "/images/me/avatar.jpeg" #comment it to use gravatar
     socialShare = false
 
-    description = "" # site description
-    keywords = "" # site keywords
+    description = "Personal website of Dr. Stephan Michard about cloud-native platforms, AI, open source, technology strategy, projects, and endurance sports."
+    keywords = "cloud-native, artificial intelligence, open source, technology strategy, OpenShift"
 
     license= 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
     favicon = "static/favicon.ico"
@@ -148,8 +147,8 @@ pygmentsCodefences = true
     #Mastodon = "@smichard:matrix.org"
     #Thingiverse = "xxxx"
     matrix = "@smichard:matrix.org"
-    Feedly = "https://feedly.com/i/subscription/content/feed%2Fhttps%3A%2F%2Ffeedly.com%2Ff%2FBoYe8xfqZVzrDQgoOUhWIGCj"
-    Substack = "https://substack.com/@stephanmichard"
+    #Feedly = "https://feedly.com/i/subscription/content/feed%2Fhttps%3A%2F%2Ffeedly.com%2Ff%2FBoYe8xfqZVzrDQgoOUhWIGCj"
+    #Substack = "https://substack.com/@stephanmichard"
 
 [params.share]
 #Twitter = false
@@ -184,33 +183,6 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     url = "cover.png"
     width = 800
     height = 600
-
-[params.gitalk]
-owner = ""       # Your GitHub ID
-repo = ""        # The repo to store comments
-clientId = ""    # Your client ID
-clientSecret = "" # Your client secret
-
-[params.valine]
-  enable = false
-  language = 'en'
-  appId = 'your appId'
-  appKey = 'your appKey'
-  notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
-  verify = false # Verification code
-  avatar = 'mm'
-  placeholder = 'your comments ...'
-  visitor = true
-
-[params.utterances]       # https://utteranc.es/
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-
-[params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-    clientId = ""           # Your client ID
-    clientSecret = ""       # Your client secret
 
 [markup]
   [markup.tableOfContents]

@@ -1,0 +1,15 @@
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ $posts = $posts.ByDate.Reverse }}
+{{ if $posts }}
+<section class="home-section home-section--wide">
+  <div class="home-section-header">
+    <h2>Latest posts</h2>
+    <a class="home-section-link" href="/posts/">All posts &rarr;</a>
+  </div>
+  <div class="card-grid">
+    {{ range first 4 $posts }}
+    {{ partial "post_card.html" . }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

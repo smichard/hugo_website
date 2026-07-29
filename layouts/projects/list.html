@@ -1,0 +1,10 @@
+{{ define "content" }}
+<div class="archive">
+    <h1 class="post-title projects-title">{{ .Title }}</h1>
+    <div class="card-grid projects-grid">
+        {{ range (where site.RegularPages "Type" "projects").ByWeight }}
+        {{ partial "project_card.html" . }}
+        {{ end }}
+    </div>
+</div>
+{{ end }}

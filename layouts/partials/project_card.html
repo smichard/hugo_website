@@ -1,0 +1,25 @@
+{{- $thumb := .Params.thumbnail -}}
+{{- $thumbResource := false -}}
+{{- if not $thumb -}}
+  {{- with .Resources.GetMatch "{cover,thumbnail}.*" -}}
+    {{- $thumb = true -}}
+    {{- $thumbResource = . -}}
+  {{- end -}}
+{{- end -}}
+<a class="card card--media" href="{{ .RelPermalink }}">
+  <div class="card-media{{ if not $thumb }} card-media--empty{{ end }}">
+    {{ with $thumb }}
+      {{ partial "responsive-image.html" (dict
+          "src" .
+          "resource" $thumbResource
+          "alt" $.Title
+          "sizes" "(max-width: 600px) 100vw, 360px"
+          "maxWidth" 600
+      ) }}
+    {{ else }}{{ partial "icons.html" "image" }}{{ end }}
+  </div>
+  <div class="card-body">
+    <h3>{{ .Title }}</h3>
+    <p>{{ .Params.summary }}</p>
+  </div>
+</a>

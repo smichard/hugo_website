@@ -14,6 +14,12 @@
 .book-form {
     clear: both;
     margin-top: 2rem;
+    /* Fixed dark background: the embedded Tally form assumes a dark backdrop
+       (transparentBackground=1, light-colored labels) regardless of the
+       site's own light/dark toggle, so it needs its own stable contrast. */
+    background: #16130f;
+    padding: 1.5rem;
+    border-radius: 8px;
 }
 @media (max-width: 640px) {
     .book-content p:has(img) {
@@ -24,7 +30,7 @@
 }
 </style>
 <div class="post-warp archive">
-    <h2 class="post-title">{{ .Title }}</h2>
+    <h1 class="post-title">{{ .Title }}</h1>
     <div class="post-content book-content">
         {{ .Content }}
     </div>

@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift","aws","automation","gitops","rhoai"]
+thumbnail: "/images/posts/post_20/overview.png"
 toc:
   enable: false
 ---

@@ -1,0 +1,17 @@
+{{- $thumb := .Params.thumbnail -}}
+<a class="card card--media" href="{{ .RelPermalink }}">
+  <div class="card-media{{ if not $thumb }} card-media--empty{{ end }}">
+    {{ with $thumb }}
+      {{ partial "responsive-image.html" (dict
+          "src" .
+          "alt" $.Title
+          "sizes" "(max-width: 600px) 100vw, 360px"
+          "maxWidth" 600
+      ) }}
+    {{ else }}{{ partial "icons.html" "image" }}{{ end }}
+  </div>
+  <div class="card-body">
+    <h3>{{ .Title }}</h3>
+    <p>{{ .Date.Format "2 January 2006" }}</p>
+  </div>
+</a>

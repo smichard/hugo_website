@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift", "ai", "vllm", "inference", "open-webui"]
+thumbnail: "/images/posts/post_32/overview.png"
 toc:
   enable: false
 ---

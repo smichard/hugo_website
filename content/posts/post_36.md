@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift", "ai", "openclaw", "agent", "vllm"]
+thumbnail: "/images/posts/post_36/overview.png"
 toc:
   enable: false
 ---
