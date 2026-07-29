@@ -307,3 +307,12 @@ a.download:hover {
 .card-body {
   padding: var(--space-3);
 }
+
+// Cover image on an individual project page, shown above the GitHub link.
+.project-cover {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto var(--space-4);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
