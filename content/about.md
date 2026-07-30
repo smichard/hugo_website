@@ -41,6 +41,7 @@ I regularly explore ideas at the intersection of technology, business, and socie
 - Pushing Limits - [link](https://pushing-limits.de/)
 
 ## Certifications
-I love to familiarize myself with new technologies, tools, or work methods, so I constantly try to educate myself. You can track my advancements on [Credly](https://www.credly.com/users/stephan-michard.07f77149/badges).
+I love to familiarize myself with new technologies, tools, or work methods, so I constantly try to educate myself.  
+You can track my advancements on [Credly](https://www.credly.com/users/stephan-michard.07f77149/badges).
 
 {{< certifications >}}

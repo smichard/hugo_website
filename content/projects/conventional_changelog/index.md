@@ -16,5 +16,5 @@ A dedicated blog post explains the reasoning behind each convention and provides
 ## References
 - Blog Post - [link]({{< ref "/posts/post_11.md" >}})
 - Opensourcerers Article - [link](https://www.opensourcerers.org/2024/03/25/enhancing-code-project-documentation-through-automated-changelogs/)
-- GitHub repository - [link](https://github.com/smichard/conventional_changelog)
+- GitHub Repository - [link](https://github.com/smichard/conventional_changelog)
 - GitHub Action on the Marketplace - [link](https://github.com/marketplace/actions/generate-changelog-based-on-conventional-commits)

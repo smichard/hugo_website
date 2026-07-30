@@ -6,4 +6,4 @@ layout: "news"
 feedURL: "https://raw.githubusercontent.com/smichard/news-feed/refs/heads/main/rss.xml"
 ---
 
-Staying up to date with the latest developments in technology, particularly in IT and AI, is something I genuinely enjoy, and something that's vital to staying relevant in my field. I follow a mix of podcasts, YouTube channels, blogs, and news outlets to keep my knowledge current. On my Feedly Board, I collect the articles and stories I find most relevant and worth revisiting. Head over and take a look at the collection - [here](https://feedly.com/i/subscription/content/feed%2Fhttps%3A%2F%2Ffeedly.com%2Ff%2FBoYe8xfqZVzrDQgoOUhWIGCj).  
+Staying up to date with the latest developments in technology, particularly in IT and AI, is something I genuinely enjoy, and something that's vital to staying relevant in my field. I follow a mix of podcasts, YouTube channels, blogs, and news outlets to keep my knowledge current. Rather than publishing yet another AI generated newsletter, I curate articles that I find relevant below. You can follow the collection via its [RSS feed](https://raw.githubusercontent.com/smichard/news-feed/refs/heads/main/rss.xml).

@@ -15,5 +15,5 @@ The accompanying post walks through how graphR works, how to run the container, 
 
 ## References
 - Blog Post - [link]({{< ref "/posts/post_3.md" >}})
-- Web app - [link](https://www.graphr.de/)
-- GitHub repository - [link](https://github.com/smichard/graphR)
+- Web App - [link](https://www.graphr.de/)
+- GitHub Repository - [link](https://github.com/smichard/graphR)

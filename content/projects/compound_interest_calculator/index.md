@@ -15,5 +15,5 @@ You can open the hosted version directly, or run it locally as a container. The 
 
 ## References
 - Blog Post - [link]({{< ref "/posts/post_15.md" >}})
-- Web app - [link](https://compound-calculator.michard.io/)
-- GitHub repository - [link](https://github.com/smichard/compound_interest_calculator)
+- Web App - [link](https://compound-calculator.michard.io/)
+- GitHub Repository - [link](https://github.com/smichard/compound_interest_calculator)

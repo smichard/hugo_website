@@ -17,4 +17,4 @@ I led several hands-on workshops and curated an online course based on this tuto
 
 ## References
 - Blog Post - [link]({{< ref "/posts/post_6.md" >}})
-- GitHub repository - [link](https://github.com/smichard/cloud_bites_tutorial)
+- GitHub Repository - [link](https://github.com/smichard/cloud_bites_tutorial)

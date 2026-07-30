@@ -15,5 +15,5 @@ It is the probabilistic companion to the deterministic [Compound Interest Calcul
 
 ## References
 - Blog Post - [link]({{< ref "/posts/post_16.md" >}})
-- Web app - [link](https://compound-simulation.michard.io/)
-- GitHub repository - [link](https://github.com/smichard/compound_simulation)
+- Web App - [link](https://compound-simulation.michard.io/)
+- GitHub Repository - [link](https://github.com/smichard/compound_simulation)
