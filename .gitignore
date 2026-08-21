@@ -8,3 +8,7 @@ a_to_do.md
 .site-check/
 .DS_Store
 **/.DS_Store
+
+# Brand source files (high-res logo/brand-board originals) -- kept locally
+# for regenerating favicons/assets, not tracked in version control.
+/assets/images/brand/
