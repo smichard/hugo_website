@@ -171,13 +171,13 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 
     [params.publisher.logo]
       url = "logo.png"
-      width = 478
-      height = 112
+      width = 988
+      height = 200
 
   [params.logo]
     url = "logo.png"
-    width = 478
-    height = 112
+    width = 988
+    height = 200
 
   [params.image]
     url = "cover.png"
