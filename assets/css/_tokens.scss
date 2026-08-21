@@ -1,6 +1,25 @@
+// Brand palette (see brand board) -- the only place raw hex values should
+// appear; everything else consumes the semantic --tokens below.
+$brand-primary-teal: #008080;
+$brand-deep-teal: #006b6b;
+$brand-mist: #ddf1f0;
+$brand-ink: #172020;
+$brand-slate: #5f7070;
+$brand-solar: #d9a441;
+$brand-paper: #f7faf9;
+
+// Dark-mode-only adjustments, derived from the brand palette above rather
+// than specified by the brand board (which only covers a light UI).
+$brand-ink-elevated: #1c2626;
+$brand-ink-inset: #202b2b;
+$brand-border-dark: #2a3838;
+$brand-teal-on-dark: #3fb3b3; // lightened Primary Teal for AA text contrast on Ink
+$brand-slate-on-dark: #8fa3a3; // lightened Slate for AA text contrast on Ink
+
 :root {
-  --font-heading: "Red Hat Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Source Code Pro", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 
   --space-1: 0.5rem;
   --space-2: 1rem;
@@ -15,36 +34,39 @@
   --radius: 8px;
 
   // Light theme (default)
-  --bg: #faf7f2;
+  --bg: #{$brand-paper};
   --bg-elevated: #ffffff;
-  --bg-inset: #f0ece3;
-  --text: #23201c;
-  --text-muted: #5c574e;
-  --border: #e4ddd0;
-  --accent: #b5502e;
+  --bg-inset: #{$brand-mist};
+  --text: #{$brand-ink};
+  --text-muted: #{$brand-slate};
+  --border: #cbe4e2;
+  --accent: #{$brand-primary-teal};
   --accent-text: #ffffff;
+  --accent-solar: #{$brand-solar};
 }
 
 :root[data-theme="dark"] {
-  --bg: #16130f;
-  --bg-elevated: #1e1a15;
-  --bg-inset: #241f19;
-  --text: #ede7de;
-  --text-muted: #a89e8f;
-  --border: #332a1f;
-  --accent: #d9825a;
-  --accent-text: #16130f;
+  --bg: #{$brand-ink};
+  --bg-elevated: #{$brand-ink-elevated};
+  --bg-inset: #{$brand-ink-inset};
+  --text: #{$brand-paper};
+  --text-muted: #{$brand-slate-on-dark};
+  --border: #{$brand-border-dark};
+  --accent: #{$brand-teal-on-dark};
+  --accent-text: #{$brand-ink};
+  --accent-solar: #{$brand-solar};
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #16130f;
-    --bg-elevated: #1e1a15;
-    --bg-inset: #241f19;
-    --text: #ede7de;
-    --text-muted: #a89e8f;
-    --border: #332a1f;
-    --accent: #d9825a;
-    --accent-text: #16130f;
+    --bg: #{$brand-ink};
+    --bg-elevated: #{$brand-ink-elevated};
+    --bg-inset: #{$brand-ink-inset};
+    --text: #{$brand-paper};
+    --text-muted: #{$brand-slate-on-dark};
+    --border: #{$brand-border-dark};
+    --accent: #{$brand-teal-on-dark};
+    --accent-text: #{$brand-ink};
+    --accent-solar: #{$brand-solar};
   }
 }

@@ -4,13 +4,13 @@
 
 .feed-loading {
   padding: 40px;
-  color: #888;
+  color: var(--text-muted);
   text-align: center;
 }
 
 .feed-error {
   padding: 20px;
-  color: #f92672;
+  color: #c33;
   text-align: center;
 }
 
@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid #4a4b50;
+  border: 1px solid var(--border);
   border-radius: 8px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
@@ -67,7 +67,7 @@
   width: 100%;
   height: 100%;
   gap: 10px;
-  background: linear-gradient(135deg, #0d2233 0%, #1e3a4f 60%, #153045 100%);
+  background: linear-gradient(135deg, #172020 0%, #22403e 60%, #1a2f2d 100%);
 }
 
 .feed-card-favicon {
@@ -80,7 +80,7 @@
 }
 
 .feed-card-domain {
-  color: #5a8aaa;
+  color: var(--text-muted);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
   text-transform: lowercase;
@@ -95,7 +95,7 @@
 }
 
 .feed-card-date {
-  color: #7a9bb5;
+  color: var(--text-muted);
   font-size: 0.75rem;
 }
 
@@ -114,7 +114,7 @@
     text-decoration: none;
 
     &:hover {
-      color: #2d96bd;
+      color: var(--accent);
     }
   }
 }
@@ -122,7 +122,7 @@
 .feed-card-desc {
   flex: 1;
   margin: 0;
-  color: #a9a9b3;
+  color: var(--text-muted);
   font-size: 0.85rem;
   line-height: 1.5;
 }
@@ -135,7 +135,7 @@
   text-decoration: none;
 
   &:hover {
-    color: #2d96bd;
+    color: var(--accent);
   }
 }
 
