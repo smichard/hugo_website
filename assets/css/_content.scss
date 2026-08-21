@@ -52,6 +52,7 @@
   background: var(--bg-inset);
   padding: 0.15em 0.4em;
   border-radius: 4px;
+  font-family: var(--font-mono);
   font-size: 0.9em;
 }
 
@@ -193,6 +194,7 @@
 }
 
 .collapsable-code__language {
+  font-family: var(--font-mono);
   font-weight: 600;
   color: var(--text);
   text-transform: uppercase;
