@@ -31,6 +31,11 @@ window.initPhotoGallery = function (options) {
       name.split("/").map(function (part) { return encodeURIComponent(part); }).join("/");
   }
 
+  function getColumnCount() {
+    var cols = window.getComputedStyle(grid).gridTemplateColumns.split(" ").filter(Boolean).length;
+    return cols || 1;
+  }
+
   if (lightbox && lbImg) {
     closeBtn = options.lightboxCloseId ? document.getElementById(options.lightboxCloseId) : null;
     var close = function () {
@@ -76,6 +81,11 @@ window.initPhotoGallery = function (options) {
       }
 
       var selected = shuffle(imgs).slice(0, max);
+      if (options.fullRows) {
+        var cols = getColumnCount();
+        var rows = Math.max(1, Math.floor(selected.length / cols));
+        selected = selected.slice(0, rows * cols);
+      }
       if (loading) loading.remove();
       grid.setAttribute("aria-busy", "false");
 
