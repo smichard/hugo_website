@@ -1,7 +1,7 @@
 ---
 title: "HolmesGPT: A First Look at an Open-Source SRE Agent"
-date: 2026-07-20
-draft: true
+date: 2026-08-22
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
@@ -60,5 +60,5 @@ Where I can see it paying off is in an environment with several clusters to mana
 - Hermes Agent: A Personal AI That Gets More Useful Over Time - [link]({{< relref "post_28.md" >}})
 - HolmesGPT - project documentation - [link](https://holmesgpt.dev/latest/)
 - HolmesGPT - GitHub repository - [link](https://github.com/HolmesGPT/holmesgpt)
-- HolmesGPT: Agentic troubleshooting built for the cloud native era - CNCF blog - [link](https://www.cncf.io/blog/2026/01/07/holmesgpt-agentic-troubleshooting-built-for-the-cloud-native-era/)
+- CNCF blog: Agentic troubleshooting built for the cloud native era - [link](https://www.cncf.io/blog/2026/01/07/holmesgpt-agentic-troubleshooting-built-for-the-cloud-native-era/)
 - HolmesGPT - operator mode - [link](https://holmesgpt.dev/latest/operator/)

@@ -11,7 +11,7 @@ toc:
   enable: false
 ---
 
-{{< figure src="/images/posts/post_42/overview.png" title="Pushing non-image content into an OCI registry with ORAS - AI generated" >}}
+{{< figure src="/images/posts/post_42/overview.png" title="Any artifact, one path: ORAS pushes Helm charts, WASM modules, and plain files through the same OCI route as container images - [Source](https://oras.land/)" >}}
 
 ## Introduction
 
@@ -66,8 +66,8 @@ I adopted ORAS quickly, this time on purpose, after months of using it in three 
 
 ## References
 
-- ORAS project homepage - [link](https://oras.land/)
-- ORAS documentation - [link](https://oras.land/docs/)
-- ORAS commands reference - [link](https://oras.land/docs/category/oras-commands/)
-- ORAS on CNCF - [link](https://www.cncf.io/projects/oras/)
-- oras-project/oras on GitHub - [link](https://github.com/oras-project/oras)
+- ORAS - project homepage - [link](https://oras.land/)
+- ORAS - project documentation - [link](https://oras.land/docs/)
+- ORAS - commands reference - [link](https://oras.land/docs/category/oras-commands/)
+- CNCF page - [link](https://www.cncf.io/projects/oras/)
+- ORAS - GitHub repository - [link](https://github.com/oras-project/oras)

@@ -118,8 +118,8 @@ What makes it more than a convenience is what sits on top. A documentation sourc
 
 ## References
 
-- Red Hat Offline Knowledge Portal product page - [link](https://access.redhat.com/products/red-hat-offline-knowledge-portal/)
-- Red Hat Offline Knowledge Portal documentation - [link](https://docs.redhat.com/en/documentation/red_hat_offline_knowledge_portal/1)
-- How to install Offline Knowledge Portal on a local system, by Avnish Kumar - [link](https://developers.redhat.com/articles/2025/08/13/how-install-offline-knowledge-portal-local-system)
-- Innovation anywhere: Red Hat delivers critical expertise with Offline Knowledge Portal - [link](https://www.redhat.com/en/blog/innovation-anywhere-red-hat-delivers-critical-expertise-offline-knowledge-portal)
+- RHOKP - product page - [link](https://access.redhat.com/products/red-hat-offline-knowledge-portal/)
+- RHOKP - documentation - [link](https://docs.redhat.com/en/documentation/red_hat_offline_knowledge_portal/1)
+- Developers Blog: How to install Offline Knowledge Portal on a local system, by Avnish Kumar - [link](https://developers.redhat.com/articles/2025/08/13/how-install-offline-knowledge-portal-local-system)
+- RHOKP - announcement - [link](https://www.redhat.com/en/blog/innovation-anywhere-red-hat-delivers-critical-expertise-offline-knowledge-portal)
 - Access Key Generator - [link](https://access.redhat.com/offline/access/)

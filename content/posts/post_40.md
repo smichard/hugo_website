@@ -45,4 +45,3 @@ For someone early in their career, still figuring out what to specialize in or h
 - TED Talk: How to Build a Career You Love - Youtube - [link](https://youtu.be/z-WfDn_0AWE?si=PpHZS2UcFNT2xFjz)
 - From Open Source Software to Open Source Strategy - Bill Gurley - [link](https://p3institute.substack.com/p/from-open-source-software-to-open)
 - The AI Divide: Who Wins and Who Gets Replaced, ft. Bill Gurley - Prof G Markets - [link](https://podcasts.apple.com/us/podcast/the-ai-divide-who-wins-and-who-gets-replaced-ft-bill-gurley/id1744631325?i=1000757671994)
-- This I Believe: EMC Presales Manifesto - Chad Sakac, Virtual Geek - [link](https://virtualgeek.typepad.com/virtual_geek/2012/01/this-i-believe-emc-presales-manifesto.html)

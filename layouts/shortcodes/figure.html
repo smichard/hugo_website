@@ -6,7 +6,7 @@
     {{- partial "responsive-image.html" (dict
         "src" (.Get "src")
         "alt" $alt
-        "title" (.Get "title")
+        "title" (.Get "title" | markdownify | plainify)
         "sizes" "(max-width: 42rem) 100vw, 42rem"
         "maxWidth" 1400
     ) -}}
@@ -14,7 +14,7 @@
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption>
             {{ with (.Get "title") -}}
-                <h4>{{ . }}</h4>
+                <h4>{{ $.Page.RenderString (dict "display" "inline") . }}</h4>
             {{- end -}}
             {{- if or (.Get "caption") (.Get "attr") -}}<p>
                 {{- .Get "caption" | markdownify -}}
