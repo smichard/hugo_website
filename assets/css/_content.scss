@@ -37,7 +37,11 @@
 
 .post-content img {
   border-radius: var(--radius);
-  margin: var(--space-2) 0;
+  margin: var(--space-2) auto;
+}
+
+.post-content figure {
+  margin: 0;
 }
 
 .post-content blockquote {
