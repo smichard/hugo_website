@@ -11,7 +11,7 @@ toc:
   enable: false
 ---
 
-{{< figure src="/images/posts/post_43/overview.png" title="Red Hat Offline Knowledge Portal behind Traefik - AI generated" >}}
+{{< figure src="/images/posts/post_43/overview.png" title="One container, 170,000+ local resources: why an offline documentation snapshot is useful, what is inside it, and what it takes to run - AI generated" >}}
 
 ## Introduction
 
