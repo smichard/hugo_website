@@ -1,7 +1,7 @@
 ---
 title: "A Hugo Theme for Your CV"
 date: 2026-08-22
-draft: false
+draft: true
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
