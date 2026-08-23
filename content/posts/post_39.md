@@ -11,7 +11,7 @@ toc:
   enable: false
 ---
 
-{{< figure src="/images/posts/post_39/overview.png" title="Screenshot taken from the Herdr website. Herdr runs coding agents in terminal panes and shows their status in a sidebar" >}}
+{{< figure src="/images/posts/post_39/overview.png" title="Screenshot taken from the Herdr website. Herdr runs coding agents in terminal panes and shows their status in a sidebar - [Source](https://herdr.dev/)" >}}
 
 ## Introduction
 
