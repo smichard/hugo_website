@@ -1,7 +1,7 @@
 ---
 title: "ORAS: Using a Container Registry as an Artifact Store"
-date: 2026-08-10
-draft: true
+date: 2026-08-30
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
