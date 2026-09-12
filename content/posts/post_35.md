@@ -154,7 +154,7 @@ From there, you have a private model on a private cluster available as a coding 
 ## References
 
 - A personal AI assistant for developers that doesn't phone home - [link](https://www.opensourcerers.org/2023/11/06/a-personal-ai-assistant-for-developers-that-doesnt-phone-home/)
-- Running the Red Hat AI Inference Server on OpenShift - [link](post_32.md)
+- Running the Red Hat AI Inference Server on OpenShift - [link]({{< relref "post_32.md" >}})
 - Eclipse Che - upstream project - [link](https://eclipse.dev/che/)
 - smichard/agent_on_ocp - GitHub repository - [link](https://github.com/smichard/agent_on_ocp)
 - Continue - project site - [link](https://www.continue.dev/)
