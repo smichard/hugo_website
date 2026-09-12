@@ -1,7 +1,7 @@
 ---
 title: "AI-Assisted Coding with OpenShift Dev Spaces"
-date: 2027-05-05
-draft: true
+date: 2026-09-13
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["OpenShift"]
