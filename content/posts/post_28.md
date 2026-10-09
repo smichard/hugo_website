@@ -5,7 +5,7 @@ draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
-tags: ["homelab", "self-hosting", "productivity", "container", "ai"]
+tags: ["homelab", "hermes", "ai", "agents","self-hosting"]
 thumbnail: "/images/posts/post_28/overview.png"
 toc:
   enable: false
