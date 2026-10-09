@@ -6,13 +6,12 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
 tags: ["homelab", "hermes", "ai", "agents","self-hosting"]
-thumbnail: "/images/posts/post_46/overview.png"
+thumbnail: "/images/posts/post_45/overview.png"
 toc:
-  enable: true
-status: RTP
+  enable: false
 ---
 
-{{< figure src="/images/posts/post_46/overview.png" title="How Hermes Agent Works: From Closed-Loop Learning to Multi-Platform Deployment - AI generated" >}}
+{{< figure src="/images/posts/post_45/overview.png" title="Hermes Bot Mode: Every Profile Becomes a Named Bot with Its Own Chat, Role, Model, and Skills - AI generated" >}}
 
 # Introduction
 
