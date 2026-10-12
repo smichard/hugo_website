@@ -1,7 +1,7 @@
 ---
 title: "Hermes Bot Mode: Persistent Specialist Profiles"
 date: 2026-10-11
-draft: true
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
