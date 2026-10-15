@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "hugo_website",
+  "project_id": "8f019f16-c7a2-43c3-8248-9fe72d54ecf4"
+}

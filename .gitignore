@@ -12,3 +12,10 @@ a_to_do.md
 # Brand source files (high-res logo/brand-board originals) -- kept locally
 # for regenerating favicons/assets, not tracked in version control.
 /assets/images/brand/
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key
+.beads/proxieddb/
+*.gate.lock*
