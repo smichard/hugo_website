@@ -17,3 +17,4 @@ RUN hugo --minify
 FROM quay.io/michard/nginx_base_image:0.2.8
 # Copy the generated files to keep the image as small as possible.
 COPY --from=builder /src/public /usr/share/nginx/html
+COPY nginx/redirect-www.conf /etc/nginx/conf.d/redirect-www.conf
