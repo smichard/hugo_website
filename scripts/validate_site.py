@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import posixpath
 import sys
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlparse
@@ -18,7 +19,7 @@ SKIPPED_SCHEMES = {"data", "javascript", "mailto", "tel"}
 class PageParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
-        self.canonical = False
+        self.canonical: str | None = None
         self.description = False
         self.h1_count = 0
         self.ids: list[str] = []
@@ -26,6 +27,7 @@ class PageParser(HTMLParser):
         self.is_alias = False
         self.json_ld: list[str] = []
         self.main_count = 0
+        self.og_images: list[str] = []
         self.references: list[str] = []
         self.title_parts: list[str] = []
         self._in_json_ld = False
@@ -50,10 +52,12 @@ class PageParser(HTMLParser):
                 self.description = True
             if (attrs.get("http-equiv") or "").lower() == "refresh":
                 self.is_alias = True
+            if (attrs.get("property") or "").lower() == "og:image":
+                self.og_images.append(attrs.get("content") or "")
         elif tag == "link":
             rel = (attrs.get("rel") or "").lower().split()
             if "canonical" in rel and attrs.get("href"):
-                self.canonical = True
+                self.canonical = attrs["href"]
         elif tag == "script" and (attrs.get("type") or "").lower() == "application/ld+json":
             self._in_json_ld = True
             self.json_ld.append("")
@@ -82,6 +86,11 @@ class PageParser(HTMLParser):
             self.title_parts.append(data)
         if self._in_json_ld:
             self.json_ld[-1] += data
+
+
+def is_absolute_site_url(url: str) -> bool:
+    parsed = urlparse(url.strip())
+    return parsed.scheme == "https" and parsed.hostname in SITE_HOSTS
 
 
 def output_target(root: Path, page_url: str, reference: str) -> Path | None:
@@ -128,6 +137,12 @@ def validate_page(root: Path, html_file: Path) -> list[str]:
         if not parser.canonical:
             errors.append("missing canonical link")
 
+    if parser.canonical and not is_absolute_site_url(parser.canonical):
+        errors.append(f"canonical link is not an absolute site URL: {parser.canonical!r}")
+    for og_image in parser.og_images:
+        if not is_absolute_site_url(og_image):
+            errors.append(f"og:image is not an absolute site URL: {og_image!r}")
+
     if parser.images_without_alt:
         errors.append(f"{parser.images_without_alt} image(s) missing alt attributes")
 
@@ -149,6 +164,19 @@ def validate_page(root: Path, html_file: Path) -> list[str]:
     return [f"{relative}: {error}" for error in errors]
 
 
+def validate_sitemap(root: Path) -> list[str]:
+    sitemap = root / "sitemap.xml"
+    if not sitemap.is_file():
+        return ["sitemap.xml: missing"]
+
+    namespace = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+    return [
+        f"sitemap.xml: <loc> is not an absolute site URL: {loc.text!r}"
+        for loc in ET.parse(sitemap).getroot().iter(f"{namespace}loc")
+        if not is_absolute_site_url(loc.text or "")
+    ]
+
+
 def main() -> int:
     if len(sys.argv) != 2:
         print(f"usage: {Path(sys.argv[0]).name} GENERATED_SITE", file=sys.stderr)
@@ -165,6 +193,7 @@ def main() -> int:
         for html_file in html_files
         for error in validate_page(root, html_file)
     ]
+    errors.extend(validate_sitemap(root))
     if errors:
         print("\n".join(errors), file=sys.stderr)
         print(f"Validation failed with {len(errors)} error(s).", file=sys.stderr)

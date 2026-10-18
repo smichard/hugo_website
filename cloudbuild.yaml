@@ -42,6 +42,22 @@ steps:
   - 'europe-north1-docker.pkg.dev/${PROJECT_ID}/hugo-website/website:${BUILD_ID}'
   - '.'
 
+# Copy the generated site out of the built image so the deployed files are validated.
+# 50x.html is the nginx base image error page, not Hugo output.
+- name: 'gcr.io/cloud-builders/docker'
+  id: Extract image output
+  entrypoint: bash
+  args:
+  - '-c'
+  - 'docker create --name site-check europe-north1-docker.pkg.dev/${PROJECT_ID}/hugo-website/website:${BUILD_ID} && docker cp site-check:/usr/share/nginx/html /workspace/.image-site && docker rm site-check && rm -f /workspace/.image-site/50x.html'
+
+- name: python:3.14-alpine
+  id: Validate image output
+  entrypoint: python3
+  args:
+  - 'scripts/validate_site.py'
+  - '.image-site'
+
 # This step pushes the image to Container Registry
 # The PROJECT_ID and SHORT_SHA variables are automatically
 # replaced by Cloud Build.
