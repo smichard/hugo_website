@@ -44,6 +44,11 @@
       }
     });
 
+    // Single-line blocks: centre the button vertically instead of pinning it to the top
+    if (codeEl.textContent.trim().indexOf("\n") === -1) {
+      containerEl.classList.add("highlight--single-line");
+    }
+
     containerEl.appendChild(copyBtn);
   }
 

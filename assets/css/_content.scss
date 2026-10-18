@@ -242,6 +242,11 @@
   cursor: pointer;
 }
 
+.highlight--single-line .highlight-copy-btn {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .highlight-copy-btn:hover {
   color: var(--text);
 }
