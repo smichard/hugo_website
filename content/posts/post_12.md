@@ -3,7 +3,7 @@ title: "Why Software Carbon Intensity Matters: An Introduction to the SCI Framew
 date: 2024-12-16
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Sustainability"]
 tags: ["Sustainability","SCI","Carbon Intensity","Carbon Footprint"]
 thumbnail: "/images/posts/post_12/sci_1.jpg"

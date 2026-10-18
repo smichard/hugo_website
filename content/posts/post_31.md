@@ -3,7 +3,7 @@ title: "qmd: Semantic search accross Markdown notes"
 date: 2026-06-27
 draft: true
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Tools"]
 tags: ["Markdown", "ai", "workflow"]
 thumbnail: "/images/posts/post_31/overview.png"

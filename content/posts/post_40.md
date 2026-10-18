@@ -3,7 +3,7 @@ title: "Book Review: Runnin' Down a Dream by Bill Gurley"
 date: 2026-10-04
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Books"]
 tags: ["book-review","career"]
 thumbnail: "/images/posts/books/runnin_down_a_dream.jpg"

@@ -3,7 +3,7 @@ title: "Deploying OpenShift on AWS with Automated Cluster Provisioning"
 date:  2026-05-09
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift","aws","automation","gitops","rhoai"]
 thumbnail: "/images/posts/post_20/overview.png"

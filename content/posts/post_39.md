@@ -3,7 +3,7 @@ title: "Herdr: Panes for My Folders, One Place for My Agents"
 date: 2026-07-19
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Tools"]
 tags: ["cli", "terminal", "ai", "agents", "productivity"]
 thumbnail: "/images/posts/post_39/overview.png"

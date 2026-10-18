@@ -3,7 +3,7 @@ title: "Book Review: The Start-Up of You by Reid Hoffman and Ben Casnocha"
 date: 2025-04-12
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Books"]
 tags: ["book-review","career","leadership"]
 thumbnail: "/images/posts/books/startup_of_you.jpg"

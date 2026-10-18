@@ -3,7 +3,7 @@ title: "Enhancing Code Project Documentation through Automated Changelogs"
 date: 2024-03-26
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Projects"]
 tags: ["coding","documentation","tutorial"]
 toc:

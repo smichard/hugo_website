@@ -3,7 +3,7 @@ title: "Building Better Ideas: Leveraging Lego Serious Play"
 date: 2025-12-20
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Innovation"]
 tags: ["Workshop","Strategy","Collaboration"]
 thumbnail: "/images/posts/post_17/lsp.jpg"

@@ -3,7 +3,7 @@ title: "Remembering Prof. Dr. Hans-Joachim Queisser"
 date: 2025-07-10
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: [""]
 tags: ["Personal"]
 thumbnail: "/images/posts/post_13/hans_queisser.jpg"

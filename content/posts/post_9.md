@@ -3,7 +3,7 @@ title: "Hello Red Hat"
 date: 2023-07-01
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["LinkedIn"]
 tags: ["Professional","Announcement","Work"]
 

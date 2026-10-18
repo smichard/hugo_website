@@ -3,7 +3,7 @@ title: "Mirroring Red Hat Documentation Locally with rh-mastery"
 date: 2026-08-02
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Tools"]
 tags: ["Red Hat","Documentation","Tooling"]
 thumbnail: "/images/posts/post_22/overview.png"

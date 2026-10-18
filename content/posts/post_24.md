@@ -3,7 +3,7 @@ title: "Extending the Local AI Stack with On-Demand GPU Inference on RunPod"
 date: 2026-03-07
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Homelab"]
 tags: ["homelab","AI","runpod","vllm","self-hosting"]
 thumbnail: "/images/posts/post_24/overview.png"

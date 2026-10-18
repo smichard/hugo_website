@@ -3,7 +3,7 @@ title: "My Local AI Stack: Open WebUI, LiteLLM, SearXNG, and Docling"
 date: 2026-02-14
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Homelab"]
 tags: ["homelab","AI","container","self-hosting"]
 thumbnail: "/images/posts/post_19/overview.png"

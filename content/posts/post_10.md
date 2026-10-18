@@ -3,7 +3,7 @@ title: "Green Software: Harnessing Efficiency and Sustainability in the Digital 
 date: 2024-01-29
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Review"]
 tags: ["Certification","Learning","Sustainability"]
 toc:

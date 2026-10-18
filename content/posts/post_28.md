@@ -3,7 +3,7 @@ title: "Hermes Agent: A Personal AI That Gets More Useful Over Time"
 date: 2026-05-02
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Tools"]
 tags: ["homelab", "hermes", "ai", "agents","self-hosting"]
 thumbnail: "/images/posts/post_28/overview.png"

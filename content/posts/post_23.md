@@ -3,7 +3,7 @@ title: "Book Review: Entzug by Christoph Peters"
 date: 2026-08-08
 draft: true
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Books"]
 tags: ["book-review","literature"]
 thumbnail: "/images/posts/books/entzug.jpg"

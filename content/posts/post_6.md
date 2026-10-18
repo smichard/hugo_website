@@ -3,7 +3,7 @@ title: "Cloud Native Tutorial"
 date: 2023-03-07
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Projects"]
 tags: ["Container","Kubernetes","Google-Cloud", "Tutorial"]
 

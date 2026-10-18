@@ -3,7 +3,7 @@ title: "Book Review: Papenburg by Philipp Oehmke"
 date: 2027-09-07
 draft: true
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Books"]
 tags: ["book-review","literature","Philipp Oehmke"]
 thumbnail: "/images/posts/books/papenburg.jpg"

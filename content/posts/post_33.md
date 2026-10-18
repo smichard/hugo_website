@@ -3,7 +3,7 @@ title: "Deploying Hermes Agent on OpenShift"
 date: 2026-05-24
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift", "ai", "hermes", "agent", "vllm"]
 thumbnail: "/images/posts/post_33/overview.png"

@@ -3,7 +3,7 @@ title: "Installing OpenShift AI on OpenShift"
 date: 2026-05-14
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift","aws","gitops","gpu","nvidia","rhoai"]
 thumbnail: "/images/posts/post_21/overview.png"

@@ -3,7 +3,7 @@ title: "Task Management with Tududi"
 date: 2026-07-25
 draft: true
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Tools"]
 tags: ["homelab", "self-hosting", "productivity", "container", "ai"]
 thumbnail: "/images/posts/post_29/overview.png"

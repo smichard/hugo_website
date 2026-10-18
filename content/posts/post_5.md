@@ -3,7 +3,7 @@ title: "Insider Research Podcast"
 date: 2023-02-22
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Media"]
 tags: ["Press","PR","Podcast"]
 

@@ -3,7 +3,7 @@ title: "My Homelab: A Traefik-centered Self-hosting Setup"
 date: 2026-01-24
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Homelab"]
 tags: ["homelab","container","self-hosting"]
 thumbnail: "/images/posts/post_18/overview.png"

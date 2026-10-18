@@ -3,7 +3,7 @@ title: "Deploying OpenClaw on OpenShift"
 date: 2026-06-07
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift", "ai", "openclaw", "agent", "vllm"]
 thumbnail: "/images/posts/post_36/overview.png"

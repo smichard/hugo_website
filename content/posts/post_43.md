@@ -3,7 +3,7 @@ title: "Running the Red Hat Offline Knowledge Portal"
 date: 2026-08-10
 draft: true
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Homelab"]
 tags: ["Red Hat","Documentation","homelab","container"]
 thumbnail: "/images/posts/post_43/overview.png"

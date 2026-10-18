@@ -3,7 +3,7 @@ title: "Book Review: Die Assistentin by Caroline Wahl"
 date: 2026-09-05
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Books"]
 tags: ["book-review","literature"]
 thumbnail: "/images/posts/books/die_dssistention.jpg"

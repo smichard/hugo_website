@@ -3,7 +3,7 @@ title: "Learning, Building, Growing: My Red Hat Journey So Far"
 date: 2025-10-02
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["LinkedIn"]
 tags: ["Professional","Announcement","Work"]
 thumbnail: "/images/posts/post_14/image.png"

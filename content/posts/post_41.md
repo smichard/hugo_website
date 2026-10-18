@@ -3,7 +3,7 @@ title: "HolmesGPT: A First Look at an Open-Source SRE Agent"
 date: 2026-08-22
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Tools"]
 tags: ["agent-ops", "ai", "sre", "holmesgpt"]
 thumbnail: "/images/posts/post_41/overview.png"

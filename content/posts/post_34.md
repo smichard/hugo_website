@@ -3,7 +3,7 @@ title: "Bringing Open WebUI to OpenShift"
 date: 2026-05-31
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift", "ai", "hermes", "agent", "vllm"]
 thumbnail: "/images/posts/post_34/overview.png"

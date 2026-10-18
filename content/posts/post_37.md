@@ -3,7 +3,7 @@ title: "Tank OS: Running OpenClaw locally in a safe and open way"
 date: 2026-06-14
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Tools"]
 tags: ["openclaw", "ai", "agent", "podman", "container"]
 thumbnail: "/images/posts/post_37/overview.png"

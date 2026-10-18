@@ -3,7 +3,7 @@ title: "AI-Assisted Coding with OpenShift Dev Spaces"
 date: 2026-09-13
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["OpenShift"]
 tags: ["openshift", "devspaces", "ai", "vllm", "coding-assistant"]
 thumbnail: "/images/posts/post_35/overview.png"

@@ -3,7 +3,7 @@ title: "Computerwoche - Interview"
 date: 2023-01-18
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Media"]
 tags: ["Press","PR","Computerwoche"]
 

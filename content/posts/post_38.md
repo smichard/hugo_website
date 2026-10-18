@@ -3,7 +3,7 @@ title: "A Weekend at Challenge Roth: From Spectator to Athlete"
 date: 2026-07-07
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Personal"]
 tags: ["Sport","Triathlon","Challenge Roth"]
 thumbnail: "/images/posts/post_38/challenge_roth.jpg"

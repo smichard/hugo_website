@@ -3,7 +3,7 @@ title: "Bye, bye Dell"
 date: 2023-06-30
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["LinkedIn"]
 tags: ["Professional","Announcement","Work"]
 

@@ -3,7 +3,7 @@ title: "Visiting KubeCon & CloudNativeCon Europe 2023 - a review"
 date: 2023-05-03
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Review"]
 tags: ["KubeCon","Conference","Kubernetes","CNCF"]
 

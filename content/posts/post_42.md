@@ -3,7 +3,7 @@ title: "ORAS: Using a Container Registry as an Artifact Store"
 date: 2026-08-30
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Tools"]
 tags: ["CNCF","OCI","Registry","Tooling"]
 thumbnail: "/images/posts/post_42/overview.png"

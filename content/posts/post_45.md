@@ -3,7 +3,7 @@ title: "Hermes Bot Mode: Persistent Specialist Profiles"
 date: 2026-10-11
 draft: false
 author: "Stephan Michard"
-authorLink: "https://stephan.michard.io"
+authorLink: "https://www.stephan.michard.io"
 categories: ["Tools"]
 tags: ["homelab", "hermes", "ai", "agents","self-hosting"]
 thumbnail: "/images/posts/post_45/overview.png"
