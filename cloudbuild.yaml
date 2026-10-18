@@ -26,7 +26,7 @@ steps:
   - '--panicOnWarning'
 
 # Check generated SEO, accessibility, JSON-LD, and local asset references.
-- name: python:3.14-alpine
+- name: python:3.15-alpine
   id: Validate output
   entrypoint: python3
   args:
@@ -51,7 +51,7 @@ steps:
   - '-c'
   - 'docker create --name site-check europe-north1-docker.pkg.dev/${PROJECT_ID}/hugo-website/website:${BUILD_ID} && docker cp site-check:/usr/share/nginx/html /workspace/.image-site && docker rm site-check && rm -f /workspace/.image-site/50x.html'
 
-- name: python:3.14-alpine
+- name: python:3.15-alpine
   id: Validate image output
   entrypoint: python3
   args:
