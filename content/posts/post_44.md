@@ -1,6 +1,6 @@
 ---
 title: "Book Review: Papenburg by Philipp Oehmke"
-date: 2027-09-07
+date: 2026-12-06
 draft: true
 author: "Stephan Michard"
 authorLink: "https://www.stephan.michard.io"
