@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
 tags: ["ai", "agents", "coding-assistant", "coding", "tools"]
+thumbnail: "/images/posts/post_48/overview.png"
 toc:
   enable: false
 ---

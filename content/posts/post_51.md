@@ -6,6 +6,7 @@ author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Homelab"]
 tags: ["homelab", "mlflow", "observability", "agents", "ai"]
+thumbnail: "/images/posts/post_51/overview.png"
 toc:
   enable: false
 ---
