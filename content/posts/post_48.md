@@ -1,7 +1,7 @@
 ---
 title: "Beads: A Task Memory for Coding Agents"
 date: 2026-10-25
-draft: true
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
