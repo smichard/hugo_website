@@ -1,7 +1,7 @@
 ---
 title: "Worktrunk: One Worktree per Coding Agent"
 date: 2026-11-01
-draft: true
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
