@@ -1,7 +1,7 @@
 ---
 title: "From Vibe Coding to Spec-Driven Development"
 date: 2026-11-08
-draft: true
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Tools"]
