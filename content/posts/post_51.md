@@ -1,7 +1,7 @@
 ---
 title: "Tracing My Agents with MLflow"
 date: 2026-11-22
-draft: true
+draft: false
 author: "Stephan Michard"
 authorLink: "https://stephan.michard.io"
 categories: ["Homelab"]
